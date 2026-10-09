@@ -1,0 +1,6113 @@
+[
+{
+"type": "school",
+"name": "New Pupils Senior Secondary School",
+"lat": 26.930408,
+"lng": 75.811779,
+"osm_id": "node/2130276039"
+},
+{
+"type": "college",
+"name": "Nav Bharti P I T I",
+"lat": 26.914988,
+"lng": 75.720882,
+"osm_id": "node/2242218395"
+},
+{
+"type": "school",
+"name": "Maheshwari girls public school",
+"lat": 26.954939,
+"lng": 75.778005,
+"osm_id": "node/2692620780"
+},
+{
+"type": "hospital",
+"name": "Soni Manipal Hospital",
+"lat": 26.968861,
+"lng": 75.77342,
+"osm_id": "node/2692620884"
+},
+{
+"type": "hospital",
+"name": "ALCS: Cosmetic Surgery, Hair Transplant & Laser Clinic in Jaipur",
+"lat": 26.904707,
+"lng": 75.780569,
+"osm_id": "node/2694200840"
+},
+{
+"type": "kindergarten",
+"name": "Loharu Montessori Childrens' School",
+"lat": 26.903986,
+"lng": 75.782109,
+"osm_id": "node/2694200959"
+},
+{
+"type": "school",
+"name": "Bharatiya Vidya Bhavan's Vidyashram",
+"lat": 26.868818,
+"lng": 75.80619,
+"osm_id": "node/2725271168"
+},
+{
+"type": "college",
+"name": "University Commerce College",
+"lat": 26.877068,
+"lng": 75.811601,
+"osm_id": "node/2725289380"
+},
+{
+"type": "college",
+"name": "Rajasthan College",
+"lat": 26.879747,
+"lng": 75.812334,
+"osm_id": "node/2725290686"
+},
+{
+"type": "hospital",
+"name": "Prakritik Chikitsalaya",
+"lat": 26.889478,
+"lng": 75.81234,
+"osm_id": "node/2725302272"
+},
+{
+"type": "hospital",
+"name": "Santokba Durlabhji Memorial Hospital",
+"lat": 26.893514,
+"lng": 75.813656,
+"osm_id": "node/2725536808"
+},
+{
+"type": "college",
+"name": "SS Jain Subodh PG College",
+"lat": 26.895474,
+"lng": 75.809717,
+"osm_id": "node/2725536819"
+},
+{
+"type": "school",
+"name": "Subodh Public School",
+"lat": 26.894048,
+"lng": 75.811924,
+"osm_id": "node/2725536822"
+},
+{
+"type": "hospital",
+"name": "ESIC Hospital",
+"lat": 26.907225,
+"lng": 75.777138,
+"osm_id": "node/2777043234"
+},
+{
+"type": "hospital",
+"name": "Saket Hospital",
+"lat": 26.849014,
+"lng": 75.765384,
+"osm_id": "node/3077970035"
+},
+{
+"type": "college",
+"name": "St. Wilfreds P.G. college",
+"lat": 26.848392,
+"lng": 75.764276,
+"osm_id": "node/3077993837"
+},
+{
+"type": "college",
+"name": "Aakashdeep TT girls college",
+"lat": 26.8441,
+"lng": 75.775668,
+"osm_id": "node/3077994633"
+},
+{
+"type": "hospital",
+"name": "Curewell Hospital",
+"lat": 26.839915,
+"lng": 75.769668,
+"osm_id": "node/3078037746"
+},
+{
+"type": "college",
+"name": "Kanodiya PG College",
+"lat": 26.885438,
+"lng": 75.811892,
+"osm_id": "node/3081604833"
+},
+{
+"type": "school",
+"name": "St. Anslem School",
+"lat": 26.860615,
+"lng": 75.756347,
+"osm_id": "node/3083894233"
+},
+{
+"type": "school",
+"name": "Jaipuria school",
+"lat": 26.858961,
+"lng": 75.803689,
+"osm_id": "node/3476214795"
+},
+{
+"type": "hospital",
+"name": "Goverment Rukmani Devi Japuria Hospital",
+"lat": 26.856923,
+"lng": 75.800953,
+"osm_id": "node/3476216925"
+},
+{
+"type": "hospital",
+"name": "MNIT college Dispensary",
+"lat": 26.862189,
+"lng": 75.812195,
+"osm_id": "node/3560470590"
+},
+{
+"type": "school",
+"name": "St.Anselm's Pink City,Malviya Nagar, Jaipur",
+"lat": 26.857769,
+"lng": 75.814245,
+"osm_id": "node/3560497262"
+},
+{
+"type": "college",
+"name": "Global technical college",
+"lat": 26.788375,
+"lng": 75.833338,
+"osm_id": "node/3771356457"
+},
+{
+"type": "school",
+"name": "Yash Vidya Mandir",
+"lat": 26.902683,
+"lng": 75.785538,
+"osm_id": "node/3840693080"
+},
+{
+"type": "school",
+"name": "Turtles School",
+"lat": 26.830072,
+"lng": 75.843042,
+"osm_id": "node/4225230790"
+},
+{
+"type": "school",
+"name": "Gandhi Nagar Girl's School 1",
+"lat": 26.88125,
+"lng": 75.806183,
+"osm_id": "node/4226406292"
+},
+{
+"type": "hospital",
+"name": "Apex Hospitals Pvt Ltd",
+"lat": 26.854751,
+"lng": 75.825271,
+"osm_id": "node/4226415489"
+},
+{
+"type": "hospital",
+"name": "Krishna Ram Charitable Hospital",
+"lat": 26.822802,
+"lng": 75.848227,
+"osm_id": "node/4226415589"
+},
+{
+"type": "school",
+"name": "VPM Classes",
+"lat": 26.833001,
+"lng": 75.751962,
+"osm_id": "node/4297282789"
+},
+{
+"type": "hospital",
+"name": "Hospital",
+"lat": 26.96041,
+"lng": 75.760539,
+"osm_id": "node/4427334090"
+},
+{
+"type": "hospital",
+"name": "SDMH",
+"lat": 26.893253,
+"lng": 75.812105,
+"osm_id": "node/4466633244"
+},
+{
+"type": "hospital",
+"name": "soni hospital",
+"lat": 26.895167,
+"lng": 75.814932,
+"osm_id": "node/4466634118"
+},
+{
+"type": "school",
+"name": "Maharani School Ground , Jaipur",
+"lat": 26.929558,
+"lng": 75.795683,
+"osm_id": "node/4511686895"
+},
+{
+"type": "hospital",
+"name": "jaipur dental hospital",
+"lat": 26.918564,
+"lng": 75.807772,
+"osm_id": "node/4621858291"
+},
+{
+"type": "hospital",
+"name": "Sparsh Hospital",
+"lat": 26.822583,
+"lng": 75.779843,
+"osm_id": "node/4744477348"
+},
+{
+"type": "school",
+"name": "The Palace School",
+"lat": 26.927036,
+"lng": 75.824813,
+"osm_id": "node/4784703223"
+},
+{
+"type": "hospital",
+"name": "Hospital",
+"lat": 26.906311,
+"lng": 75.815011,
+"osm_id": "node/4793756921"
+},
+{
+"type": "hospital",
+"name": "Sawai Man Singh Hospital, Jaipur",
+"lat": 26.906016,
+"lng": 75.816105,
+"osm_id": "node/4793756922"
+},
+{
+"type": "hospital",
+"name": "SMS Trauma Center",
+"lat": 26.90734,
+"lng": 75.814628,
+"osm_id": "node/4798048721"
+},
+{
+"type": "hospital",
+"name": "Hospital",
+"lat": 26.875564,
+"lng": 75.792605,
+"osm_id": "node/4880275221"
+},
+{
+"type": "school",
+"name": "ALLEN Career Institute, JLN Marg",
+"lat": 26.867309,
+"lng": 75.804502,
+"osm_id": "node/4880279121"
+},
+{
+"type": "hospital",
+"name": "Face kraft - Centre for advanced dentistry",
+"lat": 26.858968,
+"lng": 75.808677,
+"osm_id": "node/5533496172"
+},
+{
+"type": "hospital",
+"name": "Dr. Ramani's Dental Practice",
+"lat": 26.891872,
+"lng": 75.810142,
+"osm_id": "node/5582501185"
+},
+{
+"type": "hospital",
+"name": "Sanjavani hospital",
+"lat": 26.931796,
+"lng": 75.791816,
+"osm_id": "node/5756676422"
+},
+{
+"type": "college",
+"name": "JECRC University",
+"lat": 26.775672,
+"lng": 75.878738,
+"osm_id": "node/6258532425"
+},
+{
+"type": "school",
+"name": "Ajeet Vidhya Niketan School",
+"lat": 26.915136,
+"lng": 75.779849,
+"osm_id": "node/6324050650"
+},
+{
+"type": "hospital",
+"name": "Eternal Heart Care Center",
+"lat": 26.840169,
+"lng": 75.805875,
+"osm_id": "node/6341259416"
+},
+{
+"type": "hospital",
+"name": "JNU Hospital and Medical College",
+"lat": 26.855388,
+"lng": 75.876912,
+"osm_id": "node/6966458470"
+},
+{
+"type": "kindergarten",
+"name": "Jayshree Periwal Pre School",
+"lat": 26.900414,
+"lng": 75.731453,
+"osm_id": "node/6966530627"
+},
+{
+"type": "hospital",
+"name": "Asopa Hospital",
+"lat": 26.891564,
+"lng": 75.741419,
+"osm_id": "node/6968230705"
+},
+{
+"type": "school",
+"name": "Kendriya Vidyalaya No 4",
+"lat": 26.917163,
+"lng": 75.766885,
+"osm_id": "node/6978714374"
+},
+{
+"type": "hospital",
+"name": "Shalby Multi-Specialty Hospital, Jaipur",
+"lat": 26.903473,
+"lng": 75.729212,
+"osm_id": "node/6978725493"
+},
+{
+"type": "hospital",
+"name": "Sharad Hospital",
+"lat": 26.894498,
+"lng": 75.764031,
+"osm_id": "node/7024812754"
+},
+{
+"type": "hospital",
+"name": "R.P. Memorial Hospital",
+"lat": 26.888059,
+"lng": 75.830562,
+"osm_id": "node/7024823966"
+},
+{
+"type": "hospital",
+"name": "Sharda General Hospital",
+"lat": 26.845334,
+"lng": 75.77069,
+"osm_id": "node/7024847602"
+},
+{
+"type": "hospital",
+"name": "R.A.G. Hospital",
+"lat": 26.86752,
+"lng": 75.770203,
+"osm_id": "node/7024858970"
+},
+{
+"type": "hospital",
+"name": "Sharma Hospital, Jaipur",
+"lat": 26.906818,
+"lng": 75.824596,
+"osm_id": "node/7024889676"
+},
+{
+"type": "hospital",
+"name": "R.G.S Eye Centre and Retina Foundation",
+"lat": 26.852544,
+"lng": 75.801775,
+"osm_id": "node/7024897100"
+},
+{
+"type": "hospital",
+"name": "Bani Park Hospital",
+"lat": 26.924524,
+"lng": 75.788056,
+"osm_id": "node/7025015210"
+},
+{
+"type": "hospital",
+"name": "K.M.S.Hospital",
+"lat": 26.89533,
+"lng": 75.820803,
+"osm_id": "node/7025038083"
+},
+{
+"type": "hospital",
+"name": "Archana Hospital",
+"lat": 26.818913,
+"lng": 75.798647,
+"osm_id": "node/7025072866"
+},
+{
+"type": "clinic",
+"name": "Anurag Nursing Home, Mansarovar",
+"lat": 26.862032,
+"lng": 75.754968,
+"osm_id": "node/7025115708"
+},
+{
+"type": "hospital",
+"name": "Anita Maternity Home",
+"lat": 26.847929,
+"lng": 75.805322,
+"osm_id": "node/7025156650"
+},
+{
+"type": "hospital",
+"name": "Anshu Hospital",
+"lat": 26.887376,
+"lng": 75.807916,
+"osm_id": "node/7025157462"
+},
+{
+"type": "hospital",
+"name": "Anil Hospital",
+"lat": 26.907595,
+"lng": 75.823833,
+"osm_id": "node/7025196557"
+},
+{
+"type": "hospital",
+"name": "Anita Children's Hospital",
+"lat": 26.896295,
+"lng": 75.744838,
+"osm_id": "node/7025199278"
+},
+{
+"type": "hospital",
+"name": "Anand Maternity Hospital",
+"lat": 26.944793,
+"lng": 75.747865,
+"osm_id": "node/7025210570"
+},
+{
+"type": "hospital",
+"name": "Anand Eye Hospital",
+"lat": 26.908159,
+"lng": 75.796318,
+"osm_id": "node/7025222996"
+},
+{
+"type": "hospital",
+"name": "Amar Medical and Research Centre",
+"lat": 26.868185,
+"lng": 75.757767,
+"osm_id": "node/7025281080"
+},
+{
+"type": "hospital",
+"name": "Amodh Hospital",
+"lat": 26.897763,
+"lng": 75.832202,
+"osm_id": "node/7025285294"
+},
+{
+"type": "hospital",
+"name": "Amarnath Allergy And General Hospital",
+"lat": 26.862078,
+"lng": 75.792626,
+"osm_id": "node/7025288970"
+},
+{
+"type": "hospital",
+"name": "Amar Jain Hospital",
+"lat": 26.920405,
+"lng": 75.821414,
+"osm_id": "node/7025306774"
+},
+{
+"type": "hospital",
+"name": "Satellite Hospital, Sethi Colony , JAIPUR",
+"lat": 26.902105,
+"lng": 75.841622,
+"osm_id": "node/7025429713"
+},
+{
+"type": "hospital",
+"name": "Raj Hospital, Jaipur",
+"lat": 26.815538,
+"lng": 75.77418,
+"osm_id": "node/7027488070"
+},
+{
+"type": "hospital",
+"name": "Dr Roy Chowdary's Institute Of Urology",
+"lat": 26.901251,
+"lng": 75.796928,
+"osm_id": "node/7027516600"
+},
+{
+"type": "hospital",
+"name": "Radha Nursing Home, Jotwara",
+"lat": 26.94609,
+"lng": 75.73576,
+"osm_id": "node/7027544538"
+},
+{
+"type": "hospital",
+"name": "R.K.Yadav Memorial Hospital",
+"lat": 26.92152,
+"lng": 75.742603,
+"osm_id": "node/7027565979"
+},
+{
+"type": "hospital",
+"name": "J P Eye Hospital, Jaipur",
+"lat": 26.881596,
+"lng": 75.798792,
+"osm_id": "node/7027616575"
+},
+{
+"type": "hospital",
+"name": "Shubham Hospital and Maternity Centre",
+"lat": 26.942107,
+"lng": 75.763995,
+"osm_id": "node/7027675114"
+},
+{
+"type": "hospital",
+"name": "J. K. Loan Hospital",
+"lat": 26.901405,
+"lng": 75.817717,
+"osm_id": "node/7027685279"
+},
+{
+"type": "hospital",
+"name": "International Fertility and Health Care Centre",
+"lat": 26.897302,
+"lng": 75.810912,
+"osm_id": "node/7027690433"
+},
+{
+"type": "hospital",
+"name": "J. N. Mishra Memorial Hospital",
+"lat": 26.919455,
+"lng": 75.743105,
+"osm_id": "node/7027700037"
+},
+{
+"type": "hospital",
+"name": "Indowestern Brain and Spine Hospital",
+"lat": 26.89171,
+"lng": 75.800275,
+"osm_id": "node/7027721133"
+},
+{
+"type": "hospital",
+"name": "Holy Family Hospital, Jaipur",
+"lat": 26.893588,
+"lng": 75.824321,
+"osm_id": "node/7027743300"
+},
+{
+"type": "hospital",
+"name": "Hi Tech Hospital, Jaipur",
+"lat": 26.840203,
+"lng": 75.771783,
+"osm_id": "node/7027752926"
+},
+{
+"type": "hospital",
+"name": "Heart and General Hospital",
+"lat": 26.908662,
+"lng": 75.810872,
+"osm_id": "node/7027765939"
+},
+{
+"type": "hospital",
+"name": "Vardhman Hospital, Jaipur",
+"lat": 26.894028,
+"lng": 75.769417,
+"osm_id": "node/7027768952"
+},
+{
+"type": "hospital",
+"name": "Health Hospital",
+"lat": 26.878493,
+"lng": 75.779299,
+"osm_id": "node/7027783622"
+},
+{
+"type": "hospital",
+"name": "Uniara Hospital",
+"lat": 26.897943,
+"lng": 75.817811,
+"osm_id": "node/7027786380"
+},
+{
+"type": "hospital",
+"name": "Tyagi Eye Hospital",
+"lat": 26.900325,
+"lng": 75.751608,
+"osm_id": "node/7027800130"
+},
+{
+"type": "hospital",
+"name": "Ashok Hospital and Research Center",
+"lat": 26.872459,
+"lng": 75.699938,
+"osm_id": "node/7028034200"
+},
+{
+"type": "clinic",
+"name": "Getwell Poly Clinic and Hospital",
+"lat": 26.902255,
+"lng": 75.816707,
+"osm_id": "node/7030319488"
+},
+{
+"type": "hospital",
+"name": "Advanced Heart Care Center",
+"lat": 26.867626,
+"lng": 75.803456,
+"osm_id": "node/7030319503"
+},
+{
+"type": "hospital",
+"name": "Bhandari Hospital and Research Centre",
+"lat": 26.86364,
+"lng": 75.793734,
+"osm_id": "node/7030351333"
+},
+{
+"type": "hospital",
+"name": "Bhiwani Eye Care Centre",
+"lat": 26.90257,
+"lng": 75.8257,
+"osm_id": "node/7030410093"
+},
+{
+"type": "hospital",
+"name": "C.B.L. Memorial Holy Family Hospital",
+"lat": 26.938892,
+"lng": 75.78108,
+"osm_id": "node/7030524543"
+},
+{
+"type": "hospital",
+"name": "Carewell Hospital",
+"lat": 26.900995,
+"lng": 75.82676,
+"osm_id": "node/7030551132"
+},
+{
+"type": "hospital",
+"name": "Centre For Sight",
+"lat": 26.859313,
+"lng": 75.808178,
+"osm_id": "node/7030589195"
+},
+{
+"type": "hospital",
+"name": "Government Dental College and Hospital, Jaipur",
+"lat": 26.9378,
+"lng": 75.79291,
+"osm_id": "node/7030599187"
+},
+{
+"type": "hospital",
+"name": "Jaipur Fertility Centre",
+"lat": 26.935464,
+"lng": 75.788107,
+"osm_id": "node/7030617003"
+},
+{
+"type": "hospital",
+"name": "Zanana Hospital",
+"lat": 26.92637,
+"lng": 75.806627,
+"osm_id": "node/7030621054"
+},
+{
+"type": "hospital",
+"name": "Jaipur Calgary Eye Hospital",
+"lat": 26.855944,
+"lng": 75.822222,
+"osm_id": "node/7030626395"
+},
+{
+"type": "hospital",
+"name": "Jain Hospital, Jaipur",
+"lat": 26.89686,
+"lng": 75.837282,
+"osm_id": "node/7030653289"
+},
+{
+"type": "clinic",
+"name": "Jain Nursing Home, Jaipur",
+"lat": 26.947495,
+"lng": 75.80307,
+"osm_id": "node/7030662436"
+},
+{
+"type": "hospital",
+"name": "Rawal Hospital, Jaipur",
+"lat": 26.871568,
+"lng": 75.700915,
+"osm_id": "node/7030693236"
+},
+{
+"type": "clinic",
+"name": "Jain Eye Clinic and Hospital",
+"lat": 26.90909,
+"lng": 75.824456,
+"osm_id": "node/7030706660"
+},
+{
+"type": "hospital",
+"name": "Jain Fertility and Mother Care Hospital",
+"lat": 26.911861,
+"lng": 75.750217,
+"osm_id": "node/7030706668"
+},
+{
+"type": "hospital",
+"name": "Khandelwal Hospital",
+"lat": 27.002261,
+"lng": 75.794536,
+"osm_id": "node/7030721841"
+},
+{
+"type": "hospital",
+"name": "Jain ENT Hospital, Jaipur",
+"lat": 26.891585,
+"lng": 75.800187,
+"osm_id": "node/7030741194"
+},
+{
+"type": "hospital",
+"name": "Khandaka Hospital",
+"lat": 26.856493,
+"lng": 75.796052,
+"osm_id": "node/7030741596"
+},
+{
+"type": "hospital",
+"name": "Sita Devi Hospital",
+"lat": 26.898157,
+"lng": 75.780549,
+"osm_id": "node/7030796055"
+},
+{
+"type": "hospital",
+"name": "Monika Hospital",
+"lat": 26.943499,
+"lng": 75.752814,
+"osm_id": "node/7030849552"
+},
+{
+"type": "clinic",
+"name": "Somvati Memorial Hospital",
+"lat": 26.867894,
+"lng": 75.797068,
+"osm_id": "node/7030874903"
+},
+{
+"type": "hospital",
+"name": "Madan Parnami Memorial Hospital",
+"lat": 26.897652,
+"lng": 75.824099,
+"osm_id": "node/7030952427"
+},
+{
+"type": "hospital",
+"name": "Jyoti Chest and General Hospital",
+"lat": 27.009681,
+"lng": 75.769273,
+"osm_id": "node/7034744567"
+},
+{
+"type": "hospital",
+"name": "K.K Diagnostic Centre , Jaipur",
+"lat": 26.926073,
+"lng": 75.83148,
+"osm_id": "node/7034765483"
+},
+{
+"type": "hospital",
+"name": "K.C. Memorial Eye Hospital",
+"lat": 26.913662,
+"lng": 75.802529,
+"osm_id": "node/7034765952"
+},
+{
+"type": "clinic",
+"name": "Jyotiba Hospital",
+"lat": 26.921318,
+"lng": 75.803289,
+"osm_id": "node/7034781108"
+},
+{
+"type": "hospital",
+"name": "Vasundhra Hospital",
+"lat": 26.898218,
+"lng": 75.823656,
+"osm_id": "node/7034856996"
+},
+{
+"type": "hospital",
+"name": "Jindal Eye Hospital",
+"lat": 26.899642,
+"lng": 75.736839,
+"osm_id": "node/7034908135"
+},
+{
+"type": "hospital",
+"name": "Jha Hospital",
+"lat": 26.977262,
+"lng": 75.77268,
+"osm_id": "node/7034953778"
+},
+{
+"type": "hospital",
+"name": "Sadhana Hospital Pvt. Ltd.",
+"lat": 26.922549,
+"lng": 75.753427,
+"osm_id": "node/7034998849"
+},
+{
+"type": "hospital",
+"name": "Shubh Hospital",
+"lat": 26.897255,
+"lng": 75.752255,
+"osm_id": "node/7035005280"
+},
+{
+"type": "hospital",
+"name": "Gopinath Hospital",
+"lat": 26.801916,
+"lng": 75.813145,
+"osm_id": "node/7035008372"
+},
+{
+"type": "hospital",
+"name": "Shri Ram Hospital",
+"lat": 26.982043,
+"lng": 75.772107,
+"osm_id": "node/7035072949"
+},
+{
+"type": "hospital",
+"name": "Gem Hospital",
+"lat": 26.863148,
+"lng": 75.75444,
+"osm_id": "node/7035093683"
+},
+{
+"type": "clinic",
+"name": "Gem Nursing Home",
+"lat": 26.941271,
+"lng": 75.774106,
+"osm_id": "node/7035096937"
+},
+{
+"type": "hospital",
+"name": "Shri Niddan Hospital and Hope Fertility Centre",
+"lat": 26.897425,
+"lng": 75.75162,
+"osm_id": "node/7035102789"
+},
+{
+"type": "hospital",
+"name": "Gautam Hospital and Research Center",
+"lat": 26.909688,
+"lng": 75.789982,
+"osm_id": "node/7035107000"
+},
+{
+"type": "hospital",
+"name": "Jeevan Shri Hospital and Fertility Center",
+"lat": 26.942991,
+"lng": 75.749685,
+"osm_id": "node/7035131690"
+},
+{
+"type": "hospital",
+"name": "M.D.D. Hospital",
+"lat": 26.971395,
+"lng": 75.760497,
+"osm_id": "node/7035163535"
+},
+{
+"type": "hospital",
+"name": "Soni Hospital",
+"lat": 26.895781,
+"lng": 75.814673,
+"osm_id": "node/7035249224"
+},
+{
+"type": "hospital",
+"name": "Royal Eye Care and Research Centre",
+"lat": 26.899285,
+"lng": 75.833954,
+"osm_id": "node/7035249243"
+},
+{
+"type": "hospital",
+"name": "Chawla Hospital and Laparoscopy Centre",
+"lat": 26.899578,
+"lng": 75.831869,
+"osm_id": "node/7035250092"
+},
+{
+"type": "clinic",
+"name": "Sarvgya Nursing Home",
+"lat": 26.883281,
+"lng": 75.754921,
+"osm_id": "node/7035250093"
+},
+{
+"type": "hospital",
+"name": "Dr Mahendra Orthopaedic Centre",
+"lat": 26.901337,
+"lng": 75.739079,
+"osm_id": "node/7035250100"
+},
+{
+"type": "hospital",
+"name": "Gangori Hospital",
+"lat": 26.930393,
+"lng": 75.820346,
+"osm_id": "node/7035294692"
+},
+{
+"type": "hospital",
+"name": "Ganadhipati Purushottam Shekhawati Hospital and Research Center",
+"lat": 26.959981,
+"lng": 75.777349,
+"osm_id": "node/7035294751"
+},
+{
+"type": "hospital",
+"name": "Girdhar Hospital and Research Centre",
+"lat": 26.845468,
+"lng": 75.813161,
+"osm_id": "node/7036670276"
+},
+{
+"type": "hospital",
+"name": "Global Advanced Ent Surgery Centre",
+"lat": 26.889592,
+"lng": 75.803726,
+"osm_id": "node/7036728296"
+},
+{
+"type": "hospital",
+"name": "Ghiya Hospital",
+"lat": 26.846798,
+"lng": 75.810173,
+"osm_id": "node/7036731239"
+},
+{
+"type": "clinic",
+"name": "Gupta Dental Clinic and Perio Surgery Hospital",
+"lat": 26.873521,
+"lng": 75.796229,
+"osm_id": "node/7036732214"
+},
+{
+"type": "hospital",
+"name": "Ginni Devi Memorial Hospital",
+"lat": 26.850261,
+"lng": 75.76957,
+"osm_id": "node/7036733935"
+},
+{
+"type": "hospital",
+"name": "Gupta Hospital",
+"lat": 26.94347,
+"lng": 75.803289,
+"osm_id": "node/7036743535"
+},
+{
+"type": "hospital",
+"name": "Gupta Hospital and Diagnostic Centre Jaipur",
+"lat": 26.851613,
+"lng": 75.767945,
+"osm_id": "node/7036743841"
+},
+{
+"type": "clinic",
+"name": "Gupta Fracture Clinic and Spine Centre",
+"lat": 26.854544,
+"lng": 75.79385,
+"osm_id": "node/7036760592"
+},
+{
+"type": "hospital",
+"name": "Goyal Hospital, Jaipur",
+"lat": 26.937993,
+"lng": 75.800811,
+"osm_id": "node/7036765142"
+},
+{
+"type": "hospital",
+"name": "Gupta Child andGenral",
+"lat": 26.911211,
+"lng": 75.742074,
+"osm_id": "node/7036785909"
+},
+{
+"type": "hospital",
+"name": "Gupta Chest And General Hospital",
+"lat": 26.943101,
+"lng": 75.760058,
+"osm_id": "node/7036787752"
+},
+{
+"type": "hospital",
+"name": "Durgapura Hospital",
+"lat": 26.846184,
+"lng": 75.793809,
+"osm_id": "node/7036855302"
+},
+{
+"type": "hospital",
+"name": "Shree Narayan Chikitsalay",
+"lat": 26.853508,
+"lng": 75.789891,
+"osm_id": "node/7037297424"
+},
+{
+"type": "hospital",
+"name": "Shri Brij Fracture Hospital",
+"lat": 26.942996,
+"lng": 75.750575,
+"osm_id": "node/7037332489"
+},
+{
+"type": "hospital",
+"name": "Shri Hospital",
+"lat": 26.847523,
+"lng": 75.827025,
+"osm_id": "node/7037356085"
+},
+{
+"type": "hospital",
+"name": "Marudhar Hospital",
+"lat": 26.926957,
+"lng": 75.746355,
+"osm_id": "node/7037481103"
+},
+{
+"type": "hospital",
+"name": "Ram Avtar Eye Hospital and Glaucoma Pavilion",
+"lat": 26.89272,
+"lng": 75.824225,
+"osm_id": "node/7037488089"
+},
+{
+"type": "hospital",
+"name": "Ram Janki Memorial Vijayvergia Hospital",
+"lat": 26.847066,
+"lng": 75.827457,
+"osm_id": "node/7037513017"
+},
+{
+"type": "hospital",
+"name": "Retina Care Foundation and Eye Hospital",
+"lat": 26.869163,
+"lng": 75.79438,
+"osm_id": "node/7037563460"
+},
+{
+"type": "clinic",
+"name": "Roma Nursing Home",
+"lat": 26.892304,
+"lng": 75.745289,
+"osm_id": "node/7037568176"
+},
+{
+"type": "clinic",
+"name": "Dr.Mehta's Dignostic Clinic",
+"lat": 26.896765,
+"lng": 75.820753,
+"osm_id": "node/7037598709"
+},
+{
+"type": "school",
+"name": "Sanskar school",
+"lat": 26.922434,
+"lng": 75.735562,
+"osm_id": "node/7037601185"
+},
+{
+"type": "hospital",
+"name": "Military hospital Jaipur",
+"lat": 26.929235,
+"lng": 75.783441,
+"osm_id": "node/7037601487"
+},
+{
+"type": "hospital",
+"name": "Dr.Mamodias Proctology and IRC Centre",
+"lat": 26.897083,
+"lng": 75.823353,
+"osm_id": "node/7037606522"
+},
+{
+"type": "hospital",
+"name": "Kshitij Hospital and Medical Research Centre",
+"lat": 26.882328,
+"lng": 75.747106,
+"osm_id": "node/7037696459"
+},
+{
+"type": "hospital",
+"name": "Krishna Ram Hospital and Research Centre",
+"lat": 26.871087,
+"lng": 75.800344,
+"osm_id": "node/7037738561"
+},
+{
+"type": "hospital",
+"name": "Krishna Mother and Child Hospital",
+"lat": 26.945214,
+"lng": 75.742953,
+"osm_id": "node/7037748710"
+},
+{
+"type": "clinic",
+"name": "Krishna Clinic and Nursing Home",
+"lat": 26.945575,
+"lng": 75.797147,
+"osm_id": "node/7037755802"
+},
+{
+"type": "hospital",
+"name": "Diwakar Orthopedic and General Hospital",
+"lat": 26.937295,
+"lng": 75.789641,
+"osm_id": "node/7037995243"
+},
+{
+"type": "hospital",
+"name": "Rajat Maternity and General Hospital",
+"lat": 26.922985,
+"lng": 75.723601,
+"osm_id": "node/7038143732"
+},
+{
+"type": "hospital",
+"name": "Dwarka Orthopaedic and Trauma Hospital",
+"lat": 26.898274,
+"lng": 75.765447,
+"osm_id": "node/7038146063"
+},
+{
+"type": "hospital",
+"name": "Sevayatan Hospital",
+"lat": 26.901295,
+"lng": 75.770217,
+"osm_id": "node/7038167921"
+},
+{
+"type": "hospital",
+"name": "Kcj Diagnostic and Research Center",
+"lat": 26.905982,
+"lng": 75.813046,
+"osm_id": "node/7038169412"
+},
+{
+"type": "hospital",
+"name": "Dr Agarwals Eye Hospital",
+"lat": 26.908095,
+"lng": 75.790811,
+"osm_id": "node/7038265808"
+},
+{
+"type": "hospital",
+"name": "Agarwal Hospital and Fertility Research Centre",
+"lat": 26.897386,
+"lng": 75.743841,
+"osm_id": "node/7038265813"
+},
+{
+"type": "hospital",
+"name": "Deshbandhu E.N.T. Hospital",
+"lat": 26.859875,
+"lng": 75.756561,
+"osm_id": "node/7038293279"
+},
+{
+"type": "hospital",
+"name": "Bagree Hospital and Research Centre",
+"lat": 26.969906,
+"lng": 75.744656,
+"osm_id": "node/7038417542"
+},
+{
+"type": "hospital",
+"name": "Nirmala Hospital and Research Center",
+"lat": 26.909883,
+"lng": 75.802307,
+"osm_id": "node/7038417547"
+},
+{
+"type": "hospital",
+"name": "Raj Khurana Memorial Hospital",
+"lat": 26.897253,
+"lng": 75.826046,
+"osm_id": "node/7038464449"
+},
+{
+"type": "clinic",
+"name": "Vinayak Nursing Home",
+"lat": 26.891129,
+"lng": 75.840518,
+"osm_id": "node/7038591452"
+},
+{
+"type": "hospital",
+"name": "Jeevan Rekha Critical Care and Trauma Hospital",
+"lat": 26.800764,
+"lng": 75.86194,
+"osm_id": "node/7038735480"
+},
+{
+"type": "hospital",
+"name": "Khetan Hospital",
+"lat": 26.959073,
+"lng": 75.771094,
+"osm_id": "node/7038935616"
+},
+{
+"type": "hospital",
+"name": "Malpani Multispeciality Hospital",
+"lat": 26.973618,
+"lng": 75.776345,
+"osm_id": "node/7038935621"
+},
+{
+"type": "hospital",
+"name": "Pragati Orthopaedic and General Hospital",
+"lat": 26.903211,
+"lng": 75.835498,
+"osm_id": "node/7038990174"
+},
+{
+"type": "hospital",
+"name": "Atulya Hospital",
+"lat": 26.897479,
+"lng": 75.77173,
+"osm_id": "node/7039387654"
+},
+{
+"type": "hospital",
+"name": "Ayush Hospital",
+"lat": 26.886029,
+"lng": 75.752519,
+"osm_id": "node/7039412914"
+},
+{
+"type": "hospital",
+"name": "Atal Hospital and Reseach Center",
+"lat": 26.881121,
+"lng": 75.781576,
+"osm_id": "node/7039433534"
+},
+{
+"type": "hospital",
+"name": "Arya Hospital- Jaipur",
+"lat": 26.900392,
+"lng": 75.819064,
+"osm_id": "node/7039479669"
+},
+{
+"type": "hospital",
+"name": "Swastik Hospital, Jaipur",
+"lat": 26.891692,
+"lng": 75.839813,
+"osm_id": "node/7039491572"
+},
+{
+"type": "hospital",
+"name": "Nova Specialty Surgery",
+"lat": 26.913632,
+"lng": 75.812708,
+"osm_id": "node/7039514016"
+},
+{
+"type": "hospital",
+"name": "Shah Hospital, Jaipur",
+"lat": 26.924378,
+"lng": 75.789201,
+"osm_id": "node/7039515196"
+},
+{
+"type": "hospital",
+"name": "Sr Kalla Memorial Gastro and General Hospital",
+"lat": 26.912857,
+"lng": 75.797014,
+"osm_id": "node/7039556018"
+},
+{
+"type": "hospital",
+"name": "Dhuleshwar Hospital and Laser Skin Centre",
+"lat": 26.913941,
+"lng": 75.798449,
+"osm_id": "node/7039567318"
+},
+{
+"type": "clinic",
+"name": "Poonam Nursing Home , Jaipur",
+"lat": 26.93198,
+"lng": 75.827673,
+"osm_id": "node/7039598105"
+},
+{
+"type": "clinic",
+"name": "Welfare Clinic, Jaipur",
+"lat": 26.914773,
+"lng": 75.795549,
+"osm_id": "node/7039684189"
+},
+{
+"type": "hospital",
+"name": "Vivekanand Hospital and Fertility Centre",
+"lat": 26.914458,
+"lng": 75.796235,
+"osm_id": "node/7039702397"
+},
+{
+"type": "hospital",
+"name": "Dhanvantari Hospital,Jaipur",
+"lat": 26.858026,
+"lng": 75.757272,
+"osm_id": "node/7039952681"
+},
+{
+"type": "hospital",
+"name": "Pink City Heart and General Hospital",
+"lat": 26.971584,
+"lng": 75.770826,
+"osm_id": "node/7039981955"
+},
+{
+"type": "hospital",
+"name": "Prakash Mother and Child Hospital",
+"lat": 26.804229,
+"lng": 75.809396,
+"osm_id": "node/7039989682"
+},
+{
+"type": "hospital",
+"name": "Sahai Hospital and Research Centre",
+"lat": 26.895922,
+"lng": 75.819811,
+"osm_id": "node/7039990476"
+},
+{
+"type": "hospital",
+"name": "Agrasen Orthopaedic Hospital",
+"lat": 26.857502,
+"lng": 75.813142,
+"osm_id": "node/7039998078"
+},
+{
+"type": "hospital",
+"name": "Agrawal Hospital",
+"lat": 26.854604,
+"lng": 75.824832,
+"osm_id": "node/7040013480"
+},
+{
+"type": "hospital",
+"name": "Agrasen Hospital",
+"lat": 26.886207,
+"lng": 75.764979,
+"osm_id": "node/7040017904"
+},
+{
+"type": "hospital",
+"name": "Advanced Neurology and Superspeciality Hospital",
+"lat": 26.852142,
+"lng": 75.810331,
+"osm_id": "node/7040020566"
+},
+{
+"type": "hospital",
+"name": "Aditi General and Eye Hospital",
+"lat": 26.897253,
+"lng": 75.739251,
+"osm_id": "node/7040026262"
+},
+{
+"type": "hospital",
+"name": "Mansarovar Hospital",
+"lat": 26.847708,
+"lng": 75.769828,
+"osm_id": "node/7040044511"
+},
+{
+"type": "hospital",
+"name": "Aditya Hospital, Jaipur",
+"lat": 26.890255,
+"lng": 75.799393,
+"osm_id": "node/7040045984"
+},
+{
+"type": "clinic",
+"name": "Malpani Nursing Home",
+"lat": 26.931058,
+"lng": 75.819882,
+"osm_id": "node/7040054427"
+},
+{
+"type": "hospital",
+"name": "Swasthya Mangalam Family Health Centre",
+"lat": 26.87853,
+"lng": 75.766741,
+"osm_id": "node/7040058512"
+},
+{
+"type": "hospital",
+"name": "Aarogya Hospital, Jaipur",
+"lat": 26.905716,
+"lng": 75.749327,
+"osm_id": "node/7040062370"
+},
+{
+"type": "hospital",
+"name": "Adarsh Hospital, Jaipur",
+"lat": 26.902678,
+"lng": 75.739462,
+"osm_id": "node/7040078410"
+},
+{
+"type": "hospital",
+"name": "Narayana Multispeciality Hospital",
+"lat": 26.794995,
+"lng": 75.824163,
+"osm_id": "node/7040094579"
+},
+{
+"type": "hospital",
+"name": "Tagore Hospital and Research Institute",
+"lat": 26.858984,
+"lng": 75.769643,
+"osm_id": "node/7040100239"
+},
+{
+"type": "hospital",
+"name": "Pooja Hospital and Medical Research Centre",
+"lat": 26.899026,
+"lng": 75.779359,
+"osm_id": "node/7040101983"
+},
+{
+"type": "hospital",
+"name": "Narmada Hospital and Diagnostic Centre",
+"lat": 26.975406,
+"lng": 75.765143,
+"osm_id": "node/7040112693"
+},
+{
+"type": "hospital",
+"name": "Bhagwan Mahaveer Cancer Hospital and Research Center",
+"lat": 26.86307,
+"lng": 75.805535,
+"osm_id": "node/7040112723"
+},
+{
+"type": "hospital",
+"name": "Meera Hospital, Jaipur",
+"lat": 26.929878,
+"lng": 75.801187,
+"osm_id": "node/7040112739"
+},
+{
+"type": "hospital",
+"name": "Deep Hospital and Research Centre",
+"lat": 26.936564,
+"lng": 75.75633,
+"osm_id": "node/7040112750"
+},
+{
+"type": "hospital",
+"name": "Chirag Hospital",
+"lat": 26.866283,
+"lng": 75.764392,
+"osm_id": "node/7040112760"
+},
+{
+"type": "hospital",
+"name": "Solomon Hospital",
+"lat": 26.847147,
+"lng": 75.808718,
+"osm_id": "node/7040117130"
+},
+{
+"type": "hospital",
+"name": "Maharshi Child Hospital",
+"lat": 26.935966,
+"lng": 75.795738,
+"osm_id": "node/7040117143"
+},
+{
+"type": "hospital",
+"name": "Manu Hospital and Research Center",
+"lat": 26.897986,
+"lng": 75.767992,
+"osm_id": "node/7040129019"
+},
+{
+"type": "clinic",
+"name": "Purvi Nursing Home and Diagnostic Center",
+"lat": 26.863677,
+"lng": 75.754806,
+"osm_id": "node/7040132676"
+},
+{
+"type": "hospital",
+"name": "Sonkhiya Hospital",
+"lat": 26.946949,
+"lng": 75.79714,
+"osm_id": "node/7040134143"
+},
+{
+"type": "hospital",
+"name": "Satellite Hospital, Jaipur",
+"lat": 26.928861,
+"lng": 75.797281,
+"osm_id": "node/7040142166"
+},
+{
+"type": "hospital",
+"name": "Rajasthan Hopsital and Gastroenology Centre",
+"lat": 26.88236,
+"lng": 75.799129,
+"osm_id": "node/7040143007"
+},
+{
+"type": "hospital",
+"name": "Sun Hospital",
+"lat": 26.883011,
+"lng": 75.792921,
+"osm_id": "node/7040146307"
+},
+{
+"type": "hospital",
+"name": "Bansal Hospital,Jaipur",
+"lat": 26.893209,
+"lng": 75.763099,
+"osm_id": "node/7040147102"
+},
+{
+"type": "hospital",
+"name": "Dulet Hospital",
+"lat": 26.871891,
+"lng": 75.695326,
+"osm_id": "node/7040170022"
+},
+{
+"type": "hospital",
+"name": "Somani Hospital",
+"lat": 26.879459,
+"lng": 75.773987,
+"osm_id": "node/7040171028"
+},
+{
+"type": "hospital",
+"name": "Metro Hospital and Research Centre",
+"lat": 26.921288,
+"lng": 75.741267,
+"osm_id": "node/7040172653"
+},
+{
+"type": "hospital",
+"name": "Siddham E N T Center",
+"lat": 26.879806,
+"lng": 75.757488,
+"osm_id": "node/7040178950"
+},
+{
+"type": "hospital",
+"name": "Eye Surgery and Laser Centre",
+"lat": 26.851127,
+"lng": 75.807025,
+"osm_id": "node/7040181512"
+},
+{
+"type": "hospital",
+"name": "G M R C Hospital",
+"lat": 26.847275,
+"lng": 75.775686,
+"osm_id": "node/7040185404"
+},
+{
+"type": "hospital",
+"name": "Liberty Hospital, Jaipur",
+"lat": 26.844407,
+"lng": 75.773979,
+"osm_id": "node/7040185975"
+},
+{
+"type": "clinic",
+"name": "CGHS Polyclinic, A.G.Colony",
+"lat": 26.874099,
+"lng": 75.804105,
+"osm_id": "node/7040194284"
+},
+{
+"type": "hospital",
+"name": "Swaroop Hospital",
+"lat": 26.902489,
+"lng": 75.776396,
+"osm_id": "node/7040206604"
+},
+{
+"type": "hospital",
+"name": "Kandoi Hospital",
+"lat": 26.875268,
+"lng": 75.689777,
+"osm_id": "node/7040215093"
+},
+{
+"type": "hospital",
+"name": "Dr. Goyal's Path Lab and Imaging Centre",
+"lat": 26.894129,
+"lng": 75.770848,
+"osm_id": "node/7040217320"
+},
+{
+"type": "clinic",
+"name": "Dr. K.C. KASLIWAL Ear,Nose and Throat Centre",
+"lat": 26.905334,
+"lng": 75.81329,
+"osm_id": "node/7040227986"
+},
+{
+"type": "hospital",
+"name": "Pawan Hospital Pvt. Ltd. , Jaipur",
+"lat": 26.945702,
+"lng": 75.842103,
+"osm_id": "node/7040281162"
+},
+{
+"type": "hospital",
+"name": "Dr Naresh Goyal Orthopadic Hospital",
+"lat": 26.850464,
+"lng": 75.772937,
+"osm_id": "node/7040301742"
+},
+{
+"type": "hospital",
+"name": "Star Women and General Hospital",
+"lat": 26.802551,
+"lng": 75.808615,
+"osm_id": "node/7040325916"
+},
+{
+"type": "hospital",
+"name": "Dr. Virendra Laser and Phaco Surgery Centre - Jaipur",
+"lat": 26.881047,
+"lng": 75.800793,
+"osm_id": "node/7040336692"
+},
+{
+"type": "hospital",
+"name": "Mendiratta Hospital",
+"lat": 26.947669,
+"lng": 75.8521,
+"osm_id": "node/7040342448"
+},
+{
+"type": "hospital",
+"name": "Om Ent Hospital",
+"lat": 26.977832,
+"lng": 75.772961,
+"osm_id": "node/7040383878"
+},
+{
+"type": "hospital",
+"name": "Kedawat Hospital",
+"lat": 26.766734,
+"lng": 75.837837,
+"osm_id": "node/7040383975"
+},
+{
+"type": "hospital",
+"name": "Dr Sardar Singh Memorial Hospital(Managed By M/S Kamal Clinic and Nursing Home)",
+"lat": 26.931801,
+"lng": 75.793002,
+"osm_id": "node/7040387295"
+},
+{
+"type": "hospital",
+"name": "Kabra Eye Hospital",
+"lat": 26.902606,
+"lng": 75.770811,
+"osm_id": "node/7040396604"
+},
+{
+"type": "hospital",
+"name": "Jee Hospital and Research Centre",
+"lat": 26.886307,
+"lng": 75.768192,
+"osm_id": "node/7040396609"
+},
+{
+"type": "hospital",
+"name": "Dr.Chauhan Orthopadic centre",
+"lat": 26.93901,
+"lng": 75.780929,
+"osm_id": "node/7040401357"
+},
+{
+"type": "clinic",
+"name": "CGHS Dispensary No.5, Income Tax Colony",
+"lat": 26.894868,
+"lng": 75.796384,
+"osm_id": "node/7040409548"
+},
+{
+"type": "hospital",
+"name": "Neha Maternity and Ent Hospital",
+"lat": 26.886008,
+"lng": 75.765596,
+"osm_id": "node/7040424595"
+},
+{
+"type": "hospital",
+"name": "Max Vision Eye Care Centre",
+"lat": 26.908686,
+"lng": 75.738842,
+"osm_id": "node/7040431728"
+},
+{
+"type": "hospital",
+"name": "Dr Atuls Child Hospital",
+"lat": 26.934466,
+"lng": 75.797585,
+"osm_id": "node/7040432235"
+},
+{
+"type": "hospital",
+"name": "Mahatma Gandhi Medical College and Hospital",
+"lat": 26.769982,
+"lng": 75.854502,
+"osm_id": "node/7040437482"
+},
+{
+"type": "clinic",
+"name": "Raj Nursing Home, Jaipur",
+"lat": 26.948163,
+"lng": 75.744466,
+"osm_id": "node/7040438275"
+},
+{
+"type": "hospital",
+"name": "Chandra Bhan Hospital",
+"lat": 26.892418,
+"lng": 75.779149,
+"osm_id": "node/7040445632"
+},
+{
+"type": "hospital",
+"name": "Metro Mas Heart Care and Miltispeciality Hospital",
+"lat": 26.867992,
+"lng": 75.768336,
+"osm_id": "node/7040459777"
+},
+{
+"type": "hospital",
+"name": "Puru Eye Hospital and Phaco Surgery Centre",
+"lat": 26.867048,
+"lng": 75.766669,
+"osm_id": "node/7040460937"
+},
+{
+"type": "hospital",
+"name": "Sardarmal Khandaka Memorial Hospital",
+"lat": 26.9565,
+"lng": 75.685439,
+"osm_id": "node/7040465304"
+},
+{
+"type": "hospital",
+"name": "Mahila Chikitsalya",
+"lat": 26.914385,
+"lng": 75.824118,
+"osm_id": "node/7040488133"
+},
+{
+"type": "hospital",
+"name": "Misra Eye Hospital",
+"lat": 26.85642,
+"lng": 75.767114,
+"osm_id": "node/7040497136"
+},
+{
+"type": "hospital",
+"name": "Balaji Hospital and Orthopaedic",
+"lat": 26.954139,
+"lng": 75.769995,
+"osm_id": "node/7040514654"
+},
+{
+"type": "hospital",
+"name": "Thar Hospital Pvt. Ltd.",
+"lat": 26.921205,
+"lng": 75.742228,
+"osm_id": "node/7040552833"
+},
+{
+"type": "hospital",
+"name": "Nalini Hospital",
+"lat": 26.865094,
+"lng": 75.800768,
+"osm_id": "node/7040571420"
+},
+{
+"type": "hospital",
+"name": "Bansal Hospital and Research Center",
+"lat": 26.887387,
+"lng": 75.792553,
+"osm_id": "node/7040591725"
+},
+{
+"type": "hospital",
+"name": "Deenbandhu Hospital",
+"lat": 26.896701,
+"lng": 75.752006,
+"osm_id": "node/7040598132"
+},
+{
+"type": "hospital",
+"name": "D. C. Hospital",
+"lat": 26.86695,
+"lng": 75.781915,
+"osm_id": "node/7040614880"
+},
+{
+"type": "clinic",
+"name": "CGHS Dispensary No.4",
+"lat": 26.926494,
+"lng": 75.785614,
+"osm_id": "node/7040932161"
+},
+{
+"type": "hospital",
+"name": "Dugra Devi Memorial Hospital",
+"lat": 26.934244,
+"lng": 75.79854,
+"osm_id": "node/7040985055"
+},
+{
+"type": "hospital",
+"name": "Cocoon Hospital",
+"lat": 26.843699,
+"lng": 75.794573,
+"osm_id": "node/7042738773"
+},
+{
+"type": "hospital",
+"name": "Tb Hospital",
+"lat": 26.881631,
+"lng": 75.805087,
+"osm_id": "node/7042855467"
+},
+{
+"type": "hospital",
+"name": "Priti Maternity and General Hospital",
+"lat": 26.864884,
+"lng": 75.759179,
+"osm_id": "node/7042863527"
+},
+{
+"type": "hospital",
+"name": "Dr. Panicker's Sanjeevani Hospital Pvt. Ltd.",
+"lat": 26.932253,
+"lng": 75.791817,
+"osm_id": "node/7042863528"
+},
+{
+"type": "clinic",
+"name": "Rajdhani Clinic and Nursing Home",
+"lat": 26.911602,
+"lng": 75.807067,
+"osm_id": "node/7042869527"
+},
+{
+"type": "hospital",
+"name": "T.B. Cenetorium",
+"lat": 26.93728,
+"lng": 75.795701,
+"osm_id": "node/7042869534"
+},
+{
+"type": "hospital",
+"name": "Lifecare Hospital, Jaipur",
+"lat": 26.869551,
+"lng": 75.773275,
+"osm_id": "node/7042872239"
+},
+{
+"type": "hospital",
+"name": "Dr.M.R.Grewal Memorial Hospital",
+"lat": 26.93543,
+"lng": 75.798085,
+"osm_id": "node/7042872255"
+},
+{
+"type": "hospital",
+"name": "Tarani General Hospital",
+"lat": 26.84564,
+"lng": 75.770108,
+"osm_id": "node/7042947566"
+},
+{
+"type": "hospital",
+"name": "Railway Hospital",
+"lat": 26.916253,
+"lng": 75.786659,
+"osm_id": "node/7043371160"
+},
+{
+"type": "hospital",
+"name": "MAXX Hospital",
+"lat": 26.945078,
+"lng": 75.735207,
+"osm_id": "node/7049461143"
+},
+{
+"type": "college",
+"name": "Seedling Institute for Integrated Learning and Advanced Studies",
+"lat": 26.853086,
+"lng": 75.861761,
+"osm_id": "node/7082196526"
+},
+{
+"type": "college",
+"name": "Khandelwal Vaish Girls Institute of Technology",
+"lat": 26.916504,
+"lng": 75.732918,
+"osm_id": "node/7088015456"
+},
+{
+"type": "college",
+"name": "Department of maths",
+"lat": 26.886762,
+"lng": 75.814744,
+"osm_id": "node/7088157800"
+},
+{
+"type": "college",
+"name": "Department of Chemistry",
+"lat": 26.886727,
+"lng": 75.81497,
+"osm_id": "node/7088157801"
+},
+{
+"type": "college",
+"name": "Center For Converging Technologies",
+"lat": 26.885316,
+"lng": 75.821024,
+"osm_id": "node/7093437413"
+},
+{
+"type": "college",
+"name": "Law College RU",
+"lat": 26.886013,
+"lng": 75.821053,
+"osm_id": "node/7093437510"
+},
+{
+"type": "college",
+"name": "Department of political science",
+"lat": 26.887402,
+"lng": 75.816382,
+"osm_id": "node/7093437750"
+},
+{
+"type": "school",
+"name": "School",
+"lat": 26.889355,
+"lng": 75.746589,
+"osm_id": "node/7233534385"
+},
+{
+"type": "school",
+"name": "School",
+"lat": 26.88942,
+"lng": 75.746548,
+"osm_id": "node/7233534485"
+},
+{
+"type": "hospital",
+"name": "Air Force Hospital ,Jaipur",
+"lat": 26.960627,
+"lng": 75.84289,
+"osm_id": "node/7279062506"
+},
+{
+"type": "hospital",
+"name": "Government Hospital, Amer",
+"lat": 26.989942,
+"lng": 75.85567,
+"osm_id": "node/7279062516"
+},
+{
+"type": "hospital",
+"name": "TB Hospital",
+"lat": 26.937947,
+"lng": 75.794858,
+"osm_id": "node/7279062535"
+},
+{
+"type": "hospital",
+"name": "Government Satellite Hospital, Banipark  , Jaipur",
+"lat": 26.928678,
+"lng": 75.797258,
+"osm_id": "node/7279062612"
+},
+{
+"type": "hospital",
+"name": "Government Homeopathic Centre",
+"lat": 26.907893,
+"lng": 75.783374,
+"osm_id": "node/7279102584"
+},
+{
+"type": "hospital",
+"name": "Government Hospital",
+"lat": 26.903108,
+"lng": 75.838214,
+"osm_id": "node/7279102587"
+},
+{
+"type": "clinic",
+"name": "Sai Clinic",
+"lat": 27.004778,
+"lng": 75.727517,
+"osm_id": "node/7694995575"
+},
+{
+"type": "clinic",
+"name": "Naila Clinic",
+"lat": 26.947602,
+"lng": 75.89651,
+"osm_id": "node/7694995576"
+},
+{
+"type": "hospital",
+"name": "Krishna Hospital",
+"lat": 26.990482,
+"lng": 75.854497,
+"osm_id": "node/7694995577"
+},
+{
+"type": "hospital",
+"name": "Sunil Hospital",
+"lat": 26.968535,
+"lng": 75.904901,
+"osm_id": "node/7694995578"
+},
+{
+"type": "hospital",
+"name": "MPS Hospital",
+"lat": 26.98065,
+"lng": 75.924922,
+"osm_id": "node/7694995580"
+},
+{
+"type": "hospital",
+"name": "Bagra Hospital",
+"lat": 26.779781,
+"lng": 75.762885,
+"osm_id": "node/7694995581"
+},
+{
+"type": "clinic",
+"name": "Jai Ambey Homyo Clinic",
+"lat": 26.764782,
+"lng": 75.8351,
+"osm_id": "node/7694995582"
+},
+{
+"type": "clinic",
+"name": "Laxmi Clinic",
+"lat": 26.764062,
+"lng": 75.832044,
+"osm_id": "node/7694995587"
+},
+{
+"type": "hospital",
+"name": "Jai Durga Hospital and Research Centre",
+"lat": 26.97196,
+"lng": 75.922241,
+"osm_id": "node/7694995594"
+},
+{
+"type": "hospital",
+"name": "Advance Hospital",
+"lat": 26.800806,
+"lng": 75.772354,
+"osm_id": "node/7694995598"
+},
+{
+"type": "hospital",
+"name": "Singodiya Hospital",
+"lat": 26.954477,
+"lng": 75.884311,
+"osm_id": "node/7694995599"
+},
+{
+"type": "clinic",
+"name": "Balaji Clinic",
+"lat": 26.790446,
+"lng": 75.815619,
+"osm_id": "node/7694995601"
+},
+{
+"type": "clinic",
+"name": "Kedawat Homoeopathy",
+"lat": 26.884602,
+"lng": 75.883651,
+"osm_id": "node/7694995602"
+},
+{
+"type": "clinic",
+"name": "Homeopathic Clinic",
+"lat": 27.004606,
+"lng": 75.727243,
+"osm_id": "node/7694995604"
+},
+{
+"type": "clinic",
+"name": "Meeta Clinic",
+"lat": 26.87592,
+"lng": 75.894612,
+"osm_id": "node/7694995605"
+},
+{
+"type": "hospital",
+"name": "Dirghayu Hospital",
+"lat": 27.021801,
+"lng": 75.769201,
+"osm_id": "node/7694995606"
+},
+{
+"type": "hospital",
+"name": "Vinayak Hospital",
+"lat": 26.980087,
+"lng": 75.924775,
+"osm_id": "node/7694995609"
+},
+{
+"type": "clinic",
+"name": "Bhim Singh Clinic",
+"lat": 26.895284,
+"lng": 75.915528,
+"osm_id": "node/7694995612"
+},
+{
+"type": "clinic",
+"name": "Raj Clinic",
+"lat": 26.988641,
+"lng": 75.858799,
+"osm_id": "node/7694995613"
+},
+{
+"type": "hospital",
+"name": "Kanchan Hospital",
+"lat": 26.909138,
+"lng": 75.895018,
+"osm_id": "node/7694995614"
+},
+{
+"type": "clinic",
+"name": "Sai Baba Clinic",
+"lat": 26.783626,
+"lng": 75.816141,
+"osm_id": "node/7694995615"
+},
+{
+"type": "clinic",
+"name": "Sahara Cilnic",
+"lat": 26.95172,
+"lng": 75.867473,
+"osm_id": "node/7694995616"
+},
+{
+"type": "clinic",
+"name": "Cure Life Clinic",
+"lat": 26.867529,
+"lng": 75.888095,
+"osm_id": "node/7694995618"
+},
+{
+"type": "clinic",
+"name": "Shifa Clinic",
+"lat": 26.865154,
+"lng": 75.88699,
+"osm_id": "node/7694995619"
+},
+{
+"type": "hospital",
+"name": "Bhanu Hospital",
+"lat": 26.784124,
+"lng": 75.815859,
+"osm_id": "node/7694995620"
+},
+{
+"type": "clinic",
+"name": "Shri Balaji Clinic",
+"lat": 26.765032,
+"lng": 75.830354,
+"osm_id": "node/7694995622"
+},
+{
+"type": "hospital",
+"name": "Saraswati Hospital",
+"lat": 27.001439,
+"lng": 75.893158,
+"osm_id": "node/7694995623"
+},
+{
+"type": "hospital",
+"name": "D. H. Hospital",
+"lat": 26.876838,
+"lng": 75.894921,
+"osm_id": "node/7694995624"
+},
+{
+"type": "clinic",
+"name": "Suvidha Clinic",
+"lat": 26.970555,
+"lng": 75.908524,
+"osm_id": "node/7694995626"
+},
+{
+"type": "clinic",
+"name": "Life Care Clinic",
+"lat": 26.88289,
+"lng": 75.880733,
+"osm_id": "node/7694995628"
+},
+{
+"type": "clinic",
+"name": "Ganesh Clinic",
+"lat": 26.95261,
+"lng": 75.870244,
+"osm_id": "node/7694995629"
+},
+{
+"type": "hospital",
+"name": "Paiker Hospital",
+"lat": 26.967908,
+"lng": 75.891729,
+"osm_id": "node/7694995635"
+},
+{
+"type": "hospital",
+"name": "Sharma Nursing Home",
+"lat": 26.982444,
+"lng": 75.925147,
+"osm_id": "node/7694995636"
+},
+{
+"type": "clinic",
+"name": "Janta Clinic , Jaipur",
+"lat": 26.964084,
+"lng": 75.846828,
+"osm_id": "node/7694995637"
+},
+{
+"type": "hospital",
+"name": "Lucky Hospital",
+"lat": 26.797979,
+"lng": 75.726554,
+"osm_id": "node/7694995639"
+},
+{
+"type": "hospital",
+"name": "Dr. Kailash Chand Aloria",
+"lat": 26.878667,
+"lng": 75.903692,
+"osm_id": "node/7694995640"
+},
+{
+"type": "clinic",
+"name": "Rudra Clinic",
+"lat": 26.893955,
+"lng": 75.916759,
+"osm_id": "node/7694995642"
+},
+{
+"type": "clinic",
+"name": "Shubham Clinic & Research Centre",
+"lat": 27.02151,
+"lng": 75.769993,
+"osm_id": "node/7694995643"
+},
+{
+"type": "clinic",
+"name": "Raj Clinic",
+"lat": 26.789233,
+"lng": 75.81171,
+"osm_id": "node/7694995644"
+},
+{
+"type": "hospital",
+"name": "Janvi Hospital",
+"lat": 26.769124,
+"lng": 75.76751,
+"osm_id": "node/7694995645"
+},
+{
+"type": "clinic",
+"name": "Janta Clinics",
+"lat": 26.791635,
+"lng": 75.817183,
+"osm_id": "node/7694995648"
+},
+{
+"type": "hospital",
+"name": "Jaim Hospital",
+"lat": 26.77943,
+"lng": 75.801747,
+"osm_id": "node/7694995649"
+},
+{
+"type": "clinic",
+"name": "Jyoti Clinic",
+"lat": 26.992066,
+"lng": 75.874116,
+"osm_id": "node/7694995651"
+},
+{
+"type": "clinic",
+"name": "Suhana Clinic",
+"lat": 26.968025,
+"lng": 75.885623,
+"osm_id": "node/7694995653"
+},
+{
+"type": "clinic",
+"name": "Ansari Clinic",
+"lat": 27.001808,
+"lng": 75.73507,
+"osm_id": "node/7694995654"
+},
+{
+"type": "hospital",
+"name": "Bombay Hospital",
+"lat": 26.781935,
+"lng": 75.863398,
+"osm_id": "node/7694995656"
+},
+{
+"type": "hospital",
+"name": "D R M Hospital",
+"lat": 26.881262,
+"lng": 75.907127,
+"osm_id": "node/7694995658"
+},
+{
+"type": "clinic",
+"name": "Aayurved Clinic",
+"lat": 26.89852,
+"lng": 75.885527,
+"osm_id": "node/7694995659"
+},
+{
+"type": "clinic",
+"name": "Purwanchal Clinic",
+"lat": 26.960689,
+"lng": 75.867571,
+"osm_id": "node/7694995660"
+},
+{
+"type": "clinic",
+"name": "Saini Clinic",
+"lat": 26.970713,
+"lng": 75.909297,
+"osm_id": "node/7694995661"
+},
+{
+"type": "clinic",
+"name": "Shree Om Laxmi Bangali Clinic",
+"lat": 26.785423,
+"lng": 75.818892,
+"osm_id": "node/7694995662"
+},
+{
+"type": "clinic",
+"name": "Shekhar Clinic",
+"lat": 26.951434,
+"lng": 75.865074,
+"osm_id": "node/7694995665"
+},
+{
+"type": "hospital",
+"name": "Krishna Hospital",
+"lat": 26.989151,
+"lng": 75.853717,
+"osm_id": "node/7694995667"
+},
+{
+"type": "clinic",
+"name": "Radhe Radhe Clinic",
+"lat": 26.785971,
+"lng": 75.816407,
+"osm_id": "node/7694995673"
+},
+{
+"type": "clinic",
+"name": "Aarogya Clinic",
+"lat": 26.828698,
+"lng": 75.772153,
+"osm_id": "node/7695122978"
+},
+{
+"type": "hospital",
+"name": "Swastik Hospital and Research Centre",
+"lat": 26.858647,
+"lng": 75.720417,
+"osm_id": "node/7695122979"
+},
+{
+"type": "clinic",
+"name": "Nirog Homoeopathy Clinic",
+"lat": 26.809014,
+"lng": 75.832272,
+"osm_id": "node/7695122980"
+},
+{
+"type": "clinic",
+"name": "Namo Clinic",
+"lat": 26.872269,
+"lng": 75.822138,
+"osm_id": "node/7695122982"
+},
+{
+"type": "hospital",
+"name": "Trilok Nursing Home",
+"lat": 26.835315,
+"lng": 75.824396,
+"osm_id": "node/7695122983"
+},
+{
+"type": "clinic",
+"name": "Abhi Clinic",
+"lat": 26.828832,
+"lng": 75.774688,
+"osm_id": "node/7695122984"
+},
+{
+"type": "clinic",
+"name": "Shikha Clinic",
+"lat": 26.821388,
+"lng": 75.769577,
+"osm_id": "node/7695122985"
+},
+{
+"type": "hospital",
+"name": "Om Sai Hospital",
+"lat": 26.805118,
+"lng": 75.832238,
+"osm_id": "node/7695122986"
+},
+{
+"type": "clinic",
+"name": "Nadeem Clinic",
+"lat": 26.800702,
+"lng": 75.798116,
+"osm_id": "node/7695122987"
+},
+{
+"type": "hospital",
+"name": "Garg Child Hospital",
+"lat": 26.871421,
+"lng": 75.694172,
+"osm_id": "node/7695122988"
+},
+{
+"type": "clinic",
+"name": "Mathur Multispeciality Clinic",
+"lat": 26.838775,
+"lng": 75.735626,
+"osm_id": "node/7695122990"
+},
+{
+"type": "hospital",
+"name": "Madhu Hospital",
+"lat": 26.824263,
+"lng": 75.777936,
+"osm_id": "node/7695122992"
+},
+{
+"type": "clinic",
+"name": "Take Care Clinic",
+"lat": 26.806501,
+"lng": 75.803649,
+"osm_id": "node/7695122993"
+},
+{
+"type": "clinic",
+"name": "DIVA Women Clinic",
+"lat": 26.819886,
+"lng": 75.754734,
+"osm_id": "node/7695122994"
+},
+{
+"type": "hospital",
+"name": "Vishwanath Hospital",
+"lat": 26.804902,
+"lng": 75.811702,
+"osm_id": "node/7695122995"
+},
+{
+"type": "clinic",
+"name": "Raj Poly Clinic",
+"lat": 26.856979,
+"lng": 75.819535,
+"osm_id": "node/7695122996"
+},
+{
+"type": "hospital",
+"name": "Ramanji Hospital",
+"lat": 26.803184,
+"lng": 75.855593,
+"osm_id": "node/7695122998"
+},
+{
+"type": "clinic",
+"name": "Aalok Clinic and Research Centre",
+"lat": 26.819044,
+"lng": 75.766031,
+"osm_id": "node/7695122999"
+},
+{
+"type": "clinic",
+"name": "Shiv Shakti Clinic",
+"lat": 26.814314,
+"lng": 75.824782,
+"osm_id": "node/7695123000"
+},
+{
+"type": "clinic",
+"name": "Sanjeevani Poly Clinic",
+"lat": 26.817976,
+"lng": 75.788491,
+"osm_id": "node/7695123001"
+},
+{
+"type": "clinic",
+"name": "Laxmi Homoeo Clinic",
+"lat": 26.818272,
+"lng": 75.795886,
+"osm_id": "node/7695123002"
+},
+{
+"type": "hospital",
+"name": "Jindal Hospital",
+"lat": 26.821994,
+"lng": 75.750691,
+"osm_id": "node/7695123003"
+},
+{
+"type": "hospital",
+"name": "Harmony National Homeopathy Hospital",
+"lat": 26.806006,
+"lng": 75.84575,
+"osm_id": "node/7695123004"
+},
+{
+"type": "hospital",
+"name": "Dr. Narang Hospital",
+"lat": 26.873825,
+"lng": 75.693192,
+"osm_id": "node/7695123005"
+},
+{
+"type": "clinic",
+"name": "Jaipur Health Clinic",
+"lat": 26.817778,
+"lng": 75.813799,
+"osm_id": "node/7695123006"
+},
+{
+"type": "hospital",
+"name": "Amrit Hospital",
+"lat": 26.815231,
+"lng": 75.781491,
+"osm_id": "node/7695123007"
+},
+{
+"type": "clinic",
+"name": "Shree Shyam Clinic",
+"lat": 26.812139,
+"lng": 75.788038,
+"osm_id": "node/7695123009"
+},
+{
+"type": "clinic",
+"name": "Gitanjli Clinic",
+"lat": 26.813275,
+"lng": 75.811783,
+"osm_id": "node/7695123010"
+},
+{
+"type": "clinic",
+"name": "Om Shri Sai Clinic",
+"lat": 26.818348,
+"lng": 75.768544,
+"osm_id": "node/7695123012"
+},
+{
+"type": "clinic",
+"name": "Gautam Clinic",
+"lat": 26.818717,
+"lng": 75.766559,
+"osm_id": "node/7695123013"
+},
+{
+"type": "clinic",
+"name": "Daisy Aura Health Clinic",
+"lat": 26.809988,
+"lng": 75.814958,
+"osm_id": "node/7695123015"
+},
+{
+"type": "clinic",
+"name": "Alka Clinic Lab",
+"lat": 26.857452,
+"lng": 75.820414,
+"osm_id": "node/7695123016"
+},
+{
+"type": "clinic",
+"name": "Alok Clinic",
+"lat": 26.807325,
+"lng": 75.792293,
+"osm_id": "node/7695123017"
+},
+{
+"type": "clinic",
+"name": "Raghukul Health Care Clinic",
+"lat": 26.822476,
+"lng": 75.753403,
+"osm_id": "node/7695123018"
+},
+{
+"type": "clinic",
+"name": "Chirakshi ENT and Cancer Clinic",
+"lat": 26.837706,
+"lng": 75.832021,
+"osm_id": "node/7695123019"
+},
+{
+"type": "clinic",
+"name": "Akta Clinic",
+"lat": 26.818435,
+"lng": 75.795898,
+"osm_id": "node/7695123020"
+},
+{
+"type": "clinic",
+"name": "Khandelwal Clinic",
+"lat": 26.82104,
+"lng": 75.757625,
+"osm_id": "node/7695123021"
+},
+{
+"type": "hospital",
+"name": "Shree Adinath Hospital",
+"lat": 26.817934,
+"lng": 75.748242,
+"osm_id": "node/7695123022"
+},
+{
+"type": "clinic",
+"name": "Rajgovind Chaild Clinic",
+"lat": 26.818085,
+"lng": 75.771985,
+"osm_id": "node/7695123023"
+},
+{
+"type": "clinic",
+"name": "Bharadwaj Clinic",
+"lat": 26.818664,
+"lng": 75.794969,
+"osm_id": "node/7695123024"
+},
+{
+"type": "hospital",
+"name": "Siddhi Vinayak ENT Hospital",
+"lat": 26.804959,
+"lng": 75.806221,
+"osm_id": "node/7695123025"
+},
+{
+"type": "hospital",
+"name": "Ansh Hospital",
+"lat": 26.821057,
+"lng": 75.759247,
+"osm_id": "node/7695123026"
+},
+{
+"type": "clinic",
+"name": "Shifa Clinic",
+"lat": 26.871382,
+"lng": 75.823694,
+"osm_id": "node/7695123027"
+},
+{
+"type": "clinic",
+"name": "Namo Clinic",
+"lat": 26.873217,
+"lng": 75.722422,
+"osm_id": "node/7695123028"
+},
+{
+"type": "hospital",
+"name": "Dr. Ramesh Memorial Hospital",
+"lat": 26.841026,
+"lng": 75.739939,
+"osm_id": "node/7695123029"
+},
+{
+"type": "clinic",
+"name": "Panwar Clinic",
+"lat": 26.799734,
+"lng": 75.865469,
+"osm_id": "node/7695123030"
+},
+{
+"type": "clinic",
+"name": "Neeraj Clinic",
+"lat": 26.808431,
+"lng": 75.814551,
+"osm_id": "node/7695123032"
+},
+{
+"type": "clinic",
+"name": "Shri Guru Clinic",
+"lat": 26.80856,
+"lng": 75.791336,
+"osm_id": "node/7695123033"
+},
+{
+"type": "clinic",
+"name": "Namo Clinic",
+"lat": 26.81907,
+"lng": 75.773367,
+"osm_id": "node/7695123035"
+},
+{
+"type": "clinic",
+"name": "Rajshree Clinic",
+"lat": 26.818608,
+"lng": 75.795332,
+"osm_id": "node/7695123036"
+},
+{
+"type": "hospital",
+"name": "Medilite Hospital",
+"lat": 26.812886,
+"lng": 75.782805,
+"osm_id": "node/7695123037"
+},
+{
+"type": "clinic",
+"name": "Shailaja Clinic",
+"lat": 26.85643,
+"lng": 75.81916,
+"osm_id": "node/7695123038"
+},
+{
+"type": "hospital",
+"name": "Baheti Hospital",
+"lat": 26.855061,
+"lng": 75.822584,
+"osm_id": "node/7695123039"
+},
+{
+"type": "hospital",
+"name": "Jaipur Eye and Dental Hospital",
+"lat": 26.824899,
+"lng": 75.847433,
+"osm_id": "node/7695123040"
+},
+{
+"type": "clinic",
+"name": "Aman Poly Clinic",
+"lat": 26.811013,
+"lng": 75.789369,
+"osm_id": "node/7695123041"
+},
+{
+"type": "clinic",
+"name": "Hiya Nursing Care & Clinic",
+"lat": 26.820574,
+"lng": 75.761486,
+"osm_id": "node/7695123042"
+},
+{
+"type": "clinic",
+"name": "Jain Clinic",
+"lat": 26.818645,
+"lng": 75.794765,
+"osm_id": "node/7695123043"
+},
+{
+"type": "clinic",
+"name": "Saubhagya Homeo Clinic",
+"lat": 26.811642,
+"lng": 75.799845,
+"osm_id": "node/7695123044"
+},
+{
+"type": "clinic",
+"name": "Shahari Swasthya Kendra",
+"lat": 26.83726,
+"lng": 75.820289,
+"osm_id": "node/7695123045"
+},
+{
+"type": "hospital",
+"name": "Balaji ENT Hospital",
+"lat": 26.801712,
+"lng": 75.82263,
+"osm_id": "node/7695123046"
+},
+{
+"type": "clinic",
+"name": "Garg Clinic",
+"lat": 26.820957,
+"lng": 75.804615,
+"osm_id": "node/7695123047"
+},
+{
+"type": "hospital",
+"name": "Agarwal Hospital and Maternity Centre",
+"lat": 26.811738,
+"lng": 75.7798,
+"osm_id": "node/7695123048"
+},
+{
+"type": "hospital",
+"name": "Bhagwati Ayurveda & Panchkarma Research Centre",
+"lat": 26.809742,
+"lng": 75.867289,
+"osm_id": "node/7695123049"
+},
+{
+"type": "clinic",
+"name": "Aayur Clinic",
+"lat": 26.821102,
+"lng": 75.758616,
+"osm_id": "node/7695123050"
+},
+{
+"type": "hospital",
+"name": "SG Hospital",
+"lat": 26.802886,
+"lng": 75.866088,
+"osm_id": "node/7695123051"
+},
+{
+"type": "clinic",
+"name": "Dr. Sunil Clinic",
+"lat": 26.81273,
+"lng": 75.866083,
+"osm_id": "node/7695123052"
+},
+{
+"type": "clinic",
+"name": "Maheshwari Child Clinic",
+"lat": 26.824765,
+"lng": 75.84739,
+"osm_id": "node/7695123053"
+},
+{
+"type": "hospital",
+"name": "Pardaya Memorial Trust Hospital",
+"lat": 26.816771,
+"lng": 75.782248,
+"osm_id": "node/7695123054"
+},
+{
+"type": "clinic",
+"name": "Urmil Raj Polyclinic",
+"lat": 26.841587,
+"lng": 75.830812,
+"osm_id": "node/7695123055"
+},
+{
+"type": "hospital",
+"name": "Siddharth Hospital",
+"lat": 26.873818,
+"lng": 75.69366,
+"osm_id": "node/7695123056"
+},
+{
+"type": "clinic",
+"name": "Bambala Clinic",
+"lat": 26.802624,
+"lng": 75.807926,
+"osm_id": "node/7695123057"
+},
+{
+"type": "clinic",
+"name": "Vashisth Clinic",
+"lat": 26.816623,
+"lng": 75.800145,
+"osm_id": "node/7695123058"
+},
+{
+"type": "hospital",
+"name": "Mathur Mahila and General Hospital",
+"lat": 26.802613,
+"lng": 75.803718,
+"osm_id": "node/7695123061"
+},
+{
+"type": "clinic",
+"name": "Dhiraj Clinic",
+"lat": 26.819463,
+"lng": 75.76567,
+"osm_id": "node/7695123062"
+},
+{
+"type": "hospital",
+"name": "Ashok Hospital & Research Centre",
+"lat": 26.869767,
+"lng": 75.695827,
+"osm_id": "node/7695123063"
+},
+{
+"type": "hospital",
+"name": "The Urmil Chest & General Hospital",
+"lat": 26.805035,
+"lng": 75.823361,
+"osm_id": "node/7695123064"
+},
+{
+"type": "clinic",
+"name": "Pathak Clinic",
+"lat": 26.87854,
+"lng": 75.76678,
+"osm_id": "node/7698135280"
+},
+{
+"type": "hospital",
+"name": "Chandra Hospital",
+"lat": 26.852416,
+"lng": 75.794869,
+"osm_id": "node/7698135281"
+},
+{
+"type": "clinic",
+"name": "Dr. Dogras Clinic",
+"lat": 26.874256,
+"lng": 75.804437,
+"osm_id": "node/7698135282"
+},
+{
+"type": "clinic",
+"name": "Dr. Hemant Bhartiya Clinic",
+"lat": 26.853253,
+"lng": 75.796339,
+"osm_id": "node/7698135283"
+},
+{
+"type": "clinic",
+"name": "Aman Polyclinic",
+"lat": 26.892255,
+"lng": 75.729215,
+"osm_id": "node/7698135284"
+},
+{
+"type": "clinic",
+"name": "Agrawal Clinic",
+"lat": 26.885953,
+"lng": 75.743719,
+"osm_id": "node/7698135286"
+},
+{
+"type": "hospital",
+"name": "Utkarsh Hospital",
+"lat": 26.87739,
+"lng": 75.750153,
+"osm_id": "node/7698135288"
+},
+{
+"type": "clinic",
+"name": "V Care Physiotherapy & Rehabilitation Clinic",
+"lat": 26.851684,
+"lng": 75.788821,
+"osm_id": "node/7698135289"
+},
+{
+"type": "hospital",
+"name": "M.B.M Children and General Hospital",
+"lat": 26.891121,
+"lng": 75.735301,
+"osm_id": "node/7698135292"
+},
+{
+"type": "clinic",
+"name": "Agrawal Clinic",
+"lat": 26.903584,
+"lng": 75.74939,
+"osm_id": "node/7698135293"
+},
+{
+"type": "clinic",
+"name": "Kasliwal Heart Clinic",
+"lat": 26.904393,
+"lng": 75.752412,
+"osm_id": "node/7698135294"
+},
+{
+"type": "clinic",
+"name": "Rameshwaram Homoeo Clinic",
+"lat": 26.879228,
+"lng": 75.7134,
+"osm_id": "node/7698135295"
+},
+{
+"type": "hospital",
+"name": "Daksh Hospital",
+"lat": 26.88331,
+"lng": 75.71592,
+"osm_id": "node/7698135297"
+},
+{
+"type": "clinic",
+"name": "Verma Eye Care Centre",
+"lat": 26.889917,
+"lng": 75.732608,
+"osm_id": "node/7698135298"
+},
+{
+"type": "clinic",
+"name": "Siradhna Clinic",
+"lat": 26.86138,
+"lng": 75.790711,
+"osm_id": "node/7698135299"
+},
+{
+"type": "clinic",
+"name": "Nova Clinic",
+"lat": 26.865374,
+"lng": 75.780151,
+"osm_id": "node/7698135300"
+},
+{
+"type": "hospital",
+"name": "Jaipur Hospital",
+"lat": 26.857354,
+"lng": 75.795004,
+"osm_id": "node/7698135301"
+},
+{
+"type": "hospital",
+"name": "Kshitij Hospital",
+"lat": 26.880408,
+"lng": 75.74534,
+"osm_id": "node/7698135302"
+},
+{
+"type": "clinic",
+"name": "City Family Clinic",
+"lat": 26.902372,
+"lng": 75.74301,
+"osm_id": "node/7698135303"
+},
+{
+"type": "hospital",
+"name": "Prasoon Hospital",
+"lat": 26.853449,
+"lng": 75.78989,
+"osm_id": "node/7698135304"
+},
+{
+"type": "clinic",
+"name": "Raghav Homeopathic Clinic",
+"lat": 26.868252,
+"lng": 75.775576,
+"osm_id": "node/7698135305"
+},
+{
+"type": "hospital",
+"name": "Jain Fertility & Mother Care",
+"lat": 26.885566,
+"lng": 75.745102,
+"osm_id": "node/7698135307"
+},
+{
+"type": "hospital",
+"name": "Chanda Devi Memorial Hospital",
+"lat": 26.88586,
+"lng": 75.765816,
+"osm_id": "node/7698135308"
+},
+{
+"type": "hospital",
+"name": "Vedanta Superspeciality Hospital",
+"lat": 26.889881,
+"lng": 75.738033,
+"osm_id": "node/7698135309"
+},
+{
+"type": "hospital",
+"name": "Jaipur Doorbeen Hospital",
+"lat": 26.885076,
+"lng": 75.767081,
+"osm_id": "node/7698135311"
+},
+{
+"type": "clinic",
+"name": "Mahesh Clinic",
+"lat": 26.867761,
+"lng": 75.775755,
+"osm_id": "node/7698135312"
+},
+{
+"type": "hospital",
+"name": "Royal Hospital",
+"lat": 26.867216,
+"lng": 75.784621,
+"osm_id": "node/7698135314"
+},
+{
+"type": "clinic",
+"name": "Gupta Clinic",
+"lat": 26.885999,
+"lng": 75.765874,
+"osm_id": "node/7698135315"
+},
+{
+"type": "clinic",
+"name": "Dr. Pawan Saini's Physiotherapy Clinic",
+"lat": 26.874453,
+"lng": 75.746421,
+"osm_id": "node/7698135316"
+},
+{
+"type": "hospital",
+"name": "Shubhayush Hospital",
+"lat": 26.878055,
+"lng": 75.741452,
+"osm_id": "node/7698135319"
+},
+{
+"type": "clinic",
+"name": "Homeopathic Aarogya Dham",
+"lat": 26.887119,
+"lng": 75.751305,
+"osm_id": "node/7698135320"
+},
+{
+"type": "hospital",
+"name": "R N Multispeciality Hospital",
+"lat": 26.88477,
+"lng": 75.752358,
+"osm_id": "node/7698135321"
+},
+{
+"type": "clinic",
+"name": "Radu Clinic",
+"lat": 26.891671,
+"lng": 75.718489,
+"osm_id": "node/7698135322"
+},
+{
+"type": "clinic",
+"name": "Shreeji Homeopathic Clinic",
+"lat": 26.886778,
+"lng": 75.762058,
+"osm_id": "node/7698135323"
+},
+{
+"type": "clinic",
+"name": "Vardhman Clinic & Diagnostic Centre",
+"lat": 26.848143,
+"lng": 75.792636,
+"osm_id": "node/7698135326"
+},
+{
+"type": "clinic",
+"name": "Anurag Ayurveda Clinic",
+"lat": 26.877997,
+"lng": 75.741449,
+"osm_id": "node/7698135327"
+},
+{
+"type": "clinic",
+"name": "Upasna Homoeo Clinic",
+"lat": 26.876809,
+"lng": 75.77644,
+"osm_id": "node/7698135328"
+},
+{
+"type": "clinic",
+"name": "Namo Clinic",
+"lat": 26.879486,
+"lng": 75.740417,
+"osm_id": "node/7698135331"
+},
+{
+"type": "clinic",
+"name": "Jindal Homeo Clinic",
+"lat": 26.87897,
+"lng": 75.766362,
+"osm_id": "node/7698135332"
+},
+{
+"type": "hospital",
+"name": "Gauri Multi Speciality Hospital",
+"lat": 26.882411,
+"lng": 75.71514,
+"osm_id": "node/7698135333"
+},
+{
+"type": "hospital",
+"name": "Government Hospital",
+"lat": 26.869932,
+"lng": 75.778482,
+"osm_id": "node/7698135334"
+},
+{
+"type": "hospital",
+"name": "Neelam Hospital",
+"lat": 26.903359,
+"lng": 75.715375,
+"osm_id": "node/7698135335"
+},
+{
+"type": "hospital",
+"name": "Yadav Homeopathic Hospital",
+"lat": 26.872107,
+"lng": 75.800163,
+"osm_id": "node/7698135336"
+},
+{
+"type": "clinic",
+"name": "Sparsh Clinic",
+"lat": 26.8664,
+"lng": 75.781172,
+"osm_id": "node/7698135337"
+},
+{
+"type": "clinic",
+"name": "Deep Usha Clinic",
+"lat": 26.852475,
+"lng": 75.795992,
+"osm_id": "node/7698135338"
+},
+{
+"type": "clinic",
+"name": "Dr. Charan Clinic",
+"lat": 26.865244,
+"lng": 75.777708,
+"osm_id": "node/7698135339"
+},
+{
+"type": "hospital",
+"name": "Abhishek Hospital",
+"lat": 26.876513,
+"lng": 75.725424,
+"osm_id": "node/7698135340"
+},
+{
+"type": "clinic",
+"name": "Mishra Clinic",
+"lat": 26.848078,
+"lng": 75.791681,
+"osm_id": "node/7698135341"
+},
+{
+"type": "hospital",
+"name": "Dwarka Hospital",
+"lat": 26.894263,
+"lng": 75.764207,
+"osm_id": "node/7698135342"
+},
+{
+"type": "clinic",
+"name": "Raj Clinic",
+"lat": 26.901958,
+"lng": 75.745686,
+"osm_id": "node/7698135343"
+},
+{
+"type": "clinic",
+"name": "Cure Well Children & General Clinic",
+"lat": 26.894207,
+"lng": 75.731528,
+"osm_id": "node/7698135344"
+},
+{
+"type": "hospital",
+"name": "Rohit Hospital",
+"lat": 26.894527,
+"lng": 75.74745,
+"osm_id": "node/7698135348"
+},
+{
+"type": "clinic",
+"name": "Dr. Renu Saigal Clinic",
+"lat": 26.86265,
+"lng": 75.791808,
+"osm_id": "node/7698135350"
+},
+{
+"type": "hospital",
+"name": "Purva Hospital",
+"lat": 26.894414,
+"lng": 75.745412,
+"osm_id": "node/7698135353"
+},
+{
+"type": "clinic",
+"name": "Suraksha Clinic",
+"lat": 26.86371,
+"lng": 75.796674,
+"osm_id": "node/7698135355"
+},
+{
+"type": "clinic",
+"name": "Jain Physiotherapy Clinic",
+"lat": 26.904152,
+"lng": 75.746954,
+"osm_id": "node/7698135356"
+},
+{
+"type": "clinic",
+"name": "Gupata Homeo Clinic",
+"lat": 26.86804,
+"lng": 75.783259,
+"osm_id": "node/7698135357"
+},
+{
+"type": "clinic",
+"name": "Thyroid Diabetes Allergy Clinic",
+"lat": 26.888624,
+"lng": 75.747051,
+"osm_id": "node/7698135358"
+},
+{
+"type": "hospital",
+"name": "Kothari Hospital",
+"lat": 26.89884,
+"lng": 75.750788,
+"osm_id": "node/7698135359"
+},
+{
+"type": "clinic",
+"name": "Sharma Clinic",
+"lat": 26.848203,
+"lng": 75.793676,
+"osm_id": "node/7698135360"
+},
+{
+"type": "clinic",
+"name": "Dr. P L Clinic",
+"lat": 26.866167,
+"lng": 75.779563,
+"osm_id": "node/7698135362"
+},
+{
+"type": "hospital",
+"name": "Gouri Multi-speciality Hospital",
+"lat": 26.889523,
+"lng": 75.711393,
+"osm_id": "node/7698135363"
+},
+{
+"type": "clinic",
+"name": "NM Clinic",
+"lat": 26.882124,
+"lng": 75.71621,
+"osm_id": "node/7698135364"
+},
+{
+"type": "clinic",
+"name": "Jay Gurudev Clinic",
+"lat": 26.893359,
+"lng": 75.71854,
+"osm_id": "node/7698135365"
+},
+{
+"type": "clinic",
+"name": "Shuvam Clinic",
+"lat": 26.852048,
+"lng": 75.787453,
+"osm_id": "node/7698135366"
+},
+{
+"type": "clinic",
+"name": "Neo Clinic",
+"lat": 26.88281,
+"lng": 75.75528,
+"osm_id": "node/7698135367"
+},
+{
+"type": "clinic",
+"name": "Kamla Devi Homoeopathic Clinic",
+"lat": 26.876922,
+"lng": 75.720722,
+"osm_id": "node/7698135368"
+},
+{
+"type": "clinic",
+"name": "Skin Care Clinic",
+"lat": 26.858487,
+"lng": 75.78453,
+"osm_id": "node/7698135370"
+},
+{
+"type": "hospital",
+"name": "Aanch Hospital",
+"lat": 26.850147,
+"lng": 75.796205,
+"osm_id": "node/7698135371"
+},
+{
+"type": "clinic",
+"name": "Vivanta Clinics",
+"lat": 26.900815,
+"lng": 75.751752,
+"osm_id": "node/7698135373"
+},
+{
+"type": "hospital",
+"name": "Jaipur Hospital",
+"lat": 26.849126,
+"lng": 75.793398,
+"osm_id": "node/7698135375"
+},
+{
+"type": "clinic",
+"name": "Jain Homeo Clinic",
+"lat": 26.889102,
+"lng": 75.749238,
+"osm_id": "node/7698135376"
+},
+{
+"type": "hospital",
+"name": "Sethi Hospital",
+"lat": 26.854804,
+"lng": 75.793442,
+"osm_id": "node/7698135377"
+},
+{
+"type": "clinic",
+"name": "Family Care Poly Clinic",
+"lat": 26.903233,
+"lng": 75.715802,
+"osm_id": "node/7698135378"
+},
+{
+"type": "clinic",
+"name": "Dr. Payal Physiotherapy Clinic",
+"lat": 26.904083,
+"lng": 75.744453,
+"osm_id": "node/7698135379"
+},
+{
+"type": "clinic",
+"name": "Dr. Mahesh Gupta Child Clinic",
+"lat": 26.875819,
+"lng": 75.774887,
+"osm_id": "node/7698135380"
+},
+{
+"type": "clinic",
+"name": "Komal Clinic",
+"lat": 26.881947,
+"lng": 75.724944,
+"osm_id": "node/7698135381"
+},
+{
+"type": "clinic",
+"name": "Bhagwan Mahaveer Chikitsalaya",
+"lat": 26.852357,
+"lng": 75.789889,
+"osm_id": "node/7698135383"
+},
+{
+"type": "hospital",
+"name": "Shishumangal Hospital",
+"lat": 26.897711,
+"lng": 75.742453,
+"osm_id": "node/7698135384"
+},
+{
+"type": "clinic",
+"name": "PBM Multispeciality Clinic",
+"lat": 26.871132,
+"lng": 75.744141,
+"osm_id": "node/7698135385"
+},
+{
+"type": "hospital",
+"name": "Yuvaan Child and General Hospital",
+"lat": 26.947259,
+"lng": 75.720181,
+"osm_id": "node/7698409950"
+},
+{
+"type": "clinic",
+"name": "Kaveri Clinic",
+"lat": 26.901622,
+"lng": 75.771277,
+"osm_id": "node/7698409951"
+},
+{
+"type": "clinic",
+"name": "Outbloom Clinics",
+"lat": 26.911317,
+"lng": 75.730176,
+"osm_id": "node/7698409952"
+},
+{
+"type": "clinic",
+"name": "Reya Child Clinic",
+"lat": 26.896253,
+"lng": 75.784739,
+"osm_id": "node/7698409954"
+},
+{
+"type": "clinic",
+"name": "Dr. Shekhawat's Clinic",
+"lat": 26.896294,
+"lng": 75.784746,
+"osm_id": "node/7698409955"
+},
+{
+"type": "clinic",
+"name": "Vinayak Homoeo Clinic",
+"lat": 26.952009,
+"lng": 75.712395,
+"osm_id": "node/7698409956"
+},
+{
+"type": "hospital",
+"name": "Lal Kothi Hospital",
+"lat": 26.888786,
+"lng": 75.798318,
+"osm_id": "node/7698409957"
+},
+{
+"type": "hospital",
+"name": "Anupam Eye Hospital",
+"lat": 26.890967,
+"lng": 75.802181,
+"osm_id": "node/7698409958"
+},
+{
+"type": "hospital",
+"name": "Usha Hospital",
+"lat": 26.921774,
+"lng": 75.745466,
+"osm_id": "node/7698409959"
+},
+{
+"type": "clinic",
+"name": "Shree Shyam Child and Maternity Clinic",
+"lat": 26.942654,
+"lng": 75.751962,
+"osm_id": "node/7698409960"
+},
+{
+"type": "clinic",
+"name": "Shekar Clinic",
+"lat": 26.889034,
+"lng": 75.78858,
+"osm_id": "node/7698409962"
+},
+{
+"type": "hospital",
+"name": "Param Brahm Anand Hospital",
+"lat": 26.954114,
+"lng": 75.708327,
+"osm_id": "node/7698409963"
+},
+{
+"type": "clinic",
+"name": "Dev Clinic",
+"lat": 26.937816,
+"lng": 75.752616,
+"osm_id": "node/7698409964"
+},
+{
+"type": "clinic",
+"name": "Welfare Physiotherapy Clinic",
+"lat": 26.924173,
+"lng": 75.705468,
+"osm_id": "node/7698409965"
+},
+{
+"type": "hospital",
+"name": "Jeevan Joyti Hospital",
+"lat": 26.905852,
+"lng": 75.737538,
+"osm_id": "node/7698409966"
+},
+{
+"type": "clinic",
+"name": "Dr. Archana's Skin & Cosmetic Clinic",
+"lat": 26.904731,
+"lng": 75.735922,
+"osm_id": "node/7698409967"
+},
+{
+"type": "clinic",
+"name": "Matrix Heart & Skin Clinic",
+"lat": 26.921353,
+"lng": 75.741565,
+"osm_id": "node/7698409968"
+},
+{
+"type": "hospital",
+"name": "BB Saxena Hospital",
+"lat": 26.91391,
+"lng": 75.746178,
+"osm_id": "node/7698409969"
+},
+{
+"type": "clinic",
+"name": "Eva Slimming Clinic",
+"lat": 26.905209,
+"lng": 75.735906,
+"osm_id": "node/7698409971"
+},
+{
+"type": "clinic",
+"name": "Satyan Clinic",
+"lat": 26.904383,
+"lng": 75.735535,
+"osm_id": "node/7698409972"
+},
+{
+"type": "clinic",
+"name": "Shekhawati Child and Polyclinic",
+"lat": 26.937231,
+"lng": 75.75164,
+"osm_id": "node/7698409974"
+},
+{
+"type": "clinic",
+"name": "Enhance Clinic",
+"lat": 26.891474,
+"lng": 75.794414,
+"osm_id": "node/7698409975"
+},
+{
+"type": "hospital",
+"name": "Arpit Hospital",
+"lat": 26.911535,
+"lng": 75.722396,
+"osm_id": "node/7698409977"
+},
+{
+"type": "hospital",
+"name": "Shree K B M Hospital",
+"lat": 26.92142,
+"lng": 75.724666,
+"osm_id": "node/7698409978"
+},
+{
+"type": "hospital",
+"name": "Shri Ramniwas Memorial Hospital & Allergy Centre",
+"lat": 26.940648,
+"lng": 75.74704,
+"osm_id": "node/7698409979"
+},
+{
+"type": "hospital",
+"name": "Metrocity Hospital",
+"lat": 26.885043,
+"lng": 75.785122,
+"osm_id": "node/7698409980"
+},
+{
+"type": "clinic",
+"name": "Prasannam Clinic",
+"lat": 26.923371,
+"lng": 75.741415,
+"osm_id": "node/7698409981"
+},
+{
+"type": "clinic",
+"name": "Dr. Rahul Rai Super Specialist Liver Clinic",
+"lat": 26.887335,
+"lng": 75.808001,
+"osm_id": "node/7698409983"
+},
+{
+"type": "hospital",
+"name": "Kartarpura General Dental Hospital",
+"lat": 26.88509,
+"lng": 75.78478,
+"osm_id": "node/7698409984"
+},
+{
+"type": "hospital",
+"name": "SMS Hospital",
+"lat": 26.91846,
+"lng": 75.750299,
+"osm_id": "node/7698409986"
+},
+{
+"type": "clinic",
+"name": "Vinayak Homoeopathic Clinic",
+"lat": 26.884235,
+"lng": 75.784201,
+"osm_id": "node/7698409987"
+},
+{
+"type": "clinic",
+"name": "Dr. Praveen Joshi Clinic",
+"lat": 26.922172,
+"lng": 75.749431,
+"osm_id": "node/7698409988"
+},
+{
+"type": "clinic",
+"name": "Dr. Dhingra's Clinic",
+"lat": 26.887327,
+"lng": 75.787524,
+"osm_id": "node/7698409989"
+},
+{
+"type": "hospital",
+"name": "Ayurvedic Hospital",
+"lat": 26.909288,
+"lng": 75.770686,
+"osm_id": "node/7698409990"
+},
+{
+"type": "clinic",
+"name": "Universal Clinic",
+"lat": 26.91179,
+"lng": 75.72587,
+"osm_id": "node/7698409991"
+},
+{
+"type": "clinic",
+"name": "Bhardwaj Clinic",
+"lat": 26.892377,
+"lng": 75.777291,
+"osm_id": "node/7698409992"
+},
+{
+"type": "clinic",
+"name": "Bhagwati Clinic",
+"lat": 26.915461,
+"lng": 75.723599,
+"osm_id": "node/7698409993"
+},
+{
+"type": "hospital",
+"name": "KKS Urology and General Hospital",
+"lat": 26.888711,
+"lng": 75.808024,
+"osm_id": "node/7698409994"
+},
+{
+"type": "clinic",
+"name": "Dr. Jain's Bone and Joint Clinic",
+"lat": 26.890048,
+"lng": 75.806823,
+"osm_id": "node/7698409995"
+},
+{
+"type": "clinic",
+"name": "Homeopathy Clinic",
+"lat": 26.941255,
+"lng": 75.754322,
+"osm_id": "node/7698409996"
+},
+{
+"type": "clinic",
+"name": "Ankit Clinic",
+"lat": 26.885092,
+"lng": 75.786046,
+"osm_id": "node/7698409998"
+},
+{
+"type": "clinic",
+"name": "Dr. Rajendra Singh Clinic",
+"lat": 26.938041,
+"lng": 75.757956,
+"osm_id": "node/7698409999"
+},
+{
+"type": "hospital",
+"name": "Rishab Hospital",
+"lat": 26.953716,
+"lng": 75.708201,
+"osm_id": "node/7698410002"
+},
+{
+"type": "clinic",
+"name": "Dhanwantri Clinic",
+"lat": 26.904849,
+"lng": 75.724052,
+"osm_id": "node/7698410003"
+},
+{
+"type": "clinic",
+"name": "Om Child Clinic",
+"lat": 26.911986,
+"lng": 75.726822,
+"osm_id": "node/7698410004"
+},
+{
+"type": "clinic",
+"name": "Gupta's Clinic",
+"lat": 26.912137,
+"lng": 75.730785,
+"osm_id": "node/7698410005"
+},
+{
+"type": "clinic",
+"name": "Jidhan Clinic",
+"lat": 26.916754,
+"lng": 75.780232,
+"osm_id": "node/7698410006"
+},
+{
+"type": "clinic",
+"name": "Raj Shri Clinics",
+"lat": 26.892949,
+"lng": 75.779795,
+"osm_id": "node/7698410008"
+},
+{
+"type": "clinic",
+"name": "Dr. Geraldine Jain's Punarnawah Skin Laser & Aesthetic Clinic",
+"lat": 26.901632,
+"lng": 75.780777,
+"osm_id": "node/7698410009"
+},
+{
+"type": "clinic",
+"name": "Medical Clinic",
+"lat": 26.908345,
+"lng": 75.769461,
+"osm_id": "node/7698410010"
+},
+{
+"type": "hospital",
+"name": "Vyom Hospital",
+"lat": 26.889777,
+"lng": 75.785094,
+"osm_id": "node/7698410011"
+},
+{
+"type": "hospital",
+"name": "Janana Hospital",
+"lat": 26.947972,
+"lng": 75.712536,
+"osm_id": "node/7698410012"
+},
+{
+"type": "clinic",
+"name": "Balodia Child Clinic",
+"lat": 26.906529,
+"lng": 75.774765,
+"osm_id": "node/7698410013"
+},
+{
+"type": "clinic",
+"name": "jagdamba Clinic",
+"lat": 26.879906,
+"lng": 75.800033,
+"osm_id": "node/7698410014"
+},
+{
+"type": "clinic",
+"name": "Rahat Ortho Arthritis Clinic",
+"lat": 26.888142,
+"lng": 75.806035,
+"osm_id": "node/7698410015"
+},
+{
+"type": "hospital",
+"name": "Janni Nursing Home",
+"lat": 26.956394,
+"lng": 75.709583,
+"osm_id": "node/7698410016"
+},
+{
+"type": "clinic",
+"name": "Pink City Clinic",
+"lat": 26.922579,
+"lng": 75.721913,
+"osm_id": "node/7698410018"
+},
+{
+"type": "clinic",
+"name": "Shri Laxmi Poly Clinic",
+"lat": 26.947579,
+"lng": 75.721466,
+"osm_id": "node/7698410019"
+},
+{
+"type": "hospital",
+"name": "Sahara Child Hospital",
+"lat": 26.943412,
+"lng": 75.754349,
+"osm_id": "node/7698410020"
+},
+{
+"type": "hospital",
+"name": "Shaurya Hospital",
+"lat": 26.896903,
+"lng": 75.784416,
+"osm_id": "node/7698410021"
+},
+{
+"type": "clinic",
+"name": "Dhruv Clinic",
+"lat": 26.889832,
+"lng": 75.808309,
+"osm_id": "node/7698410022"
+},
+{
+"type": "hospital",
+"name": "Naveen Fracture and General Hospital",
+"lat": 26.904629,
+"lng": 75.735544,
+"osm_id": "node/7698410023"
+},
+{
+"type": "clinic",
+"name": "Bhartiya Clinic",
+"lat": 26.891142,
+"lng": 75.787529,
+"osm_id": "node/7698410025"
+},
+{
+"type": "clinic",
+"name": "Durga Poly Clinic",
+"lat": 26.904699,
+"lng": 75.775432,
+"osm_id": "node/7698410026"
+},
+{
+"type": "clinic",
+"name": "Gastro and Liver care",
+"lat": 26.911711,
+"lng": 75.779264,
+"osm_id": "node/7698410027"
+},
+{
+"type": "clinic",
+"name": "K.C. Eye Clinic",
+"lat": 26.921951,
+"lng": 75.722549,
+"osm_id": "node/7698410028"
+},
+{
+"type": "clinic",
+"name": "Sanjivani Clinic",
+"lat": 26.945723,
+"lng": 75.710469,
+"osm_id": "node/7698410029"
+},
+{
+"type": "clinic",
+"name": "Life Care Clinic",
+"lat": 26.949193,
+"lng": 75.712568,
+"osm_id": "node/7698410030"
+},
+{
+"type": "hospital",
+"name": "Sethi Mother and Children Hospital",
+"lat": 26.889688,
+"lng": 75.792066,
+"osm_id": "node/7698410031"
+},
+{
+"type": "clinic",
+"name": "Jai Maa Mhakali Pali Clinic",
+"lat": 26.943348,
+"lng": 75.710701,
+"osm_id": "node/7698410033"
+},
+{
+"type": "clinic",
+"name": "Dr. Suresh Yadav's Urology Clinic",
+"lat": 26.936348,
+"lng": 75.746328,
+"osm_id": "node/7698410036"
+},
+{
+"type": "clinic",
+"name": "Chouhan Clinic",
+"lat": 26.936861,
+"lng": 75.756356,
+"osm_id": "node/7698410037"
+},
+{
+"type": "hospital",
+"name": "Unique Hospital",
+"lat": 26.916501,
+"lng": 75.747077,
+"osm_id": "node/7698410038"
+},
+{
+"type": "hospital",
+"name": "Aarti Zenana Hospital",
+"lat": 26.924998,
+"lng": 75.742809,
+"osm_id": "node/7698410040"
+},
+{
+"type": "clinic",
+"name": "Shivam Surgicals",
+"lat": 26.894302,
+"lng": 75.783483,
+"osm_id": "node/7698410041"
+},
+{
+"type": "clinic",
+"name": "Krishnam Homoeo Clinic",
+"lat": 26.880298,
+"lng": 75.799624,
+"osm_id": "node/7698410042"
+},
+{
+"type": "clinic",
+"name": "Krishna Homeo Clinic",
+"lat": 26.939678,
+"lng": 75.75928,
+"osm_id": "node/7698410045"
+},
+{
+"type": "hospital",
+"name": "Shobha Nursing Home",
+"lat": 26.936505,
+"lng": 75.756109,
+"osm_id": "node/7698410046"
+},
+{
+"type": "hospital",
+"name": "Krishiv Multi Speciality Hospital",
+"lat": 26.911503,
+"lng": 75.736644,
+"osm_id": "node/7698410050"
+},
+{
+"type": "clinic",
+"name": "Parikh's Heart Clinic",
+"lat": 26.902571,
+"lng": 75.782775,
+"osm_id": "node/7698410051"
+},
+{
+"type": "hospital",
+"name": "Chowan Hospital",
+"lat": 26.925696,
+"lng": 75.7132,
+"osm_id": "node/7698410052"
+},
+{
+"type": "hospital",
+"name": "Vaishali Hospital",
+"lat": 26.91164,
+"lng": 75.731094,
+"osm_id": "node/7698410053"
+},
+{
+"type": "clinic",
+"name": "Asha Homeopathic Clinic",
+"lat": 26.905167,
+"lng": 75.725906,
+"osm_id": "node/7698410054"
+},
+{
+"type": "clinic",
+"name": "Agrawal Child Clinic",
+"lat": 26.899964,
+"lng": 75.783795,
+"osm_id": "node/7698410056"
+},
+{
+"type": "hospital",
+"name": "Purohit Eye Hospital",
+"lat": 26.881238,
+"lng": 75.791686,
+"osm_id": "node/7698410057"
+},
+{
+"type": "clinic",
+"name": "Shree Panchayati Homoeopathic Clinic",
+"lat": 26.922133,
+"lng": 75.79017,
+"osm_id": "node/7698486516"
+},
+{
+"type": "hospital",
+"name": "Pandia Eye Dental and General Hospital",
+"lat": 26.946624,
+"lng": 75.777618,
+"osm_id": "node/7698486517"
+},
+{
+"type": "clinic",
+"name": "Dr. Vijay Sharma Gastroenterology Clinic",
+"lat": 26.937042,
+"lng": 75.788851,
+"osm_id": "node/7698486518"
+},
+{
+"type": "hospital",
+"name": "Neuro Care Hospital",
+"lat": 26.955894,
+"lng": 75.776602,
+"osm_id": "node/7698486519"
+},
+{
+"type": "clinic",
+"name": "Sonkhya ENT Centre",
+"lat": 26.96804,
+"lng": 75.760118,
+"osm_id": "node/7698486520"
+},
+{
+"type": "hospital",
+"name": "Mittal Hospital and Research Centre",
+"lat": 26.962129,
+"lng": 75.780748,
+"osm_id": "node/7698486521"
+},
+{
+"type": "hospital",
+"name": "Poddar Hospital",
+"lat": 26.954915,
+"lng": 75.77098,
+"osm_id": "node/7698486522"
+},
+{
+"type": "hospital",
+"name": "Shiva Hospital",
+"lat": 26.97466,
+"lng": 75.764689,
+"osm_id": "node/7698486525"
+},
+{
+"type": "clinic",
+"name": "Gupta Clinic",
+"lat": 26.90156,
+"lng": 75.788836,
+"osm_id": "node/7698486526"
+},
+{
+"type": "clinic",
+"name": "Dariya Clinic",
+"lat": 26.979519,
+"lng": 75.766477,
+"osm_id": "node/7698486527"
+},
+{
+"type": "clinic",
+"name": "Dr. Kanodia's Clinic",
+"lat": 26.963339,
+"lng": 75.780128,
+"osm_id": "node/7698486528"
+},
+{
+"type": "clinic",
+"name": "Spine Care Clinic",
+"lat": 26.963975,
+"lng": 75.780702,
+"osm_id": "node/7698486529"
+},
+{
+"type": "clinic",
+"name": "Aastha Clinic",
+"lat": 26.963359,
+"lng": 75.780409,
+"osm_id": "node/7698486530"
+},
+{
+"type": "hospital",
+"name": "SMS Hospital",
+"lat": 26.980635,
+"lng": 75.761354,
+"osm_id": "node/7698486531"
+},
+{
+"type": "hospital",
+"name": "Lekhra Hospital",
+"lat": 26.936021,
+"lng": 75.788476,
+"osm_id": "node/7698486532"
+},
+{
+"type": "clinic",
+"name": "Baliyan's Clinic",
+"lat": 26.966744,
+"lng": 75.783345,
+"osm_id": "node/7698486536"
+},
+{
+"type": "hospital",
+"name": "Triveni Hospital",
+"lat": 26.917098,
+"lng": 75.795237,
+"osm_id": "node/7698486537"
+},
+{
+"type": "clinic",
+"name": "Chelani's Clinic",
+"lat": 26.934081,
+"lng": 75.791815,
+"osm_id": "node/7698486538"
+},
+{
+"type": "clinic",
+"name": "Pulse Clinic",
+"lat": 26.941888,
+"lng": 75.777762,
+"osm_id": "node/7698486539"
+},
+{
+"type": "clinic",
+"name": "Dr. Sakshi Skin and Laser Clinic",
+"lat": 26.962141,
+"lng": 75.779781,
+"osm_id": "node/7698486542"
+},
+{
+"type": "hospital",
+"name": "Shri Narayan Hospital",
+"lat": 26.968792,
+"lng": 75.766504,
+"osm_id": "node/7698486543"
+},
+{
+"type": "clinic",
+"name": "Family Clinic",
+"lat": 26.961347,
+"lng": 75.7804,
+"osm_id": "node/7698486544"
+},
+{
+"type": "clinic",
+"name": "Maya Homoeopathic Clinic",
+"lat": 26.974644,
+"lng": 75.760679,
+"osm_id": "node/7698486545"
+},
+{
+"type": "clinic",
+"name": "Albina Clinic",
+"lat": 26.972714,
+"lng": 75.771362,
+"osm_id": "node/7698486546"
+},
+{
+"type": "hospital",
+"name": "Prerna Hospital",
+"lat": 26.955093,
+"lng": 75.772212,
+"osm_id": "node/7698486547"
+},
+{
+"type": "hospital",
+"name": "Salasar Child Hospital",
+"lat": 26.951298,
+"lng": 75.771186,
+"osm_id": "node/7698486548"
+},
+{
+"type": "hospital",
+"name": "Raisinghani Hospital",
+"lat": 26.934346,
+"lng": 75.790462,
+"osm_id": "node/7698486549"
+},
+{
+"type": "clinic",
+"name": "Khurana Clinic",
+"lat": 26.973336,
+"lng": 75.761811,
+"osm_id": "node/7698486550"
+},
+{
+"type": "hospital",
+"name": "Om Mother and Child Hospital",
+"lat": 26.969318,
+"lng": 75.763056,
+"osm_id": "node/7698486551"
+},
+{
+"type": "clinic",
+"name": "Aapno Health Clinic",
+"lat": 26.967567,
+"lng": 75.7831,
+"osm_id": "node/7698486554"
+},
+{
+"type": "clinic",
+"name": "Jain Chest Care Centre",
+"lat": 26.937308,
+"lng": 75.795046,
+"osm_id": "node/7698486555"
+},
+{
+"type": "clinic",
+"name": "Amba Clinic",
+"lat": 26.940662,
+"lng": 75.776972,
+"osm_id": "node/7698486556"
+},
+{
+"type": "clinic",
+"name": "Homoeopathic Clinic",
+"lat": 26.978969,
+"lng": 75.768994,
+"osm_id": "node/7698486557"
+},
+{
+"type": "hospital",
+"name": "Tiwari Child and Dental Hospital",
+"lat": 26.961853,
+"lng": 75.762884,
+"osm_id": "node/7698486560"
+},
+{
+"type": "hospital",
+"name": "Jaipur Day Care Hospital",
+"lat": 26.982561,
+"lng": 75.76409,
+"osm_id": "node/7698486561"
+},
+{
+"type": "clinic",
+"name": "Rajasthan Homeopathic Centre & Clinic , Jaipur",
+"lat": 26.920699,
+"lng": 75.791859,
+"osm_id": "node/7698486562"
+},
+{
+"type": "clinic",
+"name": "Manav Seva Clinic",
+"lat": 26.950262,
+"lng": 75.772311,
+"osm_id": "node/7698486567"
+},
+{
+"type": "clinic",
+"name": "Saha Clinic",
+"lat": 26.925119,
+"lng": 75.790712,
+"osm_id": "node/7698486568"
+},
+{
+"type": "clinic",
+"name": "Siddhi Vinayak Homeopathic Clinic",
+"lat": 26.947026,
+"lng": 75.775419,
+"osm_id": "node/7698486569"
+},
+{
+"type": "clinic",
+"name": "Ravi Gupta Heart Clinic",
+"lat": 26.946912,
+"lng": 75.77415,
+"osm_id": "node/7698486570"
+},
+{
+"type": "hospital",
+"name": "Vyas Hospital",
+"lat": 26.976501,
+"lng": 75.762143,
+"osm_id": "node/7698486572"
+},
+{
+"type": "hospital",
+"name": "Dr. Johar's Ayush Unani Hospital",
+"lat": 26.949749,
+"lng": 75.799131,
+"osm_id": "node/7698486573"
+},
+{
+"type": "clinic",
+"name": "Dr. B. Lal Clinic",
+"lat": 26.96537,
+"lng": 75.781465,
+"osm_id": "node/7698486574"
+},
+{
+"type": "clinic",
+"name": "ITS Clinic",
+"lat": 26.906194,
+"lng": 75.796271,
+"osm_id": "node/7698486575"
+},
+{
+"type": "hospital",
+"name": "Shree Balaji Hospital",
+"lat": 26.967917,
+"lng": 75.7662,
+"osm_id": "node/7698486576"
+},
+{
+"type": "hospital",
+"name": "Suraksha Hospital",
+"lat": 26.973107,
+"lng": 75.765048,
+"osm_id": "node/7698486577"
+},
+{
+"type": "hospital",
+"name": "V.N.S. Homoeopathy Hospital",
+"lat": 26.947059,
+"lng": 75.778851,
+"osm_id": "node/7698486580"
+},
+{
+"type": "hospital",
+"name": "Pooja Hospital",
+"lat": 26.976903,
+"lng": 75.76442,
+"osm_id": "node/7698486581"
+},
+{
+"type": "hospital",
+"name": "Neelam Eye Hospital",
+"lat": 26.955135,
+"lng": 75.771889,
+"osm_id": "node/7698486582"
+},
+{
+"type": "hospital",
+"name": "Soni Nursing Home",
+"lat": 26.936608,
+"lng": 75.789924,
+"osm_id": "node/7698486583"
+},
+{
+"type": "clinic",
+"name": "Sun Clinic",
+"lat": 26.920676,
+"lng": 75.789337,
+"osm_id": "node/7698486584"
+},
+{
+"type": "clinic",
+"name": "Hiteshi Homeo Clinic & Skin Allergy Centre",
+"lat": 26.974645,
+"lng": 75.7701,
+"osm_id": "node/7698486585"
+},
+{
+"type": "clinic",
+"name": "R K Clinic",
+"lat": 26.98575,
+"lng": 75.768955,
+"osm_id": "node/7698486586"
+},
+{
+"type": "clinic",
+"name": "Dr. Charu's Homeo Clinic",
+"lat": 26.973068,
+"lng": 75.765584,
+"osm_id": "node/7698486587"
+},
+{
+"type": "clinic",
+"name": "Shri Jain Divakar Homeopathic Clinic",
+"lat": 26.918215,
+"lng": 75.813844,
+"osm_id": "node/7698578010"
+},
+{
+"type": "clinic",
+"name": "Chakrapani Ayurveda Clinic & Research Centre",
+"lat": 26.890818,
+"lng": 75.817691,
+"osm_id": "node/7698578011"
+},
+{
+"type": "hospital",
+"name": "Mahaveer Charitable Hospital",
+"lat": 26.899599,
+"lng": 75.824547,
+"osm_id": "node/7698578012"
+},
+{
+"type": "clinic",
+"name": "Korani Clinic",
+"lat": 26.924651,
+"lng": 75.811503,
+"osm_id": "node/7698578013"
+},
+{
+"type": "hospital",
+"name": "ASG Eye Hospital",
+"lat": 26.914966,
+"lng": 75.809544,
+"osm_id": "node/7698578014"
+},
+{
+"type": "hospital",
+"name": "Sagar Hospital",
+"lat": 26.913415,
+"lng": 75.828649,
+"osm_id": "node/7698578015"
+},
+{
+"type": "clinic",
+"name": "Shree Homoeo Clinic",
+"lat": 26.922267,
+"lng": 75.813056,
+"osm_id": "node/7698578016"
+},
+{
+"type": "clinic",
+"name": "Ekta Clinic",
+"lat": 26.918791,
+"lng": 75.816626,
+"osm_id": "node/7698578017"
+},
+{
+"type": "clinic",
+"name": "Sona Clinic",
+"lat": 26.9226,
+"lng": 75.807671,
+"osm_id": "node/7698578019"
+},
+{
+"type": "clinic",
+"name": "Bagga Clinic",
+"lat": 26.894285,
+"lng": 75.827316,
+"osm_id": "node/7698578020"
+},
+{
+"type": "hospital",
+"name": "Rama Hospital",
+"lat": 26.924219,
+"lng": 75.8356,
+"osm_id": "node/7698578021"
+},
+{
+"type": "hospital",
+"name": "Pink City Fracture & General Hospital",
+"lat": 26.925106,
+"lng": 75.811254,
+"osm_id": "node/7698578022"
+},
+{
+"type": "hospital",
+"name": "Health Aid Hospital",
+"lat": 26.902054,
+"lng": 75.826184,
+"osm_id": "node/7698578023"
+},
+{
+"type": "hospital",
+"name": "Akhila Hospital",
+"lat": 26.915106,
+"lng": 75.826897,
+"osm_id": "node/7698578024"
+},
+{
+"type": "clinic",
+"name": "Shifa Health Clinic",
+"lat": 26.924617,
+"lng": 75.810301,
+"osm_id": "node/7698578025"
+},
+{
+"type": "hospital",
+"name": "Child Care Hospital",
+"lat": 26.903563,
+"lng": 75.822238,
+"osm_id": "node/7698578026"
+},
+{
+"type": "hospital",
+"name": "MDM Hospital",
+"lat": 26.902533,
+"lng": 75.821193,
+"osm_id": "node/7698578027"
+},
+{
+"type": "clinic",
+"name": "Dadhic Clinic",
+"lat": 26.92554,
+"lng": 75.836015,
+"osm_id": "node/7698578028"
+},
+{
+"type": "clinic",
+"name": "Baldwa Clinic",
+"lat": 26.894939,
+"lng": 75.816223,
+"osm_id": "node/7698578029"
+},
+{
+"type": "hospital",
+"name": "Mahaveer Jain Hospital",
+"lat": 26.901026,
+"lng": 75.825743,
+"osm_id": "node/7698578030"
+},
+{
+"type": "hospital",
+"name": "New life Hospital",
+"lat": 26.925445,
+"lng": 75.810295,
+"osm_id": "node/7698578032"
+},
+{
+"type": "clinic",
+"name": "Shiva Homeo Clinic",
+"lat": 26.92082,
+"lng": 75.822297,
+"osm_id": "node/7698578033"
+},
+{
+"type": "clinic",
+"name": "Vijay Clinic",
+"lat": 26.927768,
+"lng": 75.830503,
+"osm_id": "node/7698578034"
+},
+{
+"type": "clinic",
+"name": "Pro Lasik Clinic",
+"lat": 26.890009,
+"lng": 75.820802,
+"osm_id": "node/7698578036"
+},
+{
+"type": "clinic",
+"name": "Shifa Hijama Clinic",
+"lat": 26.916682,
+"lng": 75.833892,
+"osm_id": "node/7698578037"
+},
+{
+"type": "clinic",
+"name": "Amritam Heart Care",
+"lat": 26.894195,
+"lng": 75.82161,
+"osm_id": "node/7698578039"
+},
+{
+"type": "clinic",
+"name": "Adarsh Clinic",
+"lat": 26.902369,
+"lng": 75.825911,
+"osm_id": "node/7698578040"
+},
+{
+"type": "clinic",
+"name": "Shibali Health Clinic",
+"lat": 26.89468,
+"lng": 75.827397,
+"osm_id": "node/7698578043"
+},
+{
+"type": "clinic",
+"name": "Nikita Clinic , Jaipur",
+"lat": 26.926132,
+"lng": 75.830868,
+"osm_id": "node/7698578044"
+},
+{
+"type": "hospital",
+"name": "Vijay Hospital",
+"lat": 26.892101,
+"lng": 75.818927,
+"osm_id": "node/7698578045"
+},
+{
+"type": "clinic",
+"name": "Janta Clinic ,Jaipur",
+"lat": 26.92462,
+"lng": 75.835723,
+"osm_id": "node/7698578046"
+},
+{
+"type": "clinic",
+"name": "Dr. Dinesh Gupta Wisdom Clinic",
+"lat": 26.90643,
+"lng": 75.834737,
+"osm_id": "node/7698578047"
+},
+{
+"type": "clinic",
+"name": "Arihant Homeo Clinic",
+"lat": 26.892574,
+"lng": 75.829472,
+"osm_id": "node/7698578048"
+},
+{
+"type": "clinic",
+"name": "Khan Clinic , JAIPUR",
+"lat": 26.944716,
+"lng": 75.847039,
+"osm_id": "node/7698578049"
+},
+{
+"type": "hospital",
+"name": "Mangalam Hospital",
+"lat": 26.898853,
+"lng": 75.83391,
+"osm_id": "node/7698578050"
+},
+{
+"type": "clinic",
+"name": "Prakas Clinic",
+"lat": 26.918173,
+"lng": 75.810454,
+"osm_id": "node/7698578051"
+},
+{
+"type": "clinic",
+"name": "Shiva Life Line Clinic",
+"lat": 26.936865,
+"lng": 75.824946,
+"osm_id": "node/7698578053"
+},
+{
+"type": "clinic",
+"name": "Faiz Clinic",
+"lat": 26.922896,
+"lng": 75.809873,
+"osm_id": "node/7698578054"
+},
+{
+"type": "hospital",
+"name": "Sahai Hospital",
+"lat": 26.89589,
+"lng": 75.820313,
+"osm_id": "node/7698578055"
+},
+{
+"type": "hospital",
+"name": "Mahesh Hospital",
+"lat": 26.922913,
+"lng": 75.808922,
+"osm_id": "node/7698578056"
+},
+{
+"type": "hospital",
+"name": "Suraj Hospial",
+"lat": 26.899078,
+"lng": 75.824377,
+"osm_id": "node/7698578057"
+},
+{
+"type": "clinic",
+"name": "Madina Clinic",
+"lat": 26.935179,
+"lng": 75.847267,
+"osm_id": "node/7698578058"
+},
+{
+"type": "clinic",
+"name": "Dr. Sanjay Kanodia's Skin Clinic",
+"lat": 26.903839,
+"lng": 75.841988,
+"osm_id": "node/7698578059"
+},
+{
+"type": "clinic",
+"name": "Tawakkal General Clinic",
+"lat": 26.930586,
+"lng": 75.844718,
+"osm_id": "node/7698578060"
+},
+{
+"type": "clinic",
+"name": "Mital Clinic",
+"lat": 26.923018,
+"lng": 75.816491,
+"osm_id": "node/7698578061"
+},
+{
+"type": "clinic",
+"name": "Shree Ram Homoeo & Clinic",
+"lat": 26.892626,
+"lng": 75.829079,
+"osm_id": "node/7698578062"
+},
+{
+"type": "clinic",
+"name": "Tilak Clinic & Nursing Home",
+"lat": 26.89627,
+"lng": 75.82652,
+"osm_id": "node/7698578063"
+},
+{
+"type": "clinic",
+"name": "Shifa Clinic",
+"lat": 26.916698,
+"lng": 75.815155,
+"osm_id": "node/7698578064"
+},
+{
+"type": "hospital",
+"name": "Health Line Hospital",
+"lat": 26.90771,
+"lng": 75.829907,
+"osm_id": "node/7698578065"
+},
+{
+"type": "hospital",
+"name": "Goyal Hospital",
+"lat": 26.918662,
+"lng": 75.821418,
+"osm_id": "node/7698578066"
+},
+{
+"type": "hospital",
+"name": "Solanki Hospital",
+"lat": 26.927245,
+"lng": 75.819232,
+"osm_id": "node/7698578067"
+},
+{
+"type": "clinic",
+"name": "Dr. Sitaram Clinic",
+"lat": 26.926029,
+"lng": 75.817108,
+"osm_id": "node/7698578068"
+},
+{
+"type": "clinic",
+"name": "S.K.D.M. Clinic",
+"lat": 26.902236,
+"lng": 75.826566,
+"osm_id": "node/7698578069"
+},
+{
+"type": "clinic",
+"name": "Goyalsa Homeo Clinic",
+"lat": 26.909086,
+"lng": 75.833248,
+"osm_id": "node/7698578070"
+},
+{
+"type": "hospital",
+"name": "Alok Nursing Home & Fracture Clinic",
+"lat": 26.91858,
+"lng": 75.831197,
+"osm_id": "node/7698578071"
+},
+{
+"type": "hospital",
+"name": "Falor Eye and Phaco Surgery Centre",
+"lat": 26.919332,
+"lng": 75.830909,
+"osm_id": "node/7698578072"
+},
+{
+"type": "clinic",
+"name": "Govind Clinic",
+"lat": 26.937926,
+"lng": 75.83576,
+"osm_id": "node/7698578073"
+},
+{
+"type": "clinic",
+"name": "Rajdhani Dental & General Clinic",
+"lat": 26.922517,
+"lng": 75.810618,
+"osm_id": "node/7698578074"
+},
+{
+"type": "clinic",
+"name": "Dr.Sudrania Clinic",
+"lat": 26.902101,
+"lng": 75.816099,
+"osm_id": "node/7698578075"
+},
+{
+"type": "clinic",
+"name": "Sri Bhardwaj Clinic",
+"lat": 26.920188,
+"lng": 75.821831,
+"osm_id": "node/7698578076"
+},
+{
+"type": "clinic",
+"name": "Vinod Clinic",
+"lat": 26.905869,
+"lng": 75.82576,
+"osm_id": "node/7698578077"
+},
+{
+"type": "hospital",
+"name": "Santokba Durlabhji Memorial Hospital",
+"lat": 26.893577,
+"lng": 75.812517,
+"osm_id": "node/7698578078"
+},
+{
+"type": "clinic",
+"name": "Care Clinic",
+"lat": 26.925732,
+"lng": 75.817034,
+"osm_id": "node/7698578079"
+},
+{
+"type": "hospital",
+"name": "M.D. Hospital",
+"lat": 26.912491,
+"lng": 75.82464,
+"osm_id": "node/7698578080"
+},
+{
+"type": "clinic",
+"name": "Jaju Clinic",
+"lat": 26.927028,
+"lng": 75.816157,
+"osm_id": "node/7698578082"
+},
+{
+"type": "clinic",
+"name": "Seva Poly Clinic",
+"lat": 26.921389,
+"lng": 75.808508,
+"osm_id": "node/7698578083"
+},
+{
+"type": "clinic",
+"name": "Nisa Clinic",
+"lat": 26.924859,
+"lng": 75.835802,
+"osm_id": "node/7698578085"
+},
+{
+"type": "hospital",
+"name": "Adinath ENT & General Hospital",
+"lat": 26.891548,
+"lng": 75.826571,
+"osm_id": "node/7698578086"
+},
+{
+"type": "clinic",
+"name": "Bani Clinic",
+"lat": 26.918235,
+"lng": 75.828884,
+"osm_id": "node/7698578087"
+},
+{
+"type": "clinic",
+"name": "Jaipur Skin Cilnic",
+"lat": 26.916717,
+"lng": 75.830114,
+"osm_id": "node/7698578088"
+},
+{
+"type": "clinic",
+"name": "Subash Clinic",
+"lat": 26.928597,
+"lng": 75.833973,
+"osm_id": "node/7698578089"
+},
+{
+"type": "clinic",
+"name": "Rathi's ENT and Women's Clinic",
+"lat": 26.902926,
+"lng": 75.841209,
+"osm_id": "node/7698578090"
+},
+{
+"type": "clinic",
+"name": "Dr. N M Jain Clinic",
+"lat": 26.903351,
+"lng": 75.822735,
+"osm_id": "node/7698578091"
+},
+{
+"type": "hospital",
+"name": "Jalmahal Hospital",
+"lat": 26.946417,
+"lng": 75.848173,
+"osm_id": "node/7698578092"
+},
+{
+"type": "clinic",
+"name": "Jain Clinic",
+"lat": 26.918658,
+"lng": 75.82654,
+"osm_id": "node/7698578093"
+},
+{
+"type": "clinic",
+"name": "Saans Chest Clinic",
+"lat": 26.897601,
+"lng": 75.821265,
+"osm_id": "node/7698578094"
+},
+{
+"type": "clinic",
+"name": "Aditya Health Clinic",
+"lat": 26.903894,
+"lng": 75.827781,
+"osm_id": "node/7698578095"
+},
+{
+"type": "clinic",
+"name": "Tosif Poly Clinic , JAIPUR",
+"lat": 26.94438,
+"lng": 75.84701,
+"osm_id": "node/7698578097"
+},
+{
+"type": "clinic",
+"name": "Dr. R.M. Mathur Clinic",
+"lat": 26.900433,
+"lng": 75.818815,
+"osm_id": "node/7698578099"
+},
+{
+"type": "clinic",
+"name": "Manohar Clinic",
+"lat": 26.921224,
+"lng": 75.813711,
+"osm_id": "node/7698578100"
+},
+{
+"type": "clinic",
+"name": "Shiv Shakti Homoeo Clinic",
+"lat": 26.902548,
+"lng": 75.824528,
+"osm_id": "node/7698578101"
+},
+{
+"type": "clinic",
+"name": "Kamal Clinic",
+"lat": 26.922763,
+"lng": 75.828999,
+"osm_id": "node/7698578103"
+},
+{
+"type": "clinic",
+"name": "Sameer Clinic",
+"lat": 26.918135,
+"lng": 75.816914,
+"osm_id": "node/7698578104"
+},
+{
+"type": "clinic",
+"name": "Vinayak Clinic",
+"lat": 26.919176,
+"lng": 75.823844,
+"osm_id": "node/7698578105"
+},
+{
+"type": "clinic",
+"name": "Health Clinic",
+"lat": 26.921897,
+"lng": 75.80955,
+"osm_id": "node/7698578106"
+},
+{
+"type": "hospital",
+"name": "Bhiwani Eye Hospital",
+"lat": 26.920051,
+"lng": 75.821769,
+"osm_id": "node/7698578107"
+},
+{
+"type": "hospital",
+"name": "Jai Hospital & Research Centre",
+"lat": 26.919202,
+"lng": 75.816758,
+"osm_id": "node/7698578108"
+},
+{
+"type": "clinic",
+"name": "Ganda Homeo Clinic",
+"lat": 26.896364,
+"lng": 75.8252,
+"osm_id": "node/7698578109"
+},
+{
+"type": "clinic",
+"name": "Ali Clinic & Doiagnostic Centre",
+"lat": 26.927597,
+"lng": 75.829679,
+"osm_id": "node/7698578110"
+},
+{
+"type": "clinic",
+"name": "Ganda Clinic",
+"lat": 26.902641,
+"lng": 75.825259,
+"osm_id": "node/7698578111"
+},
+{
+"type": "hospital",
+"name": "Pratap Nagar Sector 6 Dispensary",
+"lat": 26.809787,
+"lng": 75.809078,
+"osm_id": "node/8043763874"
+},
+{
+"type": "kindergarten",
+"name": "Jayshree Periwal Internationa Pre School",
+"lat": 26.900215,
+"lng": 75.781895,
+"osm_id": "node/8084816343"
+},
+{
+"type": "school",
+"name": "SJ Public School",
+"lat": 26.906257,
+"lng": 75.838151,
+"osm_id": "node/8125619003"
+},
+{
+"type": "school",
+"name": "Defence Public School",
+"lat": 26.909448,
+"lng": 75.744217,
+"osm_id": "node/8140727879"
+},
+{
+"type": "hospital",
+"name": "Enviornment and wildlife care society",
+"lat": 26.888526,
+"lng": 75.837777,
+"osm_id": "node/8479401770"
+},
+{
+"type": "hospital",
+"name": "Tirupati Sanjeevani Hospital",
+"lat": 26.834799,
+"lng": 75.858248,
+"osm_id": "node/8916826950"
+},
+{
+"type": "college",
+"name": "Biyani group of college",
+"lat": 26.956709,
+"lng": 75.779273,
+"osm_id": "node/9926090617"
+},
+{
+"type": "college",
+"name": "BISMA - Biyani Institute of Science and Management for Girls",
+"lat": 26.956634,
+"lng": 75.779036,
+"osm_id": "node/9926097117"
+},
+{
+"type": "college",
+"name": "BIYANI SCHOOL OF NURSING & PARA-MEDICAL SCIENCE (G.N.M.)",
+"lat": 26.956735,
+"lng": 75.779128,
+"osm_id": "node/9926105017"
+},
+{
+"type": "school",
+"name": "Kendriya Vidyalaya No. 1",
+"lat": 26.878542,
+"lng": 75.799696,
+"osm_id": "node/10554368727"
+},
+{
+"type": "hospital",
+"name": "Shri Shyam Hospital",
+"lat": 26.979258,
+"lng": 75.769214,
+"osm_id": "node/10685151323"
+},
+{
+"type": "hospital",
+"name": "S S Hospital",
+"lat": 26.979252,
+"lng": 75.76917,
+"osm_id": "node/10685211660"
+},
+{
+"type": "clinic",
+"name": "Panwar Medical & Provision Store",
+"lat": 26.826631,
+"lng": 75.849629,
+"osm_id": "node/10904677049"
+},
+{
+"type": "college",
+"name": "ground",
+"lat": 26.913495,
+"lng": 75.809059,
+"osm_id": "node/10904714945"
+},
+{
+"type": "school",
+"name": "St xavier sec school",
+"lat": 26.912891,
+"lng": 75.808626,
+"osm_id": "node/10904798522"
+},
+{
+"type": "kindergarten",
+"name": "Kangaroo kids",
+"lat": 26.916266,
+"lng": 75.792508,
+"osm_id": "node/10936838148"
+},
+{
+"type": "school",
+"name": "British International School Jaipur (BISJaipur)",
+"lat": 26.789821,
+"lng": 75.834001,
+"osm_id": "node/10945668875"
+},
+{
+"type": "school",
+"name": "SCHOLARS INTERNATIONAL SCHOOL",
+"lat": 26.957471,
+"lng": 75.699489,
+"osm_id": "node/10959824933"
+},
+{
+"type": "school",
+"name": "R.N.PUBLIC SCHOOL GROUND",
+"lat": 26.983304,
+"lng": 75.760218,
+"osm_id": "node/10960889867"
+},
+{
+"type": "school",
+"name": "SCHOLARS INTERNATIONAL SCHOOL",
+"lat": 26.956881,
+"lng": 75.699473,
+"osm_id": "node/11690475792"
+},
+{
+"type": "school",
+"name": "School",
+"lat": 26.886125,
+"lng": 75.784914,
+"osm_id": "node/11691543487"
+},
+{
+"type": "hospital",
+"name": "Hospital",
+"lat": 26.885153,
+"lng": 75.784767,
+"osm_id": "node/11691562993"
+},
+{
+"type": "clinic",
+"name": "JK Hospital",
+"lat": 26.949835,
+"lng": 75.712661,
+"osm_id": "node/11697042113"
+},
+{
+"type": "school",
+"name": "SG International School",
+"lat": 26.94483,
+"lng": 75.714926,
+"osm_id": "node/11697042114"
+},
+{
+"type": "hospital",
+"name": "JS Memorial Hospital & Research Center",
+"lat": 26.957195,
+"lng": 75.741503,
+"osm_id": "node/11968824969"
+},
+{
+"type": "clinic",
+"name": "Anjali Acupressure Treatment & Yoga Center | Anjali Yoga Center | Yoga classes in Jaipur",
+"lat": 26.938612,
+"lng": 75.839488,
+"osm_id": "node/12045501005"
+},
+{
+"type": "hospital",
+"name": "Physio Healer",
+"lat": 26.905477,
+"lng": 75.748187,
+"osm_id": "node/12133985361"
+},
+{
+"type": "school",
+"name": "Government Senior Secondary School, Sukhpuriya",
+"lat": 26.783521,
+"lng": 75.823167,
+"osm_id": "node/12151385704"
+},
+{
+"type": "school",
+"name": "Jayshree Periwal International Preschool",
+"lat": 26.930975,
+"lng": 75.794535,
+"osm_id": "node/12357926601"
+},
+{
+"type": "school",
+"name": "Veda",
+"lat": 26.929202,
+"lng": 75.793182,
+"osm_id": "node/12361057302"
+},
+{
+"type": "hospital",
+"name": "Maxwell",
+"lat": 26.934428,
+"lng": 75.794881,
+"osm_id": "node/12361795401"
+},
+{
+"type": "school",
+"name": "Mahatma Gandhi Ground , Jaipur",
+"lat": 26.923039,
+"lng": 75.79013,
+"osm_id": "node/12361796204"
+},
+{
+"type": "school",
+"name": "Pareek College ,Jaipur",
+"lat": 26.928425,
+"lng": 75.800751,
+"osm_id": "node/12367918017"
+},
+{
+"type": "school",
+"name": "Mahatma Gandhi Government School (Modi Khana)",
+"lat": 26.922068,
+"lng": 75.820541,
+"osm_id": "node/12373618075"
+},
+{
+"type": "school",
+"name": "All Saints' Church School",
+"lat": 26.917947,
+"lng": 75.798651,
+"osm_id": "node/12379232402"
+},
+{
+"type": "hospital",
+"name": "KIUOLA",
+"lat": 26.941951,
+"lng": 75.786098,
+"osm_id": "node/12595806176"
+},
+{
+"type": "hospital",
+"name": "Maxwell Hospital",
+"lat": 26.946546,
+"lng": 75.785685,
+"osm_id": "node/12595819569"
+},
+{
+"type": "hospital",
+"name": "HOspital Kavatai",
+"lat": 26.934331,
+"lng": 75.784782,
+"osm_id": "node/12595878945"
+},
+{
+"type": "clinic",
+"name": "Clinic",
+"lat": 26.814415,
+"lng": 75.768988,
+"osm_id": "node/12596410738"
+},
+{
+"type": "hospital",
+"name": "S K Multispeciality Hospital",
+"lat": 26.954217,
+"lng": 75.746422,
+"osm_id": "node/12669158100"
+},
+{
+"type": "hospital",
+"name": "AARVI Hospital",
+"lat": 26.957918,
+"lng": 75.74178,
+"osm_id": "node/12669173970"
+},
+{
+"type": "school",
+"name": "Shanti Vidya Niketan",
+"lat": 26.958371,
+"lng": 75.741712,
+"osm_id": "node/12669173972"
+},
+{
+"type": "school",
+"name": "SDM Public School",
+"lat": 26.960894,
+"lng": 75.742708,
+"osm_id": "node/12669173979"
+},
+{
+"type": "hospital",
+"name": "Archana Hospital",
+"lat": 26.957972,
+"lng": 75.736052,
+"osm_id": "node/12669219552"
+},
+{
+"type": "hospital",
+"name": "Jyoti Hospital",
+"lat": 26.957858,
+"lng": 75.737559,
+"osm_id": "node/12669219553"
+},
+{
+"type": "hospital",
+"name": "N.K Fracture And General Hospital",
+"lat": 26.956243,
+"lng": 75.741163,
+"osm_id": "node/12669219554"
+},
+{
+"type": "college",
+"name": "Narayana e-Techno School",
+"lat": 26.950245,
+"lng": 75.757557,
+"osm_id": "node/12669229316"
+},
+{
+"type": "school",
+"name": "Darbar Public School",
+"lat": 26.953141,
+"lng": 75.740816,
+"osm_id": "node/12697269269"
+},
+{
+"type": "hospital",
+"name": "Apollo Pharmacy Sector 9 Pratap Nagar",
+"lat": 26.803982,
+"lng": 75.828999,
+"osm_id": "node/13131397298"
+},
+{
+"type": "school",
+"name": "Pink City Cooking Class",
+"lat": 26.937414,
+"lng": 75.834217,
+"osm_id": "node/13423844222"
+},
+{
+"type": "college",
+"name": "Swasthya kalyan Group",
+"lat": 26.76931,
+"lng": 75.851267,
+"osm_id": "node/13687780603"
+},
+{
+"type": "college",
+"name": "Swasthya kalyan institute of naturopathy and yogic sciences",
+"lat": 26.769168,
+"lng": 75.852213,
+"osm_id": "node/13687784401"
+},
+{
+"type": "college",
+"name": "Swami Keshwanand Institute of Technology (SKIT College)",
+"lat": 26.822904,
+"lng": 75.865976,
+"osm_id": "node/14001942201"
+},
+{
+"type": "school",
+"name": "Jayshree Periwal International School",
+"lat": 26.826229,
+"lng": 75.666141,
+"osm_id": "node/14013564822"
+},
+{
+"type": "school",
+"name": "Jayshree Periwal Global School",
+"lat": 26.80978,
+"lng": 75.893993,
+"osm_id": "node/14013915949"
+},
+{
+"type": "college",
+"name": "Sri Balaji College of Engineering and Technology",
+"lat": 26.991401,
+"lng": 75.743406,
+"osm_id": "node/14064630140"
+},
+{
+"type": "college",
+"name": "Sri Balaji Shiksha Samiti",
+"lat": 26.991755,
+"lng": 75.744124,
+"osm_id": "node/14064659602"
+},
+{
+"type": "college",
+"name": "IPS BUSINESS SCHOOL",
+"lat": 26.880781,
+"lng": 75.755273,
+"osm_id": "node/14066648802"
+},
+{
+"type": "school",
+"name": "Ryan International School, Padmavati Nirman Nagar, Jaipur - CBSE",
+"lat": 26.880842,
+"lng": 75.754906,
+"osm_id": "node/14066662601"
+},
+{
+"type": "clinic",
+"name": "Ambay Dog Clinic",
+"lat": 26.982724,
+"lng": 75.741449,
+"osm_id": "node/14096168901"
+},
+{
+"type": "school",
+"name": "Sunrise World School",
+"lat": 26.979823,
+"lng": 75.743752,
+"osm_id": "node/14096176401"
+},
+{
+"type": "school",
+"name": "Priyank Vidhyapeeth Senior Secondary School",
+"lat": 26.978969,
+"lng": 75.741951,
+"osm_id": "node/14096179401"
+},
+{
+"type": "school",
+"name": "Sanjay Public Sr Sec School",
+"lat": 26.977847,
+"lng": 75.74431,
+"osm_id": "node/14096180801"
+},
+{
+"type": "clinic",
+"name": "Dhanwantri Clinic",
+"lat": 26.979504,
+"lng": 75.736187,
+"osm_id": "node/14096182102"
+},
+{
+"type": "clinic",
+"name": "Shri Balaji Medical & Clinic",
+"lat": 26.979305,
+"lng": 75.738375,
+"osm_id": "node/14096182501"
+},
+{
+"type": "school",
+"name": "H V N Public Sr. Sec. School",
+"lat": 26.975081,
+"lng": 75.733709,
+"osm_id": "node/14096205701"
+},
+{
+"type": "school",
+"name": "Wisdom Academy Sr. Secondary School",
+"lat": 26.975465,
+"lng": 75.731038,
+"osm_id": "node/14096211001"
+},
+{
+"type": "clinic",
+"name": "Shree Dev Health Care",
+"lat": 26.972622,
+"lng": 75.725558,
+"osm_id": "node/14096756201"
+},
+{
+"type": "hospital",
+"name": "Jaipur Hospital",
+"lat": 26.892544,
+"lng": 75.804536,
+"osm_id": "way/230826821"
+},
+{
+"type": "school",
+"name": "Raja Ramdev Poddar Senior Secondary School",
+"lat": 26.883702,
+"lng": 75.811195,
+"osm_id": "way/230845534"
+},
+{
+"type": "college",
+"name": "Arya College of Engineering and Information Technology",
+"lat": 27.029339,
+"lng": 75.893448,
+"osm_id": "way/237962349"
+},
+{
+"type": "college",
+"name": "Jaipur Engineering College",
+"lat": 27.02854,
+"lng": 75.894754,
+"osm_id": "way/237964454"
+},
+{
+"type": "college",
+"name": "Shankara Institute of Technology",
+"lat": 27.027907,
+"lng": 75.895964,
+"osm_id": "way/237964677"
+},
+{
+"type": "school",
+"name": "Children's Academy",
+"lat": 26.930841,
+"lng": 75.795958,
+"osm_id": "way/262856167"
+},
+{
+"type": "hospital",
+"name": "Sant Ram Memorial Tandon Eye Centre",
+"lat": 26.912752,
+"lng": 75.790104,
+"osm_id": "way/263767627"
+},
+{
+"type": "college",
+"name": "SSG Pareek PG Girls' College",
+"lat": 26.929676,
+"lng": 75.801891,
+"osm_id": "way/265217032"
+},
+{
+"type": "hospital",
+"name": "Rungta Hospital",
+"lat": 26.857771,
+"lng": 75.815186,
+"osm_id": "way/361547880"
+},
+{
+"type": "hospital",
+"name": "Fortis Escorts Hospital",
+"lat": 26.846381,
+"lng": 75.803627,
+"osm_id": "way/370170822"
+},
+{
+"type": "school",
+"name": "Nindad School Compound",
+"lat": 27.015393,
+"lng": 75.748913,
+"osm_id": "way/370945542"
+},
+{
+"type": "school",
+"name": "St. Xavier Sr. Sec. School",
+"lat": 26.912893,
+"lng": 75.80863,
+"osm_id": "way/374811875"
+},
+{
+"type": "hospital",
+"name": "Haribaksha Kanwatia Govt Hospital",
+"lat": 26.944982,
+"lng": 75.797979,
+"osm_id": "way/375890414"
+},
+{
+"type": "hospital",
+"name": "Imperial Hospital",
+"lat": 26.944701,
+"lng": 75.79722,
+"osm_id": "way/375890415"
+},
+{
+"type": "hospital",
+"name": "Murlipura Govt Hospital",
+"lat": 26.974279,
+"lng": 75.761073,
+"osm_id": "way/412807470"
+},
+{
+"type": "school",
+"name": "Tagore Public School",
+"lat": 26.935243,
+"lng": 75.799674,
+"osm_id": "way/458317708"
+},
+{
+"type": "clinic",
+"name": "Jyoti Nursing Home Orthopedic and Surgical Centre",
+"lat": 26.977659,
+"lng": 75.774249,
+"osm_id": "way/461300963"
+},
+{
+"type": "hospital",
+"name": "Candrol Cancer Treatment and Research Center",
+"lat": 26.843077,
+"lng": 75.807205,
+"osm_id": "way/623783424"
+},
+{
+"type": "school",
+"name": "SAINT TERESA'S SCHOOL",
+"lat": 26.966129,
+"lng": 75.715836,
+"osm_id": "way/653339529"
+},
+{
+"type": "school",
+"name": "JAYSHREE PERIWAL HIGH SCHOOL",
+"lat": 26.899247,
+"lng": 75.735638,
+"osm_id": "way/665384542"
+},
+{
+"type": "hospital",
+"name": "Global Heart and General Hospital",
+"lat": 26.905592,
+"lng": 75.738706,
+"osm_id": "way/666614410"
+},
+{
+"type": "hospital",
+"name": "ETERNAL MULTISPECIALITY HOSPITAL",
+"lat": 26.839961,
+"lng": 75.805846,
+"osm_id": "way/677227866"
+},
+{
+"type": "school",
+"name": "School",
+"lat": 26.960496,
+"lng": 75.803552,
+"osm_id": "way/724599683"
+},
+{
+"type": "college",
+"name": "Jaipur National University",
+"lat": 26.848311,
+"lng": 75.859384,
+"osm_id": "way/744334384"
+},
+{
+"type": "school",
+"name": "Brightlands Girls Sr. Sec. School",
+"lat": 26.914214,
+"lng": 75.739014,
+"osm_id": "way/745235613"
+},
+{
+"type": "hospital",
+"name": "Kanodia Hospital",
+"lat": 26.857544,
+"lng": 75.811442,
+"osm_id": "way/751780817"
+},
+{
+"type": "school",
+"name": "D.A.V Centenary Public School",
+"lat": 26.909357,
+"lng": 75.742166,
+"osm_id": "way/753671744"
+},
+{
+"type": "college",
+"name": "Shri Bhawani Niketan Mahila Mahavidyalaya",
+"lat": 26.947495,
+"lng": 75.768935,
+"osm_id": "way/753860856"
+},
+{
+"type": "college",
+"name": "Maharishi Arvind Institute of Science & Management",
+"lat": 26.943727,
+"lng": 75.776635,
+"osm_id": "way/753860861"
+},
+{
+"type": "school",
+"name": "Kendriya vidhyala Jothwara",
+"lat": 26.937046,
+"lng": 75.766401,
+"osm_id": "way/754523369"
+},
+{
+"type": "school",
+"name": "Army Public School, Jaipur",
+"lat": 26.925365,
+"lng": 75.766617,
+"osm_id": "way/754523370"
+},
+{
+"type": "school",
+"name": "Penguiens School",
+"lat": 26.897566,
+"lng": 75.739296,
+"osm_id": "way/758640352"
+},
+{
+"type": "school",
+"name": "Teoler High School",
+"lat": 26.910425,
+"lng": 75.693731,
+"osm_id": "way/758683163"
+},
+{
+"type": "school",
+"name": "Oxford International Academy",
+"lat": 26.908393,
+"lng": 75.725098,
+"osm_id": "way/758683189"
+},
+{
+"type": "college",
+"name": "Karni College",
+"lat": 26.911178,
+"lng": 75.72816,
+"osm_id": "way/758683192"
+},
+{
+"type": "school",
+"name": "Sr. Sec. Girls Adarsh Vidya Mandir",
+"lat": 26.916891,
+"lng": 75.731685,
+"osm_id": "way/758907567"
+},
+{
+"type": "college",
+"name": "College",
+"lat": 26.916648,
+"lng": 75.732812,
+"osm_id": "way/758907570"
+},
+{
+"type": "school",
+"name": "Sunstar School",
+"lat": 26.91519,
+"lng": 75.735003,
+"osm_id": "way/758907574"
+},
+{
+"type": "school",
+"name": "Aurbindo International School",
+"lat": 26.922929,
+"lng": 75.683919,
+"osm_id": "way/758907721"
+},
+{
+"type": "college",
+"name": "Alankar PG Girls College",
+"lat": 26.927791,
+"lng": 75.719754,
+"osm_id": "way/758907745"
+},
+{
+"type": "college",
+"name": "Mahatma Jyoti Rao Phoole University",
+"lat": 26.89123,
+"lng": 75.775439,
+"osm_id": "way/760935050"
+},
+{
+"type": "hospital",
+"name": "Gandhi Nagar Communityb Health Center",
+"lat": 26.88216,
+"lng": 75.803723,
+"osm_id": "way/779513179"
+},
+{
+"type": "school",
+"name": "St.Edmund’s School Malviya Nagar",
+"lat": 26.854312,
+"lng": 75.818041,
+"osm_id": "way/799511398"
+},
+{
+"type": "school",
+"name": "Government Senior Secondary School Sodala",
+"lat": 26.900243,
+"lng": 75.770321,
+"osm_id": "way/862568921"
+},
+{
+"type": "school",
+"name": "VSPK International School",
+"lat": 26.797039,
+"lng": 75.835357,
+"osm_id": "way/863037859"
+},
+{
+"type": "school",
+"name": "Air Force School",
+"lat": 26.960008,
+"lng": 75.844483,
+"osm_id": "way/863494838"
+},
+{
+"type": "school",
+"name": "School",
+"lat": 26.858185,
+"lng": 75.81429,
+"osm_id": "way/865638246"
+},
+{
+"type": "hospital",
+"name": "Hospital",
+"lat": 26.85756,
+"lng": 75.815692,
+"osm_id": "way/865638248"
+},
+{
+"type": "hospital",
+"name": "Hospital",
+"lat": 26.928669,
+"lng": 75.783448,
+"osm_id": "way/866544663"
+},
+{
+"type": "school",
+"name": "School Ground",
+"lat": 26.93419,
+"lng": 75.697562,
+"osm_id": "way/954797913"
+},
+{
+"type": "hospital",
+"name": "PATALIYA HOSPITAL",
+"lat": 26.83437,
+"lng": 75.835183,
+"osm_id": "way/962489671"
+},
+{
+"type": "hospital",
+"name": "PATALIYA RESERCH CENTER",
+"lat": 26.834688,
+"lng": 75.835335,
+"osm_id": "way/962490285"
+},
+{
+"type": "school",
+"name": "Maharaja Sawai Man Singh Vidyalaya",
+"lat": 26.897565,
+"lng": 75.811612,
+"osm_id": "way/976725648"
+},
+{
+"type": "college",
+"name": "Aayojan School of Architecture",
+"lat": 26.767046,
+"lng": 75.85125,
+"osm_id": "way/976743088"
+},
+{
+"type": "college",
+"name": "Apex Institute of Engineering and Technology",
+"lat": 26.766391,
+"lng": 75.8523,
+"osm_id": "way/976743090"
+},
+{
+"type": "school",
+"name": "St. Xavier's School",
+"lat": 26.805892,
+"lng": 75.67746,
+"osm_id": "way/1008772931"
+},
+{
+"type": "school",
+"name": "Candlewick Public School",
+"lat": 26.958588,
+"lng": 75.776354,
+"osm_id": "way/1034878425"
+},
+{
+"type": "hospital",
+"name": "Narayana Multispeciality Hospital Blood bank",
+"lat": 26.794941,
+"lng": 75.824697,
+"osm_id": "way/1153421452"
+},
+{
+"type": "hospital",
+"name": "Hospital",
+"lat": 26.916663,
+"lng": 75.78644,
+"osm_id": "way/1153427332"
+},
+{
+"type": "hospital",
+"name": "Hospital",
+"lat": 26.902931,
+"lng": 75.838501,
+"osm_id": "way/1153428113"
+},
+{
+"type": "hospital",
+"name": "Hospital",
+"lat": 26.962034,
+"lng": 75.780681,
+"osm_id": "way/1153428550"
+},
+{
+"type": "school",
+"name": "Vivek Techno School",
+"lat": 26.814804,
+"lng": 75.900278,
+"osm_id": "way/1156213753"
+},
+{
+"type": "school",
+"name": "PARAMOUNT PUBLIC SCHOOL GROUND",
+"lat": 26.955926,
+"lng": 75.700486,
+"osm_id": "way/1180025745"
+},
+{
+"type": "school",
+"name": "SCHOLARS PUBLIC SCHOOL GROUND",
+"lat": 26.956871,
+"lng": 75.69948,
+"osm_id": "way/1180025746"
+},
+{
+"type": "school",
+"name": "BASKETBALL GROUND",
+"lat": 26.957553,
+"lng": 75.699898,
+"osm_id": "way/1257407342"
+},
+{
+"type": "college",
+"name": "Jaipur Engineering College & Research Centre",
+"lat": 26.78191,
+"lng": 75.82067,
+"osm_id": "way/1312980064"
+},
+{
+"type": "school",
+"name": "Prabhat Public School",
+"lat": 26.843103,
+"lng": 75.761578,
+"osm_id": "way/1421893728"
+},
+{
+"type": "hospital",
+"name": "RUHS University",
+"lat": 26.801915,
+"lng": 75.829448,
+"osm_id": "way/1428340919"
+},
+{
+"type": "school",
+"name": "School",
+"lat": 26.934958,
+"lng": 75.817064,
+"osm_id": "way/1484058590"
+}
+]

@@ -1,0 +1,21 @@
+{
+  "_note": "Approximate locality centroids for Jaipur used as the offline geocoder and zone layer. Population figures are rough planning estimates - replace with ward-level Census data and real ward polygons for production.",
+  "localities": [
+    {"id": "raja_park", "name": "Raja Park", "aliases": ["raja park", "rajapark", "राजा पार्क"], "lat": 26.8964, "lng": 75.8260, "population": 95000},
+    {"id": "malviya_nagar", "name": "Malviya Nagar", "aliases": ["malviya nagar", "malviyanagar", "malviya ngr", "मालवीय नगर"], "lat": 26.8549, "lng": 75.8243, "population": 180000},
+    {"id": "mansarovar", "name": "Mansarovar", "aliases": ["mansarovar", "mansrovar", "mansarover", "मानसरोवर"], "lat": 26.8695, "lng": 75.7600, "population": 320000},
+    {"id": "vaishali_nagar", "name": "Vaishali Nagar", "aliases": ["vaishali nagar", "vaishali", "वैशाली नगर"], "lat": 26.9110, "lng": 75.7430, "population": 210000},
+    {"id": "c_scheme", "name": "C-Scheme", "aliases": ["c scheme", "c-scheme", "cscheme", "सी स्कीम"], "lat": 26.9080, "lng": 75.8000, "population": 60000},
+    {"id": "jhotwara", "name": "Jhotwara", "aliases": ["jhotwara", "jhotwada", "झोटवाड़ा"], "lat": 26.9530, "lng": 75.7400, "population": 250000},
+    {"id": "sanganer", "name": "Sanganer", "aliases": ["sanganer", "sanganer town", "सांगानेर"], "lat": 26.8180, "lng": 75.7880, "population": 230000},
+    {"id": "jagatpura", "name": "Jagatpura", "aliases": ["jagatpura", "jagat pura", "जगतपुरा"], "lat": 26.8250, "lng": 75.8650, "population": 170000},
+    {"id": "bani_park", "name": "Bani Park", "aliases": ["bani park", "banipark", "बनी पार्क"], "lat": 26.9300, "lng": 75.7950, "population": 85000},
+    {"id": "durgapura", "name": "Durgapura", "aliases": ["durgapura", "durga pura", "tonk road", "दुर्गापुरा"], "lat": 26.8530, "lng": 75.7930, "population": 120000},
+    {"id": "sodala", "name": "Sodala", "aliases": ["sodala", "shyam nagar", "सोडाला"], "lat": 26.9030, "lng": 75.7720, "population": 110000},
+    {"id": "walled_city", "name": "Walled City (Johari Bazaar)", "aliases": ["johari bazaar", "johri bazar", "walled city", "badi chaupar", "chandpole", "hawa mahal", "जौहरी बाजार"], "lat": 26.9200, "lng": 75.8270, "population": 300000},
+    {"id": "adarsh_nagar", "name": "Adarsh Nagar", "aliases": ["adarsh nagar", "adarshnagar", "आदर्श नगर"], "lat": 26.9010, "lng": 75.8400, "population": 140000},
+    {"id": "vidhyadhar_nagar", "name": "Vidhyadhar Nagar", "aliases": ["vidhyadhar nagar", "vidyadhar nagar", "vki", "विद्याधर नगर"], "lat": 26.9600, "lng": 75.7800, "population": 200000},
+    {"id": "pratap_nagar", "name": "Pratap Nagar", "aliases": ["pratap nagar", "pratapnagar", "प्रताप नगर"], "lat": 26.8000, "lng": 75.8200, "population": 190000},
+    {"id": "shastri_nagar", "name": "Shastri Nagar", "aliases": ["shastri nagar", "shastrinagar", "शास्त्री नगर"], "lat": 26.9450, "lng": 75.7950, "population": 130000}
+  ]
+}

@@ -1,0 +1,662 @@
+text,lat,lng,created_at,channel,gt_issue,gt_category,gt_sub_type,gt_locality
+community hall ke samne Pratap Nagar me safai wala nah iaa raha. jaldi thheek karo pleass.,,,2026-08-26T04:48:20,web,124,garbage,missed_collection,pratap_nagar
+"Exposed electric wies at streetliight ole near street no. 9, Mansarvar. A scooter rider fell here yesterday.",26.865736,75.757540,2026-08-26T07:50:14,web,38,streetlight,exposed_wires,mansarovar
+"The nali near street no. 3 in Mansarovar is clogged and overflowing. Complained earlier also, no atcion.",,,2026-08-27T02:49:28,whatsapp,118,drainage,blocked_drain,mansarovar
+"water tank ke samne Vidhyadhar Nagar m enali band hai, gandagi afil rahi hai. pehle bhi complaint ki ti.",,,2026-08-27T12:07:31,whatsapp,214,drainage,blocked_drain,vidhyadhar_nagar
+C-cheme Gurudwara ke samne ki naali jam ho gayi hai 1 mahine s.e jaldi theek karo please.,26.912012,75.803347,2026-08-27T19:02:25,web,195,drainage,blocked_drain,c_scheme
+"gali no 8 Jhotwara me pipe pha tgaya, ek hafte se paani beh raha.",,,2026-08-27T19:40:54,whatsapp,198,water_supply,pipeline_leak,jhotwara
+community hall ke paas Pratap Nagar m safai wala nahi aa raha. pehle bhi cmplaint ki thi.,26.793110,75.820751,2026-08-28T07:33:16,whatsapp,124,garbage,missed_collection,pratap_nagar
+Contamniated mudy water supplyy in Walled City (Johari Bazaar) lane 12 for 2 weeks. Accident can happen any time.,26.923451,75.832377,2026-08-28T12:20:11,email,27,water_supply,contaminated_water,walled_city
+"bani park me gali no 25 gadda ho gaaya hai, raat ko dikhta nahi. pehle bhi compplaint ki thi.",,,2026-08-28T14:40:57,email,69,road_damage,pothole,bani_park
+bha govt school ke samne malvyia nagar wala gddhaa abhi tak nahi bhara. pehle bhi complaint ki thi.,,,2026-08-28T16:27:18,whatsapp,4,road_damage,pothole,malviya_nagar
+"Jhotwar gali no 11 me ganda paanii aa raha hai nal me, bimari ka dar. raat koo accident hone ka dar hai.",26.957879,75.738005,2026-08-28T18:25:20,web,180,water_supply,contaminated_water,jhotwara
+"gali number 13 Sanganer me road kharab hai, chalna mushkli. ek uncle ko chot lag gayi.",26.824490,75.790873,2026-08-28T21:15:56,web,215,road_damage,broken_road,sanganer
+door t door garbage not collected in malviya nagar opposit gov tschool. pleaes fix it soon.,,,2026-08-28T23:36:52,app,212,garbage,missed_collection,malviya_nagar
+"मालवीय नगर सरकारी स्कूल के पास में सड़क पर बड़ा गड्ढा है, 2 हफ्ते से। कृपया जल्दी ठीक करें।",,,2026-08-29T01:54:35,whatsapp,4,road_damage,pothole,malviya_nagar
+bhai community hall kke paas Johari Bazaar wala gaddha abhi tak nahi bhara. koi sunwai nahi ho rahi.,,,2026-08-29T04:33:35,web,137,road_damage,pothole,walled_city
+"Pipe burst near gali no. 8 in Jhotwara, watre lowing on road for a week. Very inconvenient for residents.",,,2026-08-29T05:31:22,web,198,water_supply,pipeline_leak,jhotwara
+ovt school ke paas malviya nagar me asfai wala nahi aa raha. koi sunwai nahi ho rahii.,26.859755,75.824570,2026-08-29T06:05:02,whatsapp,212,garbage,missed_collection,malviya_nagar
+jagatpura glai number 13 me 2 hafte se kachra gaadi nai aayi. koi sunwai nahi hho rahi.,26.826926,75.860769,2026-08-29T07:01:29,app,18,garbage,missed_collection,jagatpura
+contaminated muddy water supply in masarova rgali o. 16 for a month. accident can happen any time.,,,2026-08-29T09:45:37,web,184,water_supply,contaminated_water,mansarovar
+"gali 28 Mansrovar me road kharab hai, chaln mushkil. koi sunwai nahi ho rah.i",,,2026-08-29T15:54:32,whatsapp,111,road_damage,broken_road,mansarovar
+soodala community hall ke paas me 2 hafte se achra gaadi nnahi aayyi. jald itheek kro please.,26.897809,75.769142,2026-08-29T16:00:26,web,42,garbage,missed_collection,sodala
+"Hgue otholes near opposite Hanuman temple, Raja Prak - vehicles getting damaged. Very inconveniennt for residents.",,,2026-08-29T18:50:16,app,170,road_damage,pothole,raja_park
+Jhotwara gaali number 26 ka dustbin bhar ke overflow ho raha hai. raat ko accidnet hone ka ar hai.,26.947360,75.741856,2026-08-29T21:56:21,web,250,garbage,overflowing_bin,jhotwara
+"मानसरोवर शिव मंदिर के पास की स्ट्रीट लाइट 5 दिन से बंद है, अंधेरा रहता है। बच्चे यहीं से स्कूल जाते हैं, खतरनाक है।",,,2026-08-29T23:16:34,app,94,streetlight,not_working,mansarovar
+"Hanuman temple ke samne Sodal em koda pada hai, badbu aa rahi hai. raat ko accident hone ka dar hai.",,,2026-08-30T03:44:34,web,189,garbage,garbage_dump,sodala
+the road near lane 14 iin jhotwra is ddamaged and uneve.n pease fix t soon.,,,2026-08-30T04:50:38,email,209,road_damage,broken_road,jhotwara
+sodala comunity hall ke same me 2 hafte se kachra gaadi nahi aayi.,,,2026-08-30T09:09:15,email,42,garbage,missed_collection,sodala
+gali number 11 walled city (johari bazaar) me light nahi jl rahi raat ko. kal ek scooty wala gir gaya.,26.925303,75.825751,2026-08-30T09:14:03,whatsapp,140,streetlight,not_working,walled_city
+govt school ke samne malviya naagr me safai wala nahi aa arha. pehle bhi complaint ki thhi.,,,2026-08-30T09:46:44,whatsapp,212,garbage,missed_collection,malviya_nagar
+"Jhotwara me gali nmber 21 gadda ho gaya hai, raat ko dikhta nah.",26.946450,75.739787,2026-08-30T14:25:06,app,244,road_damage,pothole,jhotwara
+bhai park gate ke samne mansarovar wala gaddha abhi tak nahi bharaa. koi sunwai nahi ho rahi.,,,2026-08-30T14:48:14,whatsapp,165,road_damage,pothole,mansarovar
+"Garbage piledd up near nera aprk gate in Manssarovar, stray animals everywhere. An oold man got injured last nigh.",26.868343,75.763025,2026-08-30T14:59:52,email,239,garbage,garbage_dump,mansarovar
+"vidhadhar agar gali no 6 pe ight ke khamb ese tar latak rahee hain, current kaa dar. kkoi sunwai nahi ho raahi.",,,2026-08-30T17:08:16,whatsapp,13,streetlight,exposed_wires,vidhyadhar_nagar
+"gali no 8 jhotwara me ppe phat gaya, ek hfate se paani beh raha. ek uncle ko chot lag gayi.",,,2026-08-30T20:01:11,web,198,water_supply,pipeline_leak,jhotwara
+Door to doro garbage not collected in Sodala gali no. 25. Very inconvenent for residents.,,,2026-08-31T00:40:45,whatsapp,42,garbage,missed_collection,sodala
+gali no 25 sodala me asfai wala ahi aa raha. ok sunwai nahi ho rahi.,26.897987,75.770092,2026-08-31T00:45:48,whatsapp,42,garbage,missed_collection,sodala
+the road near lane 14 in durgapura is damaged and uneven.,26.853742,75.793722,2026-08-31T03:12:39,whatsapp,204,road_damage,broken_road,durgapura
+Contaminate muddy water supply in Adarsh Nagar lane 13 for 10 days. Please ifx it soon.,,,2026-08-31T05:07:53,app,33,water_supply,contaminated_water,adarsh_nagar
+"Pratap Naga SBI ATM ke paas ki street light 2 hafte se band hai, andhera rehta hai. pehle hi complaint ki thi.",,,2026-08-31T06:41:51,web,159,streetlight,not_working,pratap_nagar
+"Adarsh Nagar Gurudwara ke paaas pe kachra ka dher laga hai ek hafte e. school ke bachche yahi se aate hain, bahut khatarnak hai.",,,2026-08-31T08:47:45,web,163,garbage,garbage_dump,adarsh_nagar
+"Streetlightts off near near Shiv mandir in Masarovarr, vey dark at night. Compalined earlier als, no action.",26.873489,75.766420,2026-08-31T11:32:05,web,94,streetlight,not_working,mansarovar
+Malviiya Nagar gali no 26 pe kachr ka dher laga hai ek hafte se. jaldi theek karo please.,,,2026-08-31T14:39:32,web,93,garbage,garbage_dump,malviya_nagar
+"Vaishali Nagar me gali 11 gadda ho gaya hai, raat ko dikhta nahi. pehle bhi complaint ki tthi.",,,2026-08-31T15:03:17,whatsapp,78,road_damage,pothole,vaishali_nagar
+"vaiishlai nagar gali number 24 pe liht ke khambe se taar latak rahe hain, current ka dar. ek nucle k chot lag gayyi.",,,2026-09-01T02:38:02,web,57,streetlight,exposed_wires,vaishali_nagar
+"manhole lid mmissing near street no. 27 in mansarovar, very risky. accident can happen any time.",,,2026-09-01T03:31:08,whatsapp,50,drainage,open_manhole,mansarovar
+"Jhotwara gali number 8 pe pipeline leak ho rahi hai, paai beh raha hai. raat ko accident hone ka dar hai.",,,2026-09-01T03:44:00,web,198,water_supply,pipeline_leak,jhotwara
+"Severe waterlogging at opposite hiv mmandri, jagapura after rain. Cmoplained earlie also, no acton.",26.824506,75.861479,2026-09-01T08:48:52,web,60,drainage,waterlogging,jagatpura
+"Mansarovar me gali 1 gadda ho gaya hai, raat ko dihkta nahi.",26.870540,75.763652,2026-09-01T09:07:38,app,136,road_damage,pothole,mansarovar
+"garbage piled up near near hanuman temple in sodala, stray animals everywheerre. please fix t soon.",,,2026-09-01T10:07:32,web,189,garbage,garbage_dump,sodala
+"hanuman temple ke paas pratap nagar me road kharab hai, chalna mushkil. ek unccle k chot lag gayi.",,,2026-09-01T10:48:14,whatsapp,37,road_damage,broken_road,pratap_nagar
+Public dustbin near street no. 26 in hJtwara full for a wek. Accident can happen any time.,,,2026-09-01T11:20:42,web,250,garbage,overflowing_bin,jhotwara
+"Garbage pled up near lane 27 in Sanganer, stray animals everywwhere. Very inconvenient for residents.",,,2026-09-01T11:53:52,whatsapp,89,garbage,garbage_dump,sanganer
+"MMalviya Naagr govt school ke smane me ganda panai aa raha hai nal me, bimari ka dar. rat ko accident hone ka dar hai.",26.858562,75.823215,2026-09-01T13:44:27,app,203,water_supply,contaminated_water,malviya_nagar
+"Road completely broken at stret no. 14, Jhotwara for 3 days.",,,2026-09-01T15:51:43,whatsapp,209,road_damage,broken_road,jhotwara
+"Grabage piled up near lane 30 in Soadla, stray animals everywher. An old man got injured last night.",26.899064,75.769379,2026-09-01T17:12:17,app,189,garbage,garbage_dump,sodala
+The rroad nearr opposite Reliance Fresh i Raja Park is damaged and uneven.,26.894634,75.818296,2026-09-01T17:34:31,whatsapp,222,road_damage,broken_road,raja_park
+vidhyadhar nagar ggali number 18 me 2 hafte se paani nahi aa raha. pehle bhi complaint ki thi.,,,2026-09-01T18:34:20,web,172,water_supply,no_supply,vidhyadhar_nagar
+"gali number 27 bani park me road kharab hai, chalna mushki. schoo kke bachche yahi se jaate hain, bahut khatarnak hai.",,,2026-09-01T19:28:03,whatsapp,202,road_damage,broken_road,bani_park
+"Garbage collection van has not come to gali no. 25, Sodlaa for 2 weeks. Very inonvenient for residents.",,,2026-09-01T21:32:57,web,42,garbage,missed_collection,sodala
+Adars hNaggar gali number 4 me 2 hafet se kachra gaadi nahi aayi.,,,2026-09-01T23:08:30,app,41,garbage,missed_collection,adarsh_nagar
+"Vidhyadhar Nagar gali no 6 pe liht ke khaambe se taar latak rae hain, current ka da. jaldi theek krao please.",26.961961,75.786934,2026-09-02T04:27:10,web,13,streetlight,exposed_wires,vidhyadhar_nagar
+"Walled City (Joharri Bazaar) me gali number 28 gadda ho gaya hai, raat ko dikhta nahi. koi sunwai nahi ho rahi.",,,2026-09-02T09:10:21,web,23,road_damage,pothole,walled_city
+Malvyia Nagar SBI ATM ke paas ki sadak tooti hui hai 10 din se. kal ek scooty wala girr gay.a,26.850411,75.818163,2026-09-02T10:04:11,whatsapp,252,road_damage,broken_road,malviya_nagar
+"प्रताप नगर गली नंबर 8 की सड़क टूटी हुई है। बच्चे यहीं से स्कूल जाते हैं, खतरनाक है।",26.797285,75.812963,2026-09-02T12:29:05,whatsapp,77,road_damage,broken_road,pratap_nagar
+"gali no 30 Viidhyadhar Nagar me water supply band hai, nal me paani nnahhi. koi sunwai nahi ho rahi.",,,2026-09-02T15:29:21,email,67,water_supply,no_supply,vidhyadhar_nagar
+"Svere waterlogging at street n.o 7, Maalviya Nagar after rain.",26.858469,75.820262,2026-09-02T16:38:10,web,187,drainage,waterlogging,malviya_nagar
+"Garbage piled up near opposite bus stop in Jhotwara, stray animals everywhere. Please fix it soon.",,,2026-09-02T17:50:29,whatsapp,1,garbage,garbage_dump,jhotwara
+"ggali 27 sananer me koooda pada hai, badbu aa rahi hai. phele bhi complaint ki thi.",,,2026-09-02T18:02:03,web,89,garbage,garbage_dump,sanganer
+"Steret light not working at alne 11, Walled City (Johari Bazaar) for a month. Very inconvenient for resdents.",,,2026-09-02T22:09:54,whatsapp,140,streetlight,not_working,walled_city
+"gali 18 Adrsh Nagar me water supply band hai, nla me paaani nahi. pehle bhi ocmplaintt ki thi.",,,2026-09-03T01:28:57,whatsapp,157,water_supply,no_supply,adarsh_nagar
+"Live wires hanging from light pole at lane 6, iVdhyadhar Nagar. Very niconvenient for residents.",26.961650,75.786559,2026-09-03T01:55:19,whatsapp,13,streetlight,exposed_wires,vidhyadhar_nagar
+मालवीय नगर गली 7 में जलभराव हो गया है। कृपया जल्दी ठीक करें।,,,2026-09-03T04:02:40,app,187,drainage,waterlogging,malviya_nagar
+Malviiyya Nagar gail 7 em baaish ke bad paani bhara hua hai. koi sunwai nahi ho rahi.,26.858297,75.819815,2026-09-03T05:16:12,whatsapp,187,drainage,waterlogging,malviya_nagar
+"Live wires hanging from light pole at gali no. 6, Vidhyadhar Nagar. ccident an happen any time.",,,2026-09-03T05:16:29,email,13,streetlight,exposed_wires,vidhyadhar_nagar
+"Live wires hnging from ligh pe ta gali no. 6, vidhydhar naar.",,,2026-09-03T05:32:35,app,13,streetlight,exposed_wires,vidhyadhar_nagar
+"gali 29 Raja Par me road kharab hai, chalna mushkil. koi sunwa inahi ho rahi.",,,2026-09-03T06:42:50,web,185,road_damage,broken_road,raja_park
+"Vidhyadhar Nagar agil number 6 pe ligth ke khambe se taar latak rahe hain, cuurrent ka dar.",,,2026-09-03T07:21:59,web,13,streetlight,exposed_wires,vidhyadhar_nagar
+"Garbage collection van has not com eto opposite community hall, sodala for 2 weeks. Pleease fix it soon.",,,2026-09-03T07:35:20,whatsapp,42,garbage,missed_collection,sodala
+"gali 7 C Scheme me nal iband hai, gandagi fail rraih hai. koi sunwai nahi ho rahi.",,,2026-09-03T08:03:03,whatsapp,195,drainage,blocked_drain,c_scheme
+"Water pipelline leaking at lane 8, Jhotwara, lots of water wastage. An old man got injured last nigh.",26.954453,75.746186,2026-09-03T09:42:43,web,198,water_supply,pipeline_leak,jhotwara
+water tank ke paas SSanganer me light nahi jal rah irraat ko.,,,2026-09-03T10:28:21,web,3,streetlight,not_working,sanganer
+"Stretlights off near lane 21 in Sanganer, very dark att night. Very icnonvenieent for residents.",26.814804,75.784009,2026-09-03T10:35:20,whatsapp,9,streetlight,not_working,sanganer
+dAarsh Nagar gali 9 ka dustbin bha rke overflow ho raha hai. jaldi theek karo please.,26.903454,75.843069,2026-09-03T15:49:20,whatsapp,223,garbage,overflowing_bin,adarsh_nagar
+community hall ke samne pratap nagar me safai waa nahi aa raha.,,,2026-09-03T16:16:37,web,124,garbage,missed_collection,pratap_nagar
+"gali no 18 Adarsh Nagar me nali band hai, gandagi fail rah ihai. pehle bhi comlpaint ki th.",26.902345,75.845553,2026-09-03T17:30:18,email,132,drainage,blocked_drain,adarsh_nagar
+"Viidhyadhar agar gali number 6 pe light kke khambe se taar latak rahe hain, current ka dar. pehle bhi complaint ki thi.",,,2026-09-03T18:05:19,whatsapp,13,streetlight,exposed_wires,vidhyadhar_nagar
+"gali no 30 sodala me kooda paad hai, badbu aa rahi hai. school ke bachche yahi se jaate hian, bbahut khatarnak hai.",,,2026-09-03T19:04:10,web,189,garbage,garbage_dump,sodala
+adarsh nagar glai 24 ki saak tooti hui hai 3 din se. pehle bhi copaint ik thi.,26.902200,75.845122,2026-09-03T19:24:03,whatsapp,179,road_damage,broken_road,adarsh_nagar
+सोडाला सामुदायिक भवन के पास में 2 हफ्ते से कचरा गाड़ी नहीं आई।,26.898199,75.769923,2026-09-04T01:39:59,whatsapp,42,garbage,missed_collection,sodala
+gali no 25 Sodala me safia wala nahi aa raha.,26.897791,75.769033,2026-09-04T02:20:50,whatsapp,42,garbage,missed_collection,sodala
+"Garbage piled up near near HHanuman temple in Sodala, stray animal severywhree. An old man got injurd last night.",,,2026-09-04T03:26:41,web,189,garbage,garbage_dump,sodala
+"Shv mnadir ke paas Pratap Nagr mee water supply band hai, nal me paani nah. koi sunwai nahi ho rahi.",,,2026-09-04T03:45:44,whatsapp,96,water_supply,no_supply,pratap_nagar
+pratap nagar park gate ke sammne me 3 din se paani nai aa raha.,26.801523,75.827516,2026-09-04T04:48:01,whatsapp,194,water_supply,no_supply,pratap_nagar
+Mansaroavr gali 7 me 2 hafe se kachra gaadi nahi aayi. pehle bhi complanit i thi.,,,2026-09-04T06:39:46,whatsapp,135,garbage,missed_collection,mansarovar
+"Live wires hanging from light pole at gali no. 6, Vidhyadhar agar. Very incconveenient for residentss.",,,2026-09-04T07:07:55,web,13,streetlight,exposed_wires,vidhyadhar_nagar
+"Water not coming in taps att gali no. 1, Saganer since 2 weeks. Complainee earlier also, no actionn.",,,2026-09-04T13:59:04,web,173,water_supply,no_supply,sanganer
+Dooor to door garbag not clolected in sodala opposite commuity hall. Please fix it soon.,,,2026-09-04T15:27:34,whatsapp,42,garbage,missed_collection,sodala
+"Water not coming in taps at opposite Shiv mandir, Pratap Nagar since 5 days. Accident cn happen any time.",,,2026-09-04T18:48:08,web,96,water_supply,no_supply,pratap_nagar
+"The road near gali no. 26 in Jhotwara is damaged and uneven. Complaiend earlier also, no action.",,,2026-09-04T19:15:03,whatsapp,143,road_damage,broken_road,jhotwara
+commuunity ahl ke paas Sodala me safai wala nahi aa raha.,26.897763,75.769276,2026-09-04T22:58:03,whatsapp,42,garbage,missed_collection,sodala
+"bus stop ke samne Malviya Nagar me water suply band haii, nal me paani nahi. ehel bhi complaint i thi.",,,2026-09-04T23:46:37,email,258,water_supply,no_supply,malviya_nagar
+"gurudwara ke paas sodala me manhole poen hai 10 din se. school ke bachch yahi se jaate hain, bahuut khatarnak ahi.",26.900636,75.773086,2026-09-04T23:48:22,web,125,drainage,open_manhole,sodala
+"Shiv mandir ke paas Jhotwara e gutter overflow ho raha hai 10 din se. school ke bachhce yahi se jaate hhain, bahut khaatrnak ai.",26.946713,75.735490,2026-09-05T03:07:08,web,231,drainage,sewage_overflow,jhotwara
+"Bani Par gali no 17 me ganda paani aa raah hai nal me, bimarri ka dar. koi sunwai nahi ho rahi.",26.927625,75.798496,2026-09-05T05:20:19,web,61,water_supply,contaminated_water,bani_park
+Sewer line overflow near near Shiv mandir in Jhotwara for 10 days. An ld man got injured last night.,26.946949,75.735497,2026-09-05T06:05:02,whatsapp,231,drainage,sewage_overflow,jhotwara
+"Vidhyadhar Nagar gali no 6 pe light ke khambe s etaaar latak rahe hain, current ka dar. ek uncle ko cho lag gayi.",26.961878,75.786866,2026-09-05T06:54:40,whatsapp,13,streetlight,exposed_wires,vidhyadhar_nagar
+sodala glai 5 me sadak pe bdaa gaddha hai 10 din se. koi sunwai nahi ho rahi.,26.909010,75.770685,2026-09-05T08:28:48,whatsapp,228,road_damage,pothole,sodala
+"Vidhyadhar Nagar gali 6 e light ke khabe se taar latak rhe hain, current ka dar. kal ek scooty wala giir gaya.",,,2026-09-05T10:55:51,whatsapp,13,streetlight,exposed_wires,vidhyadhar_nagar
+"The roa ddnear gali no. 8 in Pratap Nagar is damaged and uneven. Complained earlier also, no actio.",26.796811,75.813185,2026-09-05T13:30:58,whatsapp,77,road_damage,broken_road,pratap_nagar
+सोडाला गली नंबर 25 में 2 हफ्ते से कचरा गाड़ी नहीं आई। पहले भी शिकायत की थी।,,,2026-09-05T16:08:47,whatsapp,42,garbage,missed_collection,sodala
+"door to door garbage not collected in sodala gali no. 25. complained earlier also, no action.",,,2026-09-05T16:23:08,whatsapp,42,garbage,missed_collection,sodala
+जौहरी बाजार पार्क गेट के पास पर पाइपलाइन लीक हो रही है। पहले भी शिकायत की थी।,26.921852,75.826063,2026-09-05T17:07:47,email,219,water_supply,pipeline_leak,walled_city
+प्रताप नगर गली 8 की सड़क टूटी हुई है। पहले भी शिकायत की थी।,26.797086,75.812805,2026-09-05T22:23:16,app,77,road_damage,broken_road,pratap_nagar
+"Severe waerlogging at gali no. 7, Malviya Nagar after rain.",26.858140,75.820753,2026-09-05T23:41:38,web,187,drainage,waterlogging,malviya_nagar
+"PPipe burt near near park gate in johari bazaar, water flowing on road for 3 days.",26.921591,75.826783,2026-09-06T03:28:45,email,219,water_supply,pipeline_leak,walled_city
+Jhotwara gali number 6 mee 1 mahine se paani nahi aa raha.,,,2026-09-06T05:48:07,whatsapp,62,water_supply,no_supply,jhotwara
+सोडाला सामुदायिक भवन के पास में 2 हफ्ते से कचरा गाड़ी नहीं आई। कृपया जल्दी ठीक करें।,26.897749,75.770003,2026-09-06T07:39:35,web,42,garbage,missed_collection,sodala
+Water logged street near gali no. 5 in Jhotwara for 5 days. Please fix t soon.,,,2026-09-06T08:58:25,whatsapp,73,drainage,waterlogging,jhotwara
+विद्याधर नगर गली 6 पर खंभे से तार लटक रहे हैं। कल एक स्कूटी वाला गिर गया।,26.961916,75.786630,2026-09-06T09:13:44,app,13,streetlight,exposed_wires,vidhyadhar_nagar
+प्रताप नगर गली 22 में 5 दिन से पानी नहीं आ रहा है। कृपया जल्दी ठीक करें।,,,2026-09-06T09:45:54,web,102,water_supply,no_supply,pratap_nagar
+"Streetlights off near lane 26 in shstri nagar, very dark at night.",26.950017,75.800253,2026-09-06T10:33:35,whatsapp,235,streetlight,not_working,shastri_nagar
+Water ogged strret near near bus stop iin jhotwar fo r3 days.,26.955858,75.746093,2026-09-06T12:15:58,whatsapp,35,drainage,waterlogging,jhotwara
+"Road completely broken at gali no. 8, Pratap Nagar for a month.",,,2026-09-06T12:49:56,app,77,road_damage,broken_road,pratap_nagar
+adarsh nagar gali 18 ki naaali jam ho gayi hai 2 hafte se. koi snwai nahi o rahi.,,,2026-09-06T17:52:16,web,132,drainage,blocked_drain,adarsh_nagar
+"Live wirs hanging from light pole at streeet no. 6, Vidhyadhar Nagar.",,,2026-09-06T18:34:07,web,13,streetlight,exposed_wires,vidhyadhar_nagar
+"Huge garbage dump att street no. 30, Sdoaa, not cleared for a week. A scooter rider fell here yesterday.",,,2026-09-06T19:31:10,web,189,garbage,garbage_dump,sodala
+"gali number 1 Sanganr me water supplly band hai, nal me paani nahi. pehle bh complaint ki thi.",26.821194,75.790312,2026-09-06T19:51:03,app,173,water_supply,no_supply,sanganer
+"Jhotwara gali no 11 me gannda pani aa raha hai nal me, bimari ka dar. kal eek scooty wala gir gaya.",,,2026-09-07T02:38:56,web,180,water_supply,contaminated_water,jhotwara
+सोडाला गली 25 में 2 हफ्ते से कचरा गाड़ी नहीं आई।,,,2026-09-07T05:42:15,email,42,garbage,missed_collection,sodala
+"pothole at johari bazaar opposite reliance fersh still nt repired aftre 3 days. complaine earlier also, no action.",26.916798,75.822945,2026-09-07T06:27:10,web,196,road_damage,pothole,walled_city
+"Pratap Nagar community hall ke paas pe sewer ka paani road pe aa gaya hai. schoool ke bachche yahi se jaate hain, bahut khatarnak hai.",26.793491,75.821164,2026-09-07T06:39:58,email,55,drainage,sewage_overflow,pratap_nagar
+Jagatpura gali no 27 ki sadak tooti hui hai 3 din se. koi sunawi nhi ho rhi.,,,2026-09-07T07:12:51,whatsapp,122,road_damage,broken_road,jagatpura
+"garbage piled up near opposite reliance fresh i vihdyadhar nagar, stray animals everywhere. very inconvenient ffor residents.",26.961784,75.775610,2026-09-07T10:42:52,web,238,garbage,garbage_dump,vidhyadhar_nagar
+gali no 8 ratap nagar pe jalbharav ho gaya hai.,,,2026-09-07T10:51:31,whatsapp,248,drainage,waterlogging,pratap_nagar
+"vidhyadhar nagar gali no 6 pe light ke khambe se taar latak rah ehain, current ka dr. ek ncle ko chott lag gayi.",,,2026-09-07T11:03:58,whatsapp,13,streetlight,exposed_wires,vidhyadhar_nagar
+"petrol pump ke samne Jhotwaar me water suplpy band hai, nal me ppaani nahi.",26.956451,75.740785,2026-09-07T15:42:26,web,20,water_supply,no_supply,jhotwara
+There is a deep pothle street no. 5 in Sdala for 10 days. Please fix it soon.,,,2026-09-07T15:45:41,web,228,road_damage,pothole,sodala
+"झोटवाड़ा गली नंबर 14 की सड़क टूटी हुई है। बच्चे यहीं से स्कूल जाते हैं, खतरनाक है।",,,2026-09-07T16:27:17,web,209,road_damage,broken_road,jhotwara
+"sodala gali no 30 pe kcahra ka dher laga hai ke hafte se. school ke bachche yahi se jaate hain, bahut khatarnak hai.",26.899569,75.769431,2026-09-07T17:28:15,whatsapp,189,garbage,garbage_dump,sodala
+C-Scheme gali 25 ka dustbin bhar ke overflow ho raha hai. jaldi theek karo please.,,,2026-09-07T17:57:27,web,225,garbage,overflowing_bin,c_scheme
+"vidhyadhar naga rgali number 6 pe light ke khambe se taar latak rahee hain, current ka dar. school ke bachche yahi se jaate hain, bahut khatarnak hai.",26.961681,75.787520,2026-09-07T18:13:50,email,13,streetlight,exposed_wires,vidhyadhar_nagar
+"water ot coming in taps at lane 1, saanganer since 2 weeks. compained earlier also, no acion.",,,2026-09-07T19:45:34,whatsapp,173,water_supply,no_supply,sanganer
+"Sanganer gali number 22 ki street light ek hafte se band hai, anhdra rehta haai. jaldi theek karo please.",,,2026-09-07T20:46:58,email,3,streetlight,not_working,sanganer
+"Road copmletely broken at opposite Reliance Fresh, Raja Park for a week. Acccident can happen nay time.",,,2026-09-07T20:49:52,web,222,road_damage,broken_road,raja_park
+"Water not coming in taps at street no. 1, sanganer since 2 weeks. Very inconvenient for ersidents.",26.820269,75.790560,2026-09-07T23:27:28,web,173,water_supply,no_supply,sanganer
+"gali numbe 21 Sanganer me light nahhi jal rahi raat ko. shool e bachche yhi se jaaate hain, bahut khatanak hai.",26.814046,75.784248,2026-09-08T01:58:48,whatsapp,9,streetlight,not_working,sanganer
+Sodala gali number 1 pe kahra ka dher laga ahi 3 din se.,,,2026-09-08T05:26:23,email,5,garbage,garbage_dump,sodala
+"Dustbin overflowing at laane 25, C-Scheme.",26.913095,75.801172,2026-09-08T07:35:46,whatsapp,225,garbage,overflowing_bin,c_scheme
+"राजा पार्क Reliance Fresh के पास की सड़क टूटी हुई है। बच्चे यहीं से स्कूल जाते हैं, खतरनाक है।",26.894137,75.819281,2026-09-08T07:38:25,web,222,road_damage,broken_road,raja_park
+No awter supply in Adarsh Nagar gali no. 2 for a month.,,,2026-09-08T08:14:01,web,36,water_supply,no_supply,adarsh_nagar
+"Live wires hnaging frm light pole att street no. 6, Vidhyadhar Nagar. Accident can happen any time.",,,2026-09-08T09:00:12,whatsapp,13,streetlight,exposed_wires,vidhyadhar_nagar
+"gali number 1 sanganer me water supply band hai, nal me paani nahi. jaldi tehek karo please.",,,2026-09-08T09:09:44,whatsapp,173,water_supply,no_supply,sanganer
+"Huge garbage dup at street no. 10, Walled City (Johari Bazara), not clearred for 2 weeks. Please fix t soon.",,,2026-09-08T09:23:31,web,131,garbage,garbage_dump,walled_city
+Public dustbin near gali no. 25 in Shastri Nagar full for 10 days. Please fix it soon.,26.946355,75.798455,2026-09-08T11:34:12,email,103,garbage,overflowing_bin,shastri_nagar
+प्रताप नगर हनुमान मंदिर के पास की सड़क टूटी हुई है। कल एक स्कूटी वाला गिर गया।,,,2026-09-08T14:09:56,whatsapp,37,road_damage,broken_road,pratap_nagar
+community hall ke ssamee Pratap Nagar m peene ka paani ganda aa raha hai. kal k scooty wala gir gaya.,26.794524,75.823827,2026-09-08T16:49:19,email,227,water_supply,contaminated_water,pratap_nagar
+The road near opposite SBI ATM in Mansarovar is damaged and uneven. A scooter rider fell here yesterrday.,,,2026-09-08T17:45:09,web,201,road_damage,broken_road,mansarovar
+Door to door garbage not collected in Sodala near community hal. Please fix it soon.,26.897783,75.769400,2026-09-08T20:35:32,web,42,garbage,missed_collection,sodala
+"Huge garbage dump at near Hanuman temple, Sodala, not cleared for a week. Copmlained earlier also, noo action.",,,2026-09-08T22:24:44,app,189,garbage,garbage_dump,sodala
+Malviya Nagar gali number 7 me baarish ke baad paani bharaa hua hai.,,,2026-09-09T01:07:52,web,187,drainage,waterlogging,malviya_nagar
+"Drain blocked at street no. 19, Jhotwara fro 3 days, bad smell.",,,2026-09-09T01:56:00,email,246,drainage,blocked_drain,jhotwara
+"garbage piled up near near gurudwara in adarsh nagar, stay animals everywhere.",26.902525,75.835484,2026-09-09T03:54:43,whatsapp,163,garbage,garbage_dump,adarsh_nagar
+gali 26 Shastri Nagar me light nahi jal rahi raat ko. pehle bhi complaitn ki thi.,,,2026-09-09T04:30:43,whatsapp,235,streetlight,not_working,shastri_nagar
+"Pipe burst nnear lane 1 in Walled City (Joharii Bazaar), water folwing on road for 10 days. Very inconvenient for residents.",26.918738,75.821613,2026-09-09T07:18:32,web,158,water_supply,pipeline_leak,walled_city
+sanganner gali numbre 1 me 2 hafte se paani nahi aaa raha. pehle bhi complaint ki th.i,,,2026-09-09T08:14:47,whatsapp,173,water_supply,no_supply,sanganer
+"gali no 18 Adarsh Ngar m enali band hai, gandagi fail rahi hai. koi suwnai naih ho rahi.",,,2026-09-09T09:41:32,app,132,drainage,blocked_drain,adarsh_nagar
+Sanganer gali 27 pe kachra ka dhe laga hai 1 mahine se. koii sunwai nahi ho rahhi.,,,2026-09-09T17:08:51,whatsapp,89,garbage,garbage_dump,sanganer
+"Shiv mandirr ke paas Sodala me kooda pada hai, badu aa rahi hai. jalid theek karo pleae.",,,2026-09-09T23:53:13,web,216,garbage,garbage_dump,sodala
+galli 27 mansarovar me gutter overflow ho raha hia 5 din se. ek uncle ko chot lag gayi.,,,2026-09-10T00:49:53,whatsapp,83,drainage,sewage_overflow,mansarovar
+"gali no 2 johari bazaar me road kharab hai, chalna mushkil. kal ek scooty wala gir gaya.",26.915183,75.825729,2026-09-10T09:21:15,web,245,road_damage,broken_road,walled_city
+Vaishali Nagar gali 19 ki sadak tooti hui hai 10 din se. ek uncle ko chot lag gayi.,,,2026-09-10T12:17:00,whatsapp,120,road_damage,broken_road,vaishali_nagar
+jori bazaar gali o 5 ka dstbin bhar ke overflow ho rahha hai. jaldi theek karo please.,,,2026-09-10T13:48:48,web,142,garbage,overflowing_bin,walled_city
+Poothole at Adarsh Naga rnaer Shiv mandir still not reparied after 3 days.,26.894413,75.840284,2026-09-10T14:52:44,web,100,road_damage,pothole,adarsh_nagar
+The road near gali nno. 19 in Vaishali Nagar is damaged and unevven. Accident can happen y time.,26.907735,75.742570,2026-09-10T18:13:13,app,120,road_damage,broken_road,vaishali_nagar
+"gali 19 Jhotwara me nali band hai, gandgi fail rahi hai.",,,2026-09-10T18:59:13,whatsapp,246,drainage,blocked_drain,jhotwara
+jhotwara gali number 19 ki naali jam ho gayi hai 3 din se. pehle bhi complaint ki thi.,,,2026-09-10T20:52:04,web,246,drainage,blocked_drain,jhotwara
+"drain blocked at gali no. 19, hotara for 3 days, bad smell. coomplained earlier also, no acton.",26.953263,75.746151,2026-09-11T11:42:24,web,246,drainage,blocked_drain,jhotwara
+सोडाला गली नंबर 22 का डस्टबिन भरकर बह रहा है।,,,2026-09-11T13:12:44,web,109,garbage,overflowing_bin,sodala
+"गली नंबर 3, मानसरोवर में गड्ढे की वजह से बहुत परेशानी है। पहले भी शिकायत की थी।",26.870652,75.762319,2026-09-11T18:11:22,web,79,road_damage,pothole,mansarovar
+Jhotwara gali no 19 ki nalli ja ho ayi hai 3 din es. jaldi theek kar please.,,,2026-09-11T19:12:46,whatsapp,246,drainage,blocked_drain,jhotwara
+Mansaroovar gali number 5 ki sadak tooti hui hai ek hafte se. pelhe bhi complaint ki thi.,,,2026-09-11T20:38:55,email,190,road_damage,broken_road,mansarovar
+"Street light no working at street no. 21, Sanganer for 2 weeks. Accidet can happen any time.",,,2026-09-11T21:10:04,whatsapp,9,streetlight,not_working,sanganer
+The road near gali no. 19 in Vaishali Nagar is damaged and uneven. Accident can happen any time.,,,2026-09-11T23:45:25,web,120,road_damage,broken_road,vaishali_nagar
+JJohari aBzaar glai 24 pe kachra ka dher laga hai 10 din se.,26.917641,75.824255,2026-09-12T00:24:26,whatsapp,176,garbage,garbage_dump,walled_city
+"vaishali nnagar gali numer 2 pe light ke khambe se taar lata krahe hain, current ka dar. ek unclee ko chot lag gayi.",26.912008,75.749016,2026-09-12T05:56:57,whatsapp,115,streetlight,exposed_wires,vaishali_nagar
+Pblic dustbin near lane 25 in C-Scheme full for 5 days.,,,2026-09-12T07:39:41,web,225,garbage,overflowing_bin,c_scheme
+"Sewage overflowing on the street at nnear Shiv mandir, Jhotwara. Very inconvenient for residents.",26.947457,75.736217,2026-09-12T08:43:17,whatsapp,231,drainage,sewage_overflow,jhotwara
+"Exposed electric wires at streetlight pole near gai no. 2, Vaishali Nagr. Accident can happen anyy time.",,,2026-09-12T09:06:05,web,115,streetlight,exposed_wires,vaishali_nagar
+johari bazaar sbi atm ke paas ki sadak tooti hui hai 10 din se. pehle bhi omplaiint ki thi.,,,2026-09-12T10:15:33,whatsapp,97,road_damage,broken_road,walled_city
+vaishali nagar petrol pump ke samne me baarish ke baad paani bhara hua hai.,26.914049,75.736247,2026-09-12T12:00:52,app,148,drainage,waterlogging,vaishali_nagar
+"vaishali nagar gali number 2 pe light ke khambe se aar latak rahe hain, current ka dr. ek uncle ko chot alg gayi.",26.911645,75.748560,2026-09-12T13:24:36,web,115,streetlight,exposed_wires,vaishali_nagar
+"Hgue garbag edump at street no. 24, Walled City (Johari Bazaar), nott celared for 10 days. Very inconvenient for resdients.",26.917575,75.824568,2026-09-12T14:33:54,app,176,garbage,garbage_dump,walled_city
+"Live wires hanging from light pole at street no. 26, Johari Bazaar. Kids walk to schoool through his road, it is dangerous.",26.917437,75.832817,2026-09-12T17:25:50,whatsapp,178,streetlight,exposed_wires,walled_city
+"Live wiires hanging from light pole a tgali no. 2, Vaishali Nagar. A sscooter rider fell ehre yesterday.",,,2026-09-12T18:22:38,whatsapp,115,streetlight,exposed_wires,vaishali_nagar
+Viashali Nagar gali number 19 ki sadak tooti hui hai 10 idn se. ek uncl ko chot lag gayi.,,,2026-09-12T20:01:06,whatsapp,120,road_damage,broken_road,vaishali_nagar
+Sewer line ooverflow nnear near Shiv mandir in Jhotwara for 10 days. Please fix it soon.,26.946840,75.736354,2026-09-12T21:17:39,web,231,drainage,sewage_overflow,jhotwara
+"arbage pled up near opposite water tank in johari bazaar, stray animals eveywhere. copmlained earlier also, no action.",,,2026-09-12T21:35:16,web,160,garbage,garbage_dump,walled_city
+The nali near street no. 19 in Jhotwara s clogged and overflowig.,26.953150,75.745938,2026-09-13T01:10:11,app,246,drainage,blocked_drain,jhotwara
+"vaishali nagar gali no 19 ki sadak tooti hui hai 10 din se. cshool ke bachche yahi se jaate hain, bahut khatarnak hai.",,,2026-09-13T07:10:14,email,120,road_damage,broken_road,vaishali_nagar
+"gali number 18 malviya nagar me roaad kharab hai, chalna muskhil. raat ko accident hone ka darr hai.",,,2026-09-13T08:15:57,app,110,road_damage,broken_road,malviya_nagar
+The nali near lane 19 in Jhotwara is clogegd and overflowing.,,,2026-09-13T13:01:18,whatsapp,246,drainage,blocked_drain,jhotwara
+सोडाला शिव मंदिर के पास पर कचरे का ढेर लगा है।,26.898833,75.768145,2026-09-13T13:15:14,web,216,garbage,garbage_dump,sodala
+"Garage piledd up near gali no. 1 in Sodala, stray animals everywhere. Very inconvenient for residents.",26.904711,75.771270,2026-09-13T14:03:41,email,5,garbage,garbage_dump,sodala
+Jhotwaraa gali number 19 ki naali jam ho gayi hai 3 din se. jaldi theek karo please.,26.952827,75.746637,2026-09-13T14:16:23,web,246,drainage,blocked_drain,jhotwara
+मालवीय नगर Reliance Fresh के पास में नल में गंदा पानी आ रहा है। कल एक स्कूटी वाला गिर गया।,26.850046,75.828308,2026-09-13T15:18:20,whatsapp,232,water_supply,contaminated_water,malviya_nagar
+झोटवाड़ा गली 19 की नाली जाम हो गई है।,26.952621,75.745921,2026-09-13T17:01:31,whatsapp,246,drainage,blocked_drain,jhotwara
+bhai shiv mandir ke paas sodala walaa gaddha abhi tak nahi bhara.,,,2026-09-13T17:14:56,web,228,road_damage,pothole,sodala
+"pothole at johari bazaar gali no. 13 still not repaired after 10 days. cmoplaiined earlier also, no action.",,,2026-09-13T18:39:48,app,175,road_damage,pothole,walled_city
+वैशाली नगर गली 2 पर खंभे से तार लटक रहे हैं। पहले भी शिकायत की थी।,26.912018,75.748309,2026-09-13T19:27:50,whatsapp,115,streetlight,exposed_wires,vaishali_nagar
+"Dustbin overflowing at nearr watter tank, malviya nagar. Please fix it soonn.",26.857590,75.828361,2026-09-13T22:30:41,whatsapp,11,garbage,overflowing_bin,malviya_nagar
+bhai gali number 13 johari bazar wala gaddha abhi tak nahi bahra. jaldi theekk karo please.,,,2026-09-13T23:07:47,whatsapp,175,road_damage,pothole,walled_city
+gali 17 manarovar pe jalbharaav ho gaya hai.,,,2026-09-13T23:57:03,web,128,drainage,waterlogging,mansarovar
+Pothole at Adarsh Nagarr near Shiv mandir still no trepairde after 3 dasy. A scooter rider fell here yesterday.,26.895423,75.840089,2026-09-14T00:12:21,whatsapp,100,road_damage,pothole,adarsh_nagar
+jagatpua gali no 28 ki sadak ttooti hui hai 3 din se. ek uncle ko cho lag gayi.,26.819420,75.863698,2026-09-14T00:41:49,web,205,road_damage,broken_road,jagatpura
+"gali number 5 Vidhyadhar Nagar m road kharab hai, chalna mushkli. pehlee bhi complaint ki thii.",26.959632,75.777650,2026-09-14T00:59:23,email,199,road_damage,broken_road,vidhyadhar_nagar
+"मानसरोवर गली नंबर 23 पर मैनहोल का ढक्कन नहीं है। बच्चे यहीं से स्कूल जाते हैं, खतरनाक है।",26.875764,75.760840,2026-09-14T02:19:46,whatsapp,59,drainage,open_manhole,mansarovar
+बनी पार्क पार्क गेट के पास पर खंभे से तार लटक रहे हैं। कल एक स्कूटी वाला गिर गया।,,,2026-09-14T02:56:11,whatsapp,75,streetlight,exposed_wires,bani_park
+sodala shiv mandir ke paas ka duusstbin bhar ke overfolw ho raha hai.,,,2026-09-14T08:57:52,app,109,garbage,overflowing_bin,sodala
+"Live wirse hnigng from light pole at gali noo. 26, Sanganer.",26.823000,75.790615,2026-09-14T09:39:39,whatsapp,53,streetlight,exposed_wires,sanganer
+Johari Bazaar gali number 13 me sdak pe bada gaddha hai 10 din se. pehle bhi complaint ki tthi.,26.915738,75.822962,2026-09-14T10:59:18,whatsapp,175,road_damage,pothole,walled_city
+दुर्गापुरा गली नंबर 12 की सड़क टूटी हुई है। कृपया जल्दी ठीक करें।,26.851865,75.790970,2026-09-14T11:21:16,whatsapp,106,road_damage,broken_road,durgapura
+"public dustbin near street no. 21 in johari bazaar full for 2 wekes. kids walk to school through this road, it is angerous.",26.922875,75.823586,2026-09-14T12:28:28,whatsapp,255,garbage,overflowing_bin,walled_city
+"Vaishali Nagar gali no 2 pe light ke khameb se taar lataak rahe ain, currnt ka dar. koi sunwai nhai ho rahi.",26.911763,75.748822,2026-09-14T13:44:22,app,115,streetlight,exposed_wires,vaishali_nagar
+"exposed elcetric wirees at streetlight pole near street no. 2, vaihali naga.r aa old man got injured ast night.",26.911523,75.748343,2026-09-14T15:09:08,whatsapp,115,streetlight,exposed_wires,vaishali_nagar
+"gali no 28 Jagatpura me roda khara bhai, hcalna mushkil. raat ko accident hone ka dar hai.",26.818754,75.863967,2026-09-14T17:15:36,web,205,road_damage,broken_road,jagatpura
+"huge garbage dump at near shiv mandir, osdala, not cleared for 10 days.",,,2026-09-14T23:45:42,app,216,garbage,garbage_dump,sodala
+Durgapura park gate ke paas me 3 din se kachra gaadi ni aayi. koi sunwi nahi ho rahi.,26.852172,75.790720,2026-09-14T23:54:50,web,253,garbage,missed_collection,durgapura
+Johtwara govt school ke paas ka duustbin bhar ke overflow ho rah hai.,,,2026-09-15T06:56:28,whatsapp,192,garbage,overflowing_bin,jhotwara
+Shatri Nagar bus stop ke pas ka dustbinn bhar ke ovefrlow h raha hai.,26.946692,75.798068,2026-09-15T10:11:32,whatsapp,103,garbage,overflowing_bin,shastri_nagar
+"vaishali nagar gali no 2 pe liht ke khambe se taar lata kahe hain, current ka dar. kal ek scooty wlaa gir gaya.",26.911501,75.748732,2026-09-15T11:13:31,web,115,streetlight,exposed_wires,vaishali_nagar
+gali no 13 walled city (johari bazaar) road pe bahut bdae gaddhe hain. pehe bhi complaint k thi.,26.915440,75.823700,2026-09-15T12:13:37,web,175,road_damage,pothole,walled_city
+Jagatpura gali 17 pe kachra ka dhre laga hai 5 din se. jaldi theek kar oplease.,26.829431,75.866039,2026-09-15T13:25:35,web,121,garbage,garbage_dump,jagatpura
+"contaminated uddy watr supply in malviya nagar opposte reliance fresh or 5 days. kids walk to scchool through this road, it is dangeous.",,,2026-09-15T14:24:39,web,232,water_supply,contaminated_water,malviya_nagar
+thhe nali near lane 19 in jhotwara s clogged and overflowing. please fix it soon.,26.952784,75.746067,2026-09-15T16:52:14,web,246,drainage,blocked_drain,jhotwara
+"Manhole lid missing near opposite masjid in Malviya Nagar, very risky. Accident can happen any time.",,,2026-09-15T19:46:26,whatsapp,236,drainage,open_manhole,malviya_nagar
+"anhole lid missing near gali no. 8 i Maviya Nagar, very risky. Please fxi it soon.",,,2026-09-15T22:12:40,whatsapp,254,drainage,open_manhole,malviya_nagar
+जगतपुरा Reliance Fresh के पास में 3 दिन से कचरा गाड़ी नहीं आई।,26.821649,75.868476,2026-09-15T22:39:43,web,233,garbage,missed_collection,jagatpura
+he nali enar gai no. 25 in durgapura iis clogged and overflowing. very inconvneient for residents.,,,2026-09-16T04:12:30,whatsapp,145,drainage,blocked_drain,durgapura
+"gali number 19 jhotwara me ali band hia, gandagi fali rahi hai. jaldi theek karo pleas.e",,,2026-09-16T04:33:28,app,246,drainage,blocked_drain,jhotwara
+"ue potholes ner stree no. 26, Adarsh Nagar - vehicles getting damaged. Complained earrlier also, no action.",26.895733,75.842697,2026-09-16T04:55:00,whatsapp,138,road_damage,pothole,adarsh_nagar
+"Jagatppura gali no 14 pe light ke khambe se taar latak rahe hain, crurent kka dar. pehle bhi complaint ki thi.",26.828269,75.857878,2026-09-16T05:20:09,whatsapp,43,streetlight,exposed_wires,jagatpura
+jhotwara gali 19 ki anali jam ho gaiy hai 3 din se. jaldi theek karo please.,26.953050,75.746271,2026-09-16T08:41:48,whatsapp,246,drainage,blocked_drain,jhotwara
+वैशाली नगर गली नंबर 19 की सड़क टूटी हुई है। कल एक स्कूटी वाला गिर गया।,26.907543,75.743167,2026-09-16T09:17:21,whatsapp,120,road_damage,broken_road,vaishali_nagar
+Malviya Nagar gali number 3 ki sadak tooti hui hai 5 din se. jaldi theek karo please.,26.852175,75.824267,2026-09-16T12:25:38,web,68,road_damage,broken_road,malviya_nagar
+"jagatpura ggali no 14 pe light ke khmabe se taar latak rahe hain, current ka dar. jaldi theek karo plesae.",26.827881,75.857867,2026-09-16T14:37:31,web,43,streetlight,exposed_wires,jagatpura
+"Road cmplteely broken at galli no. 19, vaishali nagga for 10 day.s Please fix it soon.",26.907269,75.742707,2026-09-16T15:24:24,whatsapp,120,road_damage,broken_road,vaishali_nagar
+सी स्कीम गली 25 का डस्टबिन भरकर बह रहा है। कृपया जल्दी ठीक करें।,26.912909,75.801993,2026-09-16T17:19:05,whatsapp,225,garbage,overflowing_bin,c_scheme
+The road nar lane 19 in Vaisahli Nagar i damaged and uneven.,26.907233,75.743242,2026-09-16T19:12:41,whatsapp,120,road_damage,broken_road,vaishali_nagar
+"drain blocked at lane 19, jhotwara for 3 day, bad smell.",,,2026-09-16T20:50:08,web,246,drainage,blocked_drain,jhotwara
+"gali no 12 vashali nagar me nali band hai, gandagi faail rahi hai. jaldi theek kar please.",,,2026-09-16T21:32:59,web,154,drainage,blocked_drain,vaishali_nagar
+"वैशाली नगर गली 2 पर खंभे से तार लटक रहे हैं। बच्चे यहीं से स्कूल जाते हैं, खतरनाक है।",26.911801,75.748267,2026-09-16T22:48:31,web,115,streetlight,exposed_wires,vaishali_nagar
+"Johari Bazaa rme glai number 13 gadda ho gaya hai, raat ko dikhta nahi. jaldi hteek karo please.",26.915798,75.823092,2026-09-17T00:21:18,email,175,road_damage,pothole,walled_city
+"garbgae collection van has not come to street no. 19, jagatpura for 10 days. please ix it soon.",26.817953,75.867268,2026-09-17T00:41:11,app,88,garbage,missed_collection,jagatpura
+प्रताप नगर गली नंबर 8 में जलभराव हो गया है। पहले भी शिकायत की थी।,26.801731,75.822518,2026-09-17T00:42:37,app,248,drainage,waterlogging,pratap_nagar
+mansarovar masjid ke paas ka dustbin bhar ke overflow ho raha hai. koi sunwai nahi hho rah.i,26.868103,75.753294,2026-09-17T01:17:18,web,224,garbage,overflowing_bin,mansarovar
+The nai near gal no. 19 in jhhotwara is logged nd overflowing. Very inconvenient for residets.,,,2026-09-17T02:22:37,web,246,drainage,blocked_drain,jhotwara
+"Mansarovar gali no 5 em 10 din se paani nahi aa rha. school ke bachche yahi se jaate hain, bahut khatarnak hai.",26.868413,75.764552,2026-09-17T02:30:18,email,123,water_supply,no_supply,mansarovar
+jhoari bazaar gali number 13 e sadak pe bada gaddha hai 10 din se. pehle bhi complaint ki th.,,,2026-09-17T06:35:53,whatsapp,175,road_damage,pothole,walled_city
+gali number 18 pratap nga me peene ka paani ganda aa raha hai. raat ko acciident hone ka dar hai.,26.800754,75.818141,2026-09-17T07:01:11,whatsapp,54,water_supply,contaminated_water,pratap_nagar
+"Garbage piled up near near Shiv mandir in Sodala, srtay animals eeverywherre. Please fix it soon.",,,2026-09-17T07:39:07,whatsapp,216,garbage,garbage_dump,sodala
+adarsh nagar gali number 2 me 1 mahine se paani nahi aa aha. jladi theek karo lease.,,,2026-09-17T08:57:28,email,36,water_supply,no_supply,adarsh_nagar
+The nali near lane 19 in Jhtowara is clogged and overflowing. Very inconveinent for residents.,,,2026-09-17T09:21:31,web,246,drainage,blocked_drain,jhotwara
+सोडाला गली 22 का डस्टबिन भरकर बह रहा है। पहले भी शिकायत की थी।,26.903401,75.778753,2026-09-17T09:53:38,web,109,garbage,overflowing_bin,sodala
+sodala gali numbber 22 ka dustbin bhar ke overflow ho raha hai. koi sunwai nahi ho rahi.,,,2026-09-17T10:19:48,whatsapp,109,garbage,overflowing_bin,sodala
+dooro to door garbae not collected in drrgapura oppositee park gate. please fix it soon.,,,2026-09-17T11:01:46,app,253,garbage,missed_collection,durgapura
+"Adars Nagar me gali no 28 gadda ho gaya hai, raat ko dikhta nahi. koi sunwai anhi ho raih.",,,2026-09-17T11:34:16,whatsapp,99,road_damage,pothole,adarsh_nagar
+"gali 19 vaishali nagar me road kharab hai, chalna mushkil. koi sunwai aahi ho rahi.",26.907472,75.742537,2026-09-17T12:29:33,email,120,road_damage,broken_road,vaishali_nagar
+C Scheme gali no 25 ka dustbin bhar ke overflow ho raha hai. koi sunwai nahi ho rahi.,,,2026-09-17T14:07:25,web,225,garbage,overflowing_bin,c_scheme
+"gali 19 vaishali nagar me road kharab hai, chalna mushkil. jaldi theek karo please.",26.907004,75.743254,2026-09-17T16:43:36,whatsapp,120,road_damage,broken_road,vaishali_nagar
+"gurudwara ke ssamne bani park me nali band hai, andagi fail rahi hai. pehlle bhi complaint ki thi.",,,2026-09-17T18:37:16,web,177,drainage,blocked_drain,bani_park
+gali 11 Shasri Nagar me safai wala nahhi aaa raha.,26.941983,75.791537,2026-09-17T19:06:44,whatsapp,40,garbage,missed_collection,shastri_nagar
+"Water ppeline leaking at gali no. 10, Vaishali Nagar, lots of water wastage. A scooer rider fell here yesterday.",26.913426,75.745919,2026-09-18T00:46:50,web,105,water_supply,pipeline_leak,vaishali_nagar
+"Vaihali Nagar galli no 2 pe light ke khhambbe se taar latak rahe hain, current ka dar. raat ko accidetn hone ka dar hai.",,,2026-09-18T06:04:47,whatsapp,115,streetlight,exposed_wires,vaishali_nagar
+johari bazar gali no 3 ka dustbin bhar ke overlfow ho raha hai. eek unlce ko chot llag gayi.,26.923473,75.830024,2026-09-18T11:50:31,whatsapp,32,garbage,overflowing_bin,walled_city
+gali numbre 13 Walled City (Johari Bazaar) road pe bahut bade gaddhe hain. koi sunwai nahi ho rahi.,,,2026-09-18T14:37:39,whatsapp,175,road_damage,pothole,walled_city
+Sodala gali no 2 me baarish ke baad ppaan ibhara hua hai. jald itheek karo please.,26.897981,75.772872,2026-09-18T21:06:59,web,119,drainage,waterlogging,sodala
+सोडाला शिव मंदिर के पास पर कचरे का ढेर लगा है।,,,2026-09-18T21:53:54,web,216,garbage,garbage_dump,sodala
+"Garbage piled up near lane 17 in Jagatpura, stray animals everywhere.",26.829077,75.865954,2026-09-18T21:58:22,whatsapp,121,garbage,garbage_dump,jagatpura
+jhotwara glai no 16 me sadak pe bada gaddha hai 10 din se.,,,2026-09-18T23:41:59,whatsapp,171,road_damage,pothole,jhotwara
+jhotwara gali 7 pe kachra ka dher laga hai 5 din se. pehlle bhi complaitn ki thi.,,,2026-09-19T00:38:31,email,169,garbage,garbage_dump,jhotwara
+वैशाली नगर गली 2 पर खंभे से तार लटक रहे हैं। कृपया जल्दी ठीक करें।,26.912315,75.748735,2026-09-19T02:44:57,web,115,streetlight,exposed_wires,vaishali_nagar
+the road near gali no. 19 in vaishli nnagar is dmaaged and uneven. a scooter rid rfell here yesterday.,,,2026-09-19T05:15:25,web,120,road_damage,broken_road,vaishali_nagar
+adarsh nagar gali 25 me 3 din e kachra gaadi nahi aayi. pehle bhi comlaint ki thi.,,,2026-09-19T05:55:26,whatsapp,90,garbage,missed_collection,adarsh_nagar
+gali numbe r25 ivdhyadhar nagar me ggutter overflow ho raha hai ek hafte es. ek uncle ko chot lag gayi.,26.964573,75.777124,2026-09-19T07:52:10,whatsapp,44,drainage,sewage_overflow,vidhyadhar_nagar
+"exposed electric wires at streetlight pole near near reliance fresh, vasihalii nagar. coomplained earlier aalso, no action.",,,2026-09-19T10:02:32,web,48,streetlight,exposed_wires,vaishali_nagar
+"SBI ATM ke paas Johari Bazaar me road karab hai, chalna mushkil. jaldi theek karo please.",,,2026-09-19T10:24:15,email,97,road_damage,broken_road,walled_city
+वैशाली नगर पार्क गेट के पास में 2 हफ्ते से पानी नहीं आ रहा है।,,,2026-09-19T13:59:28,whatsapp,259,water_supply,no_supply,vaishali_nagar
+"Dustbin overflowing at gali no. 21, johari bazaar. Accident can happen any tiime.",26.922819,75.822876,2026-09-19T14:55:32,whatsapp,255,garbage,overflowing_bin,walled_city
+"Drain blocked at lane 19, Malvya Nagar for 10 days, bad smell. A scooterr rider fell her yesteerday.",26.852868,75.819693,2026-09-19T20:38:49,whatsapp,22,drainage,blocked_drain,malviya_nagar
+"Johari Bazaar me gali 13 gadda ho gaya ha,i raa kto dikta nahi. pehle bhi complaintt ki thi.",,,2026-09-19T21:43:20,whatsapp,175,road_damage,pothole,walled_city
+the road near sreeet no. 19 in vaisali nagar is damaged and unevne. a scoter rider fell here yesterday.,26.907219,75.742352,2026-09-20T00:07:25,email,120,road_damage,broken_road,vaishali_nagar
+"aMnsarovar gali 29 ki street light ek hafte se band hai, andhera rehta hai.",26.871883,75.754180,2026-09-20T01:25:41,web,230,streetlight,not_working,mansarovar
+vaishali nagar gali number 19 ki sadak tooti hhui hai 10 din se.,,,2026-09-20T02:04:39,whatsapp,120,road_damage,broken_road,vaishali_nagar
+vaishali nagar gali 12 ki nalai jaam ho gayi hai 2 hafe se. jaldi theek karo please.,,,2026-09-20T03:20:55,email,154,drainage,blocked_drain,vaishali_nagar
+durapura gali no 15 pe sewer ka paani rod pe aa gaya hai. jaldi theek karo pelase.,26.859385,75.789109,2026-09-20T06:35:07,web,147,drainage,sewage_overflow,durgapura
+pratp nagar galli no 10 ki sadak tooti hui hai ek hafte see. koi sunwai ahi ho rahi.,26.801796,75.821664,2026-09-20T06:45:33,web,56,road_damage,broken_road,pratap_nagar
+public dustbin nearr opposite wwater tank in malviya nagar full forr 2 weeks. please fix it son.,26.857815,75.828582,2026-09-20T07:20:48,whatsapp,11,garbage,overflowing_bin,malviya_nagar
+sanganer gali 23 ki saadk tooti hui hai 1 maine se.,,,2026-09-20T10:55:37,app,113,road_damage,broken_road,sanganer
+Contaminated muddy water supply in Malviya Nagar opposite Reliance Fresh for a ont. A scooter rider fell here yesterday.,26.857409,75.825588,2026-09-20T11:28:37,web,84,water_supply,contaminated_water,malviya_nagar
+"gali unmber 17 Jaggatpura me kooda pada hai, adbu aa rahi hai.",26.828756,75.865478,2026-09-20T12:10:03,whatsapp,121,garbage,garbage_dump,jagatpura
+The road near gali no. 19 in vaishali nagar is damaged and uneven. Please fix it soon.,,,2026-09-20T16:29:48,web,120,road_damage,broken_road,vaishali_nagar
+"dirty smelly water comingg in taps at gali no. 5, malviya nagar. complained earlier also, no action.",,,2026-09-20T17:29:18,whatsapp,84,water_supply,contaminated_water,malviya_nagar
+gali no 14 malviya nagaar road pe bahut bad gaddhe hain. ajldi thek karo please.,,,2026-09-20T17:45:01,whatsapp,6,road_damage,pothole,malviya_nagar
+"malviya nagar reliance fresh kke samen me ganda paani aa raha hai nal me, bimari ka dar. school ke bachche yahi se jaate hain, bahut khatarnak hhai.",26.858000,75.826268,2026-09-20T18:37:13,whatsapp,84,water_supply,contaminated_water,malviya_nagar
+"जौहरी बाजार गली नंबर 13 में सड़क पर बड़ा गड्ढा है, 10 दिन से।",,,2026-09-20T23:29:45,app,175,road_damage,pothole,walled_city
+"dustbin voerfllowing at gali no. 22, sodala. complained earlier also, no action.",,,2026-09-21T00:06:59,whatsapp,109,garbage,overflowing_bin,sodala
+"vaishali nagar gali no 2 pe light ke khabe se taar ltaak rahe hain, current ka dar.",26.911401,75.748859,2026-09-21T00:23:32,web,115,streetlight,exposed_wires,vaishali_nagar
+"drain blockedd at opposite masjid, malviya nagar for 10 days, bad smell. a scooer rider fell here yesterday.",,,2026-09-21T02:14:05,web,22,drainage,blocked_drain,malviya_nagar
+The nali ear stree no. 12 in Vaishli Naagr is clogged and overflowing. Please fix it soon.,,,2026-09-21T06:27:48,whatsapp,154,drainage,blocked_drain,vaishali_nagar
+"Malviya Nagar gali 5 me ganda paani aa raha hai nal me, bimari ka dar. pehle bhi complain tki thi.",26.857146,75.825908,2026-09-21T06:48:59,whatsapp,84,water_supply,contaminated_water,malviya_nagar
+"Huge pothole snear near masjid, howtara - vhicles getting damaged. Please fix t soon.",,,2026-09-21T07:29:35,whatsapp,171,road_damage,pothole,jhotwara
+"Live wires hanging from light poolle at tsreet no. 2, Vaishali Nagar. Kids walk to school throughh this road, it s dangerous.",,,2026-09-21T08:43:50,app,115,streetlight,exposed_wires,vaishali_nagar
+"गली 16, सांगानेर में गड्ढे की वजह से बहुत परेशानी है।",26.819622,75.781664,2026-09-21T10:36:36,whatsapp,240,road_damage,pothole,sanganer
+"masjid ke samne malviya nagar me nalli band hhai, gandagi fail rahi hai. school ke bachche yahi se jaate hain, bahut khtarnak hai.",26.852835,75.820276,2026-09-21T12:03:11,web,22,drainage,blocked_drain,malviya_nagar
+"Drain blocked at lane 19, Malviya Nagar for 10 day,s bad smell. Accident can happen any time.",,,2026-09-21T13:25:25,whatsapp,22,drainage,blocked_drain,malviya_nagar
+"Huge potholes near lane 14, patap nagra - vehiclse gettiing damaged.",,,2026-09-21T16:10:05,whatsapp,45,road_damage,pothole,pratap_nagar
+duurgapura gali no 12 pe kacrha ka dher laga hi ek hafte sse. phe bhi complaintt ki thi.,26.852196,75.787355,2026-09-21T17:53:25,web,191,garbage,garbage_dump,durgapura
+conttaminnated muddyy water supply in malviay nagar opposite reliance fresh for a month. a scooter rider fell here yesterday.,26.857211,75.825549,2026-09-21T20:02:43,whatsapp,84,water_supply,contaminated_water,malviya_nagar
+"The road near lane 5 in Mansarovar is damaged and uenven. Complained earlier also, no action.",,,2026-09-21T20:19:55,whatsapp,190,road_damage,broken_road,mansarovar
+"gali 30 mansarovar me kooda pada hai, badbu aa rahi hai. pehle bhi complaint ki thi.",26.864529,75.754672,2026-09-21T21:08:00,whatsapp,30,garbage,garbage_dump,mansarovar
+"Live wires hangiing from light pole at gali no. 2, vaishali nagar. Kids wakl to school through this road, it is dangerous.",,,2026-09-21T21:51:36,whatsapp,115,streetlight,exposed_wires,vaishali_nagar
+Walled City (Johari Bazaar) gali number 21 ka dustbin bhar ke overflo ho raha hai. kal ek scoot waa gir gaya.,26.922581,75.823512,2026-09-22T01:09:35,whatsapp,255,garbage,overflowing_bin,walled_city
+"Vaishali Nagar gal no 2 pe light kee kkhambe se taar latak rahe hain, curretn ka dr. ek uncle ko chot lag gayi.",26.912160,75.748114,2026-09-22T01:38:54,email,115,streetlight,exposed_wires,vaishali_nagar
+Contaminated mdudy water supply in Maliya Nagar neear Reliance Fresh foor a month. Very inconvenient for residents.,,,2026-09-22T01:51:18,whatsapp,84,water_supply,contaminated_water,malviya_nagar
+"Pothole at Malviya Nagar street no. 14 still not repaired after 3 days. Kis walk to school through this road, iit is danegrous.",,,2026-09-22T04:37:24,email,6,road_damage,pothole,malviya_nagar
+here is a deep potholle near communit hall in Durgapuraa for a month.,,,2026-09-22T05:14:41,whatsapp,242,road_damage,pothole,durgapura
+bai gaali no 14 Pratap Nagar wala gaddha abhii tak nahhi bhara. jaldi theek karo please.,,,2026-09-22T06:13:55,whatsapp,45,road_damage,pothole,pratap_nagar
+"water tan k paas vaishali nagar me nali band hai, gandagi fial rahi haii.",,,2026-09-22T09:27:41,web,247,drainage,blocked_drain,vaishali_nagar
+Jagatpuura gali number 11 pe sewer ka paani road pe aa gaya hai. raaat ko acciident hone ka dar hai.,26.823453,75.867649,2026-09-22T13:32:08,app,168,drainage,sewage_overflow,jagatpura
+mansrova rgali no 18 pe achra ka dher laga hai 10 din se. koi sunai nahi ho rahi.,,,2026-09-22T14:14:02,whatsapp,251,garbage,garbage_dump,mansarovar
+darsh Nagar gali no 10 pe kahcra ka dher laga hia 5 din se. jaldi theek kkaro please.,,,2026-09-22T14:48:06,app,71,garbage,garbage_dump,adarsh_nagar
+jhotwaar park gate ke samne pe kachra ka dher laga hai 10 din se. pelhe bhi complain ki thi.,,,2026-09-22T15:51:30,app,98,garbage,garbage_dump,jhotwara
+The nali near opposite water tank in vaishali nagar is clogged and oevrflowing. Very inconvenient for residents.,26.909184,75.741620,2026-09-22T16:01:12,whatsapp,247,drainage,blocked_drain,vaishali_nagar
+there is a deep pothole street no. 14 in pratap nagar fo a month.,26.798675,75.817601,2026-09-22T16:24:33,whatsapp,45,road_damage,pothole,pratap_nagar
+"विद्याधर नगर गली नंबर 25 में सड़क पर बड़ा गड्ढा है, एक हफ्ते से। पहले भी शिकायत की थी।",26.956794,75.786019,2026-09-22T16:40:19,web,164,road_damage,pothole,vidhyadhar_nagar
+"mansarovra gali 27 pe light ke khamb ese taar laatak rrahe hain, current ka dar. ko isunwai nai ho rahi.",,,2026-09-22T17:02:32,web,16,streetlight,exposed_wires,mansarovar
+"Huge potholes near llne 14, pratap nagar - vehicles egtting damaged. Very incconvenient for residens.",,,2026-09-22T18:40:33,email,45,road_damage,pothole,pratap_nagar
+"gali no 19 pratap naga me nali band hai, gandagi fail arhi hai. jaldi theek kao please.",,,2026-09-22T23:03:29,whatsapp,260,drainage,blocked_drain,pratap_nagar
+"Mansarovr community hall kee saamne pe ligh tke khambe se aar latak rahe hain, current ka dar. raaat ko acient hone ka dar hai.",,,2026-09-22T23:30:43,web,101,streetlight,exposed_wires,mansarovar
+"huge potholes near lane 25, vidhyadhar nagar - vehicles getting damaged. an old man got injured last night.",,,2026-09-23T00:49:03,web,164,road_damage,pothole,vidhyadhar_nagar
+sodala gali 27 p kachra ka dher laga hai 3 din e.,,,2026-09-23T05:57:09,app,181,garbage,garbage_dump,sodala
+"huge garbage dump at neaa rpetrol pump, jhotara, not leared fr 5 days. please fix it soon.",26.952313,75.734307,2026-09-23T06:05:20,whatsapp,169,garbage,garbage_dump,jhotwara
+"dustbin oevrflowing at opposie bus stop, malviya nagar. complained earlier also, no action.",26.857476,75.830767,2026-09-23T07:04:23,whatsapp,15,garbage,overflowing_bin,malviya_nagar
+Jotwara petrol pump ke samne pe kachra ka dher laga hai 5 din se. koi sunwai nahi ho rahi.,,,2026-09-23T12:01:48,web,169,garbage,garbage_dump,jhotwara
+There is a deep pothole treet no. 14 in Pratap Nagar for a month. Very inconvenient for residents.,26.798852,75.817834,2026-09-23T12:39:42,web,45,road_damage,pothole,pratap_nagar
+शास्त्री नगर Reliance Fresh के पास का डस्टबिन भरकर बह रहा है।,,,2026-09-23T12:42:06,web,66,garbage,overflowing_bin,shastri_nagar
+"DDrain lbocked at gali no. 12, Vaishali Nagar for 2 weeks, bad smell. Veery nicovenient for residetns.",26.909497,75.736281,2026-09-23T13:39:20,web,154,drainage,blocked_drain,vaishali_nagar
+"gali number 18 saganer me kooda pada hai, badb aa rahi hai. pehle bhi complaint ki hti.",,,2026-09-23T14:03:07,email,58,garbage,garbage_dump,sanganer
+"Pothole at Malviya Nagar street no. 14 still not repaiired after 3 days. Complained erlier also, no action.",,,2026-09-23T14:46:54,whatsapp,6,road_damage,pothole,malviya_nagar
+Mansarovar gali 1 ka dustbin bhar ke overflow ho rha hai.,26.865541,75.762413,2026-09-23T16:10:39,web,182,garbage,overflowing_bin,mansarovar
+"Jhotara gali nmuber 1 pe manhole kkhula pada ha,i dhakkan nahi hai. chool ke bachche yahi se jaate hain, bahut khaatrnak hai.",26.946069,75.740194,2026-09-23T17:10:49,whatsapp,188,drainage,open_manhole,jhotwara
+"jhotwara gali number 18 ka dustbin bhar ke overflow ho raha hai. school ke bachche yahi se jaaate hain, bahut khatarnak hai.",26.952892,75.747220,2026-09-23T20:37:56,email,104,garbage,overflowing_bin,jhotwara
+"Hug garbage ump at lane 24, Bani Park, not cleared for 3 days. Complained earlier aslo, o action.",,,2026-09-24T00:13:18,web,193,garbage,garbage_dump,bani_park
+Malviya Nagar masjid ke paas ki naali ajm ho gayi hi 10 di nse. kal ek scooty wala gir aya.,,,2026-09-24T01:21:40,web,22,drainage,blocked_drain,malviya_nagar
+Vidhyyadha Nagar Gruudwara ke paas me 5 din se kachra gaadi nahi aayi. koi sunwai nahii ho rhi.,,,2026-09-24T03:20:37,app,237,garbage,missed_collection,vidhyadhar_nagar
+झोटवाड़ा गली नंबर 7 पर कचरे का ढेर लगा है।,26.951786,75.734478,2026-09-24T03:21:50,whatsapp,169,garbage,garbage_dump,jhotwara
+"Live wires hanging from light pole at street no. 11, Mansarovar. An old man go tinjured last night.",26.864143,75.756773,2026-09-24T03:39:46,whatsapp,218,streetlight,exposed_wires,mansarovar
+"gali nno 8 C-Scheme me water supply band hai, nal me paani nahi. school k bachche yahi se jaate hain, bahut khataarnak hai.",,,2026-09-24T03:53:09,web,114,water_supply,no_supply,c_scheme
+"jagatpura me gali 24 gadda ho gaya hai, raat ko dikha nahi. koi sunwai nahi ho rah.i",,,2026-09-24T03:55:51,whatsapp,49,road_damage,pothole,jagatpura
+"iDrty smelly water coming in taps at gali no. 5, Malviya Nagar. Very inconvenient ofr residents.",,,2026-09-24T09:11:00,email,84,water_supply,contaminated_water,malviya_nagar
+pratap ngaar gali 14 me sadak pe bada gaddh ahai 1 mahin se. jadi theek karo please.,26.798637,75.817814,2026-09-24T09:18:04,whatsapp,45,road_damage,pothole,pratap_nagar
+pratap nagar gai numbber 14 me sadak pe bada gaddha hai 1 mahine se.,,,2026-09-24T10:43:24,whatsapp,45,road_damage,pothole,pratap_nagar
+"Jhtwara masjid ke paas ki street light 10 din se band hai, adhera rehta hai. eek uncle ko chot lag gayi.",,,2026-09-24T10:55:57,whatsapp,95,streetlight,not_working,jhotwara
+आदर्श नगर गुरुद्वारा के पास पर खंभे से तार लटक रहे हैं। कल एक स्कूटी वाला गिर गया।,,,2026-09-24T11:52:57,web,211,streetlight,exposed_wires,adarsh_nagar
+the road near street no. 10 in pratap nagar is damaged and uneven.,,,2026-09-24T12:07:24,app,56,road_damage,broken_road,pratap_nagar
+durgapura gali no 15 pe sewer ka paani road pe aa gay hai. ek uncle ko chot lag gayi.,,,2026-09-24T12:29:16,whatsapp,147,drainage,sewage_overflow,durgapura
+"bhai gali no 14 Malviya Nagar wala gaddha abhi tak nahi bhara. school ke baachche yahi se jaate hn, bahut khatarnak hai.",,,2026-09-24T13:29:20,web,6,road_damage,pothole,malviya_nagar
+Vaishali Nagar agli 12 kii naali jm ho gayi haai 2 haafte se. jaldi theek karo please.,26.909320,75.736803,2026-09-24T13:59:15,whatsapp,154,drainage,blocked_drain,vaishali_nagar
+Public dustbin nar lane 3 in johari bazaa rfull for a monnth. An old man got injureed alst night.,,,2026-09-24T13:59:40,email,32,garbage,overflowing_bin,walled_city
+door to door garbage not collected in durgapura near park gate. please fix it soon.,26.852482,75.791454,2026-09-24T15:19:14,web,253,garbage,missed_collection,durgapura
+Vaishali Naga rgali nmber 12 ki naali jam ho gayi hai 2 hafte se. phle b icomplaint ki thi.,26.908854,75.736484,2026-09-24T19:22:08,whatsapp,154,drainage,blocked_drain,vaishali_nagar
+vishali nagar gali no 12 ki naali jjam ho gayi hai 2 afte se. pehl bhi ccomplaint ki thi.,26.908913,75.736252,2026-09-24T22:17:49,web,154,drainage,blocked_drain,vaishali_nagar
+"Huge garbage dump at lane 18, Sanganer, not cleared for 3 days. Complained earrlier also, no action.",,,2026-09-24T22:21:47,whatsapp,58,garbage,garbage_dump,sanganer
+malviya nagar gali numbber 19 ki naalli jam ho gayi hai 10 din se. ek uncle ko chot alg gayi.,,,2026-09-24T22:39:23,whatsapp,22,drainage,blocked_drain,malviya_nagar
+सांगानेर गली 18 पर कचरे का ढेर लगा है। पहले भी शिकायत की थी।,26.816823,75.788804,2026-09-24T23:16:17,whatsapp,58,garbage,garbage_dump,sanganer
+जौहरी बाजार गली नंबर 10 की नाली जाम हो गई है। पहले भी शिकायत की थी।,26.918503,75.830178,2026-09-24T23:31:14,whatsapp,34,drainage,blocked_drain,walled_city
+Jagatpura govt scool ke paas pe kachra ka dher laga ha i5 din se.,26.829385,75.866359,2026-09-25T01:00:05,web,121,garbage,garbage_dump,jagatpura
+"Vidhyaadhar Nagar me gali 25 gdada oh gaya hai, raat ko dikhta nahi. school ke bachce yahi se jaate hain, bahut khatrnak hai.",26.956658,75.785899,2026-09-25T01:38:07,whatsapp,164,road_damage,pothole,vidhyadhar_nagar
+"opne manhole without cver at oppossite masjid, malviiy nagar. kids walk to school thhrough this road, itt iis dangerou.",26.857310,75.818328,2026-09-25T01:40:29,web,236,drainage,open_manhole,malviya_nagar
+"gali nubmer 2 Jhotwaa p jalbharav ho gaya hai. school ke bachche yahi se jaate hain, bahut khatarnak hai.",,,2026-09-25T02:05:29,whatsapp,21,drainage,waterlogging,jhotwara
+"मालवीय नगर सामुदायिक भवन के पास में सड़क पर बड़ा गड्ढा है, एक महीने से।",26.847666,75.824065,2026-09-25T04:25:23,whatsapp,76,road_damage,pothole,malviya_nagar
+"dirty smelly water coming iin taps at stree tno. 5, malviya nagar. kids walk to school through thhis road, it is dangerous.",,,2026-09-25T04:28:02,whatsapp,84,water_supply,contaminated_water,malviya_nagar
+"Pratap Nagar me gali no 14 gadda ho gaya hai, raat ko dikhta nahi. pehle bhi complaint ki thi.",26.798976,75.818333,2026-09-25T05:55:58,web,45,road_damage,pothole,pratap_nagar
+"oppe nmanhole wihout cover at gali no. 17, ansarovar. an old man got injured last night.",,,2026-09-25T06:04:28,whatsapp,153,drainage,open_manhole,mansarovar
+"gai 19 malviya nagar me nali band hai, gandagi fail rahi hai. school ke bachche yahi se jaate hain, bahut khatarnak hia.",,,2026-09-25T07:44:48,whatsapp,22,drainage,blocked_drain,malviya_nagar
+"Stree light ot working att opposite masjid, Jhotwwara for 10 day. Complained earlier also, no action.",26.953102,75.737083,2026-09-25T09:35:41,whatsapp,95,streetlight,not_working,jhotwara
+"community hall ke aas vidhyadhar nagar me nali band hai, gandagi fai rahi hai.",26.955809,75.779837,2026-09-25T11:01:41,whatsapp,80,drainage,blocked_drain,vidhyadhar_nagar
+durgapura gali number 15 pe sewer ka paani rad pe aa gaya hai.,26.859003,75.788877,2026-09-25T12:57:28,web,147,drainage,sewage_overflow,durgapura
+Pothole at pratap nagar street no. 14 still no repaired after a month.,,,2026-09-25T15:45:46,whatsapp,45,road_damage,pothole,pratap_nagar
+"Garbage piled up near lane 29 in Johari Bazaar, stray animal everywhere. Complained earlier also, no action.",26.925910,75.829870,2026-09-25T18:00:15,whatsapp,127,garbage,garbage_dump,walled_city
+"Drain blocked at lane 12, Vaishali Nagar for 2 weeks, bad smell. Comlained earlier also, no action.",,,2026-09-25T18:34:47,web,154,drainage,blocked_drain,vaishali_nagar
+"Exopsed electric wires a streettlight pole near opposite Shiv mandir, mansarovar. Very incnvenieent for residents.",,,2026-09-25T20:16:39,whatsapp,218,streetlight,exposed_wires,mansarovar
+"huge potholes near street no. 14, pratap naga - vehicles ggetting damaed. very inonvenient for residennts.",,,2026-09-25T20:58:14,app,45,road_damage,pothole,pratap_nagar
+saganer gali no 18 pe kachra ka dher laga hai 3 din se. jaldi theek karo please.,,,2026-09-25T21:08:41,whatsapp,58,garbage,garbage_dump,sanganer
+झोटवाड़ा गली 1 पर मैनहोल का ढक्कन नहीं है। कल एक स्कूटी वाला गिर गया।,,,2026-09-25T22:03:31,whatsapp,188,drainage,open_manhole,jhotwara
+gali 9 Malviya Nagar road pe bahut bade gadhe hain. kal ek scooty wala gir gaya.,,,2026-09-25T22:52:10,whatsapp,12,road_damage,pothole,malviya_nagar
+"mansarovar glia number 27 pe light ke khambe se taar latka rahe hain, current ka dra. school ke baachche yahi se jaate hain, bahut khatarak hai.",,,2026-09-25T23:30:36,email,16,streetlight,exposed_wires,mansarovar
+Vaishali Nagar gali 22 ki sadak toot ihui hai 5 din se. kal ek scooy wala gir gaya.,26.908825,75.746047,2026-09-26T01:41:50,web,141,road_damage,broken_road,vaishali_nagar
+"Three is a deep pothole lane 14 in Malviya Nagar for 3 days. Kids walk to school through this roadd, it is dangerous.",26.859676,75.819069,2026-09-26T02:50:50,whatsapp,6,road_damage,pothole,malviya_nagar
+The nali near gali no. 30 in Sodala is clogged and verflowing.,26.903975,75.767039,2026-09-26T03:31:40,email,17,drainage,blocked_drain,sodala
+"gali noo 19 Pratap Nagar me nali band hai, gandagi fail rahi hai. jalldi theek karo please.",,,2026-09-26T04:10:17,web,260,drainage,blocked_drain,pratap_nagar
+सांगानेर गली 18 पर कचरे का ढेर लगा है। पहले भी शिकायत की थी।,,,2026-09-26T09:31:11,app,58,garbage,garbage_dump,sanganer
+"Garbage collection van has not come to opposite gov tschool, Vishali agar for a week. Very inconvenient or residents.",,,2026-09-26T12:05:19,web,155,garbage,missed_collection,vaishali_nagar
+"Drain blocked at near Gurudwara, vidhyadhar nagar for 10 days, bad smell. A scoote rride rfell ehre yesterday.",,,2026-09-26T13:34:40,whatsapp,52,drainage,blocked_drain,vidhyadhar_nagar
+pratap nagr gali no 14 me sadak pe bada gaddha hai 1 mahine se.,26.799571,75.817736,2026-09-26T14:45:37,whatsapp,45,road_damage,pothole,pratap_nagar
+सांगानेर गली नंबर 18 पर कचरे का ढेर लगा है। कृपया जल्दी ठीक करें।,,,2026-09-26T15:36:46,web,58,garbage,garbage_dump,sanganer
+विद्याधर नगर गली 24 में एक हफ्ते से कचरा गाड़ी नहीं आई।,26.964132,75.773324,2026-09-26T16:14:39,app,210,garbage,missed_collection,vidhyadhar_nagar
+Johrai Bazaaar gali 3 ka dusbin bhar ke overflow ho rah hai. jaldi theek karo please.,,,2026-09-26T16:41:08,app,32,garbage,overflowing_bin,walled_city
+Sodal gali no 27 pe kachhra ka dher lag ahai 3 din se. raat ko accident hone ka dar hai.,,,2026-09-26T17:15:26,whatsapp,181,garbage,garbage_dump,sodala
+There is a deep pothloe lane 14 in pratap nagar for a month. Very incnvenient for residnts.,26.799523,75.817524,2026-09-26T17:27:02,web,45,road_damage,pothole,pratap_nagar
+"Severe waterlogging at ggali no. 29, Jagatpura after rain.",,,2026-09-26T18:26:56,web,243,drainage,waterlogging,jagatpura
+"vaishalii nagar park gate kke paas pe ligth k ekhambe se taar latak rahe hain, current ka daar. school ke bachche yahi se jaate hain, bahut khatarnak hai.",26.911513,75.738645,2026-09-26T18:30:14,whatsapp,241,streetlight,exposed_wires,vaishali_nagar
+जगतपुरा सरकारी स्कूल के पास का डस्टबिन भरकर बह रहा है।,,,2026-09-26T19:55:16,web,257,garbage,overflowing_bin,jagatpura
+वैशाली नगर पानी की टंकी के पास की नाली जाम हो गई है।,,,2026-09-26T22:05:08,whatsapp,247,drainage,blocked_drain,vaishali_nagar
+bhai petrol pump ke pasa jhotwra wala gaddha abhi tak nahi bhara. koi sunwai nahi ho rrahi.,26.958074,75.737024,2026-09-26T23:29:00,app,226,road_damage,pothole,jhotwara
+There is a deep pothole opposite govt school in Mansarovar for a month. Please fix it soon.,26.868905,75.760604,2026-09-26T23:36:43,whatsapp,2,road_damage,pothole,mansarovar
+"huge garbage dump at lane 18, sanganer, not cleared for 3 days.",,,2026-09-27T00:15:53,web,58,garbage,garbage_dump,sanganer
+"Dustbin overflowing at laae 18, Jhotwara. A scooter rider ffell here yesterday.",26.952325,75.747234,2026-09-27T01:47:16,web,104,garbage,overflowing_bin,jhotwara
+gali no 1 Bani Park me light nahi jal rahi raa ko. pehe bhi complaint ki thi.,,,2026-09-27T04:31:59,whatsapp,39,streetlight,not_working,bani_park
+"mansarovar RReliance Fresh ke paas pe light ke khambe se taar latak rahe hian, current ka adr. ek uncl eko chot lag gayi.",,,2026-09-27T05:42:56,web,108,streetlight,exposed_wires,mansarovar
+"gali 18 sanganer me kooda pada hai, badbu aa rahi hai.",,,2026-09-27T06:03:37,web,58,garbage,garbage_dump,sanganer
+"Dirt smelly water coming in taps a gali no. 6, jagatpura. Complained earlier also, no action.",,,2026-09-27T06:44:56,email,207,water_supply,contaminated_water,jagatpura
+"Street light not working at glai no. 23, Adarsh Nagar for 10 days.",,,2026-09-27T07:02:04,app,139,streetlight,not_working,adarsh_nagar
+gali no 5 Mlaviya Nagar me peene ka paani ganda aa raha hai.,,,2026-09-27T07:51:29,whatsapp,84,water_supply,contaminated_water,malviya_nagar
+gali 11 vaishali nagar me guter overflw ho rha hai 2 hafte se. koi suunwai nahi ho rahi.,,,2026-09-27T08:48:41,app,7,drainage,sewage_overflow,vaishali_nagar
+gali 29 aJgatpura pe jalbharav ho gaya hai.,26.824605,75.861700,2026-09-27T09:11:23,web,243,drainage,waterlogging,jagatpura
+masjid ke paas jhhotwaar me liight nah ijal rahi raat ko. pehle bhi complaint ki thi.,26.952422,75.736839,2026-09-27T09:37:21,email,95,streetlight,not_working,jhotwara
+Vidhyadahr Nagar gali no 12 ka dustbin bhar ke overflo who raha hai. koi sunwai nahi ho rahi.,26.960930,75.778258,2026-09-27T09:52:03,app,31,garbage,overflowing_bin,vidhyadhar_nagar
+"Drain blcoked at lane 19, Maalviyaa Nagar for 10 days, bda smell. An old man got injured lat nigght.",26.852701,75.820276,2026-09-27T11:43:45,whatsapp,22,drainage,blocked_drain,malviya_nagar
+"Severe waterlogging at street no. 29, Jagatpura after rain. Please fix it soon.",,,2026-09-27T14:24:05,whatsapp,243,drainage,waterlogging,jagatpura
+"gali number 18 Sanganer me kooda pada hai, badbu aa rahi hai. pehle bhi omplaint kii thi.",26.816832,75.789245,2026-09-27T15:53:32,email,58,garbage,garbage_dump,sanganer
+glii number 29 jjagatpura pe jalbhara ho gaya hai. koi sunwai nahi ho rahi.,,,2026-09-27T17:59:47,whatsapp,243,drainage,waterlogging,jagatpura
+जौहरी बाजार गली नंबर 22 की सड़क टूटी हुई है। कृपया जल्दी ठीक करें।,,,2026-09-27T19:34:57,whatsapp,130,road_damage,broken_road,walled_city
+The road near lane 21 in mansarovar is damagde and uneven. Please fi it soon.,,,2026-09-27T19:36:07,whatsapp,74,road_damage,broken_road,mansarovar
+"garbag piled up near lae 10 in adarsh ngaar, stray animals everywhere. pleasse fxi it soon.",26.900251,75.843545,2026-09-27T20:03:29,web,71,garbage,garbage_dump,adarsh_nagar
+Sewer line overflow near street no. 15 in Durgapur for a month.,,,2026-09-27T21:01:36,whatsapp,147,drainage,sewage_overflow,durgapura
+"गली 14, प्रताप नगर में गड्ढे की वजह से बहुत परेशानी है। कृपया जल्दी ठीक करें।",,,2026-09-27T22:18:02,web,45,road_damage,pothole,pratap_nagar
+"masjid ke samne Manasrovar me gutter overflow ho raha hai 1 mahine se. school ke bachche yahi se jaate ain, bahut khaaarnak hai.",,,2026-09-28T02:26:38,web,220,drainage,sewage_overflow,mansarovar
+"odala gali 27 pe akchra ka dher lga hi 3 din se. school k bachche yahi se jaate hain, bahut khatarnak hai.",26.908195,75.774460,2026-09-28T03:36:54,whatsapp,181,garbage,garbage_dump,sodala
+bhai gali no 30 Jaagtpura wala gaddha abhi tak nahi bhara. koi sunwai nahi ho rah.,,,2026-09-28T03:46:53,web,146,road_damage,pothole,jagatpura
+"Pipe burst near lane 16 in pratap nagar, water flowing on road fr 5 daayys.",,,2026-09-28T04:22:25,web,81,water_supply,pipeline_leak,pratap_nagar
+"Drain blocke at laen 30, soala for 3 days, bad smell. Complained earlier also, no ation.",,,2026-09-28T06:33:15,whatsapp,17,drainage,blocked_drain,sodala
+"Diry mselly water coming in taps at lane 5, Malviya Nagar. Kids walkk to school through this road, it is dangerosu.",26.857427,75.826328,2026-09-28T09:11:24,web,84,water_supply,contaminated_water,malviya_nagar
+Jagatpura gali 11 pe sewer ka pani road pe aa gaya hai. raat ko accident hone k dar hai.,26.823658,75.867957,2026-09-28T09:20:08,web,168,drainage,sewage_overflow,jagatpura
+jhowara gali numbeer 20 pe kachra ka dher lga hai 1 mahine se. rat ko accident hone ka dar hai.,,,2026-09-28T10:52:44,whatsapp,149,garbage,garbage_dump,jhotwara
+"Open manhloe without cover at lane 4, vidhyadhar nagar.",26.959443,75.777404,2026-09-28T11:11:16,whatsapp,197,drainage,open_manhole,vidhyadhar_nagar
+"गली नंबर 14, प्रताप नगर में गड्ढे की वजह से बहुत परेशानी है। पहले भी शिकायत की थी।",,,2026-09-28T11:46:18,web,45,road_damage,pothole,pratap_nagar
+मालवीय नगर Reliance Fresh के पास में नल में गंदा पानी आ रहा है।,26.857729,75.826390,2026-09-28T12:21:40,whatsapp,84,water_supply,contaminated_water,malviya_nagar
+"huge garbage dump att gali no. 26, adarsh ngar, not cleared for 10 daays.",26.896128,75.839037,2026-09-28T13:02:29,web,152,garbage,garbage_dump,adarsh_nagar
+"Garbage piled up nea gali no. 18 in sanganer, stray animmals everywhere. Very inconvenient for residents.",26.816767,75.789240,2026-09-28T13:08:08,app,58,garbage,garbage_dump,sanganer
+"Dirty smelly watre coming in taps at gali no. 5, Malviya Nagar. Accident can hhappen any time.",26.857586,75.825733,2026-09-28T13:50:22,whatsapp,84,water_supply,contaminated_water,malviya_nagar
+"gali 18 sanganer m ekkooda pada hai, babu aa rahi haai. koi sunwa inahi ho rahi.",,,2026-09-28T14:29:18,whatsapp,58,garbage,garbage_dump,sanganer
+Vaishhali Nagar govtt chhool ek paas ki sadakk tooti hui hai ek hafte se.,,,2026-09-28T14:40:26,whatsapp,46,road_damage,broken_road,vaishali_nagar
+"gali noo 15 Durgapura me gutter overflow ho raha hi 1 mahinne se. school k bachche yahi s jaate hain, bahut katarnak hai.",26.859282,75.789333,2026-09-28T16:53:33,web,147,drainage,sewage_overflow,durgapura
+aSnganer gali nuber 18 pe kachra ka dher laga hai 3 din se. jaldi theek karo please.,,,2026-09-28T17:45:10,whatsapp,58,garbage,garbage_dump,sanganer
+"Streetlights off near gali no. 16 in pratap nagar, very dark at night. Very ncionvenient for residents.",26.796115,75.826274,2026-09-28T18:09:46,web,65,streetlight,not_working,pratap_nagar
+"Haunman temple ke samne johar bazaar me kooad pada hai, badbu aa rahi hai. jaldi theek karo please.",26.921559,75.825091,2026-09-28T18:11:35,web,208,garbage,garbage_dump,walled_city
+Jhotwara Gurudwara ke samne m eek hafte se kachra gaadi nahi aayyi. pehle bhi complaint ki thi.,,,2026-09-28T20:07:33,whatsapp,156,garbage,missed_collection,jhotwara
+Vaishhali Naar park gate ke paas me 2 hafte se paani nahi aa raha. jaldi theek karo please.,,,2026-09-28T20:59:50,whatsapp,259,water_supply,no_supply,vaishali_nagar
+"garbaeg piled up near lane 18 in sanngner, stray animals everywhere. complained earlier also, no actio.",,,2026-09-28T21:44:13,whatsapp,58,garbage,garbage_dump,sanganer
+"Garbage piled up near strreet no. 27 in odala, stray animals everywhee. Very inonvenient for residents.",,,2026-09-28T22:12:15,web,181,garbage,garbage_dump,sodala
+"gali no 27 raja park me kooda paa hai, badbu aa rahi hai. pehle bhi complaint ki thi.",26.901459,75.830071,2026-09-29T02:20:51,whatsapp,24,garbage,garbage_dump,raja_park
+Jhotara Hanuman temple ke samn ka dustbin bhar ke overflow ho raha hai. koi sunwai nahi ho rahhi.,,,2026-09-29T02:21:22,web,116,garbage,overflowing_bin,jhotwara
+reliance freesh ke paas malviya nagarr me peene ka paani ganda a rraha hai. raat ko accident hone ka dar hai.,26.857653,75.825679,2026-09-29T03:14:59,whatsapp,84,water_supply,contaminated_water,malviya_nagar
+"Pratapp Nagar gali 16 pe ippeline lak ho rahi ai, paain beh raha hhai.",26.797380,75.818578,2026-09-29T05:27:15,app,81,water_supply,pipeline_leak,pratap_nagar
+galii 21 sodala me light nah jal rhai rat ko.,26.905883,75.766429,2026-09-29T06:31:54,app,183,streetlight,not_working,sodala
+"Huge garbage dump t street no. 27, sodal,a not cleard for 3 days. Acciden tcan happen any time.",,,2026-09-29T06:41:34,whatsapp,181,garbage,garbage_dump,sodala
+मालवीय नगर गली 19 की नाली जाम हो गई है। पहले भी शिकायत की थी।,,,2026-09-29T10:42:15,whatsapp,22,drainage,blocked_drain,malviya_nagar
+gali no 5 Malviya Naga rme peene ka paani ganda aa raha hai. kal ek scooty wala gir gaya.,26.857360,75.825828,2026-09-29T11:05:21,web,84,water_supply,contaminated_water,malviya_nagar
+mansarovar gal numbr 10 me 1 mahhine se paani nahi aa raha. kal ek scooty wala gir gaya.,26.867449,75.759483,2026-09-29T11:52:49,whatsapp,162,water_supply,no_supply,mansarovar
+Contaminated muddy water supply in mlviya nagar stret no. 5 for a month. A sooter ridr fell heree yesterday.,26.857795,75.825504,2026-09-29T13:23:28,web,84,water_supply,contaminated_water,malviya_nagar
+"Mansarovar Reliancc Fresh e samne pe light ke khambe se taar latak rahe hain, current ka dar. school ke bachche yhi se jaaet hai,n bahut khatarnak hai.",26.866167,75.765942,2026-09-29T14:22:50,app,108,streetlight,exposed_wires,mansarovar
+वैशाली नगर गली नंबर 5 की सड़क टूटी हुई है। पहले भी शिकायत की थी।,,,2026-09-29T17:21:06,whatsapp,46,road_damage,broken_road,vaishali_nagar
+Pratap Ngar gali no 12 ki sadak toti hui haai 1 mahine se.,,,2026-09-29T17:49:49,whatsapp,82,road_damage,broken_road,pratap_nagar
+mansarovar water tank ke paas m 1 mahine se paani nahi aa raha. kal ek scooty ala gir gaya.,26.867490,75.759856,2026-09-29T21:17:50,whatsapp,162,water_supply,no_supply,mansarovar
+jagatpura govt schoool ke paas ka dustbin bhar ke voerflow ho raha haai. pehle bhi complaint ki hi.,,,2026-09-30T00:49:02,whatsapp,257,garbage,overflowing_bin,jagatpura
+"Manhole lid missing near opposite Reliance FFersh in shastri nagar, very risk. Complained earlier also, no action.",26.948912,75.794986,2026-09-30T04:31:42,app,144,drainage,open_manhole,shastri_nagar
+"Seevere waterloogging at streeet no. 30, Raja Park after rain.",,,2026-09-30T05:59:05,whatsapp,92,drainage,waterlogging,raja_park
+"gali o 24 bani park me koda pada ahi, badbu a rahi hai.",26.935128,75.794331,2026-09-30T07:18:40,whatsapp,193,garbage,garbage_dump,bani_park
+Vaiishali Nagar community hall ke paas ki sadak tooti hui hai 2 hafte se. pehl bhi complaint ki thi.,26.911369,75.736141,2026-09-30T09:29:11,web,234,road_damage,broken_road,vaishali_nagar
+"gali 30 sodla me nali band hai, gandagi fail rahi hai. koi sunwai nahi ho rahi.",26.904319,75.766815,2026-09-30T09:47:57,whatsapp,17,drainage,blocked_drain,sodala
+"जौहरी बाजार गली नंबर 19 की सड़क टूटी हुई है। बच्चे यहीं से स्कूल जाते हैं, खतरनाक है।",,,2026-09-30T12:52:37,whatsapp,217,road_damage,broken_road,walled_city
+"Vaishali Nagar park gate ke samne pe light ke khambe se taar latak rahe hain, current ka dar. e uncle ko chot lag gayi.",,,2026-09-30T13:15:27,whatsapp,241,streetlight,exposed_wires,vaishali_nagar
+"stretelights off near poposite gurudwara in vaishali ngar, very dakr at night.",,,2026-09-30T14:00:44,whatsapp,28,streetlight,not_working,vaishali_nagar
+"sodala gal number 12 pe pipeline leak ho rahii hai, paan beh raha hai.",,,2026-09-30T15:24:56,whatsapp,10,water_supply,pipeline_leak,sodala
+Door o door garbag not collcted in vaishai ngaar street no. 2. Please fix t soon.,,,2026-09-30T16:30:17,app,155,garbage,missed_collection,vaishali_nagar
+जौहरी बाजार गली नंबर 19 का डस्टबिन भरकर बह रहा है। कृपया जल्दी ठीक करें।,26.913947,75.829859,2026-09-30T18:45:22,whatsapp,70,garbage,overflowing_bin,walled_city
+mansaroovar gali 26 ka dustbin bbhar ke voerflow ho raha hai.,26.873944,75.761103,2026-09-30T22:34:06,whatsapp,200,garbage,overflowing_bin,mansarovar
+"Severe waterloging at lane 29, jagatpur after rain.",,,2026-10-01T00:53:02,whatsapp,243,drainage,waterlogging,jagatpura
+सोडाला गली 12 पर पाइपलाइन लीक हो रही है। कृपया जल्दी ठीक करें।,26.904090,75.771727,2026-10-01T01:02:43,email,10,water_supply,pipeline_leak,sodala
+झोटवाड़ा गली 26 में एक महीने से पानी नहीं आ रहा है। पहले भी शिकायत की थी।,,,2026-10-01T04:09:53,web,86,water_supply,no_supply,jhotwara
+mansarovar gali no 26 ka dusttbin bhar ke overflow ho raha hai. peehle bhi complaint ki thi.,26.873406,75.761452,2026-10-01T04:17:24,whatsapp,200,garbage,overflowing_bin,mansarovar
+सोडाला गली 12 पर पाइपलाइन लीक हो रही है।,26.904203,75.772436,2026-10-01T04:50:35,whatsapp,10,water_supply,pipeline_leak,sodala
+"There s a deep pothole gali no. 14 in prtaap nagar for a month. Complained earlier alsso, no action.",26.799246,75.818074,2026-10-01T06:04:15,web,45,road_damage,pothole,pratap_nagar
+"huge garbbage dum at gali no. 18, sanganer, not cleared for 3 days. very inconvenien for residents.",,,2026-10-01T07:23:40,web,58,garbage,garbage_dump,sanganer
+"mansarovar Reliane Fresh ke samne p light ke khambe se taar latak rahe hain, curent ka dar. raat ko accident hone ka dar hai.",,,2026-10-01T09:27:50,web,108,streetlight,exposed_wires,mansarovar
+जगतपुरा गली नंबर 29 में जलभराव हो गया है। कृपया जल्दी ठीक करें।,,,2026-10-01T12:59:47,whatsapp,243,drainage,waterlogging,jagatpura
+bhai gali no 6 mansarovar wwala gadha abhi tak nahi bhara. pehle bhi compplainnt ki thi.,,,2026-10-01T13:34:52,app,126,road_damage,pothole,mansarovar
+ammnsarovar gal inumber 26 ka dustbin bhar ke overflow ho raha hai. pehle bhi complaint ki thi.,,,2026-10-01T14:26:24,app,200,garbage,overflowing_bin,mansarovar
+gali no 29 Jagatpura pe jalbharav ho gaya hai.,,,2026-10-01T15:02:19,whatsapp,243,drainage,waterlogging,jagatpura
+"Dustbin overfflowing at near masjid, Jgaatpua. Veery inconveinent for residents.",26.828994,75.861828,2026-10-01T16:42:08,email,151,garbage,overflowing_bin,jagatpura
+"dirtty smelly water coming in atps at lane 2, sodala. a sooter rider efll here yesterday.",,,2026-10-01T17:04:40,web,91,water_supply,contaminated_water,sodala
+Jagaturpa gali 11 ka dustbin bhar ke overflow ho raha hai. kooi sunwai nahi ho rahi.,26.821773,75.858889,2026-10-01T17:57:44,whatsapp,229,garbage,overflowing_bin,jagatpura
+Public dustbin near lane 26 in Mansarovar full for a week. Very inconvenient for reidents.,,,2026-10-01T18:26:12,email,200,garbage,overflowing_bin,mansarovar
+"pratap nagar gali no 16 pe pipeline leak ho rahi hai, paani beh raha hai.",,,2026-10-01T19:40:03,whatsapp,81,water_supply,pipeline_leak,pratap_nagar
+Public dustbin near street no. 26 in ansrovar full for a week. Please fix it soon.,26.873698,75.760753,2026-10-02T02:32:23,web,200,garbage,overflowing_bin,mansarovar
+hanuman teemple ke amne durgapura me sfaai wala nahi aa raha. pehle bhi complaint ki thi.,,,2026-10-02T02:58:01,email,63,garbage,missed_collection,durgapura
+"Garbbage piled up near oposite Gurudwar ain Walled City (Johari Bazaar), stray animals everywhere. Complained earlie also, no action.",26.916464,75.827283,2026-10-02T02:58:13,whatsapp,166,garbage,garbage_dump,walled_city
+"Road completely broke at lane 5, Vaishali Nagar for  aweek. Please fix it soon.",26.907387,75.741154,2026-10-02T04:29:26,app,46,road_damage,broken_road,vaishali_nagar
+ansarovar gali 26 ka dustbin bhar ke overflow ho arh ahai. pehle bhi complaint ki thi.,26.872905,75.761165,2026-10-02T06:02:48,web,200,garbage,overflowing_bin,mansarovar
+"road completely broken at gali no. 21, mansarovar for a week.",26.873369,75.764552,2026-10-02T06:27:59,app,134,road_damage,broken_road,mansarovar
+"gali no 18 Snaganer me kooda paa hai, babu aa rahi hai. koi sunwai nahi ho rai.",,,2026-10-02T06:36:27,whatsapp,58,garbage,garbage_dump,sanganer
+"Garabge collection van has ont come to near Hanuman temple, Dugapura for 5 days. Please fix it soon.",,,2026-10-02T07:52:33,web,63,garbage,missed_collection,durgapura
+"gali no 4 SSanganr road pe bahut bade gaddhe hain. scchool ke bachche yahi se jaate hain, bahut khatarank hai.",26.819604,75.782717,2026-10-02T12:24:23,app,72,road_damage,pothole,sanganer
+johari bazaar gali 28 ki naali jam ho gayii hai 10 din se. raat ko accident hoe ka daar hai.,,,2026-10-02T14:10:19,app,150,drainage,blocked_drain,walled_city
+mansarovar gali no 26 kaa dustbin bhar ek overrflw ho raha hai. pehl bhi complaint kki ti.,,,2026-10-02T18:48:54,whatsapp,200,garbage,overflowing_bin,mansarovar
+"मानसरोवर सामुदायिक भवन के पास में सड़क पर बड़ा गड्ढा है, 2 हफ्ते से। कृपया जल्दी ठीक करें।",,,2026-10-02T19:04:49,web,249,road_damage,pothole,mansarovar
+"गली नंबर 1, जौहरी बाजार में गड्ढे की वजह से बहुत परेशानी है। पहले भी शिकायत की थी।",,,2026-10-02T19:49:12,whatsapp,107,road_damage,pothole,walled_city
+"street lght ot working at street no. 7, shastr nagar for a moonth. accident can happen any time.",26.944109,75.793998,2026-10-02T20:05:34,web,174,streetlight,not_working,shastri_nagar
+प्रताप नगर गली नंबर 16 पर पाइपलाइन लीक हो रही है। पहले भी शिकायत की थी।,26.797711,75.819023,2026-10-02T21:00:54,whatsapp,81,water_supply,pipeline_leak,pratap_nagar
+mansarovar gali no 26 ka dustbin bhar ke overflow ho raha hai. koi sunwai nahi ho rahi.,,,2026-10-02T22:45:03,web,200,garbage,overflowing_bin,mansarovar
+दुर्गापुरा गली 27 की सड़क टूटी हुई है।,,,2026-10-03T01:01:43,app,117,road_damage,broken_road,durgapura
+"Huge garbage ddum at gai lno. 29, Walled City (Johar iBaaar), not cleared fo a month. Very inconvvenient fo rresidents.",26.926067,75.829681,2026-10-03T03:14:37,web,127,garbage,garbage_dump,walled_city
+"dusbtin overflowwing at lane 26, mansaorvar.",,,2026-10-03T04:12:46,web,200,garbage,overflowing_bin,mansarovar
+"walled city (johari bazaar) parrk gate ke samne ki street light 2 hafte se band hia, andhera rehta hai.",,,2026-10-03T04:23:16,app,133,streetlight,not_working,walled_city
+"The road nera gali no. 27 in Durgapura is damaged and uenven. Complained earrlier also, no action.",,,2026-10-03T04:33:29,whatsapp,117,road_damage,broken_road,durgapura
+Thee road near street no. 8 in jagapura is damaged and uneven. An old man got injured last nght.,26.831031,75.860722,2026-10-03T04:47:21,whatsapp,19,road_damage,broken_road,jagatpura
+मानसरोवर गली नंबर 26 का डस्टबिन भरकर बह रहा है।,26.873469,75.761722,2026-10-03T06:30:42,email,200,garbage,overflowing_bin,mansarovar
+दुर्गापुरा गली नंबर 27 की सड़क टूटी हुई है। कृपया जल्दी ठीक करें।,26.849518,75.796074,2026-10-03T08:46:43,email,117,road_damage,broken_road,durgapura
+"Big pothole on the road at lane 4, naganer.",,,2026-10-03T08:54:01,web,72,road_damage,pothole,sanganer
+jaagatpura gali no 29 me baarish ke baad paani bhar ahua hai.,26.824303,75.861953,2026-10-03T10:29:54,whatsapp,243,drainage,waterlogging,jagatpura
+The road near stret no. 21 in Mannsarovar is damaged and uneven. Pleaase fx it soon.,26.872809,75.764305,2026-10-03T12:01:20,email,134,road_damage,broken_road,mansarovar
+जौहरी बाजार गली 24 पर कचरे का ढेर लगा है। कृपया जल्दी ठीक करें।,26.919878,75.821130,2026-10-03T12:09:01,whatsapp,213,garbage,garbage_dump,walled_city
+"Shastri NNaga Gurudwara ke samne pe light ke khambe se taar ltak rhe hain, cuurrent ka dar. pehle bhi complaiit ki thi.",,,2026-10-03T13:03:28,web,87,streetlight,exposed_wires,shastri_nagar
+Pothole at Waleld Ctiy (ohari Bazaar) gali no. 1 still not repaired after 10 days. Very inconvenient for residents.,26.916783,75.822744,2026-10-03T15:48:30,web,107,road_damage,pothole,walled_city
+"waterr tank ke samne malviya nagar me kooda pada ha, badbu a rahi hai. koi sunwai nahi ho rahi.",,,2026-10-03T17:42:09,web,256,garbage,garbage_dump,malviya_nagar
+manasrovar park gate ke paas ki ssadak tooti hui hai ek hafte se. ppehl ebhi complaint ki thi.,,,2026-10-03T18:03:02,web,134,road_damage,broken_road,mansarovar
+Mansraovar gali number 26 ka dustbin bhar ke overflow ho raha hai. pehle bhi complaint ki thi.,,,2026-10-03T18:33:19,whatsapp,200,garbage,overflowing_bin,mansarovar
+बनी पार्क गली 24 पर कचरे का ढेर लगा है।,,,2026-10-03T22:25:47,whatsapp,193,garbage,garbage_dump,bani_park
+जगतपुरा गली 29 में जलभराव हो गया है।,,,2026-10-04T02:56:33,whatsapp,243,drainage,waterlogging,jagatpura
+mansarovar gali 26 ka dustbin bhar ke oerflow ho raha hai. ko isunwai nahi ho rahi.,,,2026-10-04T07:35:21,whatsapp,200,garbage,overflowing_bin,mansarovar
+gail 29 jagatpura pe jalbharav ho gaa hai. koii sunwa iinnahi ho rahi.,26.824666,75.861726,2026-10-04T07:37:04,web,243,drainage,waterlogging,jagatpura
+gali no 15 Malviya Nagar me llight nahi jal rhai raat ko. rat ko acciddent ohne ka dar hai.,,,2026-10-04T08:34:51,app,29,streetlight,not_working,malviya_nagar
+"Road completely broken at street no. 27, Durgapura for 10 days. Very inconvenient for residents.",,,2026-10-04T10:32:59,email,117,road_damage,broken_road,durgapura
+"Pipe burst near lane 30 in agatpura, water flowing on road for 5 days. An old man got injured last night.",26.824577,75.858794,2026-10-04T13:53:56,whatsapp,112,water_supply,pipeline_leak,jagatpura
+झोटवाड़ा Reliance Fresh के पास में जलभराव हो गया है। पहले भी शिकायत की थी।,26.951153,75.742520,2026-10-04T14:12:09,web,14,drainage,waterlogging,jhotwara
+Jhotwara Reliance Fresh ke paas me baarish ke baa paani bhara hu hai. koi sunwia nahii ho rahhi.,,,2026-10-04T14:20:12,web,14,drainage,waterlogging,jhotwara
+gali 29 Jagatpura pe jalbharav ho gaya hia. koi unwai nahi ho rahi.,26.824004,75.861977,2026-10-04T14:31:52,whatsapp,243,drainage,waterlogging,jagatpura
+jhotwara gali 2 m baarish ke baad paani bhara hua hai.,,,2026-10-04T15:16:31,whatsapp,21,drainage,waterlogging,jhotwara
+the road near llane 27 in durgapura is damaged and uneven.,26.849831,75.796758,2026-10-04T16:00:21,app,117,road_damage,broken_road,durgapura
+mansarovr gali number 26 ka dustbin bhar ke overflow ho raha hai.,,,2026-10-04T16:39:49,whatsapp,200,garbage,overflowing_bin,mansarovar
+johari bazaar gali no 1 me ssada pe bada gaddha hai 10 din se. jaldi theek karo please.,,,2026-10-04T18:29:06,web,107,road_damage,pothole,walled_city
+Wlaled City (Johari Bazaar) gali 19 ki sada kttooti hui hai 3 din se. ek uncle ko chot lag gayi.,,,2026-10-04T19:14:11,web,217,road_damage,broken_road,walled_city
+Wate logged streett near gali no. 29 in Jagatpura for 5 days. Very inconvenient for residents.,,,2026-10-04T19:55:20,app,243,drainage,waterlogging,jagatpura
+gali 29 jagatpura pe jlbharav ho gayaa haai.,,,2026-10-04T20:44:01,email,243,drainage,waterlogging,jagatpura
+"gali 27 Durgapura me roa dkharab hai, chalna mushkil. koi sunwai nnahi ho rhi.",,,2026-10-04T20:45:11,web,117,road_damage,broken_road,durgapura
+durgapura gal ino 27 ki saddak tooti hui hai 10 din se. koi sunwai nahi ho rahi.,,,2026-10-04T21:20:00,whatsapp,117,road_damage,broken_road,durgapura
+"glai no 27 durgapura me roa dkharab hai, chalna mushkil. ppehle bbhi complaint ki thi.",26.849765,75.796598,2026-10-04T22:31:01,web,117,road_damage,broken_road,durgapura
+reliance fersh ke paass jhotwara pe jalbharav ho gaya hai. jaldi hteek karo plase.,26.951446,75.741708,2026-10-04T22:59:22,email,14,drainage,waterlogging,jhotwara
+"Streetlights off near gail no. 30 in Jhowtar,a very dark at night. Please fix it soon.",,,2026-10-04T23:15:27,web,64,streetlight,not_working,jhotwara
+jhotwara Reliance Fresh ke samne me baarish ke baad paani bhara hhua hai. pehe bhi complaint ki thi.,,,2026-10-05T01:28:11,app,14,drainage,waterlogging,jhotwara
+"सांगानेर गली 12 पर मैनहोल का ढक्कन नहीं है। बच्चे यहीं से स्कूल जाते हैं, खतरनाक है।",26.819203,75.792460,2026-10-05T01:58:30,whatsapp,47,drainage,open_manhole,sanganer
+"Water pipeline leaking at lane 16, pratap nagar, lots of water wasattge. Very inconvenient for residents.",26.796860,75.818893,2026-10-05T03:24:54,app,81,water_supply,pipeline_leak,pratap_nagar
+"Streetlights ff near street no. 30 in Jhotwara, veryy dark at night.",,,2026-10-05T04:11:21,whatsapp,64,streetlight,not_working,jhotwara
+The road enar lane 27 in Durgapura is damaed and uneven. Please fix it soon.,26.850102,75.796712,2026-10-05T04:32:13,whatsapp,117,road_damage,broken_road,durgapura
+"Severe waterlogging at near Reliance Fresh, jhotwara after rain. Complained earlier also, no action.",,,2026-10-05T05:03:23,web,14,drainage,waterlogging,jhotwara
+durgapurra gali number 27 ki sadak tooti hui hai 10 din se. koi sunnwai nahi ho rahi.,26.850329,75.795826,2026-10-05T05:33:16,web,117,road_damage,broken_road,durgapura
+जगतपुरा गली 29 में जलभराव हो गया है। कृपया जल्दी ठीक करें।,,,2026-10-05T07:34:26,app,243,drainage,waterlogging,jagatpura
+Water logged street near opposite Reliance Fresh in jjhotwara for a month. Very inconvenient fro residents.,,,2026-10-05T10:13:01,whatsapp,14,drainage,waterlogging,jhotwara
+"Dustbin ooverflowing at gali no. 5, Adarsh Nagar. Complained earlier also, no action.",26.896905,75.837839,2026-10-05T11:29:50,app,26,garbage,overflowing_bin,adarsh_nagar
+"dutsbi noverflowing at gali no. 5, adarsh nagar.",,,2026-10-05T11:45:25,app,26,garbage,overflowing_bin,adarsh_nagar
+water logged street near gali n.o 30 in raja park for 2 weeks.,,,2026-10-05T12:08:25,app,92,drainage,waterlogging,raja_park
+राजा पार्क गली 28 में 3 दिन से कचरा गाड़ी नहीं आई। कल एक स्कूटी वाला गिर गया।,26.899783,75.832320,2026-10-05T12:15:40,email,161,garbage,missed_collection,raja_park
+jagapura galli no 6 me sadak pe bada gadddha hai ek hafte se. kal ek scooty wala gir gaa.,26.831591,75.865154,2026-10-05T12:50:32,web,221,road_damage,pothole,jagatpura
+"petrol pump ke paas rraja park me pipe phat gaya, ek hafte se pani beh raha. koi sunwai nahi ho rahi.",,,2026-10-05T13:03:31,web,129,water_supply,pipeline_leak,raja_park
+Water logged street near near Reliance Fresh in Jhotwara for a month. Very inconvenient fro resideents.,26.951345,75.742461,2026-10-05T14:13:12,app,14,drainage,waterlogging,jhotwara
+durgapur gali 27 k sadak toti hui hai 10 din se. jaldi theek karo plase.,,,2026-10-05T16:07:52,whatsapp,117,road_damage,broken_road,durgapura
+"Dustbn overflowing at near gvt school, jagatpura.",26.822164,75.866478,2026-10-05T18:04:22,whatsapp,257,garbage,overflowing_bin,jagatpura
+prattap nagar gali no 12 kki sadak tooti hui hai 1 mahine se.,,,2026-10-05T18:13:10,email,82,road_damage,broken_road,pratap_nagar
+bhai gali no 9 Malviya Nagar wala gaddha abhi ak nahi bhara. ek uncle ko chot lag gayi.,,,2026-10-05T18:41:05,web,12,road_damage,pothole,malviya_nagar
+"dustbn overflowing at sstreet no. 20, mnsarovra. very inconvenient for eisdents.",26.875920,75.756031,2026-10-05T20:36:16,web,85,garbage,overflowing_bin,mansarovar
+vidhyadhar nagar gali no 12 ka dustbin bhar ke overflow ho raha hai. pehle bhi complaint ki thi.,,,2026-10-05T22:10:30,web,31,garbage,overflowing_bin,vidhyadhar_nagar
+mansarovar gali no 26 ka duustbin bhar ke overfllow ho raha hai. jaldi theek karo plese.,,,2026-10-05T22:18:34,whatsapp,200,garbage,overflowing_bin,mansarovar
+"evree waterlogging at lane 14, vidhydhar nagar after rain. Accident can happen any time.",,,2026-10-05T22:25:30,whatsapp,8,drainage,waterlogging,vidhyadhar_nagar
+"water pipeline leaking at near ppetrol pump, raja park, lots of water wastage. complained earlier also, no action.",26.897600,75.826227,2026-10-06T02:00:01,whatsapp,129,water_supply,pipeline_leak,raja_park
+Reliance Fresh ke samne jhottwara pe jalbharav ho gaya hai. jaldi theek karo please.,,,2026-10-06T02:04:28,whatsapp,14,drainage,waterlogging,jhotwara
+झोटवाड़ा गली 22 में नल में गंदा पानी आ रहा है।,,,2026-10-06T02:34:34,whatsapp,51,water_supply,contaminated_water,jhotwara
+adarsh nagar gali numberr 5 kaa dustbni bhar ke overfloow ho raha hai. jaldi theek karo pleas.,26.896263,75.838384,2026-10-06T02:55:02,whatsapp,26,garbage,overflowing_bin,adarsh_nagar
+"Drain blocked at gali no. 30, Sodala for 3 days, bad smell. lease fix it soon.",26.903724,75.766624,2026-10-06T04:16:27,web,17,drainage,blocked_drain,sodala
+मानसरोवर SBI ATM के पास में नल में गंदा पानी आ रहा है। कृपया जल्दी ठीक करें।,26.871792,75.767401,2026-10-06T05:23:09,web,186,water_supply,contaminated_water,mansarovar
+"gali no 27 durgapur me road khaarb haai, chalna mushkil.",,,2026-10-06T06:45:19,whatsapp,117,road_damage,broken_road,durgapura
+"झोटवाड़ा गली 30 की स्ट्रीट लाइट 10 दिन से बंद है, अंधेरा रहता है। कृपया जल्दी ठीक करें।",,,2026-10-06T08:07:37,web,64,streetlight,not_working,jhotwara
+Jagatpura gali no 29 me baarsh ke baad paani bhara hua hai. jaldi theek krao plese.,26.824453,75.862288,2026-10-06T08:09:15,web,243,drainage,waterlogging,jagatpura
+"Public dustbin near ali no. 5 in Adarsh Nagar full foor a month. Copmlained earlier also, no action.",,,2026-10-06T08:42:24,web,26,garbage,overflowing_bin,adarsh_nagar
+"Dirty smelly water coming in taps at street no. 22, Jhotwara. Accident can happpen any time.",,,2026-10-06T09:03:32,web,51,water_supply,contaminated_water,jhotwara
+दुर्गापुरा गली 24 पर कचरे का ढेर लगा है। कल एक स्कूटी वाला गिर गया।,26.852281,75.798733,2026-10-06T10:13:57,whatsapp,167,garbage,garbage_dump,durgapura
+ddurgapura gali number 24 pe kachra ka dher laga hai 3 di se. raat ko accident hone ka dar hai.,,,2026-10-06T12:14:59,web,167,garbage,garbage_dump,durgapura
+"jhotara gali number 22 me gannda paani aa raha hai nal me, bimari ka dar.",26.954685,75.740313,2026-10-06T12:22:17,web,51,water_supply,contaminated_water,jhotwara
+adarsh nagar gali number 5 ka dustbin bhar ke overflow ho rraha hai. oi snwai naahi o rahi.,26.896321,75.837691,2026-10-06T13:04:35,whatsapp,26,garbage,overflowing_bin,adarsh_nagar
+"Huge garabge dump at treet no. 24, durgapura, not cleared ffor 3 days. A scooter rider ffell here yesterday.",,,2026-10-06T13:19:43,whatsapp,167,garbage,garbage_dump,durgapura
+"vidhyadhar nagar govt school ke paas pe light ke kkhambe se taar lattak rahe hain, current kka dar. rata ko accident hoe ka dar hai.",,,2026-10-06T13:57:14,email,206,streetlight,exposed_wires,vidhyadhar_nagar
+"विद्याधर नगर गुरुद्वारा के पास पर मैनहोल का ढक्कन नहीं है। बच्चे यहीं से स्कूल जाते हैं, खतरनाक है।",26.959002,75.777925,2026-10-06T13:59:12,whatsapp,197,drainage,open_manhole,vidhyadhar_nagar
+"झोटवाड़ा गली 22 में नल में गंदा पानी आ रहा है। बच्चे यहीं से स्कूल जाते हैं, खतरनाक है।",,,2026-10-06T14:09:41,web,51,water_supply,contaminated_water,jhotwara
+"jhotwara gali 22 me ganda paani aa rah ahia nal me, bimari ka dar.",26.954476,75.739537,2026-10-06T14:29:48,web,51,water_supply,contaminated_water,jhotwara
+"Public dutbin near gali no. 26 in Mansarovar fulll for a week. Complaiend earlier also, no action.",26.873901,75.761064,2026-10-06T14:32:33,web,200,garbage,overflowing_bin,mansarovar
+Reliance Fresh ke paas Jhotwara pe jalbharav ho gaya hai.,,,2026-10-06T14:57:55,app,14,drainage,waterlogging,jhotwara
+"asnganer me gali nmbe r4 gadda ho gaya hai, raaat ko dikhta nahi. kal ek scooty wala gir gaya.",26.819219,75.781926,2026-10-06T15:38:45,whatsapp,72,road_damage,pothole,sanganer
+"garbage piled up near street n.o 24 in durgapura, stray animals everywhere.",,,2026-10-06T15:47:18,whatsapp,167,garbage,garbage_dump,durgapura
+Relanec Fresh ke samne Jhotwara pe jalbhaav ho gaya hai. jaldi theek karo please.,,,2026-10-06T16:02:55,whatsapp,14,drainage,waterlogging,jhotwara
+"Garbage piled up near street no. 24 in Durgapura, stray animals everywhere. Accident can happen any time.",,,2026-10-06T16:04:29,app,167,garbage,garbage_dump,durgapura
+"Road completely broken at opposite gotv school, Jagatppura for a week. ery inconvenient for residents.",26.830952,75.860927,2026-10-06T17:28:40,email,19,road_damage,broken_road,jagatpura
+झोटवाड़ा गली नंबर 22 में नल में गंदा पानी आ रहा है। कल एक स्कूटी वाला गिर गया।,,,2026-10-06T17:34:43,email,51,water_supply,contaminated_water,jhotwara
+"galli number 24 durapura me kooda paad hai, badbu aa rahi hai. scool ke bacchche yai se jaate hain, ahut khatarnak hai.",26.852490,75.798667,2026-10-06T18:14:52,web,167,garbage,garbage_dump,durgapura
+प्रताप नगर गली नंबर 25 की नाली जाम हो गई है। कृपया जल्दी ठीक करें।,,,2026-10-06T18:38:31,whatsapp,25,drainage,blocked_drain,pratap_nagar
+"Contaminated uddy water supply in Jhotwara gali no. 22 for 2 weks. Kids walk to school through this road, it is dangerous.",,,2026-10-06T19:07:49,app,51,water_supply,contaminated_water,jhotwara
+"Garbage piled up neear gali no. 24 in Durgapura, stary animals everywhee. A scooter rider fell here yesterday.",26.852452,75.798723,2026-10-06T19:34:26,whatsapp,167,garbage,garbage_dump,durgapura
+झोटवाड़ा Reliance Fresh के पास में जलभराव हो गया है। कृपया जल्दी ठीक करें।,26.951102,75.742450,2026-10-06T20:00:18,whatsapp,14,drainage,waterlogging,jhotwara
+"huge potholes near lane 4, sanganer - vehicles gettin damaged. complained earlier also, no acction.",26.819759,75.782897,2026-10-06T20:31:12,web,72,road_damage,pothole,sanganer
+johari bazzaar gali 19 ka dustbn bhar ke overflow ho raha hai.,26.914558,75.829584,2026-10-06T21:26:17,email,70,garbage,overflowing_bin,walled_city
+"gali 22 jhotawr me peene a paan ganda aa raha hai. school kke bachche yahii se jaate haiin, bahut khatarnak hai.",,,2026-10-06T21:38:31,app,51,water_supply,contaminated_water,jhotwara
+"Huge garbage dump at gali no. 24, Dugapura, not cleared for 3 days. A scooter rider ell here yesteray.",26.852006,75.798749,2026-10-06T21:59:00,web,167,garbage,garbage_dump,durgapura
+Jhotwara Reliance Fresh ke paas me baaarish ke baaa paani bhara hua haai. jaldi theek karo please.,26.950752,75.742162,2026-10-06T22:53:36,web,14,drainage,waterlogging,jhotwara
+"Viddhyada Nagar gali 14 me baarish ke baadd paani bbhara hua hai. schhool ke bachche yahi se jaate hain, bahut khatarnak hai.",,,2026-10-06T23:15:31,whatsapp,8,drainage,waterlogging,vidhyadhar_nagar
+Water logged street near near Reliance Fresh in Jhotwaa fr a month. Pleease fix it soonn.,,,2026-10-06T23:28:24,whatsapp,14,drainage,waterlogging,jhotwara
+"ggali nno 24 Durgapura me kooda pada hai, badbu aa rhaii haii. pehle bhi compliant ki thi.",,,2026-10-06T23:42:15,app,167,garbage,garbage_dump,durgapura
+"Dustbin overflowing at gali no. 12, Vidyadhar Nagar.",,,2026-10-06T23:45:41,whatsapp,31,garbage,overflowing_bin,vidhyadhar_nagar
+"Garbage piled up nearr lane 24 in Durgapura, stray anmals everywhere. A csooter rider fell here yetserday.",26.851937,75.798524,2026-10-07T00:02:00,whatsapp,167,garbage,garbage_dump,durgapura
+"road completely broken at gali no. 8, jagatpura for a week. an old man got injured last night.",26.830736,75.861214,2026-10-07T00:05:41,app,19,road_damage,broken_road,jagatpura
+Durgapura gali number 24 pe kachra ka dher lag ahai 3 din se. koi sunwaai nahi ho rahi.,26.851955,75.798947,2026-10-07T00:26:26,web,167,garbage,garbage_dump,durgapura
+adarsh nagar gali no 5 ka dustbin bhar ke overflow h oraha hai. jaldi theek karo please.,26.896836,75.837858,2026-10-07T00:43:55,whatsapp,26,garbage,overflowing_bin,adarsh_nagar
+"Huge grbage dump ta gali no. 24, Durgapura, not cleared for 3 days. Kids walk to school through this road, it is dagerous.",,,2026-10-07T00:58:38,whatsapp,167,garbage,garbage_dump,durgapura
+झोटवाड़ा Reliance Fresh के पास में जलभराव हो गया है।,,,2026-10-07T01:37:50,web,14,drainage,waterlogging,jhotwara
+"gali nmuer 27 durgapura me road kharba hai, chaln amushkil. kooi sunwai nahi h rahi.",,,2026-10-07T01:45:40,whatsapp,117,road_damage,broken_road,durgapura
+"huge garbage dump at lane 24, durgapura, not clered for 3 days. kids walk tto school through this road, i is dangerous.",,,2026-10-07T02:42:10,email,167,garbage,garbage_dump,durgapura
+"जगतपुरा गली 8 की सड़क टूटी हुई है। बच्चे यहीं से स्कूल जाते हैं, खतरनाक है।",,,2026-10-07T03:08:33,app,19,road_damage,broken_road,jagatpura
+Public dustbin near street no. 12 in Vidhyadhar Naga rfull for 10 days. Please fix it soon.,,,2026-10-07T04:09:00,web,31,garbage,overflowing_bin,vidhyadhar_nagar
+jhotwar areliance fresh ke samne me baarish ke baad paani bhaar uha hai. pehle bhi complanit ki thi.,,,2026-10-07T05:03:44,whatsapp,14,drainage,waterlogging,jhotwara
+विद्याधर नगर सरकारी स्कूल के पास पर खंभे से तार लटक रहे हैं। कल एक स्कूटी वाला गिर गया।,26.959021,75.779036,2026-10-07T05:35:17,web,206,streetlight,exposed_wires,vidhyadhar_nagar
+durgapura gali number 24 pe kachra ka dher laga hai 3 di se. ek uncle o chot lag gayi.,,,2026-10-07T05:53:40,email,167,garbage,garbage_dump,durgapura
+"Garage piled up near lane 24 in Durgapuar, stray animals everywhere. Please fix it soon.",26.851914,75.798901,2026-10-07T05:57:32,web,167,garbage,garbage_dump,durgapura
+आदर्श नगर गली 5 का डस्टबिन भरकर बह रहा है। कृपया जल्दी ठीक करें।,26.896742,75.837605,2026-10-07T06:15:15,web,26,garbage,overflowing_bin,adarsh_nagar
+झोटवाड़ा गली नंबर 22 में नल में गंदा पानी आ रहा है। कल एक स्कूटी वाला गिर गया।,,,2026-10-07T06:53:53,app,51,water_supply,contaminated_water,jhotwara
+"jhotwara gali no 22 me ganda paani aa raha hai nal me, bimair ka dar. raat ko accident hone ka dar hai.",26.954829,75.740173,2026-10-07T10:17:36,web,51,water_supply,contaminated_water,jhotwara
+"water ank ke paas Malviya Nagar me kooda pada hai, badbu aa rahi hai.",,,2026-10-07T11:11:25,whatsapp,256,garbage,garbage_dump,malviya_nagar
+"gali 12 malviya nagar me nali band hai, gandagi fail rahi hai. koi sunwai nahi ho rahi.",,,2026-10-08T01:08:16,email,261,drainage,blocked_drain,malviya_nagar
+malviya nagar gali no 12 ki naali jam ho agyi hai ek hafte se. koi sunwai nahi ho rahi.,,,2026-10-08T06:37:37,app,261,drainage,blocked_drain,malviya_nagar
+Malviya Nagar gali number 22 me baarish ke baad paaani bhara hua haii. pehle bhi complaint ki thi.,26.850589,75.828192,2026-10-08T08:30:10,whatsapp,262,drainage,waterlogging,malviya_nagar
+gli no 22 Malviya Nagar pe jalbharav hoo gaya hai.,,,2026-10-08T09:23:24,whatsapp,262,drainage,waterlogging,malviya_nagar
+"bus stop ke sammn Malviya Nagar me gutter overflow ho raha hai 3 din se. school k bachche yahi see jaate hain, bahut khatarnak hai.",,,2026-10-08T13:05:23,whatsapp,263,drainage,sewage_overflow,malviya_nagar
+मालवीय नगर गली नंबर 12 की नाली जाम हो गई है। कृपया जल्दी ठीक करें।,,,2026-10-08T15:19:38,web,261,drainage,blocked_drain,malviya_nagar
+glai o 22 Malviya Nagar pe jalbharav ho gaya hai. jaldi theke kro pleaes.,,,2026-10-08T18:36:21,whatsapp,262,drainage,waterlogging,malviya_nagar
+"Severe waterloging at gali no. 22, Malviya Nagar after rain.",,,2026-10-08T19:26:23,whatsapp,262,drainage,waterlogging,malviya_nagar
+gali no 22 Malviya Nagar pe albharav hoo gyaa hai. jldi theek karo please.,,,2026-10-08T20:52:00,email,262,drainage,waterlogging,malviya_nagar
+Sewer line overflow near lane 4 in Malviyya Nagar for 3 days. Accident ca happne any time.,,,2026-10-08T23:39:28,whatsapp,263,drainage,sewage_overflow,malviya_nagar
+"Severe waterlogginng at street no. 4, Malviya Nagar after rain. Accident can happen any time.",,,2026-10-09T05:54:59,app,264,drainage,waterlogging,malviya_nagar
+gli 4 Malviya Nagar pe jalbharav o gaya hai. jaldi theek karo please.,,,2026-10-09T06:10:26,web,264,drainage,waterlogging,malviya_nagar
+sewer line overflow near ane 4 in malviya ngaar for 3 days. an old man go tinjured last night.,,,2026-10-09T08:45:19,whatsapp,263,drainage,sewage_overflow,malviya_nagar
+gali 4 Malviya Nagar pe jalbbhrv ho gaya hai. koi suwnai nhi ho rahi.,,,2026-10-09T10:37:24,app,264,drainage,waterlogging,malviya_nagar
+Malviya Nagar gali number 22 me baarish ke baad paani bhara hua hai. koi sunwai nahi ho rahi.,,,2026-10-09T11:20:26,email,262,drainage,waterlogging,malviya_nagar
+bus stop ke samne malviya nagar me utter overflow ho raha hai 3 din se.,26.852900,75.816795,2026-10-09T11:23:37,whatsapp,263,drainage,sewage_overflow,malviya_nagar
+मालवीय नगर गली 4 पर सीवर का पानी सड़क पर बह रहा है।,,,2026-10-09T12:27:02,whatsapp,263,drainage,sewage_overflow,malviya_nagar
