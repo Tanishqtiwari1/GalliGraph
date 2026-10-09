@@ -5,3 +5,5 @@ anthropic>=0.70
 numpy>=2.0
 httpx>=0.27
 python-dotenv>=1.0
+scikit-learn>=1.5
+joblib>=1.4

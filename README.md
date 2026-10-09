@@ -23,20 +23,46 @@ A complaint like *"bhai raja park gali no 5 me 2 hafte se bada gaddha hai, kal s
 
 ## Measured results
 
-Ground-truth evaluation (`scripts/evaluate.py`) on synthetic Jaipur complaint streams. These include typos, three languages, vague landmarks, partial GPS, and hard negatives (different issues of the same type in the same locality). The numbers below are for **offline mode, with no API key**:
+### On real complaints
+
+CivicPulse's classifier is trained on **14,491 real citizen complaints** (Bengaluru, 2019–2021) and tested on **1,548 complaints from 2022** that it never saw:
+
+| Approach | Category accuracy on real 2022 complaints |
+|---|---|
+| Always guess the most common category | 18.3% |
+| Keyword rules only | 66.0% |
+| **Trained model alone** (TF-IDF + logistic regression) | **81.2%** (88.4% on the 77% of complaints where it is confident) |
+| **CivicPulse (trained model + multilingual rules)** | **78.6%** |
+
+The combined system trades about 3 points on English for keeping Hindi/Hinglish accurate (below). The model never saw Hinglish, so it only overrides the keyword rules there when it is very sure. In the real data the citizen picks the category, and some labels are wrong (e.g. an overflowing drain filed as "garbage"), which caps the achievable score.
+
+The real data also changed the product. About 13% of real complaints were **stray animals, traffic/parking or electricity supply**, which had no department in the original design, so they became categories with their own routing.
+
+**Duplicates in the wild:** replaying the 4,000 most recent real complaints with their real GPS and timestamps, **8.2%** were repeats of an already-open issue. A manual spot check of merged pairs found most were the same problem reported again: the same blocked drain two days apart, the same stray dogs, identical resubmissions. Traffic rule violations are excluded from merging, because each one is a separate incident.
+
+### On multilingual synthetic data
+
+Ground-truth evaluation (`scripts/evaluate.py`) on synthetic Jaipur complaint streams in English, Hindi and Hinglish, with typos, vague landmarks, partial GPS and hard negatives (different issues of the same type in the same locality):
 
 | Metric | Dataset A (661 complaints) | Held-out dataset B (788 complaints) |
 |---|---|---|
-| Category accuracy | **97.9%** | **97.7%** |
-| Duplicate-detection precision | **95.4%** | **96.6%** |
-| Duplicate-detection recall | 86.3% | 79.8% |
-| Duplicate-detection F1 | **0.906** | **0.874** |
+| Category accuracy | **96.5%** | **96.8%** |
+| Duplicate-detection precision | **96.5%** | |
+| Duplicate-detection recall | 85.5% | |
+| Duplicate-detection F1 | **0.907** | **0.871** |
 | Planted spike detected | ✅ | ✅ |
-| Avg processing time | ~12 ms / complaint | |
 
-High precision is deliberate. Wrongly merging two different problems hides one of them, which is worse than leaving a duplicate unmerged. Borderline matches are merged but flagged for human review.
+High precision is deliberate. Wrongly merging two different problems hides one of them, which is worse than leaving a duplicate unmerged.
 
-> These numbers come from synthetic data. Before the final pitch, re-run `evaluate.py` on real complaints (Google Form, campus pilot, public posts) labelled by hand.
+### Retrain on new data
+
+```bash
+cd backend
+.venv/bin/python ../scripts/train_classifier.py --csv path/to/complaints.csv   # ~3 min, writes backend/models/
+.venv/bin/python ../scripts/evaluate_real.py                                     # real-data accuracy + duplicate study
+```
+
+The model file (~30 MB) is not committed to git. Without it, CivicPulse falls back to keyword rules.
 
 ## Quick start
 
@@ -54,7 +80,7 @@ Set `CIVICPULSE_EXTRACTOR` in `backend/.env` (copy it from `backend/.env.example
 
 | Mode | Cost | Speed | What you need |
 |---|---|---|---|
-| `rules` | Free | ~12 ms | Nothing. Offline keyword and fuzzy rules. No photo checks |
+| `rules` | Free | ~30 ms | Nothing. Trained ML model (if `backend/models/` exists) + offline keyword rules |
 | `ollama` | **Free** | ~7 s | [Ollama](https://ollama.com) with `ollama pull qwen2.5:7b` and `ollama pull gemma3:4b`. Runs on your machine, so **complaints never leave the server** |
 | `claude` / `auto` | ~$0.002 per complaint | ~1 s | `ANTHROPIC_API_KEY` from console.anthropic.com |
 
@@ -63,6 +89,8 @@ Set `CIVICPULSE_EXTRACTOR` in `backend/.env` (copy it from `backend/.env.example
 ollama pull qwen2.5:7b && ollama pull gemma3:4b
 echo "CIVICPULSE_EXTRACTOR=ollama" >> backend/.env
 ```
+
+`CIVICPULSE_VERIFIER` (auto / claude / ollama / none) chooses who checks after-repair photos, independently of the text mode. A good free setup is `CIVICPULSE_EXTRACTOR=rules` + `CIVICPULSE_VERIFIER=ollama`: the trained model reads complaints in milliseconds, and local AI checks photos.
 
 Every AI mode falls back to offline rules if the model is unreachable, so the demo never breaks. With a local model, the extraction is cross-checked against rule-based safety keywords: small models tend to under-rate danger, so severity is never lowered below what the rules detect. A local model only auto-accepts a repair photo at *high* confidence; anything else goes to a supervisor.
 
@@ -89,6 +117,7 @@ Optional: `pip install sentence-transformers` gives neural multilingual embeddin
 ```
 backend/app/
   extract.py    Claude / local Ollama structured extraction + offline fallback
+  classifier.py trained complaint classifier (real data)
   ollama.py     client for free local models
   fuzzy.py      typo-tolerant phrase matching
   geo.py        geocoding, localities, OSM POIs, spot fingerprints
@@ -103,7 +132,7 @@ backend/app/
   pipeline.py   end-to-end ingest
   main.py       FastAPI routes
 frontend/src/   React + Tailwind + Leaflet + Recharts dashboard
-scripts/        generate_synthetic, seed, evaluate, fetch_pois
+scripts/        generate_synthetic, seed, evaluate, evaluate_real, train_classifier, fetch_pois
 data/           Jaipur gazetteer, OSM POIs, synthetic dataset
 docs/api.md     API contract
 ```

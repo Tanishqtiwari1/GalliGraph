@@ -18,13 +18,31 @@ CATEGORIES = {
     },
     "garbage": {
         "label": "Garbage & sanitation",
-        "sub_types": ["garbage_dump", "missed_collection", "overflowing_bin", "dead_animal", "other"],
+        "sub_types": ["garbage_dump", "missed_collection", "overflowing_bin", "dead_animal", "public_urination",
+                      "public_toilet", "other"],
         "department": "Sanitation (Swachh Bharat Cell)",
     },
     "streetlight": {
         "label": "Streetlight",
         "sub_types": ["not_working", "flickering", "damaged_pole", "exposed_wires", "other"],
         "department": "Municipal Electrical Wing",
+    },
+    # The three categories below were added after analysing 16k real complaints (Bengaluru, 2019-22):
+    # together they were ~13% of real complaints and had no department to go to.
+    "stray_animals": {
+        "label": "Stray animals",
+        "sub_types": ["stray_dogs", "stray_cattle", "stray_pigs", "other"],
+        "department": "Municipal Veterinary & Animal Control",
+    },
+    "traffic": {
+        "label": "Traffic & parking",
+        "sub_types": ["congestion", "illegal_parking", "signal_fault", "rule_violation", "other"],
+        "department": "Traffic Police",
+    },
+    "electricity": {
+        "label": "Electricity supply",
+        "sub_types": ["power_outage", "transformer_pole", "other"],
+        "department": "JVVNL (Electricity Discom)",
     },
     "other": {
         "label": "Other",

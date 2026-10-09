@@ -29,6 +29,9 @@ OFFICER_ROLE = {
     "Municipal Sewerage & Drainage": "JE (Sewerage)",
     "Sanitation (Swachh Bharat Cell)": "Sanitary Inspector",
     "Municipal Electrical Wing": "JE (Electrical)",
+    "Municipal Veterinary & Animal Control": "Veterinary Officer",
+    "Traffic Police": "Traffic Inspector",
+    "JVVNL (Electricity Discom)": "AEN (JVVNL)",
     "Commissioner's Office (manual triage)": "Ward Officer",
 }
 # Some departments are faster than others - this is what the accountability dashboard should surface.

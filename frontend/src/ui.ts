@@ -6,6 +6,9 @@ export const CATEGORY_META: Record<Category, { label: string; color: string; emo
   drainage: { label: 'Drainage & sewage', color: '#7c3aed', emoji: '🌊' },
   garbage: { label: 'Garbage', color: '#65a30d', emoji: '🗑️' },
   streetlight: { label: 'Streetlight', color: '#ca8a04', emoji: '💡' },
+  stray_animals: { label: 'Stray animals', color: '#a16207', emoji: '🐕' },
+  traffic: { label: 'Traffic & parking', color: '#0891b2', emoji: '🚦' },
+  electricity: { label: 'Electricity supply', color: '#db2777', emoji: '⚡' },
   other: { label: 'Other', color: '#64748b', emoji: '📌' },
 }
 
@@ -86,4 +89,5 @@ export const EXTRACTOR_LABEL: Record<string, string> = {
   claude: 'Claude AI',
   ollama: 'Local AI (Ollama)',
   rules: 'Offline rules',
+  trained: 'Trained ML model',
 }

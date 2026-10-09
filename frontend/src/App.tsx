@@ -32,7 +32,10 @@ export default function App() {
 
   useEffect(() => {
     api.meta().then(setMeta).catch(() => {})
-    api.health().then((h) => setMode(h.extractor)).catch(() => setMode('offline'))
+    api
+      .health()
+      .then((h) => setMode(h.extractor === 'rules' && h.trained_model ? 'trained' : h.extractor))
+      .catch(() => setMode('rules'))
     const onHash = () => setTab(tabFromHash())
     window.addEventListener('hashchange', onHash)
     return () => window.removeEventListener('hashchange', onHash)

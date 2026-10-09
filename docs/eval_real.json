@@ -1,0 +1,34 @@
+{
+  "test_complaints": 1548,
+  "test_period": ">= 2022-01-01 (model trained only on earlier complaints)",
+  "category_accuracy_combined": 0.7862,
+  "category_accuracy_keywords_only": 0.6602,
+  "top_confusions": [
+    "other -> traffic: 51",
+    "drainage -> road_damage: 38",
+    "garbage -> road_damage: 22",
+    "garbage -> other: 18",
+    "other -> road_damage: 18",
+    "other -> garbage: 15"
+  ],
+  "duplicate_study": {
+    "complaints": 4000,
+    "merged_into_existing_issue": 328,
+    "distinct_issues": 3672,
+    "duplicate_share_pct": 8.2,
+    "largest_clusters": [
+      {
+        "summary": "Public urination (garbage & sanitation).",
+        "reports": 11
+      },
+      {
+        "summary": "Public urination (garbage & sanitation).",
+        "reports": 7
+      },
+      {
+        "summary": "Damaged footpath (road damage).",
+        "reports": 7
+      }
+    ]
+  }
+}

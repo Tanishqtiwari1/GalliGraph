@@ -45,11 +45,27 @@ def verify_resolution(summary: str, before_images: list[str], after_image: str |
     """Returns the verdict plus `auto_accept`: whether the closure can be accepted without a supervisor."""
     if not after_image:
         return _skipped("No after-repair photo was provided, so the closure cannot be verified. Needs human review.")
-    if config.EXTRACTOR == "ollama":
+    method = active_verifier()
+    if method == "ollama":
         return _verify_ollama(summary, before_images, after_image)
-    if config.EXTRACTOR == "rules" or not claude_available():
-        return _skipped("AI photo verification is unavailable (offline mode). A supervisor should review the photo.")
-    return _verify_claude(summary, before_images, after_image)
+    if method == "claude":
+        return _verify_claude(summary, before_images, after_image)
+    return _skipped("AI photo verification is not configured. A supervisor should review the photo.")
+
+
+def active_verifier() -> str:
+    from . import ollama
+
+    choice = config.VERIFIER
+    if choice == "auto":
+        if config.EXTRACTOR == "ollama":
+            return "ollama"
+        if config.EXTRACTOR != "rules" and claude_available():
+            return "claude"
+        return "ollama" if ollama.available() else "none"
+    if choice == "claude" and not claude_available():
+        return "none"
+    return choice
 
 
 def _verify_ollama(summary: str, before_images: list[str], after_image: str) -> dict:

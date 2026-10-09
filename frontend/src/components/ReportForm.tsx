@@ -10,6 +10,7 @@ const SAMPLES = [
   'मालवीय नगर गली 12 में सीवर का पानी सड़क पर बह रहा है, बच्चे यहीं से स्कूल जाते हैं',
   'Street light not working near Shiv mandir, Mansarovar for 10 days, very dark at night',
   'jhotwara gali 3 me 4 din se paani nahi aa raha, tanker bhi nahi aaya',
+  'Pack of stray dogs near the park gate in Vaishali Nagar chasing kids and two-wheelers every evening',
 ]
 
 interface Props {

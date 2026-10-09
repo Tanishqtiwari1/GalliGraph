@@ -25,6 +25,10 @@ OLLAMA_TEXT_MODEL = os.getenv("CIVICPULSE_OLLAMA_TEXT_MODEL", "qwen2.5:7b")
 OLLAMA_VISION_MODEL = os.getenv("CIVICPULSE_OLLAMA_VISION_MODEL", "gemma3:4b")
 OLLAMA_TIMEOUT = float(os.getenv("CIVICPULSE_OLLAMA_TIMEOUT", 120))
 
+# Who checks after-repair photos: "auto" | "claude" | "ollama" | "none".
+# auto -> Claude if a key is set, else local Ollama if it is running, else a supervisor reviews every closure.
+VERIFIER = os.getenv("CIVICPULSE_VERIFIER", "auto")
+
 # --- Geocoding --------------------------------------------------------------
 # Nominatim (OpenStreetMap) is used for landmarks not in the local gazetteer. Off by default
 # because the public server is rate limited (1 req/s); turn on for live demos.

@@ -1,0 +1,17 @@
+{
+  "extractor": "ollama",
+  "complaints": 100,
+  "true_issues": 62,
+  "predicted_issues": 75,
+  "category_accuracy": 0.86,
+  "dedup_precision": 0.918,
+  "dedup_recall": 0.5091,
+  "dedup_f1": 0.655,
+  "spike_detected": false,
+  "alerts": [],
+  "avg_processing_ms": 11709.9,
+  "thresholds": {
+    "merge": 0.72,
+    "review": 0.6
+  }
+}

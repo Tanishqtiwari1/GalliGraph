@@ -99,8 +99,14 @@ def _issue_detail(conn, issue_id: int) -> dict:
 
 @app.get("/api/health")
 def health():
-    out = {"status": "ok", "extractor": extract.active_extractor_name(), "embeddings": embed.backend_name()}
-    if out["extractor"] == "ollama":
+    from . import classifier, verify
+
+    out = {"status": "ok", "extractor": extract.active_extractor_name(), "embeddings": embed.backend_name(),
+           "photo_verifier": verify.active_verifier(), "trained_model": None}
+    bundle = classifier._load()
+    if bundle:
+        out["trained_model"] = {k: bundle[k] for k in ("source", "trained_on", "test_accuracy")}
+    if out["extractor"] == "ollama" or out["photo_verifier"] == "ollama":
         from . import config, ollama
         models = ollama.installed_models()
         out["ollama"] = {"reachable": ollama.available(), "text_model": config.OLLAMA_TEXT_MODEL,

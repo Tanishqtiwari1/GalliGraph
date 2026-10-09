@@ -7,13 +7,17 @@ from datetime import datetime
 
 from . import priority, sla
 from .db import complaint_row_to_dict, from_blob, issue_row_to_dict, log_event, to_blob
-from .dedup import find_match, merged_embedding
+from .dedup import DedupResult, find_match, merged_embedding
 from .embed import embed
 from .extract import extract
 from .geo import geocode, spot_keys
 from .media import save_image
 from .taxonomy import department_for
 from .timeutil import iso, parse, utcnow
+
+
+# Incidents, not standing problems: two reports are two separate events even at the same spot.
+NEVER_MERGE = {("traffic", "rule_violation")}
 
 
 def _embedding_text(raw: str, summary: str, detail: str | None) -> str:
@@ -39,9 +43,12 @@ def ingest(conn: sqlite3.Connection, *, text: str, lat: float | None = None, lng
     vec = embed(_embedding_text(text, ex.summary_en, ex.location_detail))
     spots = spot_keys(text, ex.location_detail)
 
-    # 4. Deduplicate
-    match = find_match(conn, category=ex.category, lat=geo.lat, lng=geo.lng, precision=geo.precision,
-                       locality_id=geo.locality_id, created_at=created_at, embedding=vec, spot_keys=spots)
+    # 4. Deduplicate (one-off incidents such as a traffic violation by a specific vehicle are never merged)
+    if (ex.category, ex.sub_type) in NEVER_MERGE:
+        match = DedupResult(None, None, False)
+    else:
+        match = find_match(conn, category=ex.category, lat=geo.lat, lng=geo.lng, precision=geo.precision,
+                           locality_id=geo.locality_id, created_at=created_at, embedding=vec, spot_keys=spots)
 
     secondary_dept = department_for(ex.secondary_category) if ex.secondary_category else None
 

@@ -1,4 +1,13 @@
-export type Category = 'road_damage' | 'water_supply' | 'drainage' | 'garbage' | 'streetlight' | 'other'
+export type Category =
+  | 'road_damage'
+  | 'water_supply'
+  | 'drainage'
+  | 'garbage'
+  | 'streetlight'
+  | 'stray_animals'
+  | 'traffic'
+  | 'electricity'
+  | 'other'
 export type Status = 'open' | 'assigned' | 'in_progress' | 'needs_verification' | 'resolved'
 export type Tier = 'critical' | 'high' | 'medium' | 'low'
 
@@ -246,7 +255,14 @@ export interface IssueFilters {
 }
 
 export const api = {
-  health: () => request<{ status: string; extractor: string; embeddings: string }>('/health'),
+  health: () =>
+    request<{
+      status: string
+      extractor: string
+      embeddings: string
+      photo_verifier: string
+      trained_model: { source: string; trained_on: number; test_accuracy: number } | null
+    }>('/health'),
   meta: () => request<Meta>('/meta'),
   stats: () => request<Stats>('/stats'),
   alerts: () => request<Alert[]>('/alerts'),

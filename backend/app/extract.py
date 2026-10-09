@@ -18,7 +18,8 @@ from .taxonomy import CATEGORIES
 
 log = logging.getLogger(__name__)
 
-Category = Literal["road_damage", "water_supply", "drainage", "garbage", "streetlight", "other"]
+Category = Literal["road_damage", "water_supply", "drainage", "garbage", "streetlight", "stray_animals", "traffic",
+                   "electricity", "other"]
 
 
 class Extraction(BaseModel):
@@ -166,10 +167,28 @@ _KEYWORDS: dict[str, dict[str, list[str]]] = {
     "garbage": {
         "dead_animal": ["dead animal", "dead dog", "dead cow", "mara hua", "मरा हुआ"],
         "overflowing_bin": ["dustbin", "bin overflowing", "overflowing bin", "kooda daan", "डस्टबिन"],
+        "public_urination": ["urination", "urinating", "peshab", "yellow spot", "पेशाब"],
+        "public_toilet": ["public toilet", "toilet", "sulabh", "शौचालय"],
         "missed_collection": ["garbage van", "collection", "kachra gaadi", "safai wala", "not collected",
                               "nahi aayi", "hoopers", "कचरा गाड़ी", "door to door"],
         "garbage_dump": ["garbage", "kachra", "kachara", "kooda", "kuda", "trash", "rubbish", "कचरा", "कचरे", "कूड़ा",
                          "dher", "ढेर", "dump"],
+    },
+    "stray_animals": {
+        "stray_dogs": ["stray dog", "stray dogs", "dogs", "dog bite", "kutte", "kutta", "kutton", "कुत्ते", "कुत्ता"],
+        "stray_cattle": ["stray cattle", "cows", "cattle", "bull", "gaay", "gaaye", "saand", "आवारा पशु", "गाय", "सांड"],
+        "stray_pigs": ["pigs", "suar", "सूअर"],
+    },
+    "traffic": {
+        "congestion": ["traffic jam", "congestion", "traffic", "bottleneck", "जाम लग"],
+        "illegal_parking": ["parking", "parked", "wrong parking", "no parking", "पार्किंग"],
+        "signal_fault": ["traffic signal", "signal not working", "traffic light", "pedestrian light"],
+        "rule_violation": ["helmet", "wrong side", "one way", "no entry", "triple riding", "zebra", "jumping signal"],
+    },
+    "electricity": {
+        "power_outage": ["power cut", "power outage", "no electricity", "electricity", "bijli", "light gayi",
+                         "light chali", "बिजली", "voltage", "power supply"],
+        "transformer_pole": ["transformer", "electric pole", "बिजली का खंभा"],
     },
     "streetlight": {
         "exposed_wires": ["wire", "wires", "taar", "तार", "current", "shock"],
@@ -184,10 +203,11 @@ _KEYWORDS: dict[str, dict[str, list[str]]] = {
 _SAFETY = ["accident", "gir gaya", "gir gayi", "gire", "fell", "injur", "chot", "hurt", "electrocut", "shock",
            "current", "dengue", "malaria", "disease", "bimari", "kids", "bachche", "children", "school",
            "hospital", "dangerous", "khatarnak", "danger", "open manhole", "live wire", "drinking",
-           "बच्चे", "स्कूल", "दुर्घटना", "गिर", "खतरनाक", "चोट", "करंट", "बीमारी", "अस्पताल"]
+           "बच्चे", "स्कूल", "दुर्घटना", "गिर", "खतरनाक", "चोट", "करंट", "बीमारी", "अस्पताल",
+           "smoke", "dhuan", "dhua", "spark", "fire", "aag", "dog bite", "biting", "chasing", "धुआं", "आग"]
 _SAFETY_FUZZY = ["accident", "dangerous", "khatarnak", "injured", "school", "children", "bachche", "electric"]
 _SEVERE = ["accident", "injur", "electrocut", "live wire", "open manhole", "cave", "dhans", "sewage in drinking",
-           "died", "death", "fell", "gir gay", "khatarnak", "dangerous", "दुर्घटना", "गिर गया", "गिर गई", "खतरनाक"]
+           "died", "death", "fell", "gir gay", "khatarnak", "dangerous", "smoke", "dhuan", "spark", "fire", "aag", "bite", "दुर्घटना", "गिर गया", "गिर गई", "खतरनाक"]
 _DURATION_WORDS = re.compile(r"\b(din|dino|day|days|hafte|hafta|week|weeks|mahina|mahine|month|months|saal|year|"
                              r"kal|yesterday)\b|दिन|हफ्ते|हफ़्ते|महीने|साल|कल", re.IGNORECASE)
 _UNIT_DAYS = {"din": 1, "day": 1, "days": 1, "dino": 1, "hafte": 7, "hafta": 7, "week": 7, "weeks": 7,
@@ -199,7 +219,14 @@ _NUM_WORDS = {"ek": 1, "one": 1, "a": 1, "do": 2, "two": 2, "teen": 3, "three": 
 class RuleExtractor:
     name = "rules"
 
-    def extract(self, text: str, image_b64: str | None = None, image_media_type: str | None = None) -> Extraction:
+    # How the trained model and the keyword rules are combined (see _choose_category). The model was trained
+    # on English complaints, so on Hindi/Hinglish it must be far more certain before it overrides keywords.
+    # (confident, fallback) per detected language - tuned on real 2022 complaints + synthetic Hinglish.
+    THRESHOLDS = {"english": (0.5, 0.25), "hinglish": (0.8, 0.5), "hindi": (0.8, 0.5)}
+    STRONG_KEYWORDS_OVERRIDE = 0.75
+
+    def extract(self, text: str, image_b64: str | None = None, image_media_type: str | None = None,
+                use_model: bool = True) -> Extraction:
         from .geo import locality_by_id, match_locality  # local import avoids a cycle
 
         low = text.lower()
@@ -210,9 +237,15 @@ class RuleExtractor:
             scores[cat] = (sum(hits.values()), max(hits, key=hits.get))
         ranked = sorted(scores.items(), key=lambda kv: kv[1][0], reverse=True)
         category, sub_type = (ranked[0][0], ranked[0][1][1]) if ranked[0][1][0] > 0 else ("other", "other")
+        lang = "hindi" if re.search(r"[ऀ-ॿ]", text) else (
+            "hinglish" if re.search(r"\b(hai|nahi|ke|ki|me|mein|bhai|paani|sadak|kachra|gaya|gayi|raha|rahi)\b", low)
+            else "english")
+        if use_model:
+            category, sub_type = self._choose_category(text, category, sub_type, ranked[0][1][0], lang)
         # A second department is involved only when its evidence is as strong as the main one's
         # ("road caved in because of a leaking pipe").
-        secondary = (ranked[1][0] if category != "other" and ranked[1][1][0] >= max(2, ranked[0][1][0] / 2)
+        runner_up = next((kv for kv in ranked if kv[0] != category), ranked[1])
+        secondary = (runner_up[0] if category != "other" and runner_up[1][0] >= max(2, scores[category][0] / 2)
                      else None)
 
         duration = None
@@ -234,9 +267,6 @@ class RuleExtractor:
         loc_id = match_locality(text)
         detail = re.search(r"((gali|lane|street|sector|plot|house|block)\s*(no\.?|number)?\s*[-#]?\s*\w+|"
                            r"(near|opp\.?|opposite|ke paas|samne)\s+[\w ]{3,30})", low)
-        lang = "hindi" if re.search(r"[ऀ-ॿ]", text) else (
-            "hinglish" if re.search(r"\b(hai|nahi|ke|ki|me|mein|bhai|paani|sadak|kachra|gaya|gayi)\b", low) else "english")
-
         loc_name = locality_by_id()[loc_id]["name"] if loc_id else None
         if detail:
             # "near opposite masjid in malviya nagar" -> "near opposite masjid"
@@ -254,6 +284,25 @@ class RuleExtractor:
             severity=severity, severity_reason="Rule-based estimate from keywords and duration",
             safety_risk=safety, language=lang, summary_en=summary + ".", secondary_category=secondary,
         ))
+
+    def _choose_category(self, text: str, kw_category: str, kw_sub: str, keyword_hits: int,
+                         lang: str) -> tuple[str, str]:
+        """The trained model knows how real citizens phrase complaints (English); the keyword rules cover
+        Hindi/Hinglish. Trust the model when it is confident, else the keywords, else a weaker model guess."""
+        from . import classifier
+
+        pred = classifier.predict(text)
+        if pred is None:
+            return kw_category, kw_sub
+        model_cat, p, _ = pred
+        confident, fallback = self.THRESHOLDS.get(lang, self.THRESHOLDS["hinglish"])
+        if keyword_hits >= 2:  # several specific keywords matched: only a near-certain model may disagree
+            confident = max(confident, self.STRONG_KEYWORDS_OVERRIDE)
+        if p >= confident or (keyword_hits == 0 and p >= fallback):
+            if model_cat == kw_category:
+                return kw_category, kw_sub  # agree: keep the keyword sub-type (it saw the exact phrase)
+            return model_cat, classifier.predict_sub_type(text, model_cat) or "other"
+        return kw_category, kw_sub
 
 
 _NULLISH = {"", "null", "none", "n/a", "na", "unknown", "not specified", "not mentioned"}
