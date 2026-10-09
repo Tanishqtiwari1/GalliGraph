@@ -76,7 +76,10 @@ def score(conn: sqlite3.Connection, issue: dict, now: datetime | None = None) ->
     add("population", impact, reason)
 
     n = issue["report_count"]
-    add("reports", math.log1p(n) / math.log1p(15), f"{n} citizen report{'s' if n != 1 else ''}")
+    confirmed = issue.get("confirmations") or 0
+    reason = f"{n} citizen report{'s' if n != 1 else ''}" + (f" + {confirmed} neighbour{'s' if confirmed != 1 else ''} confirmed"
+                                                            if confirmed else "")
+    add("reports", math.log1p(n + 0.5 * confirmed) / math.log1p(15), reason)
 
     age = (now - parse(issue["first_reported"])).total_seconds() / 86400 + (issue["reported_duration_days"] or 0)
     add("duration", age / 30, f"Problem open ~{age:.0f} day{'s' if round(age) != 1 else ''}")

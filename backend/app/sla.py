@@ -10,17 +10,42 @@ from datetime import datetime, timedelta
 from .db import log_event
 from .timeutil import iso, parse, utcnow
 
-# (minimum score, tier, hours allowed)
+# (minimum score, tier, default hours allowed). The hours are a configurable policy (supervisors can change
+# them in Settings) - demonstration values, not official municipal rules.
 TIERS = [(70, "critical", 24), (50, "high", 72), (30, "medium", 168), (0, "low", 336)]
+DEFAULT_HOURS = {t: h for _, t, h in TIERS}
+_hours_override: dict[str, float] = {}
+
+
+def load_policy(conn: sqlite3.Connection) -> dict[str, float]:
+    row = conn.execute("SELECT value FROM settings WHERE key = 'sla_hours'").fetchone()
+    _hours_override.clear()
+    if row:
+        import json
+        _hours_override.update({k: float(v) for k, v in json.loads(row["value"]).items() if k in DEFAULT_HOURS})
+    return policy()
+
+
+def policy() -> dict[str, float]:
+    return {t: _hours_override.get(t, h) for t, h in DEFAULT_HOURS.items()}
+
+
+def save_policy(conn: sqlite3.Connection, hours: dict[str, float]) -> dict[str, float]:
+    import json
+    clean = {t: float(hours[t]) for t in DEFAULT_HOURS if t in hours and 1 <= float(hours[t]) <= 24 * 90}
+    conn.execute("INSERT INTO settings (key, value) VALUES ('sla_hours', ?) ON CONFLICT(key) DO UPDATE SET value = excluded.value",
+                 (json.dumps(clean),))
+    return load_policy(conn)
 ESCALATION_TARGET = {1: "Ward Supervisor", 2: "Municipal Commissioner"}
-CLOSED = ("resolved",)
+CLOSED = ("resolved", "rejected")
 
 
-def tier_for(score: float) -> tuple[str, int]:
-    for minimum, tier, hours in TIERS:
+def tier_for(score: float) -> tuple[str, float]:
+    hours = policy()
+    for minimum, tier, _ in TIERS:
         if score >= minimum:
-            return tier, hours
-    return TIERS[-1][1], TIERS[-1][2]
+            return tier, hours[tier]
+    return TIERS[-1][1], hours[TIERS[-1][1]]
 
 
 def apply(conn: sqlite3.Connection, issue_id: int, now: datetime | None = None) -> None:
@@ -40,7 +65,7 @@ def apply(conn: sqlite3.Connection, issue_id: int, now: datetime | None = None) 
 def check(conn: sqlite3.Connection, issue_id: int | None = None, now: datetime | None = None) -> int:
     """Raise escalation levels for overdue issues. Returns how many issues escalated."""
     now = now or utcnow()
-    sql = "SELECT id, sla_due_at, sla_hours, escalation_level FROM issues WHERE status NOT IN ('resolved') AND sla_due_at IS NOT NULL"
+    sql = "SELECT id, sla_due_at, sla_hours, escalation_level FROM issues WHERE status NOT IN ('resolved', 'rejected') AND sla_due_at IS NOT NULL"
     args: tuple = ()
     if issue_id is not None:
         sql += " AND id = ?"

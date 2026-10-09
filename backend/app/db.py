@@ -40,7 +40,13 @@ CREATE TABLE IF NOT EXISTS issues (
     assigned_officer   TEXT,
     resolution_note    TEXT,
     after_image        TEXT,
-    verification       TEXT
+    verification       TEXT,
+    confirmations      INTEGER NOT NULL DEFAULT 0,
+    reviewed_at        TEXT,
+    reviewed_by        TEXT,
+    info_request       TEXT,
+    disputed           INTEGER NOT NULL DEFAULT 0,
+    citizen_confirmed  INTEGER NOT NULL DEFAULT 0
 );
 CREATE TABLE IF NOT EXISTS complaints (
     id              INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -61,7 +67,14 @@ CREATE TABLE IF NOT EXISTS complaints (
     needs_review    INTEGER NOT NULL DEFAULT 0,
     processing_ms   INTEGER,
     reporter_contact TEXT,
-    image_path      TEXT
+    image_path      TEXT,
+    tracking_code   TEXT UNIQUE,
+    triage_meta     TEXT,
+    sms_opt_in      INTEGER NOT NULL DEFAULT 0
+);
+CREATE TABLE IF NOT EXISTS settings (
+    key   TEXT PRIMARY KEY,
+    value TEXT NOT NULL
 );
 CREATE TABLE IF NOT EXISTS issue_events (
     id        INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -111,9 +124,12 @@ _MIGRATIONS = {
     "issues": {
         "secondary_department": "TEXT", "sla_hours": "REAL", "sla_due_at": "TEXT", "sla_tier": "TEXT",
         "escalation_level": "INTEGER NOT NULL DEFAULT 0", "assigned_officer": "TEXT", "resolution_note": "TEXT",
-        "after_image": "TEXT", "verification": "TEXT",
+        "after_image": "TEXT", "verification": "TEXT", "confirmations": "INTEGER NOT NULL DEFAULT 0",
+        "reviewed_at": "TEXT", "reviewed_by": "TEXT", "info_request": "TEXT",
+        "disputed": "INTEGER NOT NULL DEFAULT 0", "citizen_confirmed": "INTEGER NOT NULL DEFAULT 0",
     },
-    "complaints": {"image_path": "TEXT"},
+    "complaints": {"image_path": "TEXT", "tracking_code": "TEXT", "triage_meta": "TEXT",
+                   "sms_opt_in": "INTEGER NOT NULL DEFAULT 0"},
 }
 
 
@@ -126,13 +142,29 @@ def init() -> None:
                     if col not in have:
                         conn.execute(f"ALTER TABLE {table} ADD COLUMN {col} {decl}")
         conn.executescript(SCHEMA)
+        from .notify import OUTBOX_SCHEMA
+        conn.executescript(OUTBOX_SCHEMA)
+        conn.execute("CREATE UNIQUE INDEX IF NOT EXISTS idx_complaints_code ON complaints(tracking_code)")
+        for (cid,) in conn.execute("SELECT id FROM complaints WHERE tracking_code IS NULL").fetchall():
+            conn.execute("UPDATE complaints SET tracking_code = ? WHERE id = ?", (new_tracking_code(), cid))
+
+
+# No 0/O/1/I/L so codes are easy to read out over the phone.
+_CODE_ALPHABET = "23456789ABCDEFGHJKMNPQRSTUVWXYZ"
+
+
+def new_tracking_code() -> str:
+    """Random, non-sequential citizen tracking code like JA-7KQ2-9XPM (~10^12 possibilities)."""
+    import secrets
+    raw = "".join(secrets.choice(_CODE_ALPHABET) for _ in range(8))
+    return f"JA-{raw[:4]}-{raw[4:]}"
 
 
 def reset() -> None:
     with session() as conn:
         conn.executescript("DROP TABLE IF EXISTS issue_events; DROP TABLE IF EXISTS issue_tasks; "
                            "DROP TABLE IF EXISTS complaints; DROP TABLE IF EXISTS issues;")
-        conn.executescript(SCHEMA)
+        conn.executescript(SCHEMA)  # official accounts (users table) are kept
 
 
 def log_event(conn: sqlite3.Connection, issue_id: int, at: str, kind: str, message: str, actor: str = "system") -> None:
@@ -152,6 +184,7 @@ def issue_row_to_dict(row: sqlite3.Row) -> dict:
     d = dict(row)
     d.pop("embedding", None)
     d["safety_risk"] = bool(d["safety_risk"])
+    d["disputed"] = bool(d.get("disputed"))
     d["spot_keys"] = json.loads(d["spot_keys"]) if d.get("spot_keys") else []
     d["priority_breakdown"] = json.loads(d["priority_breakdown"]) if d["priority_breakdown"] else None
     d["verification"] = json.loads(d["verification"]) if d.get("verification") else None
@@ -166,9 +199,12 @@ def media_url(path: str | None) -> str | None:
 def complaint_row_to_dict(row: sqlite3.Row) -> dict:
     d = dict(row)
     d.pop("embedding", None)
-    d.pop("reporter_contact", None)
+    contact = d.pop("reporter_contact", None)
+    d["sms_to"] = (contact[-10:-8] + "••••••" + contact[-2:]) if contact and d.get("sms_opt_in") else None
+    d["sms_opt_in"] = bool(d.get("sms_opt_in"))
     d["has_image"] = bool(d["has_image"])
     d["needs_review"] = bool(d["needs_review"])
     d["extracted"] = json.loads(d["extracted"])
+    d["triage_meta"] = json.loads(d["triage_meta"]) if d.get("triage_meta") else None
     d["image_url"] = media_url(d.pop("image_path", None))
     return d

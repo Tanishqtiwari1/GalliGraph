@@ -6,14 +6,46 @@ from dataclasses import asdict
 from datetime import datetime
 
 from . import priority, sla
-from .db import complaint_row_to_dict, from_blob, issue_row_to_dict, log_event, to_blob
+from .db import complaint_row_to_dict, from_blob, issue_row_to_dict, log_event, new_tracking_code, to_blob
 from .dedup import DedupResult, find_match, merged_embedding
 from .embed import embed
 from .extract import extract
 from .geo import geocode, spot_keys
 from .media import save_image
-from .taxonomy import department_for
+from .taxonomy import CATEGORIES, department_for
 from .timeutil import iso, parse, utcnow
+
+
+def _triage_meta(text: str, ex, geo, spots: list[str], has_image: bool) -> dict:
+    """What an officer needs to judge the AI's suggestion: how sure the model is and what is missing."""
+    from . import classifier
+
+    from .extract import keyword_hits
+
+    # Confidence reflects what actually drove the decision: the trained model when it is sure,
+    # otherwise how many specific keywords matched (the path used for Hindi/Hinglish text).
+    pred = classifier.predict(text)
+    p_model = pred[2].get(ex.category, 0.0) if pred is not None else 0.0
+    hits = keyword_hits(text, ex.category)
+    if p_model >= 0.5:
+        confidence, basis = p_model, "trained model"
+    elif hits >= 2:
+        confidence, basis = max(p_model, 0.8), f"{hits} keyword matches"
+    elif hits == 1:
+        confidence, basis = max(p_model, 0.6), "1 keyword match"
+    else:
+        confidence, basis = p_model, "weak signal - please check"
+    confidence = round(confidence, 2)
+    missing = []
+    if geo.precision == "unknown":
+        missing.append("location")
+    elif geo.precision == "locality" and not spots:
+        missing.append("exact spot (lane / landmark)")
+    if not ex.duration_days:
+        missing.append("how long the problem has existed")
+    if not has_image:
+        missing.append("photo")
+    return {"confidence": confidence, "basis": basis, "missing": missing}
 
 
 # Incidents, not standing problems: two reports are two separate events even at the same spot.
@@ -28,13 +60,17 @@ def _embedding_text(raw: str, summary: str, detail: str | None) -> str:
 
 def ingest(conn: sqlite3.Connection, *, text: str, lat: float | None = None, lng: float | None = None,
            channel: str = "web", image_b64: str | None = None, image_media_type: str | None = None,
-           created_at: str | None = None, reporter_contact: str | None = None) -> dict:
+           created_at: str | None = None, reporter_contact: str | None = None,
+           category_hint: str | None = None, sms_opt_in: bool = False) -> dict:
     t0 = time.perf_counter()
     created_at = iso(parse(created_at)) if created_at else iso(utcnow())
     image_path = save_image(image_b64, image_media_type) if image_b64 else None  # validates before any AI spend
 
     # 1. Extract structured fields
     ex, extractor = extract(text, image_b64, image_media_type)
+    if category_hint and ex.category == "other" and category_hint in CATEGORIES:
+        # The citizen picked a category tile and the text alone was not conclusive: trust the tile.
+        ex.category, ex.sub_type = category_hint, "other"
 
     # 2. Geocode
     geo = geocode(ex.location_text, text, lat, lng)
@@ -91,13 +127,16 @@ def ingest(conn: sqlite3.Connection, *, text: str, lat: float | None = None, lng
     cur = conn.execute(
         """INSERT INTO complaints (raw_text, channel, has_image, created_at, extracted, extractor, category, lat, lng,
                locality_id, geo_precision, embedding, issue_id, dedup_score, needs_review, reporter_contact, processing_ms,
-               image_path)
-           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+               image_path, tracking_code)
+           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
         (text, channel, int(bool(image_b64)), created_at, ex.model_dump_json(), extractor, ex.category,
          geo.lat, geo.lng, geo.locality_id, geo.precision, to_blob(vec), issue_id, match.score,
-         int(match.needs_review), reporter_contact, None, image_path),
+         int(match.needs_review), reporter_contact, None, image_path, new_tracking_code()),
     )
     complaint_id = cur.lastrowid
+    conn.execute("UPDATE complaints SET triage_meta = ?, sms_opt_in = ? WHERE id = ?",
+                 (json.dumps(_triage_meta(text, ex, geo, spots, bool(image_b64))), int(bool(sms_opt_in and reporter_contact)),
+                  complaint_id))
     if secondary_dept:
         conn.execute("INSERT OR IGNORE INTO issue_tasks (issue_id, department, role, created_at) VALUES (?, ?, 'linked', ?)",
                      (issue_id, secondary_dept, created_at))
@@ -136,7 +175,7 @@ def rescore_issue(conn: sqlite3.Connection, issue_id: int, now: datetime | None 
 
 
 def rescore_all(conn: sqlite3.Connection, now: datetime | None = None) -> int:
-    ids = [r["id"] for r in conn.execute("SELECT id FROM issues WHERE status != 'resolved'")]
+    ids = [r["id"] for r in conn.execute("SELECT id FROM issues WHERE status NOT IN ('resolved', 'rejected')")]
     for i in ids:
         rescore_issue(conn, i, now)
     return len(ids)

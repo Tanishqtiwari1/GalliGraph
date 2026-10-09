@@ -14,9 +14,11 @@ export const CATEGORY_META: Record<Category, { label: string; color: string; emo
 
 export const STATUS_META: Record<Status, { label: string; cls: string }> = {
   open: { label: 'Open', cls: 'bg-rose-50 text-rose-700 ring-rose-200' },
+  info_requested: { label: 'Info requested', cls: 'bg-sky-50 text-sky-700 ring-sky-200' },
+  rejected: { label: 'Rejected', cls: 'bg-slate-100 text-slate-600 ring-slate-200' },
   assigned: { label: 'Assigned', cls: 'bg-amber-50 text-amber-700 ring-amber-200' },
   in_progress: { label: 'In progress', cls: 'bg-sky-50 text-sky-700 ring-sky-200' },
-  needs_verification: { label: 'Closure flagged', cls: 'bg-purple-50 text-purple-700 ring-purple-200' },
+  needs_verification: { label: 'Resolution review', cls: 'bg-purple-50 text-purple-700 ring-purple-200' },
   resolved: { label: 'Resolved', cls: 'bg-emerald-50 text-emerald-700 ring-emerald-200' },
 }
 

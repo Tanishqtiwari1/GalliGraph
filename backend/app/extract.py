@@ -265,12 +265,14 @@ class RuleExtractor:
         severity = min(severity, 5)
 
         loc_id = match_locality(text)
-        detail = re.search(r"((gali|lane|street|sector|plot|house|block)\s*(no\.?|number)?\s*[-#]?\s*\w+|"
-                           r"(near|opp\.?|opposite|ke paas|samne)\s+[\w ]{3,30})", low)
+        # Lane/sector numbers; English "near X" puts the landmark after, Hindi "X ke paas/samne" before.
+        detail = (re.search(r"(gali|galli|lane|street|sector|plot|house|block)\s*(no\.?|number)?\s*[-#]?\s*\d+\w*", low)
+                  or re.search(r"(near|opp\.?|opposite)\s+(?!the\b)(\w+(?:\s+\w+){0,2})", low)
+                  or re.search(r"((?:\w+\s+){1,2}\w+)\s+(?:ke\s+paas|ke\s+samne|samne)\b", low))
         loc_name = locality_by_id()[loc_id]["name"] if loc_id else None
         if detail:
             # "near opposite masjid in malviya nagar" -> "near opposite masjid"
-            detail_text = re.split(r"\s+(?:in|at|me|mein|,)\s+|,", detail.group(0).strip())[0].strip()
+            detail_text = re.split(r"\s+(?:in|at|me|mein)(?:\s+|$)|,", detail.group(0).strip())[0].strip()
         else:
             detail_text = None
         label = CATEGORIES[category]["label"].lower()
@@ -295,6 +297,8 @@ class RuleExtractor:
         if pred is None:
             return kw_category, kw_sub
         model_cat, p, _ = pred
+        if model_cat == "other" and keyword_hits > 0:
+            return kw_category, kw_sub  # "other" means the model has no idea; specific keywords beat that
         confident, fallback = self.THRESHOLDS.get(lang, self.THRESHOLDS["hinglish"])
         if keyword_hits >= 2:  # several specific keywords matched: only a near-certain model may disagree
             confident = max(confident, self.STRONG_KEYWORDS_OVERRIDE)
@@ -357,3 +361,12 @@ def extract(text: str, image_b64: str | None = None, image_media_type: str | Non
                 raise
             log.warning("%s extraction failed (%s); using rule-based fallback", primary.name, exc)
     return rules.extract(text), rules.name
+
+
+def keyword_hits(text: str, category: str) -> int:
+    """How many keywords of `category` appear in the text (typo tolerant)."""
+    subs = _KEYWORDS.get(category)
+    if not subs:
+        return 0
+    toks = tokens(text)
+    return sum(count_phrases(kws, toks) for kws in subs.values())

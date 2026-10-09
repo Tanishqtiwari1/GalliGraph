@@ -50,13 +50,17 @@ def simulate_lifecycle(conn, rng: random.Random, resolve_older_than_days: float)
             # Historic issue: resolved after a department-dependent delay (some miss the deadline).
             hours = r["sla_hours"] * DEPT_SPEED.get(r["department"], 1.0) * rng.uniform(0.25, 1.6)
             resolved_at = min(max(last, first + timedelta(hours=hours)), now - timedelta(hours=1))
-            conn.execute("UPDATE issues SET status='resolved', resolved_at=?, assigned_officer=? WHERE id=?",
-                         (iso(resolved_at), officer, r["id"]))
+            conn.execute("UPDATE issues SET status='resolved', resolved_at=?, assigned_officer=?, reviewed_at=?, reviewed_by=? WHERE id=?",
+                         (iso(resolved_at), officer, iso(min(assigned_at, resolved_at)), "Ward Officer (seed)", r["id"]))
             conn.execute("UPDATE issue_tasks SET status='done', completed_at=? WHERE issue_id=?", (iso(resolved_at), r["id"]))
             db.log_event(conn, r["id"], iso(min(assigned_at, resolved_at)), "assignment", f"Assigned to {officer}")
-            db.log_event(conn, r["id"], iso(resolved_at), "status", "Closed (imported history, no photo verification)")
+            db.log_event(conn, r["id"], iso(resolved_at), "history", "Closed (imported history, no photo verification)")
         elif (now - first).days >= 1:
             status = rng.choices(["assigned", "in_progress", "open"], [0.45, 0.25, 0.30])[0]
+            if status != "open" or rng.random() < 0.4:  # some open issues were reviewed but not yet assigned
+                reviewed_at = first + timedelta(hours=rng.uniform(1, 12))
+                conn.execute("UPDATE issues SET reviewed_at=?, reviewed_by=? WHERE id=?", (iso(min(reviewed_at, now)), "Ward Officer (seed)", r["id"]))
+                db.log_event(conn, r["id"], iso(min(reviewed_at, now)), "triage", "AI triage reviewed and approved", "Ward Officer (seed)")
             if status != "open":
                 conn.execute("UPDATE issues SET status=?, assigned_officer=? WHERE id=?", (status, officer, r["id"]))
                 db.log_event(conn, r["id"], iso(min(assigned_at, now)), "assignment", f"Assigned to {officer}")

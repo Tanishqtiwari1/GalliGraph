@@ -1,21 +1,21 @@
 {
   "test_complaints": 1548,
   "test_period": ">= 2022-01-01 (model trained only on earlier complaints)",
-  "category_accuracy_combined": 0.7862,
-  "category_accuracy_keywords_only": 0.6602,
+  "category_accuracy_combined": 0.7797,
+  "category_accuracy_keywords_only": 0.6957,
   "top_confusions": [
-    "other -> traffic: 51",
-    "drainage -> road_damage: 38",
-    "garbage -> road_damage: 22",
-    "garbage -> other: 18",
-    "other -> road_damage: 18",
-    "other -> garbage: 15"
+    "other -> traffic: 35",
+    "drainage -> road_damage: 34",
+    "other -> road_damage: 28",
+    "garbage -> road_damage: 25",
+    "other -> garbage: 24",
+    "traffic -> road_damage: 15"
   ],
   "duplicate_study": {
     "complaints": 4000,
-    "merged_into_existing_issue": 328,
-    "distinct_issues": 3672,
-    "duplicate_share_pct": 8.2,
+    "merged_into_existing_issue": 335,
+    "distinct_issues": 3665,
+    "duplicate_share_pct": 8.4,
     "largest_clusters": [
       {
         "summary": "Public urination (garbage & sanitation).",

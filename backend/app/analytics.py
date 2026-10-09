@@ -9,7 +9,7 @@ from .timeutil import parse, utcnow
 
 
 def _summarise(rows: list[sqlite3.Row], now: datetime, window_start: datetime) -> dict:
-    open_rows = [r for r in rows if r["status"] != "resolved"]
+    open_rows = [r for r in rows if r["status"] not in ("resolved", "rejected")]
     overdue = [r for r in open_rows if r["sla_due_at"] and parse(r["sla_due_at"]) < now]
     resolved = [r for r in rows if r["status"] == "resolved" and r["resolved_at"]
                 and parse(r["resolved_at"]) >= window_start]

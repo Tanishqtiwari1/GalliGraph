@@ -1,0 +1,24 @@
+# Render Blueprint: https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: civicpulse
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: CIVICPULSE_SECRET_KEY
+        generateValue: true
+      - key: CIVICPULSE_ADMIN_USER
+        value: admin
+      - key: CIVICPULSE_ADMIN_PASSWORD
+        sync: false            # set it in the Render dashboard; never commit it
+      - key: CIVICPULSE_SEED_DEMO
+        value: "1"
+      - key: CIVICPULSE_DEMO_DATA
+        value: "1"
+      - key: CIVICPULSE_DB
+        value: /data/civicpulse.db
+      - key: CIVICPULSE_UPLOAD_DIR
+        value: /data/uploads
+      - key: ANTHROPIC_API_KEY
+        sync: false            # optional: enables Claude extraction + photo verification

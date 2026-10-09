@@ -2,16 +2,16 @@
   "extractor": "rules",
   "complaints": 788,
   "true_issues": 304,
-  "predicted_issues": 331,
-  "category_accuracy": 0.9683,
-  "dedup_precision": 0.966,
-  "dedup_recall": 0.7923,
-  "dedup_f1": 0.8706,
+  "predicted_issues": 332,
+  "category_accuracy": 0.967,
+  "dedup_precision": 0.9596,
+  "dedup_recall": 0.7889,
+  "dedup_f1": 0.866,
   "spike_detected": true,
   "alerts": [
-    "Drainage & sewage complaints in Malviya Nagar: 13 in the last 2 days vs ~1.4 expected (9.1x baseline)"
+    "Drainage & sewage complaints in Malviya Nagar: 12 in the last 2 days vs ~1.5 expected (8.0x baseline)"
   ],
-  "avg_processing_ms": 17.3,
+  "avg_processing_ms": 18.1,
   "thresholds": {
     "merge": 0.72,
     "review": 0.6

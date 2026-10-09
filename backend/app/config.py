@@ -11,6 +11,7 @@ DATA_DIR = PROJECT_DIR / "data"
 load_dotenv(BACKEND_DIR / ".env")
 
 DB_PATH = Path(os.getenv("CIVICPULSE_DB", BACKEND_DIR / "civicpulse.db"))
+UPLOAD_DIR = Path(os.getenv("CIVICPULSE_UPLOAD_DIR", BACKEND_DIR / "uploads"))
 
 # --- LLM extraction ---------------------------------------------------------
 # "auto" -> use Claude when credentials exist, otherwise the offline rule-based extractor.
@@ -47,3 +48,13 @@ SPIKE_RECENT_DAYS = int(os.getenv("SPIKE_RECENT_DAYS", 2))
 SPIKE_BASELINE_DAYS = int(os.getenv("SPIKE_BASELINE_DAYS", 28))
 SPIKE_Z_THRESHOLD = float(os.getenv("SPIKE_Z_THRESHOLD", 3.0))
 SPIKE_MIN_COUNT = int(os.getenv("SPIKE_MIN_COUNT", 4))
+
+# --- Deployment -------------------------------------------------------------
+# Behind a hosting proxy (Render, Railway, nginx) set 1 so rate limits see the real client IP.
+TRUST_PROXY = os.getenv("CIVICPULSE_TRUST_PROXY", "0") == "1"
+# Show a "demo data" banner on the citizen portal when the database holds synthetic complaints.
+DEMO_DATA = os.getenv("CIVICPULSE_DEMO_DATA", "1") == "1"
+# Built frontend (npm run build). When present, the API server also serves the website.
+FRONTEND_DIST = Path(os.getenv("CIVICPULSE_FRONTEND_DIST", PROJECT_DIR / "frontend" / "dist"))
+# Comma-separated origins allowed to call the API from another domain (empty = same origin only).
+CORS_ORIGINS = [o.strip() for o in os.getenv("CIVICPULSE_CORS_ORIGINS", "").split(",") if o.strip()]

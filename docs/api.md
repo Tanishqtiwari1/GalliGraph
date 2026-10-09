@@ -16,6 +16,18 @@ Base URL: `http://localhost:8000/api`. Interactive docs: `http://localhost:8000/
 | GET | `/performance?days=30` | Accountability: overall + per department + per area (on-time %, median fix time, overdue, escalated), weekly opened vs resolved |
 | GET | `/media/{file}` | Stored evidence photos |
 | GET | `/track/{complaint_id}` | Citizen-facing status message + target date |
+| POST | `/complaints/preview` | Review before submitting: what the AI understood, department, estimated priority and deadline (nothing saved) |
+| POST | `/track/{code}/feedback` | Citizen `{verdict: fixed / not_fixed, note}`. A dispute sends the issue to supervisor review |
+| POST | `/track/{code}/reply` | Citizen answers an officer's request for information |
+| GET | `/track/{code}/evidence` | After-repair photo for the citizen who reported |
+| POST | `/public/issues/{id}/confirm` | "I have this too (+1)" |
+| POST | `/issues/{id}/triage` | Officer `{action: approve / edit / reject / request_info, ...}`. Overrides need a reason and are audited |
+| POST | `/issues/{id}/notes` | Work note `{text, public}`. Public notes appear on the citizen's tracking page |
+| POST | `/issues/{id}/escalate` · `/remind` | Manual escalation (with reason) and deadline reminder |
+| GET | `/issues/{id}/duplicates` | Related reports with match %, distance and time gap |
+| POST | `/complaints/{id}/confirm-duplicate` · `/split` | Confirm a merge, or split a report out into its own incident |
+| GET | `/activity` · `/sla/overview` | Notification feed; SLA centre (due in 48 h, overdue, escalation history) |
+| GET/POST/DELETE | `/admin/users…` · GET/PUT `/admin/settings` | Supervisor: staff accounts and deadline policy |
 | GET | `/alerts` | Spike alerts with 21-day daily series |
 | GET | `/hotspots` | Locality × category pairs with most issues (90 days) |
 | GET | `/stats` | Dashboard KPIs |
@@ -73,4 +85,4 @@ Response (abridged):
 8. **Deadlines**: critical 24 h · high 72 h · medium 7 d · low 14 d from first report; escalation to Ward Supervisor (missed) then Commissioner (past 2× the allowed time)
 9. **Closure**: after-repair photo, AI verification against the citizens' photos, supervisor review when not verified
 
-Statuses: `open` → `assigned` → `in_progress` → `needs_verification` (closure flagged) → `resolved`
+Statuses: `open` → (`info_requested`) → `assigned` → `in_progress` → `needs_verification` (resolution review) → `resolved`, or `rejected` (not actionable). Officials with a department only see and act on that department's issues.

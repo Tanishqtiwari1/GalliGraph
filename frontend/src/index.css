@@ -1,47 +1,109 @@
 @import "tailwindcss";
 @import "leaflet/dist/leaflet.css";
 
+/* GalliGraph "Civic Intelligence System" design tokens (see the Stitch DESIGN.md) */
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-sans: "Inter", "Noto Sans Devanagari", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Manrope", "Noto Sans Devanagari", ui-sans-serif, system-ui, sans-serif;
+
+  /* Primary: civic resolution, verified states, primary actions */
   --color-brand-50: #f0fdfa;
   --color-brand-100: #ccfbf1;
+  --color-brand-200: #99f6e4;
   --color-brand-500: #14b8a6;
   --color-brand-600: #0d9488;
   --color-brand-700: #0f766e;
+  --color-brand-800: #115e59;
   --color-brand-900: #134e4a;
-  --color-ink: #0f172a;
+
+  /* Secondary: navigation chrome and authoritative headings */
+  --color-navy-700: #334155;
+  --color-navy-800: #1e293b;
+  --color-navy-900: #0f172a;
+
+  /* Tertiary: escalations, pending validations */
+  --color-saffron-50: #fffbeb;
+  --color-saffron-100: #fef3c7;
+  --color-saffron-600: #d97706;
+  --color-saffron-700: #b45309;
+
+  /* Surfaces */
+  --color-canvas: #f8fafc;
+  --color-surface-low: #eff4ff;
+  --color-surface: #e5eeff;
+  --color-surface-high: #dce9ff;
+  --color-ink: #0b1c30;
+  --color-ink-variant: #3d4947;
+  --color-outline: #6d7a77;
 }
 
 html,
 body,
 #root {
-  height: 100%;
+  min-height: 100%;
 }
 
 body {
-  background: #f1f5f9;
+  background: var(--color-canvas);
   color: var(--color-ink);
   -webkit-font-smoothing: antialiased;
+  font-feature-settings: "cv11", "ss01";
+}
+
+/* Level 1: white card, 1px slate border, ambient shadow */
+@utility card {
+  @apply rounded-xl border border-slate-200 bg-white;
+  box-shadow: 0 1px 3px 0 rgb(15 23 42 / 0.05), 0 1px 2px -1px rgb(15 23 42 / 0.05);
+}
+/* Level 2: drawers, popovers */
+@utility card-raised {
+  @apply rounded-xl border border-slate-300 bg-white;
+  box-shadow: 0 4px 6px -1px rgb(15 23 42 / 0.08), 0 2px 4px -2px rgb(15 23 42 / 0.06);
+}
+@utility section-label {
+  @apply text-xs font-semibold uppercase tracking-wider text-slate-600;
+}
+@utility pill {
+  @apply inline-flex items-center gap-1 whitespace-nowrap rounded-full border px-2.5 py-0.5 text-xs font-semibold;
+}
+@utility pill-ok { @apply border-emerald-200 bg-emerald-50 text-emerald-700; }
+@utility pill-warn { @apply border-amber-200 bg-amber-50 text-amber-700; }
+@utility pill-crit { @apply border-red-200 bg-red-50 text-red-700; }
+@utility pill-zone { @apply border-slate-300 bg-slate-100 text-slate-700; }
+@utility pill-info { @apply border-brand-200 bg-brand-50 text-brand-800; }
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 text-sm font-semibold transition active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50;
+  min-height: 40px;
+}
+@utility btn-primary { @apply bg-brand-600 text-white hover:bg-brand-700 active:bg-brand-800; }
+@utility btn-navy { @apply bg-navy-900 text-white hover:bg-navy-800; }
+@utility btn-ghost { @apply border border-slate-300 bg-white text-slate-800 hover:bg-slate-50; }
+@utility btn-danger { @apply bg-red-600 text-white hover:bg-red-700; }
+@utility field {
+  @apply w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm outline-none focus:border-brand-600 focus:ring-2 focus:ring-brand-100;
+}
+@utility tnum { font-variant-numeric: tabular-nums; }
+
+.font-display {
+  letter-spacing: -0.015em;
 }
 
 .leaflet-container {
   font-family: inherit;
-  border-radius: 0.75rem;
+  border-radius: 0.5rem;
 }
 
 .leaflet-popup-content {
   margin: 10px 12px;
 }
 
-@keyframes pulse-ring {
-  0% { transform: scale(0.6); opacity: 0.9; }
-  100% { transform: scale(1.6); opacity: 0; }
+/* Bottom navigation sits above the iOS home indicator */
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
-.alert-pulse {
-  animation: pulse-ring 1.8s ease-out infinite;
-  transform-origin: center;
-  transform-box: fill-box;
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }
 
 /* Work order printing: show only the sheet */
@@ -52,3 +114,20 @@ body {
   .wo-sheet { position: absolute; inset: 0 auto auto 0; width: 100%; max-width: none; box-shadow: none; border-radius: 0; }
   .wo-noprint { display: none !important; }
 }
+
+/* Motion: entrance + panel transitions (disabled by prefers-reduced-motion above) */
+@keyframes rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@keyframes slide-in { from { transform: translateX(40px); opacity: 0.6; } to { transform: none; opacity: 1; } }
+@keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.animate-rise { animation: rise 0.35s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+.animate-slide-in { animation: slide-in 0.28s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+.animate-ticker { animation: ticker 40s linear infinite; }
+.animate-ticker:hover { animation-play-state: paused; }
+.stagger > * { animation: rise 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+.stagger > *:nth-child(2) { animation-delay: 40ms; }
+.stagger > *:nth-child(3) { animation-delay: 80ms; }
+.stagger > *:nth-child(4) { animation-delay: 120ms; }
+.stagger > *:nth-child(5) { animation-delay: 160ms; }
+.stagger > *:nth-child(6) { animation-delay: 200ms; }
+.lift { transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease; }
+.lift:hover { transform: translateY(-2px); box-shadow: 0 8px 20px -8px rgb(15 23 42 / 0.18); }

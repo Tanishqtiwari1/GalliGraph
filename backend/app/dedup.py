@@ -63,7 +63,7 @@ def find_match(conn: sqlite3.Connection, *, category: str, lat, lng, precision: 
     window_start = iso(parse(created_at) - timedelta(days=config.DEDUP_WINDOW_DAYS))
     rows = conn.execute(
         """SELECT id, lat, lng, geo_precision, locality_id, last_reported, embedding, spot_keys FROM issues
-           WHERE category = ? AND status != 'resolved' AND last_reported >= ?""",
+           WHERE category = ? AND status NOT IN ('resolved', 'rejected') AND last_reported >= ?""",
         (category, window_start),
     ).fetchall()
 

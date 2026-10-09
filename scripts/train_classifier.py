@@ -125,6 +125,8 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--csv", default=str(DEFAULT_CSV))
     ap.add_argument("--test-from", default="2022-01-01", help="complaints on/after this date form the test set")
+    ap.add_argument("--word-features", type=int, default=15_000)
+    ap.add_argument("--char-features", type=int, default=20_000)
     args = ap.parse_args()
 
     with open(args.csv, encoding="utf-8", errors="replace", newline="") as f:
@@ -145,9 +147,10 @@ def main() -> None:
 
     def make_model() -> Pipeline:
         features = FeatureUnion([
-            ("words", TfidfVectorizer(ngram_range=(1, 2), min_df=2, max_features=40_000, sublinear_tf=True)),
-            ("chars", TfidfVectorizer(analyzer="char_wb", ngram_range=(3, 5), min_df=3, max_features=60_000,
+            ("words", TfidfVectorizer(ngram_range=(1, 2), min_df=2, max_features=args.word_features,
                                       sublinear_tf=True)),
+            ("chars", TfidfVectorizer(analyzer="char_wb", ngram_range=(3, 5), min_df=3,
+                                      max_features=args.char_features, sublinear_tf=True)),
         ])
         return Pipeline([("features", features),
                          ("clf", LogisticRegression(max_iter=3000, C=4.0, class_weight="balanced"))])

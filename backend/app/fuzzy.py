@@ -24,6 +24,8 @@ def _word_ok(tok: str, word: str) -> bool:
         return True
     if len(word) < 5 or not word.isascii():
         return False  # short words ("nal" tap vs "nali" drain) and Devanagari must match exactly
+    if len(word) < 7 and abs(len(tok) - len(word)) > 1:
+        return False  # "park" is not a typo of "parked"
     return _sim(tok, word) >= (0.8 if len(word) < 7 else 0.75)
 
 

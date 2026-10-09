@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
 import { api, type Issue, type Performance, type PerfSummary } from '../api'
 import { ESCALATION_LABEL, deadlineChip, fmtHours, priorityTone } from '../ui'
-import { Card } from './Dashboard'
+import { Card, Kpi as ShellKpi } from './Shell'
 
 function pct(v: number | null) {
   return v === null ? '—' : `${v}%`
@@ -16,13 +16,8 @@ function complianceCls(v: number | null) {
 }
 
 function Kpi({ label, value, hint, cls }: { label: string; value: string | number; hint?: string; cls?: string }) {
-  return (
-    <div className="rounded-xl bg-white p-4 shadow-sm ring-1 ring-slate-200">
-      <div className="text-xs font-medium text-slate-500">{label}</div>
-      <div className={`mt-1 text-2xl font-semibold tabular-nums ${cls ?? 'text-ink'}`}>{value}</div>
-      {hint && <div className="mt-0.5 text-xs text-slate-500">{hint}</div>}
-    </div>
-  )
+  const tone = cls?.includes('red') ? 'critical' : cls?.includes('emerald') ? 'primary' : cls?.includes('amber') || cls?.includes('purple') ? 'warn' : 'default'
+  return <ShellKpi label={label} value={value} hint={hint} tone={tone} />
 }
 
 function Row({ name, s }: { name: string; s: PerfSummary }) {
@@ -63,13 +58,14 @@ export function PerformanceView({ refreshKey, onSelect }: { refreshKey: number; 
     <div className="space-y-4">
       <div className="flex flex-wrap items-center justify-between gap-2">
         <div>
-          <h2 className="text-lg font-semibold">Accountability</h2>
+          <div className="text-xs font-bold uppercase tracking-wider text-brand-700">Admin intel</div>
+          <h1 className="font-display text-2xl font-bold sm:text-3xl">Ward &amp; department accountability</h1>
           <p className="text-sm text-slate-500">Are complaints actually getting fixed, by whom, and on time?</p>
         </div>
         <select
           value={days}
           onChange={(e) => setDays(Number(e.target.value))}
-          className="rounded-lg border-0 bg-white py-1.5 pl-3 pr-8 text-sm ring-1 ring-slate-300"
+          className="field w-auto"
           aria-label="Time window"
         >
           <option value={7}>Last 7 days</option>

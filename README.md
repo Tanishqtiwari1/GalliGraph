@@ -1,6 +1,8 @@
-# CivicPulse: AI triage for civic complaints
+# GalliGraph: AI triage for civic complaints
 
 > Thousands of messy citizen complaints in, one ranked, deduplicated, department-routed action list out.
+>
+> Repo: JanAwaaz · UI design system: "Civic Intelligence System" (Manrope + Inter, bilingual English/Hindi, mobile-first).
 
 Built for **OFFGRID** (Problem Statement #10, *AI Civic Complaint Triage*). It also covers **#11** (duplicate detection), **#2** (priority engine), **#9** (trend detection) and **#4** (waste complaint intelligence).
 
@@ -30,15 +32,15 @@ CivicPulse's classifier is trained on **14,491 real citizen complaints** (Bengal
 | Approach | Category accuracy on real 2022 complaints |
 |---|---|
 | Always guess the most common category | 18.3% |
-| Keyword rules only | 66.0% |
-| **Trained model alone** (TF-IDF + logistic regression) | **81.2%** (88.4% on the 77% of complaints where it is confident) |
-| **CivicPulse (trained model + multilingual rules)** | **78.6%** |
+| Keyword rules only | 69.6% |
+| **Trained model alone** (TF-IDF + logistic regression) | **80.6%** (87.9% on the 77% of complaints where it is confident) |
+| **GalliGraph (trained model + multilingual rules)** | **78.0%** |
 
 The combined system trades about 3 points on English for keeping Hindi/Hinglish accurate (below). The model never saw Hinglish, so it only overrides the keyword rules there when it is very sure. In the real data the citizen picks the category, and some labels are wrong (e.g. an overflowing drain filed as "garbage"), which caps the achievable score.
 
 The real data also changed the product. About 13% of real complaints were **stray animals, traffic/parking or electricity supply**, which had no department in the original design, so they became categories with their own routing.
 
-**Duplicates in the wild:** replaying the 4,000 most recent real complaints with their real GPS and timestamps, **8.2%** were repeats of an already-open issue. A manual spot check of merged pairs found most were the same problem reported again: the same blocked drain two days apart, the same stray dogs, identical resubmissions. Traffic rule violations are excluded from merging, because each one is a separate incident.
+**Duplicates in the wild:** replaying the 4,000 most recent real complaints with their real GPS and timestamps, **8.4%** were repeats of an already-open issue. A manual spot check of merged pairs found most were the same problem reported again: the same blocked drain two days apart, the same stray dogs, identical resubmissions. Traffic rule violations are excluded from merging, because each one is a separate incident.
 
 ### On multilingual synthetic data
 
@@ -46,10 +48,10 @@ Ground-truth evaluation (`scripts/evaluate.py`) on synthetic Jaipur complaint st
 
 | Metric | Dataset A (661 complaints) | Held-out dataset B (788 complaints) |
 |---|---|---|
-| Category accuracy | **96.5%** | **96.8%** |
-| Duplicate-detection precision | **96.5%** | |
-| Duplicate-detection recall | 85.5% | |
-| Duplicate-detection F1 | **0.907** | **0.871** |
+| Category accuracy | **97.0%** | **96.7%** |
+| Duplicate-detection precision | **96.4%** | |
+| Duplicate-detection recall | 84.9% | |
+| Duplicate-detection F1 | **0.903** | **0.866** |
 | Planted spike detected | ✅ | ✅ |
 
 High precision is deliberate. Wrongly merging two different problems hides one of them, which is worse than leaving a duplicate unmerged.
@@ -62,7 +64,38 @@ cd backend
 .venv/bin/python ../scripts/evaluate_real.py                                     # real-data accuracy + duplicate study
 ```
 
-The model file (~30 MB) is not committed to git. Without it, CivicPulse falls back to keyword rules.
+The deployed model (`backend/models/complaint_classifier.joblib`, ~12 MB) is committed. The raw dataset is not.
+
+## Two portals, one shared record
+
+Every complaint is a single record. Citizens and officers see different views of it.
+
+| | Citizen portal (`/`) | Officer portal (`/official`) |
+|---|---|---|
+| Who | Anyone, no account (private tracking code) | Municipal staff, login, role-based |
+| Navigation | Home · Report · My cases · City map · Alerts · Help | Overview · AI Triage · Complaints · Issue map · Work orders · SLA & Alerts · Analytics · Staff |
+| Reporting | 4-step wizard: describe (with **voice-to-text** in Hindi/English) → location (**pin on map** or GPS) → photo → **review what the AI understood** → submit | – |
+| Tracking | Stages that actually happened: Submitted → Reviewed → Assigned → In progress → Resolution review → Resolved. Public updates, resolution note and after-repair photo | Full audit trail with who did what and when |
+| AI | Sees the routing and priority reasons | Reviews each suggestion: confidence and what drove it, missing info. **Approve / Edit (with reason) / Reject / Request info / Escalate** |
+| Duplicates | "I have this too (+1)" on nearby issues | Side-by-side duplicate review (match %, distance, time gap). Confirm or split out; every report keeps its ID |
+| Closure | **Confirm the fix or dispute it.** A dispute starts a supervisor review | Photo evidence goes to **resolution review**. AI flags inconsistencies but **never closes an issue by itself**; a supervisor approves |
+| Map | Public issues (~100 m precision), category and status filters, hotspots | Operational map with priority/department/date filters, spike alerts, GIS CSV export |
+| Also | Notifications, FAQ, category guide, privacy settings, English/हिंदी | Work-order board, SLA centre (due soon, overdue, remind, escalate, history), notifications bell, department-scoped access |
+
+What citizens never see: officer names, internal notes, AI reasoning notes, other citizens' text or photos, exact home locations, staff tools.
+
+**Roles:**
+- An *official* with a department sees and acts only on that department's complaints (jurisdiction). They review AI suggestions, assign, add notes and submit closures with evidence.
+- A *supervisor* sees the whole city. Supervisors also approve or reject closures, manage staff accounts (create, reset password, remove) and configure the **deadline policy**, which is a configurable setting rather than official rules.
+
+Every action is recorded on the issue timeline with the logged-in person's name.
+
+**Accounts:** the first supervisor is created from `CIVICPULSE_ADMIN_USER` / `CIVICPULSE_ADMIN_PASSWORD` in `backend/.env`. Add more accounts with:
+```bash
+cd backend && .venv/bin/python ../scripts/create_user.py <username> --role official --name "JE (Roads) Zone 3"
+```
+
+**Security:** scrypt-hashed passwords; signed httpOnly session cookies (12 h); rate limits on complaints (10 per 10 min per IP) and logins; citizen photos served only to logged-in officials; non-guessable tracking codes.
 
 ## Quick start
 
@@ -70,7 +103,7 @@ The model file (~30 MB) is not committed to git. Without it, CivicPulse falls ba
 ./run.sh
 ```
 
-Open **http://localhost:5173**. API docs are at **http://localhost:8000/docs**.
+Open **http://localhost:5173** (citizens) and **http://localhost:5173/official** (officials). API docs are at **http://localhost:8000/docs**.
 
 On the first run, `run.sh` creates the Python virtualenv, installs npm packages, generates the synthetic dataset and seeds the database.
 
@@ -112,6 +145,20 @@ cd ../frontend && npm install && npm run dev
 
 Optional: `pip install sentence-transformers` gives neural multilingual embeddings for deduplication. They're picked up automatically.
 
+## Deploy (Render, free)
+
+The repo ships a `Dockerfile` (builds the React app and serves it plus the API from one container) and a `render.yaml` blueprint.
+
+1. Push the repo to GitHub.
+2. In Render: **New → Blueprint**, then pick the repo.
+3. Set `CIVICPULSE_ADMIN_PASSWORD` (and optionally `ANTHROPIC_API_KEY`) in the dashboard. `CIVICPULSE_SECRET_KEY` is generated automatically.
+4. Deploy. Citizens use `https://<your-app>.onrender.com/`; officials use `/official`.
+
+Notes:
+- **Free plan storage resets on restart/redeploy.** The bootstrap reloads the demo data each time. For real use, attach a persistent disk at `/data` (paid) or move to a managed database.
+- **Photo verification on a server** needs `ANTHROPIC_API_KEY`. Without it every closure goes to a supervisor (safe default). Local Ollama only works when running on your own machine.
+- Running without Docker: `cd frontend && npm run build`, then `python scripts/bootstrap.py && cd backend && uvicorn app.main:app`. FastAPI serves the built site when `frontend/dist` exists.
+
 ## Project layout
 
 ```
@@ -129,10 +176,13 @@ backend/app/
   verify.py     AI before/after photo verification of closures
   analytics.py  department and area accountability metrics
   media.py      evidence photo storage
+  auth.py       official accounts, sessions, roles, rate limits
+  public.py     what citizens can see (aggregated, no personal data)
   pipeline.py   end-to-end ingest
   main.py       FastAPI routes
 frontend/src/   React + Tailwind + Leaflet + Recharts dashboard
-scripts/        generate_synthetic, seed, evaluate, evaluate_real, train_classifier, fetch_pois
+scripts/        generate_synthetic, seed, bootstrap, create_user, evaluate, evaluate_real,
+                train_classifier, fetch_pois
 data/           Jaipur gazetteer, OSM POIs, synthetic dataset
 docs/api.md     API contract
 ```

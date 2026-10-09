@@ -5,7 +5,7 @@ import uuid
 
 from . import config
 
-UPLOAD_DIR = config.BACKEND_DIR / "uploads"
+UPLOAD_DIR = config.UPLOAD_DIR
 MAX_BYTES = 5 * 1024 * 1024
 EXT = {"image/jpeg": "jpg", "image/png": "png", "image/webp": "webp", "image/gif": "gif"}
 
