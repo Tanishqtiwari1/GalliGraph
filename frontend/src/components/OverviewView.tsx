@@ -1,4 +1,4 @@
-import { AlertTriangle, ArrowRight, Clock, Flame, Gavel, Hourglass, ListChecks, ShieldAlert, Sparkles, UserX } from 'lucide-react'
+import { AlertTriangle, ArrowRight, CheckCircle2, Clock, Copy, Flame, Gavel, Hourglass, Inbox, ListChecks, ShieldAlert, Sparkles, UserX } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { Area, AreaChart, Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
 import { api, type Activity, type Issue, type Performance, type Stats } from '../api'
@@ -27,7 +27,7 @@ export function OverviewView({ user, refreshKey, goComplaints, goTriage, goSla, 
     api.stats().then(setStats).catch(() => {})
     api.performance(30).then(setPerf).catch(() => {})
     api.activity(15).then(setActivity).catch(() => setActivity([]))
-    api.issues({ untriaged: true, sort: 'priority', limit: 4 }).then(setQueue).catch(() => {})
+    api.issues({ untriaged: true, sort: 'priority', limit: 6 }).then(setQueue).catch(() => {})
   }, [refreshKey])
 
   const s = stats
@@ -48,6 +48,14 @@ export function OverviewView({ user, refreshKey, goComplaints, goTriage, goSla, 
         <button type="button" onClick={goTriage} className="btn btn-primary">
           <Sparkles className="h-4 w-4" /> Open AI triage ({s?.untriaged ?? '…'})
         </button>
+      </div>
+
+      {/* City-wide totals: everything citizens have reported and what has been fixed */}
+      <div className="stagger grid grid-cols-2 gap-2 md:grid-cols-4">
+        <Kpi icon={Inbox} tone="primary" label="Total complaints received" value={<CountUp value={s?.complaints} />} hint="from citizens, all channels" onClick={() => goComplaints({})} />
+        <Kpi icon={Copy} label="Unique issues" value={<CountUp value={s?.issues} />} hint={s ? `${s.duplicates_merged} duplicates merged (${s.dedup_reduction_pct}% fewer)` : ''} />
+        <Kpi icon={ListChecks} tone="warn" label="Active issues" value={<CountUp value={s?.active_issues} />} hint="being worked on" onClick={() => goComplaints({})} />
+        <Kpi icon={CheckCircle2} tone="primary" label="Resolved" value={<CountUp value={s?.resolved_issues} />} hint={s && s.issues ? `${Math.round((100 * s.resolved_issues) / s.issues)}% of all issues fixed` : ''} />
       </div>
 
       <div className="stagger grid grid-cols-2 gap-2 md:grid-cols-3 xl:grid-cols-6">
