@@ -59,6 +59,7 @@ export interface Complaint {
 
 export interface Issue {
   id: number
+  tracking_codes?: string[]
   category: Category
   sub_type: string
   summary: string

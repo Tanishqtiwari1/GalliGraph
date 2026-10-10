@@ -1,4 +1,4 @@
-import { Clock, Copy, Hourglass, ListFilter, MapPin, ShieldAlert, Siren, Users } from 'lucide-react'
+import { Clock, Copy, Hourglass, ListFilter, MapPin, Search, ShieldAlert, Siren, Users } from 'lucide-react'
 import { useEffect, useMemo, useState } from 'react'
 import { api, type Issue, type Meta, type Stats } from '../api'
 import { CATEGORY_HI } from '../i18n'
@@ -23,6 +23,7 @@ export function TriageView({ meta = null, refreshKey, canSupervise, onChanged, f
   const [issues, setIssues] = useState<Issue[]>([])
   const [filter, setFilter] = useState<Filter>('untriaged')
   const [sort, setSort] = useState<Sort>('priority')
+  const [q, setQ] = useState('')
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
@@ -46,7 +47,11 @@ export function TriageView({ meta = null, refreshKey, canSupervise, onChanged, f
     }),
     [issues],
   )
-  const shown = issues.filter((i) =>
+  const needle = q.trim().toLowerCase()
+  const matches = (i: Issue) =>
+    `${(i.tracking_codes ?? []).join(' ')} ${displayId(i.id, i.first_reported)} ${i.summary} ${i.locality ?? ''}`.toLowerCase().includes(needle)
+  // A search looks across the whole active queue, whichever filter pill is selected
+  const shown = needle ? issues.filter(matches) : issues.filter((i) =>
     filter === 'untriaged'
       ? !i.reviewed_at
       : filter === 'disputed'
@@ -128,6 +133,17 @@ export function TriageView({ meta = null, refreshKey, canSupervise, onChanged, f
               </button>
             ))}
           </div>
+          <label className="card flex items-center gap-2 px-3 py-2 text-sm">
+            <Search className="h-4 w-4 shrink-0 text-slate-400" />
+            <input
+              value={q}
+              onChange={(e) => setQ(e.target.value)}
+              placeholder="Search tracking code (JA-…), ID, text or area"
+              className="w-full bg-transparent outline-none"
+              aria-label="Search the queue"
+            />
+            {q && <span className="shrink-0 text-xs text-slate-500">{shown.length} found</span>}
+          </label>
           <div className="card flex items-center justify-between gap-2 px-3 py-2 text-sm">
             <span className="inline-flex items-center gap-1.5 text-slate-600">
               <ListFilter className="h-4 w-4" /> Ranked by

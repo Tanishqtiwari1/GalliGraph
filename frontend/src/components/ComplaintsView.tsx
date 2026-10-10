@@ -39,7 +39,7 @@ export function ComplaintsView({ meta, refreshKey, initial, openIssue }: { meta:
   }, [preset, status, tier, category, department, area, since, refreshKey])
 
   const shown = useMemo(
-    () => (rows ?? []).filter((i) => !q || `${i.summary} ${i.locality ?? ''} ${i.department} ${displayId(i.id, i.first_reported)}`.toLowerCase().includes(q.toLowerCase())),
+    () => (rows ?? []).filter((i) => !q || `${i.summary} ${i.locality ?? ''} ${i.department} ${displayId(i.id, i.first_reported)} ${(i.tracking_codes ?? []).join(' ')}`.toLowerCase().includes(q.toLowerCase())),
     [rows, q],
   )
 
@@ -89,7 +89,7 @@ export function ComplaintsView({ meta, refreshKey, initial, openIssue }: { meta:
         </span>
         <label className="flex min-w-48 flex-1 items-center gap-1.5 rounded-md border border-slate-300 px-2">
           <Search className="h-3.5 w-3.5 text-slate-400" />
-          <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search ID, text, area…" className="w-full py-1.5 text-xs outline-none" aria-label="Search" />
+          <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search JA- code, ID, text, area…" className="w-full py-1.5 text-xs outline-none" aria-label="Search" />
         </label>
         <select disabled={!!preset} value={status} onChange={(e) => setStatus(e.target.value)} className={sel} aria-label="Status">
           <option value="active">Active</option>

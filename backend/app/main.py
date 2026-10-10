@@ -423,6 +423,12 @@ def list_issues(status: str | None = None, category: str | None = None, locality
     with db.session() as conn:
         sla.check(conn)
         rows = [_decorate(db.issue_row_to_dict(r)) for r in conn.execute(sql, (*args, limit))]
+        # Citizens quote their JA-XXXX-XXXX tracking code, so officers must be able to search by it
+        codes: dict[int, list[str]] = {}
+        for c in conn.execute("SELECT issue_id, tracking_code FROM complaints WHERE tracking_code IS NOT NULL"):
+            codes.setdefault(c["issue_id"], []).append(c["tracking_code"])
+        for r in rows:
+            r["tracking_codes"] = codes.get(r["id"], [])
     for rank, r in enumerate(rows, 1):
         r["rank"] = rank if sort == "priority" else None
     return rows
