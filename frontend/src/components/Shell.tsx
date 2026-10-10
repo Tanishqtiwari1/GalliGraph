@@ -5,6 +5,8 @@ import {
   Droplets,
   Lightbulb,
   MapPin,
+  Moon,
+  Sun,
   TrafficCone,
   Trash2,
   Waves,
@@ -12,6 +14,7 @@ import {
   type LucideIcon,
 } from 'lucide-react'
 import type { Category, Tier } from '../api'
+import { useState } from 'react'
 import { useLang } from '../i18n'
 
 export const BRAND = 'GalliGraph'
@@ -39,6 +42,32 @@ export function Logo({ size = 40 }: { size?: number }) {
       <circle cx="24" cy="22" r="3" fill="#14b8a6" />
       <path d="M16 12v5m0 0-6 4m6-4 6 4" stroke="#fff" strokeWidth="2" strokeLinecap="round" fill="none" />
     </svg>
+  )
+}
+
+/** Light / dark theme. The choice is remembered; the first visit follows the device setting (see index.html). */
+export function ThemeToggle() {
+  const [dark, setDark] = useState(() => document.documentElement.classList.contains('dark'))
+  const toggle = () => {
+    const next = !dark
+    document.documentElement.classList.toggle('dark', next)
+    try {
+      localStorage.setItem('gg-theme', next ? 'dark' : 'light')
+    } catch {
+      /* storage blocked: the theme still applies for this visit */
+    }
+    setDark(next)
+  }
+  return (
+    <button
+      type="button"
+      onClick={toggle}
+      aria-label={dark ? 'Switch to light mode' : 'Switch to dark mode'}
+      title={dark ? 'Light mode' : 'Dark mode'}
+      className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-slate-600 ring-1 ring-slate-300 hover:bg-slate-100"
+    >
+      {dark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+    </button>
   )
 }
 

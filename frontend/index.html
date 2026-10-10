@@ -12,6 +12,12 @@
       rel="stylesheet"
     />
     <title>GalliGraph</title>
+      <script>
+      try {
+        var t = localStorage.getItem('gg-theme')
+        if (t === 'dark' || (!t && matchMedia('(prefers-color-scheme: dark)').matches)) document.documentElement.classList.add('dark')
+      } catch (e) {}
+    </script>
   </head>
   <body>
     <div id="root"></div>

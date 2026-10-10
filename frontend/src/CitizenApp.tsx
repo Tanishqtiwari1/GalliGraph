@@ -8,7 +8,7 @@ import { HelpView } from './components/HelpView'
 import { ToastProvider } from './components/Kit'
 import { MyComplaints } from './components/MyComplaints'
 import { ReportWizard } from './components/ReportWizard'
-import { BottomNav, BrandBlock, LangToggle, PortalSwitcher, TopTabs, type NavItem } from './components/Shell'
+import { BottomNav, BrandBlock, LangToggle, ThemeToggle, PortalSwitcher, TopTabs, type NavItem } from './components/Shell'
 import { TrackView } from './components/TrackView'
 import { useLang } from './i18n'
 import { noticesFrom, useMyComplaints } from './useMyComplaints'
@@ -75,6 +75,7 @@ export default function CitizenApp() {
               <button type="button" onClick={() => go('help')} className="rounded-lg p-2 text-slate-600 hover:bg-slate-100" aria-label="Help and settings" title="Help & settings">
                 <CircleHelp className="h-5 w-5" />
               </button>
+              <ThemeToggle />
               <LangToggle />
             </div>
           </div>

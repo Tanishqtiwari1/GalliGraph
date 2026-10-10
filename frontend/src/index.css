@@ -131,3 +131,77 @@ body {
 .stagger > *:nth-child(6) { animation-delay: 200ms; }
 .lift { transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease; }
 .lift:hover { transform: translateY(-2px); box-shadow: 0 8px 20px -8px rgb(15 23 42 / 0.18); }
+
+
+/* ------------------------------------------------------------------ dark mode
+   Tailwind v4 colours are CSS variables, so the dark theme remaps the palette once instead of
+   touching every component: light tints become deep tints, dark text becomes light text. */
+html.dark {
+  color-scheme: dark;
+  --color-white: #111c2e;
+  --color-canvas: #0a1220;
+  --color-surface-low: #0f1a2b;
+  --color-surface: #16233a;
+  --color-surface-high: #1c2c46;
+  --color-ink: #e6edf7;
+  --color-ink-variant: #b6c2d0;
+  --color-outline: #8a9bb0;
+
+  --color-slate-50: #0f1a2b;
+  --color-slate-100: #16233a;
+  --color-slate-200: #22324a;
+  --color-slate-300: #334560;
+  --color-slate-400: #6b7d95;
+  --color-slate-500: #94a3b8;
+  --color-slate-600: #a9b6c8;
+  --color-slate-700: #cbd5e1;
+  --color-slate-800: #e2e8f0;
+  --color-slate-900: #f1f5f9;
+  --color-slate-950: #f8fafc;
+
+  --color-brand-50: #0b2e2b;
+  --color-brand-100: #0f3f3b;
+  --color-brand-200: #17574f;
+  --color-brand-800: #5eead4;
+  --color-brand-900: #99f6e4;
+
+  --color-saffron-50: #2b1f08;
+  --color-saffron-100: #3a2a0b;
+  --color-saffron-700: #fbbf24;
+
+  --color-emerald-50: #062a1f; --color-emerald-100: #083828; --color-emerald-200: #0d4d38;
+  --color-emerald-700: #6ee7b7; --color-emerald-800: #a7f3d0; --color-emerald-900: #d1fae5;
+  --color-amber-50: #2b1f08; --color-amber-100: #3a2a0b; --color-amber-200: #5a420f; --color-amber-300: #7a5a14;
+  --color-amber-700: #fcd34d; --color-amber-800: #fde68a; --color-amber-900: #fef3c7; --color-amber-950: #fffbeb;
+  --color-red-50: #2d0f12; --color-red-100: #3d1418; --color-red-200: #5c1d23; --color-red-300: #7f2a31;
+  --color-red-700: #fca5a5; --color-red-800: #fecaca;
+  --color-rose-50: #2d0f17; --color-rose-200: #5c1d2c; --color-rose-700: #fda4af;
+  --color-sky-50: #0b2236; --color-sky-200: #14385a; --color-sky-700: #7dd3fc; --color-sky-900: #e0f2fe;
+  --color-purple-50: #22123a; --color-purple-200: #3d2163; --color-purple-700: #d8b4fe; --color-purple-800: #e9d5ff;
+}
+/* Text that sits on a coloured button stays white */
+html.dark .text-white,
+html.dark .btn-primary,
+html.dark .btn-navy,
+html.dark .btn-danger {
+  color: #fff;
+}
+html.dark .bg-navy-900 { background-color: #1e3a5f; }
+html.dark .leaflet-container { filter: brightness(0.8) contrast(1.1); }
+/* The officer sidebar is a dark panel in both themes: give it back the original slate text colours */
+html.dark aside.bg-navy-900 {
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
+  background-color: #0b1526;
+  border-right: 1px solid #22324a;
+}
+html.dark .text-navy-900,
+html.dark .text-navy-800 { color: var(--color-ink); }
+/* Solid coloured backgrounds that carry white text keep their strong colour */
+html.dark .bg-red-700 { background-color: #b91c1c; }
+html.dark .bg-emerald-700 { background-color: #047857; }
+html.dark .bg-amber-700 { background-color: #b45309; }
+html.dark .bg-sky-700 { background-color: #0369a1; }
+html.dark .bg-purple-700 { background-color: #7e22ce; }
+html.dark .bg-brand-800 { background-color: #115e59; }

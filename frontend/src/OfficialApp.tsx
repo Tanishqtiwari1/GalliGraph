@@ -21,7 +21,7 @@ import { LoginPage } from './components/LoginPage'
 import { OfficialMap } from './components/OfficialMap'
 import { OverviewView, type ComplaintFilter } from './components/OverviewView'
 import { PerformanceView } from './components/PerformanceView'
-import { BottomNav, BrandBlock, CITY, LangToggle, Logo, BRAND, type NavItem } from './components/Shell'
+import { BottomNav, BrandBlock, CITY, LangToggle, ThemeToggle, Logo, BRAND, type NavItem } from './components/Shell'
 import { SlaCenter } from './components/SlaCenter'
 import { StaffView } from './components/StaffView'
 import { TriageView } from './components/TriageView'
@@ -201,7 +201,8 @@ function OfficialInner() {
             {mode && <span className="pill pill-info ml-2">{EXTRACTOR_LABEL[mode] ?? mode}</span>}
           </div>
           <div className="flex items-center gap-1.5">
-            <LangToggle />
+            <ThemeToggle />
+              <LangToggle />
             <div className="relative">
               <button
                 type="button"
