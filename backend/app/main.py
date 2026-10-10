@@ -146,7 +146,7 @@ def _actor(user: dict) -> str:
 
 # ============================================================================= public (citizens)
 
-@app.get("/api/health")
+@app.api_route("/api/health", methods=["GET", "HEAD"])  # HEAD: uptime monitors
 def health():
     from . import classifier, verify
 
@@ -684,7 +684,7 @@ if config.FRONTEND_DIST.is_dir():
     # so /official and other client-side routes work on refresh.
     _dist = config.FRONTEND_DIST.resolve()
 
-    @app.get("/{path:path}", include_in_schema=False)
+    @app.api_route("/{path:path}", methods=["GET", "HEAD"], include_in_schema=False)
     def spa(path: str):
         candidate = (_dist / path).resolve()
         if path and candidate.is_file() and _dist in candidate.parents:
