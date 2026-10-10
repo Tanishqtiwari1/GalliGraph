@@ -56,7 +56,8 @@ def provider() -> str:
 
 
 def public_base_url() -> str:
-    return os.getenv("CIVICPULSE_PUBLIC_URL", "http://localhost:5173").rstrip("/")
+    # Render sets RENDER_EXTERNAL_URL automatically, so SMS links point at the live site without extra config
+    return (os.getenv("CIVICPULSE_PUBLIC_URL") or os.getenv("RENDER_EXTERNAL_URL") or "http://localhost:5173").rstrip("/")
 
 
 def _send_twilio(to: str, body: str) -> None:

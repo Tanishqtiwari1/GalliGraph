@@ -1,7 +1,7 @@
 # Render Blueprint: https://render.com/docs/blueprint-spec
 services:
   - type: web
-    name: civicpulse
+    name: galligraph
     runtime: docker
     plan: free
     healthCheckPath: /api/health
