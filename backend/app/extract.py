@@ -158,7 +158,7 @@ _KEYWORDS: dict[str, dict[str, list[str]]] = {
                       "paani nahi aa", "पानी नहीं आ"],
     },
     "drainage": {
-        "open_manhole": ["manhole", "open chamber", "dhakkan", "ढक्कन"],
+        "open_manhole": ["manhole", "man hole", "open chamber", "dhakkan", "ढक्कन", "मैनहोल", "गटर"],
         "sewage_overflow": ["sewage", "sewer", "gutter overflow", "gutter ka paani", "naali ka paani", "सीवर"],
         "waterlogging": ["waterlogging", "water logging", "water logged", "paani bhara", "pani bhar", "jalbharav",
                          "जलभराव", "flooded street"],
@@ -208,6 +208,16 @@ _SAFETY = ["accident", "gir gaya", "gir gayi", "gire", "fell", "injur", "chot", 
 _SAFETY_FUZZY = ["accident", "dangerous", "khatarnak", "injured", "school", "children", "bachche", "electric"]
 _SEVERE = ["accident", "injur", "electrocut", "live wire", "open manhole", "cave", "dhans", "sewage in drinking",
            "died", "death", "fell", "gir gay", "khatarnak", "dangerous", "smoke", "dhuan", "spark", "fire", "aag", "bite", "दुर्घटना", "गिर गया", "गिर गई", "खतरनाक"]
+# Hazards that are dangerous however they're phrased ("the manhole is opened", "dhakkan gayab hai", "wire latak raha"),
+# so they don't depend on one exact phrase like "open manhole".
+_HAZARD = re.compile(
+    r"(manhole|man hole|chamber|gutter|dhakkan|ढक्कन|मैनहोल|गटर).{0,40}"
+    r"(open|opened|uncover|without (a )?(lid|cover)|no (lid|cover)|missing|broken|toot|tuta|tuti|khula|khuli|gayab|nahi|nahin|"
+    r"खुला|खुली|गायब|टूटा|नहीं)"
+    r"|(open|opened|uncovered|khula|khuli|खुला|खुली|without (a )?(lid|cover)).{0,25}(manhole|man hole|chamber|gutter|nala|naala|मैनहोल|गटर|नाला)"
+    r"|(wire|taar|तार).{0,30}(hanging|loose|latak|lataka|tuta|tuti|broken|road par|ground|zameen|गिरा|लटक|टूटा)"
+    r"|(hanging|loose|broken|naked|bare|nangi|nanga|khula|exposed).{0,15}(wire|taar|तार)",
+    re.IGNORECASE)
 _DURATION_WORDS = re.compile(r"\b(din|dino|day|days|hafte|hafta|week|weeks|mahina|mahine|month|months|saal|year|"
                              r"kal|yesterday)\b|दिन|हफ्ते|हफ़्ते|महीने|साल|कल", re.IGNORECASE)
 _UNIT_DAYS = {"din": 1, "day": 1, "days": 1, "dino": 1, "hafte": 7, "hafta": 7, "week": 7, "weeks": 7,
@@ -254,14 +264,17 @@ class RuleExtractor:
             n = int(m.group(1)) if m.group(1).isdigit() else _NUM_WORDS[m.group(1)]
             duration = n * _UNIT_DAYS[m.group(2)]
 
-        safety = any(k in low for k in _SAFETY) or count_phrases(_SAFETY_FUZZY, toks) > 0
+        hazard = bool(_HAZARD.search(text))
+        safety = hazard or any(k in low for k in _SAFETY) or count_phrases(_SAFETY_FUZZY, toks) > 0
         severity = 2
         if duration and duration >= 7:
             severity += 1
         if safety:
             severity += 1
-        if any(k in low for k in _SEVERE):
+        if hazard or any(k in low for k in _SEVERE):
             severity += 1
+        if hazard:
+            severity = 5  # open manhole / exposed live wire: immediate danger to life
         severity = min(severity, 5)
 
         loc_id = match_locality(text)
