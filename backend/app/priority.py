@@ -21,6 +21,7 @@ WEIGHTS = {
 }
 SENSITIVE_POI = {"school", "hospital", "clinic", "college", "kindergarten"}
 RECURRENCE_LOOKBACK_DAYS = 90
+LIFE_SAFETY_FLOOR = 70.0  # minimum score for severity-5 safety hazards (= critical tier)
 RECURRENCE_RADIUS_M = 300
 
 
@@ -92,5 +93,12 @@ def score(conn: sqlite3.Connection, issue: dict, now: datetime | None = None) ->
         "Safety risk (injury / disease / electrocution)" if issue["safety_risk"] else "No direct safety risk reported")
 
     total = round(sum(f["points"] for f in factors), 1)
+    # Immediate danger to life (open manhole, exposed live wire...) is never left in a 7-day queue:
+    # it always reaches the critical tier (24 h), and the breakdown says why.
+    if issue["severity"] >= 5 and issue["safety_risk"] and total < LIFE_SAFETY_FLOOR:
+        boost = round(LIFE_SAFETY_FLOOR - total, 1)
+        factors.append({"factor": "life_safety", "weight": boost, "value": 1.0, "points": boost,
+                        "reason": "Immediate danger to life: raised to critical (24 h deadline)"})
+        total = LIFE_SAFETY_FLOOR
     factors.sort(key=lambda f: f["points"], reverse=True)
     return total, factors
