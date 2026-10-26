@@ -144,6 +144,8 @@ def init() -> None:
         conn.executescript(SCHEMA)
         from .notify import OUTBOX_SCHEMA
         conn.executescript(OUTBOX_SCHEMA)
+        from .whatsapp import SESSION_SCHEMA
+        conn.executescript(SESSION_SCHEMA)
         conn.execute("CREATE UNIQUE INDEX IF NOT EXISTS idx_complaints_code ON complaints(tracking_code)")
         for (cid,) in conn.execute("SELECT id FROM complaints WHERE tracking_code IS NULL").fetchall():
             conn.execute("UPDATE complaints SET tracking_code = ? WHERE id = ?", (new_tracking_code(), cid))

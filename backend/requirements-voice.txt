@@ -1,0 +1,4 @@
+# Optional: free local speech-to-text for voice notes (Hindi/English). Needs ~1 GB RAM for the "small" model,
+# so it is not installed on Render's free plan; there, set CIVICPULSE_WHISPER_API_KEY instead.
+faster-whisper>=1.2
+av>=11,<16

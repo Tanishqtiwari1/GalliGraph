@@ -41,7 +41,7 @@ CATEGORIES = {
     },
     "electricity": {
         "label": "Electricity supply",
-        "sub_types": ["power_outage", "transformer_pole", "other"],
+        "sub_types": ["power_outage", "transformer_pole", "live_wire", "other"],
         "department": "JVVNL (Electricity Discom)",
     },
     "other": {

@@ -392,12 +392,23 @@ export interface User {
   department: string | null
 }
 
+export interface Transcript {
+  text: string
+  language: string
+  english: string | null
+  for_ai: string
+  seconds: number
+  engine: string
+}
+
 export interface Health {
   status: string
   extractor: string
   embeddings: string
   photo_verifier: string
   sms_provider: string
+  voice_notes?: string
+  whatsapp?: boolean
   demo_data: boolean
   trained_model: { source: string; trained_on: number; test_accuracy: number } | null
 }
@@ -492,6 +503,8 @@ export const api = {
   settings: () => request<{ sla_hours: Record<Tier, number>; defaults: Record<Tier, number> }>('/admin/settings'),
   saveSettings: (hours: Record<string, number>) =>
     request<{ sla_hours: Record<Tier, number>; reapplied_to: number }>('/admin/settings', { method: 'PUT', body: JSON.stringify({ hours }) }),
+  transcribe: (audio_base64: string, media_type: string) =>
+    request<Transcript>('/transcribe', { method: 'POST', body: JSON.stringify({ audio_base64, media_type }) }),
   preview: (body: { text: string; lat?: number; lng?: number; category_hint?: string; image_base64?: string; image_media_type?: string }) =>
     request<Preview>('/complaints/preview', { method: 'POST', body: JSON.stringify(body) }),
   feedback: (code: string, verdict: 'fixed' | 'not_fixed', note?: string) =>

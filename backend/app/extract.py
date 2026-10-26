@@ -186,6 +186,7 @@ _KEYWORDS: dict[str, dict[str, list[str]]] = {
         "rule_violation": ["helmet", "wrong side", "one way", "no entry", "triple riding", "zebra", "jumping signal"],
     },
     "electricity": {
+        "live_wire": ["bijli ka taar", "bijli ka tar", "bijli ki taar", "high tension", "बिजली का तार"],
         "power_outage": ["power cut", "power outage", "no electricity", "electricity", "bijli", "light gayi",
                          "light chali", "बिजली", "voltage", "power supply"],
         "transformer_pole": ["transformer", "electric pole", "बिजली का खंभा"],
@@ -200,7 +201,7 @@ _KEYWORDS: dict[str, dict[str, list[str]]] = {
     },
 }
 
-_SAFETY = ["accident", "gir gaya", "gir gayi", "gire", "fell", "injur", "chot", "hurt", "electrocut", "shock",
+_SAFETY = ["accident", "gir gaya", "gir gayi", "gire", "gir rahe", "gir raha", "gir rahi", "girte", "gir jate", "falling", "fell", "injur", "chot", "hurt", "electrocut", "shock",
            "current", "dengue", "malaria", "disease", "bimari", "kids", "bachche", "children", "school",
            "hospital", "dangerous", "khatarnak", "danger", "open manhole", "live wire", "drinking",
            "बच्चे", "स्कूल", "दुर्घटना", "गिर", "खतरनाक", "चोट", "करंट", "बीमारी", "अस्पताल",

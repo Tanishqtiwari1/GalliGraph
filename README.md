@@ -34,7 +34,7 @@ Problem Statement **#10 AI Civic Complaint Triage**. It also covers **#2** prior
 ## Contents
 
 - [Why](#why) · [Results](#measured-results) · [Screenshots](#screenshots) · [Architecture](#architecture)
-- [How the AI works](#how-the-ai-works) · [Two portals](#two-portals-one-record) · [Security & privacy](#security--privacy)
+- [How the AI works](#how-the-ai-works) · [WhatsApp & voice](#whatsapp--voice-notes) · [Two portals](#two-portals-one-record) · [Security & privacy](#security--privacy)
 - [Quick start](#quick-start) · [Configuration](#configuration) · [Deploy](#deploy) · [Project layout](#project-layout) · [Roadmap](#roadmap)
 
 ## Why
@@ -254,6 +254,38 @@ Missing, unclear or mismatched evidence goes to a human. A local model only auto
 
 </details>
 
+## WhatsApp & voice notes
+
+Most citizens won't open a website, but they already use WhatsApp, and many prefer to speak rather than type.
+
+**WhatsApp bot (Twilio).** Citizens message the city's WhatsApp number with text, a 🎤 voice note, a 📷 photo and/or a 📍 shared location:
+
+```
+Citizen: bada gaddha hai 2 hafte se, scooty wale gir rahe hain
+Bot:     📍 Where is this? Send the area and a landmark, or share your location.
+Citizen: Raja Park gali no 5
+Bot:     ✅ Complaint registered / शिकायत दर्ज हो गई
+         Tracking code: JA-GZ3B-U64W · Pothole in Raja Park, gali no 5 · Goes to: PWD
+         ⚠️ Safety risk noted for the officer · Target: fix within 7 days
+Citizen: JA-GZ3B-U64W
+Bot:     📋 Status: Assigned · Department: PWD · Target date: 02 Nov, 03:19 PM IST
+```
+
+- Same pipeline as the web form (extraction, dedup, priority, SLA). The bot asks once for anything missing (place or description).
+- Sending a tracking code returns the live status; `CANCEL` starts over; greetings return a bilingual help message.
+- Every webhook call is verified with Twilio's `X-Twilio-Signature` (HMAC-SHA1); forged calls get 403. Limit: 5 complaints per number per hour.
+- When the issue is resolved, WhatsApp reporters are told on WhatsApp (in production, messages outside the 24 h window need an approved template).
+- Setup: set `TWILIO_ACCOUNT_SID`, `TWILIO_AUTH_TOKEN`, `TWILIO_WHATSAPP_FROM`, then point the sender's "when a message comes in" webhook to `POST https://<app>/api/whatsapp/webhook`.
+
+**Voice notes (Whisper).** On the web form, *Record voice note* works in every modern browser (unlike live dictation),
+and WhatsApp voice notes go through the same engine:
+
+- Local, free and offline with `faster-whisper` (`pip install -r backend/requirements-voice.txt`, model `small`, ~1–4 s per note), or any
+  OpenAI-compatible Whisper API (e.g. a free Groq key) on small servers.
+- Hindi speech is kept as spoken **plus an English translation**, which is what the classifier reads best. Example:
+  *"राजा पार्क गली नंबर पांच में मैनहोल खुला पड़ा है, कल एक स्कूटी वाला गिर गया"* → open manhole · severity 5 · safety risk · Raja Park · 24 h.
+- Audio is transcribed and discarded; only the text is stored.
+
 ## Two portals, one record
 
 | | Citizen portal (`/`) | Officer portal (`/official`) |
@@ -361,7 +393,9 @@ backend/app/
   sla.py         deadline tiers and escalation
   trends.py      Poisson spike alerts, hotspots
   verify.py      AI before/after photo verification
-  notify.py      opt-in resolution SMS (console / Twilio) with outbox
+  notify.py      opt-in resolution SMS / WhatsApp (console / Twilio) with outbox
+  whatsapp.py    WhatsApp bot: Twilio webhook, conversation drafts, signature check
+  transcribe.py  voice notes -> text (local faster-whisper or Whisper API), Hindi + English
   auth.py        scrypt, signed sessions, roles, rate limits
   officer.py     officer workflow: review, assign, work orders, closure
   public.py      citizen-safe views (aggregated, privacy-rounded)
@@ -379,8 +413,8 @@ docs/            API contract, evaluation results, screenshots
 - [x] Citizen + officer portals, trained model, duplicate merging, explainable priority, SLA escalation
 - [x] Verified closure with citizen confirm/dispute and resolution SMS
 - [x] Live deployment, dark mode, Hindi UI
+- [x] WhatsApp bot intake and Hindi voice notes (Whisper)
 - [ ] MUJ campus pilot → one Jaipur ward pilot
-- [ ] WhatsApp bot intake and voice notes
 - [ ] Real ward boundaries and Census population; Postgres + PostGIS
 - [ ] Multilingual transformer (IndicBERT / MuRIL) trained on pilot data
 - [ ] State grievance-portal integration and GeM listing

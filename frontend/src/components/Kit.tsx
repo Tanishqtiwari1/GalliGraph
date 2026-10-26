@@ -1,6 +1,7 @@
-import { Crosshair, Loader2, Mic, MicOff, X } from 'lucide-react'
+import { AudioLines, Crosshair, Loader2, Mic, MicOff, Square, X } from 'lucide-react'
 import { createContext, useCallback, useContext, useEffect, useRef, useState } from 'react'
 import { CircleMarker, MapContainer, TileLayer, useMap, useMapEvents } from 'react-leaflet'
+import { api } from '../api'
 
 /* ------------------------------------------------------------------ animated number */
 
@@ -177,6 +178,127 @@ export function VoiceButton({ onText, lang }: { onText: (t: string) => void; lan
         {listening ? <MicOff className="h-4 w-4" /> : <Mic className="h-4 w-4" />}
         {listening ? 'Stop listening' : lang === 'hi-IN' ? 'बोलकर लिखें' : 'Speak instead'}
       </button>
+      {error && <span className="mt-1 text-xs text-red-600">{error}</span>}
+    </span>
+  )
+}
+
+/* ------------------------------------------------------------------ recorded voice note (server Whisper) */
+
+const MAX_VOICE_SECONDS = 90
+let voiceEnabled: Promise<boolean> | null = null
+function voiceNotesEnabled() {
+  voiceEnabled ??= api
+    .health()
+    .then((h) => !!h.voice_notes && h.voice_notes !== 'none')
+    .catch(() => false)
+  return voiceEnabled
+}
+
+function pickMime() {
+  const options = ['audio/webm;codecs=opus', 'audio/webm', 'audio/mp4', 'audio/ogg;codecs=opus']
+  return options.find((m) => typeof MediaRecorder !== 'undefined' && MediaRecorder.isTypeSupported(m)) ?? ''
+}
+
+function blobToBase64(blob: Blob): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const r = new FileReader()
+    r.onload = () => resolve(String(r.result).split(',')[1] ?? '')
+    r.onerror = () => reject(r.error)
+    r.readAsDataURL(blob)
+  })
+}
+
+/** Record a voice note in any language; the server transcribes it (Hindi gets an English translation too).
+ *  Works in every modern browser, unlike live dictation. The audio itself is not stored. */
+export function VoiceNoteButton({ onText, hindi }: { onText: (t: string) => void; hindi: boolean }) {
+  const [enabled, setEnabled] = useState(false)
+  const [state, setState] = useState<'idle' | 'recording' | 'working'>('idle')
+  const [seconds, setSeconds] = useState(0)
+  const [error, setError] = useState<string | null>(null)
+  const [heard, setHeard] = useState<string | null>(null)
+  const rec = useRef<MediaRecorder | null>(null)
+  const timer = useRef<number | null>(null)
+
+  useEffect(() => {
+    voiceNotesEnabled().then(setEnabled)
+    return () => {
+      if (timer.current) window.clearInterval(timer.current)
+      rec.current?.stream.getTracks().forEach((t) => t.stop())
+    }
+  }, [])
+
+  if (!enabled || typeof MediaRecorder === 'undefined') return null
+
+  async function start() {
+    setError(null)
+    setHeard(null)
+    let stream: MediaStream
+    try {
+      stream = await navigator.mediaDevices.getUserMedia({ audio: true })
+    } catch {
+      setError(hindi ? 'माइक्रोफ़ोन की अनुमति नहीं मिली।' : 'Microphone permission was denied.')
+      return
+    }
+    const mime = pickMime()
+    const r = new MediaRecorder(stream, mime ? { mimeType: mime } : undefined)
+    const chunks: Blob[] = []
+    r.ondataavailable = (e) => {
+      if (e.data.size) chunks.push(e.data)
+    }
+    r.onstop = async () => {
+      stream.getTracks().forEach((t) => t.stop())
+      if (timer.current) window.clearInterval(timer.current)
+      const type = (r.mimeType || mime || 'audio/webm').split(';')[0]
+      const blob = new Blob(chunks, { type })
+      if (blob.size < 2000) {
+        setState('idle')
+        setError(hindi ? 'रिकॉर्डिंग बहुत छोटी थी।' : 'That recording was too short.')
+        return
+      }
+      setState('working')
+      try {
+        const t = await api.transcribe(await blobToBase64(blob), type)
+        setHeard(t.text)
+        onText(t.for_ai)
+      } catch (e) {
+        setError(e instanceof Error ? e.message : 'Could not transcribe the voice note.')
+      } finally {
+        setState('idle')
+      }
+    }
+    rec.current = r
+    r.start()
+    setSeconds(0)
+    setState('recording')
+    timer.current = window.setInterval(() => {
+      setSeconds((s) => {
+        if (s + 1 >= MAX_VOICE_SECONDS && r.state === 'recording') r.stop()
+        return s + 1
+      })
+    }, 1000)
+  }
+
+  const label =
+    state === 'recording'
+      ? `${hindi ? 'रोकें' : 'Stop'} · ${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, '0')}`
+      : state === 'working'
+        ? hindi ? 'समझ रहे हैं…' : 'Transcribing…'
+        : hindi ? 'वॉइस नोट रिकॉर्ड करें' : 'Record voice note'
+  return (
+    <span className="inline-flex flex-col">
+      <button
+        type="button"
+        disabled={state === 'working'}
+        onClick={() => (state === 'recording' ? rec.current?.stop() : start())}
+        aria-pressed={state === 'recording'}
+        className={`btn ${state === 'recording' ? 'btn-danger' : 'btn-primary'} relative`}
+      >
+        {state === 'recording' && <span className="absolute -left-1 -top-1 h-3 w-3 animate-ping rounded-full bg-red-500" />}
+        {state === 'recording' ? <Square className="h-4 w-4" /> : state === 'working' ? <Loader2 className="h-4 w-4 animate-spin" /> : <AudioLines className="h-4 w-4" />}
+        {label}
+      </button>
+      {heard && <span className="mt-1 max-w-xs text-xs text-emerald-700">✓ {hindi ? 'सुना' : 'Heard'}: “{heard}”</span>}
       {error && <span className="mt-1 text-xs text-red-600">{error}</span>}
     </span>
   )

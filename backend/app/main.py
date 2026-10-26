@@ -6,6 +6,7 @@ Two audiences:
 """
 import json
 import logging
+import os
 import re
 import threading
 from contextlib import asynccontextmanager
@@ -14,10 +15,10 @@ from typing import Literal
 
 from fastapi import Depends, FastAPI, HTTPException, Query, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, Response as RawResponse
 from pydantic import BaseModel, Field
 
-from . import analytics, auth, config, db, embed, extract, notify, officer, public, sla, trends
+from . import analytics, auth, config, db, embed, extract, notify, officer, public, sla, transcribe, trends, whatsapp
 from .geo import localities, locality_by_id
 from .media import UPLOAD_DIR, MediaError, save_image
 from .pipeline import ingest, rescore_all, rescore_issue
@@ -152,7 +153,8 @@ def health():
 
     out = {"status": "ok", "extractor": extract.active_extractor_name(), "embeddings": embed.backend_name(),
            "photo_verifier": verify.active_verifier(), "trained_model": None, "demo_data": config.DEMO_DATA,
-           "sms_provider": notify.provider()}
+           "sms_provider": notify.provider(), "voice_notes": transcribe.engine(),
+           "whatsapp": bool(os.getenv("TWILIO_AUTH_TOKEN"))}
     bundle = classifier._load()
     if bundle:
         out["trained_model"] = {k: bundle[k] for k in ("source", "trained_on", "test_accuracy")}
@@ -188,6 +190,49 @@ def create_complaint(body: ComplaintIn, request: Request):
 
 
 _preview_limiter = auth.RateLimiter(limit=30, window_s=600)
+_voice_limiter = auth.RateLimiter(limit=20, window_s=600)
+_whatsapp_lock = threading.Lock()
+
+
+class VoiceIn(BaseModel):
+    audio_base64: str = Field(min_length=10, max_length=12_000_000)
+    media_type: str = Field(max_length=60)
+
+
+@app.post("/api/transcribe")
+def transcribe_voice(body: VoiceIn, request: Request):
+    """Citizen voice note -> text (Hindi/English), so people who can't type can still report. Audio is not stored."""
+    _voice_limiter.check(request)
+    try:
+        t = transcribe.transcribe_b64(body.audio_base64, body.media_type)
+    except transcribe.TranscribeError as exc:
+        raise HTTPException(422, str(exc)) from exc
+    return {"text": t.text, "language": t.language, "english": t.english, "for_ai": t.for_ai(),
+            "seconds": t.seconds, "engine": t.engine}
+
+
+@app.post("/api/whatsapp/webhook", include_in_schema=False)
+async def whatsapp_webhook(request: Request):
+    """Twilio WhatsApp inbound messages (form-encoded). Replies with TwiML."""
+    from urllib.parse import parse_qsl
+
+    form = dict(parse_qsl((await request.body()).decode("utf-8", "replace"), keep_blank_values=True))
+    path = "/api/whatsapp/webhook"
+    urls = [notify.public_base_url() + path, str(request.url).replace("http://", "https://", 1), str(request.url)]
+    if not whatsapp.signature_ok(urls, form, request.headers.get("X-Twilio-Signature")):
+        raise HTTPException(403, "Invalid signature")
+    import anyio
+
+    def run() -> str:
+        with _whatsapp_lock, _ingest_lock, db.session() as conn:
+            return whatsapp.handle(conn, form)
+
+    try:
+        reply = await anyio.to_thread.run_sync(run)
+    except Exception:
+        log.exception("WhatsApp message failed")
+        reply = "Sorry, something went wrong on our side. Please try again in a minute."
+    return RawResponse(content=whatsapp.twiml(reply), media_type="application/xml")
 
 
 @app.post("/api/complaints/preview")

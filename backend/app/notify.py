@@ -3,6 +3,7 @@
 Providers (CIVICPULSE_SMS_PROVIDER):
   * "console" (default): messages are composed and stored in the outbox but not sent - safe for demos.
   * "twilio": sends real SMS via Twilio's REST API (TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN, TWILIO_FROM_NUMBER).
+    Citizens who reported on WhatsApp are answered on WhatsApp instead (TWILIO_WHATSAPP_FROM).
     A Twilio trial account can only text numbers verified in the Twilio console.
 
 Every attempt is recorded in the sms_outbox table so officials can see what was sent and whether it worked.
@@ -60,10 +61,15 @@ def public_base_url() -> str:
     return (os.getenv("CIVICPULSE_PUBLIC_URL") or os.getenv("RENDER_EXTERNAL_URL") or "http://localhost:5173").rstrip("/")
 
 
-def _send_twilio(to: str, body: str) -> None:
-    sid, token, sender = (os.getenv("TWILIO_ACCOUNT_SID"), os.getenv("TWILIO_AUTH_TOKEN"), os.getenv("TWILIO_FROM_NUMBER"))
+def _send_twilio(to: str, body: str, whatsapp: bool = False) -> None:
+    sid, token = os.getenv("TWILIO_ACCOUNT_SID"), os.getenv("TWILIO_AUTH_TOKEN")
+    sender = os.getenv("TWILIO_WHATSAPP_FROM") if whatsapp else os.getenv("TWILIO_FROM_NUMBER")
     if not (sid and token and sender):
-        raise RuntimeError("Twilio is not configured (TWILIO_ACCOUNT_SID / TWILIO_AUTH_TOKEN / TWILIO_FROM_NUMBER)")
+        raise RuntimeError("Twilio is not configured (TWILIO_ACCOUNT_SID / TWILIO_AUTH_TOKEN / "
+                           + ("TWILIO_WHATSAPP_FROM)" if whatsapp else "TWILIO_FROM_NUMBER)"))
+    if whatsapp:
+        # Business-initiated WhatsApp messages outside the 24 h chat window need an approved template in production.
+        to, sender = f"whatsapp:{to}", sender if sender.startswith("whatsapp:") else f"whatsapp:{sender}"
     resp = httpx.post(f"https://api.twilio.com/2010-04-01/Accounts/{sid}/Messages.json",
                       auth=(sid, token), data={"From": sender, "To": to, "Body": body}, timeout=15)
     if resp.status_code >= 300:
@@ -78,7 +84,7 @@ def _deliver(rows: list[dict]) -> None:
             status, error = "simulated", None
             if prov == "twilio":
                 try:
-                    _send_twilio(r["to"], r["body"])
+                    _send_twilio(r["to"], r["body"], whatsapp=r.get("channel") == "whatsapp")
                     status = "sent"
                 except (httpx.HTTPError, RuntimeError, ValueError) as exc:
                     status, error = "failed", str(exc)[:300]
@@ -92,19 +98,21 @@ def _deliver(rows: list[dict]) -> None:
         if rows:
             sent = sum(1 for _ in rows)
             word = "simulated (demo mode)" if prov == "console" else "queued"
+            via = "WhatsApp/SMS" if any(r.get("channel") == "whatsapp" for r in rows) else "SMS"
             db.log_event(conn, rows[0]["issue_id"], iso(utcnow()), "sms",
-                         f"Resolution SMS {word} to {sent} citizen{'s' if sent != 1 else ''}", "system")
+                         f"Resolution {via} {word} to {sent} citizen{'s' if sent != 1 else ''}", "system")
 
 
 def notify_resolved(conn: sqlite3.Connection, issue_id: int, label: str) -> int:
     """Text every opted-in citizen who reported this issue. Returns how many messages were queued."""
     rows = []
     for c in conn.execute(
-            "SELECT id, tracking_code, reporter_contact FROM complaints WHERE issue_id = ? AND reporter_contact IS NOT NULL "
+            "SELECT id, tracking_code, reporter_contact, channel FROM complaints WHERE issue_id = ? AND reporter_contact IS NOT NULL "
             "AND sms_opt_in = 1", (issue_id,)):
         body = (f"GalliGraph: Your complaint {c['tracking_code']} ({label}) has been resolved. "
                 f"Not fixed? Tell us: {public_base_url()}/#track/{c['tracking_code']}")
-        rows.append({"complaint_id": c["id"], "issue_id": issue_id, "to": c["reporter_contact"], "body": body})
+        rows.append({"complaint_id": c["id"], "issue_id": issue_id, "to": c["reporter_contact"], "body": body,
+                     "channel": c["channel"]})
     if rows:
         threading.Thread(target=_deliver, args=(rows,), daemon=True).start()
     return len(rows)

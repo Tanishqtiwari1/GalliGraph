@@ -22,3 +22,11 @@ services:
         value: /data/uploads
       - key: ANTHROPIC_API_KEY
         sync: false            # optional: enables Claude extraction + photo verification
+      - key: CIVICPULSE_WHISPER_API_KEY
+        sync: false            # optional: voice notes via a hosted Whisper API (e.g. free Groq key)
+      - key: TWILIO_ACCOUNT_SID
+        sync: false            # optional: WhatsApp intake + resolution messages
+      - key: TWILIO_AUTH_TOKEN
+        sync: false
+      - key: TWILIO_WHATSAPP_FROM
+        sync: false

@@ -21,7 +21,7 @@ import { api, type Category, type Meta, type Preview, type Receipt } from '../ap
 import { CATEGORY_HI, useLang } from '../i18n'
 import { rememberCode } from '../myComplaints'
 import { CATEGORY_META, fileToBase64, fmtDate, prettySub } from '../ui'
-import { LocationPicker, VoiceButton } from './Kit'
+import { LocationPicker, VoiceButton, VoiceNoteButton } from './Kit'
 import { ScoreBreakdown } from './ScoreBreakdown'
 import { CATEGORY_ICON, TIER_PILL } from './Shell'
 
@@ -226,6 +226,7 @@ export function ReportWizard({ meta, onTrack, categoryHint }: { meta: Meta | nul
               </span>
             </label>
             <div className="flex flex-wrap items-center gap-2">
+              <VoiceNoteButton hindi={lang === 'hi'} onText={(t) => setText((x) => (x ? `${x}\n${t}` : t))} />
               <VoiceButton lang={lang === 'hi' ? 'hi-IN' : 'en-IN'} onText={(t) => setText((x) => (x ? `${x} ${t}` : t))} />
               <span className="text-xs text-slate-500">Examples:</span>
               {EXAMPLES.map((s) => (
