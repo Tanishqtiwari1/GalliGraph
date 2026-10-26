@@ -232,6 +232,10 @@ async def whatsapp_webhook(request: Request):
     except Exception:
         log.exception("WhatsApp message failed")
         reply = "Sorry, something went wrong on our side. Please try again in a minute."
+    if whatsapp.reply_via_api():
+        # Reply from the number the citizen wrote to (form "To"), e.g. the trial or sandbox sender
+        await anyio.to_thread.run_sync(whatsapp.send, form.get("From", ""), form.get("To"), reply)
+        return RawResponse(content=whatsapp.twiml(None), media_type="application/xml")
     return RawResponse(content=whatsapp.twiml(reply), media_type="application/xml")
 
 

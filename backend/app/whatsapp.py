@@ -77,8 +77,32 @@ def signature_ok(urls: list[str], params: dict[str, str], signature: str | None)
     return False
 
 
-def twiml(text: str) -> str:
-    return f'<?xml version="1.0" encoding="UTF-8"?><Response><Message>{escape(text)}</Message></Response>'
+def twiml(text: str | None) -> str:
+    body = f"<Message>{escape(text)}</Message>" if text else ""
+    return f'<?xml version="1.0" encoding="UTF-8"?><Response>{body}</Response>'
+
+
+def reply_via_api() -> bool:
+    """Twilio's WhatsApp trial ("Try out WhatsApp") ignores TwiML replies, so by default replies are sent with the
+    Messages API whenever credentials are configured. CIVICPULSE_WHATSAPP_REPLY=twiml forces in-response replies."""
+    mode = os.getenv("CIVICPULSE_WHATSAPP_REPLY", "auto").lower()
+    if mode == "twiml":
+        return False
+    return bool(os.getenv("TWILIO_ACCOUNT_SID") and os.getenv("TWILIO_AUTH_TOKEN"))
+
+
+def send(to: str, sender: str | None, text: str) -> None:
+    """Send a WhatsApp message through Twilio's Messages API (WhatsApp limits one message to 1,600 characters)."""
+    sid, token = os.getenv("TWILIO_ACCOUNT_SID"), os.getenv("TWILIO_AUTH_TOKEN")
+    sender = sender or os.getenv("TWILIO_WHATSAPP_FROM", "")
+    if not sender.startswith("whatsapp:"):
+        sender = f"whatsapp:{sender}"
+    if not to.startswith("whatsapp:"):
+        to = f"whatsapp:{to}"
+    resp = httpx.post(f"https://api.twilio.com/2010-04-01/Accounts/{sid}/Messages.json", auth=(sid, token),
+                      data={"From": sender, "To": to, "Body": text[:1600]}, timeout=20)
+    if resp.status_code >= 300:
+        log.warning("WhatsApp reply failed (%s): %s", resp.status_code, resp.text[:200])
 
 
 def _download(url: str) -> tuple[bytes, str]:
