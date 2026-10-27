@@ -25,6 +25,9 @@ const FAQ = [
   ['How long will it take?', 'Every issue gets a target date based on its priority. If it is missed, the issue is escalated to a senior officer automatically.'],
   ['What if it is marked fixed but it is not?', 'Open your complaint and choose "No, still a problem". A supervisor reviews it. Closures are never decided by AI alone.'],
   ['Can I report by voice?', 'Yes. Tap "Speak instead" on the report page (works in Chrome, Edge and Safari) in Hindi or English.'],
+  ['What data do you keep, and for how long?', 'Your complaint text, photo and pin, kept so the city can fix the problem and show its record. Hidden data inside photos (like the GPS position and phone model) is removed when you upload. Voice recordings are turned into text and not stored. A phone number is optional and is deleted automatically 30 days after your complaint is closed.'],
+  ['Is my complaint sent to an AI service?', 'To understand your complaint, the city may use an AI model. Depending on the setup it runs on the city\'s own server or with a cloud AI provider (Anthropic Claude for text and photos, a speech-to-text service for voice notes). These providers only receive the complaint itself, never your phone number.'],
+  ['How do I remove my phone number?', 'Open your complaint with its tracking code and tap "Stop messages & delete my number". It is erased straight away. To have a whole complaint removed, contact the municipal office with your tracking code.'],
 ]
 
 export function HelpView({ meta }: { meta: Meta | null }) {

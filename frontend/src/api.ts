@@ -525,6 +525,7 @@ export const api = {
   }) => request<Receipt>('/complaints', { method: 'POST', body: JSON.stringify(body) }),
   notifyOptIn: (code: string, phone: string) =>
     request<{ ok: boolean; to: string }>(`/track/${encodeURIComponent(code)}/notify`, { method: 'POST', body: JSON.stringify({ phone }) }),
+  notifyOptOut: (code: string) => request<{ ok: boolean }>(`/track/${encodeURIComponent(code)}/notify`, { method: 'DELETE' }),
   issueSms: (id: number) =>
     request<{ provider: string; messages: { to_masked: string; body: string; provider: string; status: string; error: string | null; created_at: string }[] }>(`/issues/${id}/sms`),
   confirm: (issueId: number) =>

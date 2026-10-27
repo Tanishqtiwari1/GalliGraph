@@ -4,6 +4,7 @@ Two audiences:
   * Citizens (no login): report, track by private code, see the public city map and statistics.
   * Officials (login): the full issue queue, actions, work orders, verification and accountability.
 """
+import hashlib
 import json
 import logging
 import os
@@ -18,9 +19,10 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, Response as RawResponse
 from pydantic import BaseModel, Field
 
-from . import analytics, auth, config, db, embed, extract, notify, officer, public, sla, transcribe, trends, whatsapp
+from . import (analytics, auth, config, db, embed, extract, notify, officer, public, retention, security, sla,
+               transcribe, trends, whatsapp)
 from .geo import localities, locality_by_id
-from .media import UPLOAD_DIR, MediaError, save_image
+from .media import UPLOAD_DIR, MediaError, clean_image, save_image
 from .pipeline import ingest, rescore_all, rescore_issue
 from .taxonomy import CATEGORIES, department_for
 from .timeutil import iso, utcnow
@@ -38,11 +40,16 @@ async def lifespan(_app: FastAPI):
         auth.init_users(conn)
         sla.load_policy(conn)
         rescore_all(conn)  # durations age, so refresh scores (and deadlines) on boot
+    retention.purge()
+    retention.start_background()
     yield
 
 
-app = FastAPI(title="GalliGraph API", version="0.3.0", lifespan=lifespan,
+# Interactive API docs are a map of every endpoint, so they are only served outside production.
+_docs = {} if not config.PRODUCTION else {"docs_url": None, "redoc_url": None, "openapi_url": None}
+app = FastAPI(title="GalliGraph API", version="0.3.0", lifespan=lifespan, **_docs,
               description="AI triage for civic complaints: extract, deduplicate, prioritise, route, track, verify.")
+security.install(app)
 if config.CORS_ORIGINS:
     app.add_middleware(CORSMiddleware, allow_origins=config.CORS_ORIGINS, allow_credentials=True,
                        allow_methods=["*"], allow_headers=["*"])
@@ -65,7 +72,7 @@ class ComplaintIn(BaseModel):
     lat: float | None = Field(default=None, ge=-90, le=90)
     lng: float | None = Field(default=None, ge=-180, le=180)
     channel: Literal["web", "whatsapp", "email", "app"] = "web"
-    image_base64: str | None = Field(default=None, description="Optional photo, base64 without data: prefix")
+    image_base64: str | None = Field(default=None, max_length=7_000_000, description="Optional photo, base64 without data: prefix")
     image_media_type: ImageType | None = None
     category_hint: str | None = Field(default=None, max_length=40, description="Category tile the citizen picked")
     phone: str | None = Field(default=None, max_length=20, description="Optional Indian mobile number for SMS updates")
@@ -103,7 +110,7 @@ class ReplyIn(BaseModel):
 
 class ResolveIn(BaseModel):
     note: str | None = Field(default=None, max_length=2000)
-    after_image_base64: str | None = None
+    after_image_base64: str | None = Field(default=None, max_length=7_000_000)
     after_image_media_type: ImageType | None = None
 
 
@@ -246,7 +253,13 @@ def preview_complaint(body: ComplaintIn, request: Request):
     from .geo import geocode
     from .priority import score as priority_score
 
-    ex, extractor = extract.extract(body.text, body.image_base64, body.image_media_type)
+    image_b64, image_type = body.image_base64, body.image_media_type
+    if image_b64:
+        try:
+            image_b64, image_type = clean_image(image_b64, image_type)
+        except MediaError as exc:
+            raise HTTPException(422, str(exc)) from exc
+    ex, extractor = extract.extract(body.text, image_b64, image_type)
     if body.category_hint and ex.category == "other" and body.category_hint in CATEGORIES:
         ex.category, ex.sub_type = body.category_hint, "other"
     geo = geocode(ex.location_text, body.text, body.lat, body.lng)
@@ -326,9 +339,24 @@ def citizen_notify_opt_in(code: str, body: NotifyIn, request: Request):
     return {"ok": True, "to": notify.mask(phone)}
 
 
+@app.delete("/api/track/{code}/notify")
+def citizen_notify_opt_out(code: str, request: Request):
+    """Withdraw consent: stop updates and erase the citizen's phone number from this complaint."""
+    _feedback_limiter.check(request)
+    with db.session() as conn:
+        c = _complaint_by_code(conn, code)
+        conn.execute("UPDATE complaints SET reporter_contact = NULL, sms_opt_in = 0 WHERE id = ?", (c["id"],))
+    return {"ok": True}
+
+
+# Tracking codes are the only key to a citizen's complaint, so guessing them is rate limited
+_track_limiter = auth.RateLimiter(limit=60, window_s=600)
+
+
 @app.get("/api/track/{code}/evidence")
-def resolution_evidence(code: str):
+def resolution_evidence(code: str, request: Request):
     """The department's after-repair photo is shown to the citizen who reported (their own complaint only)."""
+    _track_limiter.check(request)
     with db.session() as conn:
         c = _complaint_by_code(conn, code)
         i = conn.execute("SELECT after_image FROM issues WHERE id = ?", (c["issue_id"],)).fetchone()
@@ -341,7 +369,8 @@ def resolution_evidence(code: str):
 
 
 @app.get("/api/track/{code}")
-def track(code: str):
+def track(code: str, request: Request):
+    _track_limiter.check(request)
     if not re.fullmatch(r"(?i)JA-[A-Z0-9]{4}-[A-Z0-9]{4}", code.strip()):
         raise HTTPException(404, "No complaint found with that tracking code")
     with db.session() as conn:
@@ -359,13 +388,15 @@ _confirm_limiter = auth.RateLimiter(limit=30, window_s=600)
 def confirm_issue(issue_id: int, request: Request):
     """'I have this too (+1)': a resident confirms an existing problem without filing a duplicate complaint."""
     _confirm_limiter.check(request)
-    key = (auth.client_ip(request), issue_id)
+    key = (hashlib.sha256(auth.client_ip(request).encode()).hexdigest()[:16], issue_id)  # no raw IPs kept
     with db.session() as conn:
         row = conn.execute("SELECT status, confirmations FROM issues WHERE id = ?", (issue_id,)).fetchone()
         if not row or row["status"] == "resolved":
             raise HTTPException(404, "This problem is not open")
         if key in _confirmed:
             return {"confirmations": row["confirmations"], "already": True}
+        if len(_confirmed) > 100_000:
+            _confirmed.clear()
         _confirmed.add(key)
         conn.execute("UPDATE issues SET confirmations = confirmations + 1 WHERE id = ?", (issue_id,))
         db.log_event(conn, issue_id, iso(utcnow()), "confirmation", "A resident confirmed this problem (+1)", "citizen")
@@ -392,17 +423,22 @@ def public_summary(days: int = Query(30, ge=7, le=365)):
 @app.post("/api/auth/login")
 def login(body: LoginIn, request: Request, response: Response):
     auth.login_limiter.check(request)
+    auth.account_login_limiter.check(request, key="user:" + body.username.strip().lower())
     user = auth.authenticate(body.username, body.password)
     if user is None:
         raise HTTPException(401, "Wrong username or password")
     response.set_cookie(auth.COOKIE, auth.make_token(user), max_age=auth.SESSION_HOURS * 3600, httponly=True,
-                        samesite="lax", secure=auth.cookie_secure(request), path="/")
+                        samesite="strict", secure=auth.cookie_secure(request), path="/")
     return user
 
 
 @app.post("/api/auth/logout")
-def logout(response: Response):
-    response.delete_cookie(auth.COOKIE, path="/")
+def logout(request: Request, response: Response):
+    user = auth.current_user(request)
+    if user:
+        with db.session() as conn:
+            auth.revoke_sessions(conn, user["id"])  # the old cookie stops working even if it was copied
+    response.delete_cookie(auth.COOKIE, path="/", httponly=True, samesite="strict", secure=auth.cookie_secure(request))
     return {"ok": True}
 
 

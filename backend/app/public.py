@@ -176,6 +176,11 @@ def _public_event(msg: str, kind: str = "") -> str:
         return "The officer needs more information from you"
     if kind == "info_reply":
         return "You added more information"
+    # Several citizens can share one issue: never show one reporter's own words to the others
+    if kind == "dispute":
+        return "A resident says the problem persists - sent for review"
+    if kind == "citizen_feedback":
+        return "A resident confirmed the fix"
     if msg.startswith("Rejected as not actionable"):
         return msg.replace("Rejected as not actionable", "Closed as not actionable")
     if msg.startswith("Fix reported"):

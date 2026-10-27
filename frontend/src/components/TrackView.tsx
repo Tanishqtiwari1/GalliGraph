@@ -166,9 +166,26 @@ export function TrackView({ initialCode }: { initialCode?: string }) {
               </span>
             </form>
           )}
-          {(res.sms_opt_in || smsTo) && !['resolved', 'rejected'].includes(res.status) && (
-            <p className="flex items-center gap-2 text-sm text-emerald-800">
-              <MessageSquareText className="h-4 w-4" /> You'll get an SMS when this is resolved.
+          {(res.sms_opt_in || smsTo) && (
+            <p className="flex flex-wrap items-center gap-2 text-sm text-emerald-800">
+              <MessageSquareText className="h-4 w-4" />
+              {!['resolved', 'rejected'].includes(res.status) ? "You'll get an SMS when this is resolved." : 'Your number is saved for updates on this complaint.'}
+              <button
+                type="button"
+                onClick={async () => {
+                  try {
+                    await api.notifyOptOut(res.tracking_code)
+                    setSmsTo(null)
+                    setRes({ ...res, sms_opt_in: false })
+                    toast('Your number was deleted. You will not get messages about this complaint.')
+                  } catch (err) {
+                    toast(err instanceof Error ? err.message : 'Could not delete the number', 'error')
+                  }
+                }}
+                className="text-xs font-semibold text-slate-600 underline hover:text-slate-900"
+              >
+                Stop messages &amp; delete my number
+              </button>
             </p>
           )}
 

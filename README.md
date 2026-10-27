@@ -305,11 +305,23 @@ and configures deadline policy.
 ## Security & privacy
 
 - **Passwords:** `hashlib.scrypt` (N=2¹⁴, r=8, p=1, per-user salt), constant-time comparison.
-- **Sessions:** HMAC-SHA256-signed httpOnly cookies (Secure behind HTTPS); tampered cookies are rejected.
-- **Rate limits:** sliding window per IP: logins 8 / 5 min, complaints 10 / 10 min → HTTP 429.
+- **Sessions:** HMAC-SHA256-signed httpOnly, SameSite=Strict cookies (always Secure in production); tampered cookies are
+  rejected. Logging out or a password reset revokes every existing session for that account.
+- **Login:** same response time whether or not the username exists; limited per IP (8 / 5 min) and per account (10 / 15 min).
+- **Rate limits:** sliding window per IP: complaints 10 / 10 min, tracking-code lookups 60 / 10 min → HTTP 429.
+- **HTTP hardening:** Content-Security-Policy, `X-Frame-Options: DENY`, `nosniff`, strict Referrer-Policy, Permissions-Policy,
+  HSTS in production, `Cache-Control: no-store` on the API, 14 MB request cap, cross-site POST/PATCH/DELETE refused.
+- **Uploads:** every photo is decoded and re-encoded, so non-images are rejected and EXIF metadata (GPS, phone model) is
+  stripped before the photo is stored or sent to an AI model.
 - **SQL:** user values always go through parameterised queries.
 - **Privacy:** no citizen accounts; public coordinates rounded to ~100 m; citizen text, photos, officer names and internal notes
-  are never public; officers see masked phone numbers; evidence photos are served only to logged-in officials.
+  are never public (one reporter's dispute note is not shown to other reporters of the same issue); officers see masked phone
+  numbers; evidence photos are served only to logged-in officials.
+- **Data retention:** phone numbers are erased 30 days after the issue closes (`CIVICPULSE_CONTACT_RETENTION_DAYS`), and
+  citizens can delete theirs at any time from the tracking page. Unsent WhatsApp drafts are erased after a day. Old evidence
+  photos can be deleted automatically with `CIVICPULSE_PHOTO_RETENTION_DAYS`.
+- **Production mode** (`CIVICPULSE_ENV=production`, set in the Dockerfile and render.yaml): refuses to start without a
+  32+ character `CIVICPULSE_SECRET_KEY` and hides `/docs`.
 - **Secrets:** admin password and keys come from environment variables, never from code.
 
 ## Quick start

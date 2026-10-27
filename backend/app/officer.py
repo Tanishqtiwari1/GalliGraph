@@ -302,10 +302,11 @@ def create_user(body: NewUser, user: dict = Supervisor):
 @router.post("/admin/users/{username}/password")
 def reset_password(username: str, body: PasswordIn, _user: dict = Supervisor):
     with db.session() as conn:
-        n = conn.execute("UPDATE users SET password_hash = ? WHERE username = ?",
-                         (auth.hash_password(body.password), username.lower())).rowcount
-    if not n:
-        raise HTTPException(404, "user not found")
+        row = conn.execute("SELECT id FROM users WHERE username = ?", (username.lower(),)).fetchone()
+        if not row:
+            raise HTTPException(404, "user not found")
+        conn.execute("UPDATE users SET password_hash = ? WHERE id = ?", (auth.hash_password(body.password), row["id"]))
+        auth.revoke_sessions(conn, row["id"])  # a reset password also signs out every open session
     return {"ok": True}
 
 
