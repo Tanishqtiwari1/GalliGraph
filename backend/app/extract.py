@@ -219,6 +219,32 @@ _HAZARD = re.compile(
     r"|(wire|taar|तार).{0,30}(hanging|loose|latak|lataka|tuta|tuti|broken|road par|ground|zameen|गिरा|लटक|टूटा)"
     r"|(hanging|loose|broken|naked|bare|nangi|nanga|khula|exposed).{0,15}(wire|taar|तार)",
     re.IGNORECASE)
+# Someone has already been killed or seriously hurt here. The hazard has proven itself, so the report goes
+# straight to the critical tier however mild the problem sounds ("road is damaged, one person died").
+_CASUALTY = re.compile(
+    r"\b(died|dies|dying|death|deaths|killed|kill(ing|s)? (a|one|two|\w+ )?(person|people|man|woman|child|boy|girl|kid)|"
+    r"passed away|lost (his|her|their|a|one) li(fe|ves)|fatal|fatality|dead (body|man|woman|child|person)|"
+    r"(person|man|woman|child|boy|girl|people|someone|uncle|aunty|biker|rider) (is |was )?dead|"
+    r"maut|mar gay[ai]|mar gaye|mare gaye|mar chuk[ai]|jaan (chali|gayi|gai|ja)|jaan le li|"
+    r"(badly|seriously|severely|critically) (injured|hurt)|fracture|haddi tut|hospitali[sz]ed|icu|"
+    r"bahut chot|gambhir chot|ghayal)\b"
+    r"|मौत|मर गय|मर गई|मारे गए|जान चली|जान गई|मृत्यु|गंभीर चोट|घायल|हड्डी टूट",
+    re.IGNORECASE)
+# ...but a dead stray animal is a garbage complaint, not a casualty
+_ANIMAL_DEATH = re.compile(
+    r"(dog|dogs|cow|cows|cattle|animal|animals|cat|pig|pigs|bird|birds|rat|rats|monkey|buffalo|bull|kutta|kutte|"
+    r"gaay|gay|suar|janwar|जानवर|कुत्ता|कुत्ते|गाय|सुअर).{0,25}(died|dead|death|maut|mar gay|मर गय|मौत)"
+    r"|(dead|mara hua|mari hui|मरा हुआ|मरी हुई).{0,15}(dog|cow|cattle|animal|cat|pig|bird|rat|kutta|gaay|janwar|जानवर|कुत्ता|गाय)",
+    re.IGNORECASE)
+
+
+def casualty_reported(text: str) -> bool:
+    """True when the complaint says a person was killed or seriously injured."""
+    m = _CASUALTY.search(text)
+    return bool(m) and not (_ANIMAL_DEATH.search(text) and not re.search(
+        r"\b(person|people|man|woman|child|boy|girl|aadmi|aurat|bachch|insaan|log)\b|आदमी|बच्च|लोग", text, re.IGNORECASE))
+
+
 _DURATION_WORDS = re.compile(r"\b(din|dino|day|days|hafte|hafta|week|weeks|mahina|mahine|month|months|saal|year|"
                              r"kal|yesterday)\b|दिन|हफ्ते|हफ़्ते|महीने|साल|कल", re.IGNORECASE)
 _UNIT_DAYS = {"din": 1, "day": 1, "days": 1, "dino": 1, "hafte": 7, "hafta": 7, "week": 7, "weeks": 7,
@@ -266,7 +292,8 @@ class RuleExtractor:
             duration = n * _UNIT_DAYS[m.group(2)]
 
         hazard = bool(_HAZARD.search(text))
-        safety = hazard or any(k in low for k in _SAFETY) or count_phrases(_SAFETY_FUZZY, toks) > 0
+        casualty = casualty_reported(text)
+        safety = hazard or casualty or any(k in low for k in _SAFETY) or count_phrases(_SAFETY_FUZZY, toks) > 0
         severity = 2
         if duration and duration >= 7:
             severity += 1
@@ -274,8 +301,8 @@ class RuleExtractor:
             severity += 1
         if hazard or any(k in low for k in _SEVERE):
             severity += 1
-        if hazard:
-            severity = 5  # open manhole / exposed live wire: immediate danger to life
+        if hazard or casualty:
+            severity = 5  # open manhole / exposed live wire / someone already killed or badly hurt: danger to life
         severity = min(severity, 5)
 
         loc_id = match_locality(text)
@@ -297,7 +324,8 @@ class RuleExtractor:
         return _clean(Extraction(
             category=category, sub_type=sub_type, location_text=loc_name,
             location_detail=detail_text, duration_days=duration,
-            severity=severity, severity_reason="Rule-based estimate from keywords and duration",
+            severity=severity, severity_reason=("Death or serious injury reported - danger to life" if casualty
+                                                else "Rule-based estimate from keywords and duration"),
             safety_risk=safety, language=lang, summary_en=summary + ".", secondary_category=secondary,
         ))
 
@@ -369,7 +397,11 @@ def extract(text: str, image_b64: str | None = None, image_media_type: str | Non
     primary, rules = _extractors()
     if primary:
         try:
-            return primary.extract(text, image_b64, image_media_type), primary.name
+            ex = primary.extract(text, image_b64, image_media_type)
+            if casualty_reported(text) and (ex.severity < 5 or not ex.safety_risk):
+                ex.severity, ex.safety_risk = 5, True
+                ex.severity_reason += " (raised to 5: death or serious injury reported)"
+            return ex, primary.name
         except (anthropic.APIConnectionError, anthropic.RateLimitError, anthropic.APIStatusError, RuntimeError) as exc:
             if config.EXTRACTOR == "claude":
                 raise
