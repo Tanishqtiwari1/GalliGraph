@@ -64,9 +64,9 @@ export function ThemeToggle() {
       onClick={toggle}
       aria-label={dark ? 'Switch to light mode' : 'Switch to dark mode'}
       title={dark ? 'Light mode' : 'Dark mode'}
-      className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-slate-600 ring-1 ring-slate-300 hover:bg-slate-100"
+      className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-slate-600 ring-1 ring-slate-300 hover:bg-slate-100"
     >
-      {dark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+      {dark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
     </button>
   )
 }
@@ -96,48 +96,33 @@ export function LangToggle({ dark = false }: { dark?: boolean }) {
   )
 }
 
+/** One clear button that offers the other language, written in that language. */
+export function LangSwitch() {
+  const { lang, setLang } = useLang()
+  return (
+    <button
+      type="button"
+      onClick={() => setLang(lang === 'hi' ? 'en' : 'hi')}
+      lang={lang === 'hi' ? 'en' : 'hi'}
+      aria-label={lang === 'hi' ? 'Switch to English' : 'हिंदी में देखें'}
+      className="min-h-11 shrink-0 rounded-full px-3 text-sm font-bold text-navy-900 ring-1 ring-slate-400 hover:bg-slate-100"
+    >
+      {lang === 'hi' ? 'English' : 'हिंदी'}
+    </button>
+  )
+}
+
 export function BrandBlock({ subtitle }: { subtitle?: string }) {
   return (
     <a href="/" className="flex min-w-0 items-center gap-2.5">
       <Logo />
       <div className="leading-tight">
-        <div className="flex items-center gap-1.5">
-          <span className="font-display text-xl font-extrabold text-brand-700">{BRAND}</span>
-          <span className="hidden rounded-md bg-brand-600 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wide whitespace-nowrap text-white min-[400px]:inline">
-            AI Gov
-          </span>
-        </div>
+        <span className="font-display text-xl font-bold text-brand-700">{BRAND}</span>
         <div className="flex items-center gap-1 text-xs font-medium text-slate-600">
           <MapPin className="h-3 w-3" aria-hidden /> {subtitle ?? `${CITY} · ${CITY_HI}`}
         </div>
       </div>
     </a>
-  )
-}
-
-/** Citizen Portal | Officer Triage | Admin Intel switcher from the design. */
-export function PortalSwitcher({ active }: { active: 'citizen' | 'triage' | 'intel' }) {
-  const { t } = useLang()
-  const items = [
-    { id: 'citizen', label: t('citizenPortal'), href: '/' },
-    { id: 'triage', label: t('officerTriage'), href: '/official#triage' },
-    { id: 'intel', label: t('adminIntel'), href: '/official#ops' },
-  ] as const
-  return (
-    <nav className="grid grid-cols-3 gap-1 rounded-xl bg-surface-low p-1 text-xs font-semibold sm:text-sm" aria-label="Portals">
-      {items.map((i) => (
-        <a
-          key={i.id}
-          href={i.href}
-          aria-current={active === i.id ? 'page' : undefined}
-          className={`truncate rounded-lg px-1.5 py-1.5 text-center sm:px-3 ${
-            active === i.id ? 'bg-white text-brand-700 shadow-sm' : 'text-slate-600 hover:text-navy-900'
-          }`}
-        >
-          {i.label}
-        </a>
-      ))}
-    </nav>
   )
 }
 
@@ -151,7 +136,7 @@ export interface NavItem<T extends string> {
 function Badge({ n }: { n?: number }) {
   if (!n) return null
   return (
-    <span className="absolute -right-1.5 -top-1 min-w-4 rounded-full bg-red-600 px-1 text-center text-[10px] font-bold leading-4 text-white">
+    <span className="absolute -right-1.5 -top-1 min-w-5 rounded-full bg-red-700 px-1 text-center text-xs font-bold leading-5 text-white">
       {n > 9 ? '9+' : n}
     </span>
   )
@@ -171,13 +156,13 @@ export function BottomNav<T extends string>({ items, active, onChange }: { items
             type="button"
             onClick={() => onChange(id)}
             aria-current={active === id ? 'page' : undefined}
-            className={`relative flex min-h-14 flex-col items-center justify-center gap-0.5 px-0.5 text-center text-[10.5px] font-semibold leading-tight ${
-              active === id ? 'text-brand-700' : 'text-slate-500'
+            className={`relative flex min-h-16 flex-col items-center justify-center gap-0.5 px-0.5 text-center text-xs font-bold leading-tight ${
+              active === id ? 'text-brand-700' : 'text-slate-600'
             }`}
           >
-            {active === id && <span className="absolute inset-x-4 top-0 h-0.5 rounded-full bg-brand-600" />}
+            {active === id && <span className="absolute inset-x-3 top-0 h-1 rounded-full bg-brand-600" />}
             <span className="relative">
-              <Icon className="h-5 w-5" aria-hidden />
+              <Icon className="h-6 w-6" aria-hidden />
               <Badge n={badge} />
             </span>
             {label}
@@ -198,7 +183,7 @@ export function TopTabs<T extends string>({ items, active, onChange }: { items: 
           type="button"
           onClick={() => onChange(id)}
           aria-current={active === id ? 'page' : undefined}
-          className={`inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-semibold ${
+          className={`inline-flex min-h-11 items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-bold ${
             active === id ? 'bg-brand-50 text-brand-800' : 'text-slate-600 hover:bg-slate-100'
           }`}
         >
@@ -214,7 +199,7 @@ export function TopTabs<T extends string>({ items, active, onChange }: { items: 
 }
 
 export const TIER_PILL: Record<Tier, { cls: string; label: string }> = {
-  critical: { cls: 'pill-crit', label: 'P0 Critical' },
+  critical: { cls: 'pill-crit', label: 'Critical' },
   high: { cls: 'pill-warn', label: 'High' },
   medium: { cls: 'pill-zone', label: 'Medium' },
   low: { cls: 'pill-zone', label: 'Low' },

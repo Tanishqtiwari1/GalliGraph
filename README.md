@@ -302,13 +302,21 @@ and WhatsApp voice notes go through the same engine:
 **Roles:** an *official* is scoped to their department. A *supervisor* sees the whole city, approves closures, manages staff
 and configures deadline policy.
 
+## Accessibility & citizen tools
+
+- **Built for phones, older eyes and first-time users:** 16-18 px body text, 48 px controls, high-contrast colours, visible keyboard focus, one main action per screen. Every citizen page is available in full Hindi.
+- **Danger near me:** open life-threatening hazards close to the citizen. The browser works out the distance, so the citizen's position never reaches the server.
+- **Escalation letter:** when a deadline is missed, the tracking page writes a letter to the Commissioner or an RTI application from the facts on record.
+- **Send when back online:** a complaint made without a connection is kept on the phone (IndexedDB) and sent when the connection returns with the site open.
+- **Repeat-failure spots (officers, Analytics):** places closed as fixed that came back within 180 days or whose fix was disputed.
+
 ## Security & privacy
 
 - **Passwords:** `hashlib.scrypt` (N=2¹⁴, r=8, p=1, per-user salt), constant-time comparison.
 - **Sessions:** HMAC-SHA256-signed httpOnly, SameSite=Strict cookies (always Secure in production); tampered cookies are
   rejected. Logging out or a password reset revokes every existing session for that account.
 - **Login:** same response time whether or not the username exists; limited per IP (8 / 5 min) and per account (10 / 15 min).
-- **Rate limits:** sliding window per IP: complaints 10 / 10 min, tracking-code lookups 60 / 10 min → HTTP 429.
+- **Rate limits:** sliding window per IP: complaints 10 / 10 min, tracking-code lookups 300 / 10 min → HTTP 429.
 - **HTTP hardening:** Content-Security-Policy, `X-Frame-Options: DENY`, `nosniff`, strict Referrer-Policy, Permissions-Policy,
   HSTS in production, `Cache-Control: no-store` on the API, 14 MB request cap, cross-site POST/PATCH/DELETE refused.
 - **Uploads:** every photo is decoded and re-encoded, so non-images are rejected and EXIF metadata (GPS, phone model) is

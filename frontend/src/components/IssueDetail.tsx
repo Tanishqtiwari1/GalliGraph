@@ -233,7 +233,7 @@ export function IssueDetail({ issueId, canSupervise, meta = null, onClose, onCha
               {photos[0] && (
                 <figure className="relative">
                   <img src={photos[0]} alt="Citizen evidence" className="h-36 w-full rounded-lg object-cover" />
-                  <figcaption className="absolute bottom-1.5 left-1.5 rounded bg-navy-900/80 px-1.5 py-0.5 text-[11px] font-semibold text-white">
+                  <figcaption className="absolute bottom-1.5 left-1.5 rounded bg-navy-900/80 px-1.5 py-0.5 text-xs font-semibold text-white">
                     <Camera className="mr-1 inline h-3 w-3" /> Citizen photo
                   </figcaption>
                 </figure>

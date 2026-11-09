@@ -32,7 +32,7 @@ export function LoginPage({ onLogin }: { onLogin: (u: User) => void }) {
           <div>
             <div className="flex items-center gap-1.5">
               <span className="font-display text-xl font-extrabold text-brand-700">{BRAND}</span>
-              <span className="rounded-md bg-brand-600 px-1.5 py-0.5 text-[10px] font-bold uppercase text-white">AI Gov</span>
+              <span className="rounded-md bg-brand-600 px-1.5 py-0.5 text-xs font-bold uppercase text-white">AI Gov</span>
             </div>
             <div className="text-xs text-slate-500">Officer console · {CITY} Municipal Corporation</div>
           </div>

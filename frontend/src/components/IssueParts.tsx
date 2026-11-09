@@ -121,7 +121,7 @@ export function TriageReview({ issue, meta, run }: { issue: IssueDetail; meta: M
           </button>
         </div>
       )}
-      <p className="mt-2 text-[11px] text-slate-500">AI suggests; the authorised officer decides. Overrides are recorded with your reason.</p>
+      <p className="mt-2 text-xs text-slate-500">AI suggests; the authorised officer decides. Overrides are recorded with your reason.</p>
 
       {mode === 'edit' && (
         <Modal title="Correct the AI suggestion" onClose={close}>
@@ -300,7 +300,7 @@ export function DuplicateReview({ issue, onChanged }: { issue: IssueDetail; onCh
               <Scissors className="h-4 w-4" /> Different, split out
             </button>
           </div>
-          <p className="mt-2 text-[11px] text-slate-500">Every report keeps its own tracking code, so citizens still get updates.</p>
+          <p className="mt-2 text-xs text-slate-500">Every report keeps its own tracking code, so citizens still get updates.</p>
         </>
       )}
     </Section>

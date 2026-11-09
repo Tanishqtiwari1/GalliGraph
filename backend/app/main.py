@@ -350,7 +350,7 @@ def citizen_notify_opt_out(code: str, request: Request):
 
 
 # Tracking codes are the only key to a citizen's complaint, so guessing them is rate limited
-_track_limiter = auth.RateLimiter(limit=60, window_s=600)
+_track_limiter = auth.RateLimiter(limit=300, window_s=600)
 
 
 @app.get("/api/track/{code}/evidence")
@@ -409,6 +409,12 @@ def public_map(category: str | None = None, resolved_days: int = Query(30, ge=0,
     with db.session() as conn:
         sla.check(conn)
         return public.map_points(conn, resolved_days, category)
+
+
+@app.get("/api/public/dangers")
+def public_dangers():
+    with db.session() as conn:
+        return public.dangers(conn)
 
 
 @app.get("/api/public/summary")

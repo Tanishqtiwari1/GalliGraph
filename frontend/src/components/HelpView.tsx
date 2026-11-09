@@ -1,105 +1,90 @@
-import { ChevronDown, Eye, Languages, Lock, Phone, Settings, Trash2 } from 'lucide-react'
+import { ChevronDown, Eye, Lock, Phone, Settings, Trash2 } from 'lucide-react'
 import { useState } from 'react'
 import type { Category, Meta } from '../api'
 import { CATEGORY_HI, useLang } from '../i18n'
 import { CATEGORY_META } from '../ui'
 import { useToast } from './Kit'
-import { CATEGORY_ICON } from './Shell'
+import { CATEGORY_ICON, LangSwitch, ThemeToggle } from './Shell'
 
-const EXAMPLES: Partial<Record<Category, string>> = {
-  road_damage: 'Potholes, broken or caved-in roads, damaged footpaths',
-  water_supply: 'No water, low pressure, leaking pipelines, dirty tap water',
-  drainage: 'Blocked drains, sewage overflow, waterlogging, open manholes',
-  garbage: 'Garbage dumps, missed collection, overflowing bins, dead animals, public urination spots',
-  streetlight: 'Lights not working or flickering, damaged poles, exposed wires on light poles',
-  traffic: 'Jams, illegal parking, faulty signals, repeated rule violations at a spot',
-  stray_animals: 'Aggressive stray dogs, stray cattle or pigs',
-  electricity: 'Power cuts, voltage problems, damaged transformers or electric poles',
+const EXAMPLES: Partial<Record<Category, [string, string]>> = {
+  road_damage: ['Potholes, broken roads, damaged footpaths', 'गड्ढे, टूटी सड़कें, ख़राब फ़ुटपाथ'],
+  water_supply: ['No water, low pressure, leaking pipes, dirty water', 'पानी नहीं, कम दबाव, रिसते पाइप, गंदा पानी'],
+  drainage: ['Blocked drains, sewage overflow, open manholes', 'बंद नालियाँ, बहता सीवर, खुले मैनहोल'],
+  garbage: ['Garbage dumps, missed collection, overflowing bins', 'कचरे के ढेर, कचरा न उठना, भरे कूड़ेदान'],
+  streetlight: ['Lights not working, damaged poles, exposed wires', 'बंद लाइटें, टूटे खंभे, खुले तार'],
+  traffic: ['Jams, illegal parking, faulty signals', 'जाम, ग़लत पार्किंग, ख़राब सिग्नल'],
+  stray_animals: ['Aggressive stray dogs, stray cattle', 'आक्रामक आवारा कुत्ते, आवारा पशु'],
+  electricity: ['Power cuts, voltage problems, damaged transformers', 'बिजली कटौती, वोल्टेज समस्या, ख़राब ट्रांसफ़ॉर्मर'],
 }
 
-const FAQ = [
-  ['Do I need an account?', 'No. You get a private tracking code (like JA-7KQ2-9XPM). This device also remembers your complaints under "My complaints".'],
-  ['Who sees what I write?', 'Only municipal officials see your words, photo and exact pin. The public map shows just the type of problem and the area (to about 100 m). Officer names and internal notes are never shown publicly.'],
-  ['What if someone already reported it?', 'GalliGraph merges repeat reports into one issue automatically. Your report still counts and raises the priority. You can also tap "+1" on an existing issue.'],
-  ['How is priority decided?', 'AI suggests a priority from danger to people, how many are affected (schools, hospitals nearby), how long it has existed and how many people reported it. An officer reviews it. You can see the reasons on your receipt.'],
-  ['How long will it take?', 'Every issue gets a target date based on its priority. If it is missed, the issue is escalated to a senior officer automatically.'],
-  ['What if it is marked fixed but it is not?', 'Open your complaint and choose "No, still a problem". A supervisor reviews it. Closures are never decided by AI alone.'],
-  ['Can I report by voice?', 'Yes. Tap "Speak instead" on the report page (works in Chrome, Edge and Safari) in Hindi or English.'],
-  ['What data do you keep, and for how long?', 'Your complaint text, photo and pin, kept so the city can fix the problem and show its record. Hidden data inside photos (like the GPS position and phone model) is removed when you upload. Voice recordings are turned into text and not stored. A phone number is optional and is deleted automatically 30 days after your complaint is closed.'],
-  ['Is my complaint sent to an AI service?', 'To understand your complaint, the city may use an AI model. Depending on the setup it runs on the city\'s own server or with a cloud AI provider (Anthropic Claude for text and photos, a speech-to-text service for voice notes). These providers only receive the complaint itself, never your phone number.'],
-  ['How do I remove my phone number?', 'Open your complaint with its tracking code and tap "Stop messages & delete my number". It is erased straight away. To have a whole complaint removed, contact the municipal office with your tracking code.'],
+const FAQ: [string, string, string, string][] = [
+  ['Do I need an account?', 'क्या खाता बनाना ज़रूरी है?', 'No. You get a private tracking code like JA-7KQ2-9XPM. This phone also remembers your complaints.', 'नहीं। आपको JA-7KQ2-9XPM जैसा निजी ट्रैकिंग कोड मिलता है। यह फ़ोन आपकी शिकायतें याद रखता है।'],
+  ['Who sees what I write?', 'मेरा लिखा कौन देखता है?', 'Only municipal officials see your words, photo and exact pin. The public map shows only the type of problem and the area, to about 100 metres.', 'आपके शब्द, फ़ोटो और सही पिन केवल नगर अधिकारी देखते हैं। सार्वजनिक नक्शे पर केवल समस्या का प्रकार और क्षेत्र, लगभग 100 मीटर तक दिखता है।'],
+  ['What if someone already reported it?', 'अगर किसी ने पहले ही बता दिया हो?', 'Repeat reports are joined into one case. Your report still counts and raises the priority.', 'एक जैसी शिकायतें एक मामले में जोड़ दी जाती हैं। आपकी शिकायत गिनी जाती है और प्राथमिकता बढ़ाती है।'],
+  ['How long will it take?', 'कितना समय लगेगा?', 'Every complaint gets a target date based on how serious it is. If the date is missed, it goes to a senior officer, and you can send a letter or RTI application from the complaint page.', 'हर शिकायत को गंभीरता के अनुसार लक्ष्य तारीख़ मिलती है। तारीख़ चूकने पर यह वरिष्ठ अधिकारी को जाती है, और आप शिकायत के पेज से पत्र या RTI आवेदन भेज सकते हैं।'],
+  ['What if it is marked fixed but it is not?', 'अगर ठीक बताया जाए पर ठीक न हो?', 'Open your complaint and choose "No, still a problem". A supervisor will check it.', 'अपनी शिकायत खोलें और "नहीं, समस्या बनी है" चुनें। पर्यवेक्षक जाँच करेंगे।'],
+  ['What if I have no internet?', 'अगर इंटरनेट न हो?', 'You can still fill in the complaint on a page that is already open. It is saved on your phone and sent when you are back online with GalliGraph open.', 'पहले से खुले पेज पर आप शिकायत भर सकते हैं। यह फ़ोन पर सहेजी जाती है और इंटरनेट आने पर GalliGraph खुला होने पर भेजी जाती है।'],
+  ['What data do you keep, and for how long?', 'आप क्या जानकारी रखते हैं और कब तक?', 'Your complaint text, photo and pin, so the city can fix the problem and show its record. Hidden data inside photos, like GPS position and phone model, is removed when you upload. Voice recordings are turned into text and not stored. A phone number is optional and is deleted automatically 30 days after your complaint is closed.', 'आपकी शिकायत का पाठ, फ़ोटो और पिन, ताकि नगर समस्या ठीक कर सके और रिकॉर्ड दिखा सके। फ़ोटो की छिपी जानकारी, जैसे GPS और फ़ोन मॉडल, अपलोड के समय हटा दी जाती है। आवाज़ की रिकॉर्डिंग को पाठ में बदला जाता है और रखा नहीं जाता। फ़ोन नंबर वैकल्पिक है और शिकायत बंद होने के 30 दिन बाद अपने-आप हट जाता है।'],
+  ['Is my complaint sent to an AI service?', 'क्या मेरी शिकायत किसी AI सेवा को जाती है?', "To understand your complaint, the city may use an AI model. Depending on the setup it runs on the city's own server or with a cloud provider (Anthropic Claude for text and photos, a speech-to-text service for voice notes). These providers receive only the complaint itself, never your phone number.", 'शिकायत समझने के लिए नगर AI मॉडल का उपयोग कर सकता है। यह व्यवस्था के अनुसार नगर के अपने सर्वर पर या क्लाउड सेवा (पाठ और फ़ोटो के लिए Anthropic Claude, आवाज़ के लिए स्पीच-टू-टेक्स्ट सेवा) से चलता है। इन सेवाओं को केवल शिकायत मिलती है, आपका फ़ोन नंबर कभी नहीं।'],
+  ['How do I remove my phone number?', 'अपना फ़ोन नंबर कैसे हटाएँ?', 'Open your complaint with its tracking code and press "Stop messages and delete my number". It is erased straight away. To have a whole complaint removed, contact the municipal office with your tracking code.', 'ट्रैकिंग कोड से अपनी शिकायत खोलें और "संदेश बंद करें और मेरा नंबर हटाएँ" दबाएँ। नंबर तुरंत हट जाता है। पूरी शिकायत हटवाने के लिए ट्रैकिंग कोड के साथ नगर कार्यालय से संपर्क करें।'],
 ]
 
 export function HelpView({ meta }: { meta: Meta | null }) {
-  const { lang, setLang } = useLang()
+  const { lang, l } = useLang()
   const toast = useToast()
   const [open, setOpen] = useState<number | null>(0)
+  const hi = lang === 'hi'
 
   return (
-    <div className="mx-auto max-w-3xl space-y-6">
-      <div>
-        <h1 className="font-display text-2xl font-bold sm:text-3xl">Help &amp; settings</h1>
-        <p className="text-sm text-slate-600">Simple answers, category guide and your privacy controls.</p>
-      </div>
+    <div className="mx-auto max-w-2xl space-y-6">
+      <h1 className="font-display text-3xl font-bold">{l('Help and settings', 'सहायता और सेटिंग')}</h1>
 
-      <section className="card divide-y divide-slate-100">
-        <h2 className="px-4 py-3 font-display font-bold">Frequently asked questions</h2>
-        {FAQ.map(([q, a], i) => (
-          <div key={q}>
-            <button type="button" onClick={() => setOpen(open === i ? null : i)} aria-expanded={open === i} className="flex w-full items-center justify-between gap-3 px-4 py-3 text-left text-sm font-semibold hover:bg-slate-50">
-              {q}
-              <ChevronDown className={`h-4 w-4 shrink-0 transition-transform ${open === i ? 'rotate-180' : ''}`} />
+      <section className="card divide-y divide-slate-200">
+        <h2 className="px-4 py-3 text-lg font-bold">{l('Common questions', 'आम सवाल')}</h2>
+        {FAQ.map(([qEn, qHi, aEn, aHi], i) => (
+          <div key={qEn}>
+            <button type="button" onClick={() => setOpen(open === i ? null : i)} aria-expanded={open === i} className="flex min-h-14 w-full items-center justify-between gap-3 px-4 py-3 text-left text-sm font-bold hover:bg-slate-50">
+              {hi ? qHi : qEn}
+              <ChevronDown className={`h-5 w-5 shrink-0 transition-transform ${open === i ? 'rotate-180' : ''}`} aria-hidden />
             </button>
-            {open === i && <p className="animate-rise px-4 pb-4 text-sm text-slate-600">{a}</p>}
+            {open === i && <p className="px-4 pb-4 text-sm">{hi ? aHi : aEn}</p>}
           </div>
         ))}
       </section>
 
       <section>
-        <h2 className="mb-2 font-display font-bold">Which category should I pick?</h2>
-        <div className="grid gap-2 sm:grid-cols-2">
+        <h2 className="mb-2 text-lg font-bold">{l('Which type should I pick?', 'कौन सा प्रकार चुनूँ?')}</h2>
+        <div className="grid gap-2">
           {(Object.keys(EXAMPLES) as Category[]).map((c) => {
             const Icon = CATEGORY_ICON[c]
             const dept = meta?.categories.find((x) => x.key === c)?.department
             return (
               <div key={c} className="card flex gap-3 p-3">
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-surface text-brand-700">
-                  <Icon className="h-5 w-5" />
-                </span>
+                <Icon className="mt-0.5 h-6 w-6 shrink-0 text-brand-700" aria-hidden />
                 <div className="min-w-0">
-                  <div className="text-sm font-semibold">
-                    {CATEGORY_META[c].label} <span className="font-normal text-slate-500">· {CATEGORY_HI[c]}</span>
-                  </div>
-                  <p className="text-xs text-slate-600">{EXAMPLES[c]}</p>
-                  {dept && <p className="mt-0.5 text-[11px] font-semibold text-brand-700">Goes to: {dept}</p>}
+                  <div className="text-sm font-bold">{hi ? CATEGORY_HI[c] : CATEGORY_META[c].label}</div>
+                  <p className="text-sm">{EXAMPLES[c]![hi ? 1 : 0]}</p>
+                  {dept && <p className="sr-only">{dept}</p>}
                 </div>
               </div>
             )
           })}
         </div>
-        <p className="mt-2 text-xs text-slate-500">Not sure? Skip the category. AI suggests one and an officer checks it.</p>
+        <p className="mt-2 text-sm">{l('Not sure? Skip it. The system suggests one and an officer checks it.', 'पता नहीं? छोड़ दें। सिस्टम सुझाव देगा और अधिकारी जाँचेगा।')}</p>
       </section>
 
       <section className="card space-y-4 p-4">
-        <h2 className="flex items-center gap-2 font-display font-bold">
-          <Settings className="h-5 w-5 text-brand-700" /> Settings &amp; privacy
-        </h2>
-        <div className="flex flex-wrap items-center justify-between gap-2">
-          <span className="flex items-center gap-2 text-sm">
-            <Languages className="h-4 w-4" /> Language / भाषा
-          </span>
-          <div className="flex overflow-hidden rounded-lg ring-1 ring-slate-300">
-            {(['en', 'hi'] as const).map((l) => (
-              <button key={l} type="button" onClick={() => setLang(l)} aria-pressed={lang === l} className={`px-3 py-1.5 text-sm font-semibold ${lang === l ? 'bg-navy-900 text-white' : 'bg-white'}`}>
-                {l === 'en' ? 'English' : 'हिंदी'}
-              </button>
-            ))}
-          </div>
+        <h2 className="flex items-center gap-2 text-lg font-bold"><Settings className="h-6 w-6 text-brand-700" aria-hidden /> {l('Settings and privacy', 'सेटिंग और निजता')}</h2>
+        <div className="flex items-center justify-between gap-2">
+          <span className="text-sm font-bold">{l('Language', 'भाषा')}</span>
+          <LangSwitch />
         </div>
-        <div className="flex flex-wrap items-center justify-between gap-2">
-          <span className="flex items-center gap-2 text-sm">
-            <Trash2 className="h-4 w-4" /> Forget my complaints on this device
-          </span>
+        <div className="flex items-center justify-between gap-2">
+          <span className="text-sm font-bold">{l('Dark or light screen', 'गहरी या हल्की स्क्रीन')}</span>
+          <ThemeToggle />
+        </div>
+        <div className="flex items-center justify-between gap-2">
+          <span className="flex items-center gap-2 text-sm font-bold"><Trash2 className="h-5 w-5" aria-hidden /> {l('Forget my complaints on this phone', 'इस फ़ोन से मेरी शिकायतें भूलें')}</span>
           <button
             type="button"
             onClick={() => {
@@ -110,24 +95,19 @@ export function HelpView({ meta }: { meta: Meta | null }) {
               } catch {
                 /* ignore */
               }
-              toast('Removed from this device. Your complaints still exist with the city.')
+              toast(l('Removed from this phone. Your complaints still exist with the city.', 'इस फ़ोन से हटा दी गईं। शिकायतें नगर के पास बनी रहेंगी।'))
             }}
-            className="btn btn-ghost"
+            className="btn btn-ghost shrink-0"
           >
-            Clear
+            {l('Clear', 'हटाएँ')}
           </button>
         </div>
-        <ul className="space-y-1.5 text-xs text-slate-600">
-          <li className="flex gap-2">
-            <Lock className="h-3.5 w-3.5 shrink-0" /> No account, no phone number required. Your tracking code is the key.
-          </li>
-          <li className="flex gap-2">
-            <Eye className="h-3.5 w-3.5 shrink-0" /> Public map: category, area (~100 m) and status only. Never your words, photo or home location.
-          </li>
-          <li className="flex gap-2">
-            <Phone className="h-3.5 w-3.5 shrink-0" /> Emergencies (live wires, fire, collapse): call 112 first.
-          </li>
+        <ul className="space-y-2 text-sm">
+          <li className="flex gap-2"><Lock className="mt-0.5 h-4 w-4 shrink-0" aria-hidden /> {l('No account or phone number needed. Your tracking code is the key.', 'खाता या फ़ोन नंबर ज़रूरी नहीं। आपका ट्रैकिंग कोड ही चाबी है।')}</li>
+          <li className="flex gap-2"><Eye className="mt-0.5 h-4 w-4 shrink-0" aria-hidden /> {l('The public map never shows your words, photo or home.', 'सार्वजनिक नक्शा आपके शब्द, फ़ोटो या घर कभी नहीं दिखाता।')}</li>
+          <li className="flex gap-2"><Phone className="mt-0.5 h-4 w-4 shrink-0" aria-hidden /> {l('Emergencies: call 112 first.', 'आपातकाल में पहले 112 पर कॉल करें।')}</li>
         </ul>
+        <a href="/official" className="inline-flex min-h-11 items-center text-sm font-bold text-brand-700 underline">{l('Officials login', 'अधिकारी लॉगिन')}</a>
       </section>
     </div>
   )

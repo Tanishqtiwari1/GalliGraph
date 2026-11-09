@@ -36,7 +36,7 @@ export function WorkOrdersView({ refreshKey, openIssue }: { refreshKey: number; 
                 </h2>
                 <span className="rounded-full bg-white px-2 text-xs font-bold tnum">{issues ? items.length : '…'}</span>
               </div>
-              <p className="px-2 pb-2 text-[11px] text-slate-500">{col.hint}</p>
+              <p className="px-2 pb-2 text-xs text-slate-500">{col.hint}</p>
               <div className="max-h-[70vh] space-y-2 overflow-y-auto p-0.5">
                 {!issues && <Skeleton className="h-24 bg-white" />}
                 {issues && items.length === 0 && <p className="rounded-lg border border-dashed border-slate-300 p-4 text-center text-xs text-slate-500">Empty</p>}
@@ -46,7 +46,7 @@ export function WorkOrdersView({ refreshKey, openIssue }: { refreshKey: number; 
                   return (
                     <button key={i.id} type="button" onClick={() => openIssue(i.id)} className="card lift w-full p-3 text-left">
                       <div className="flex items-center justify-between gap-2">
-                        <span className="font-mono text-[11px] text-slate-500">WO #{String(i.id).padStart(4, '0')}</span>
+                        <span className="font-mono text-xs text-slate-500">WO #{String(i.id).padStart(4, '0')}</span>
                         <span className={`pill ${TIER_PILL[tier].cls}`}>{TIER_PILL[tier].label}</span>
                       </div>
                       <div className="mt-1.5 flex items-start gap-2">
@@ -66,7 +66,7 @@ export function WorkOrdersView({ refreshKey, openIssue }: { refreshKey: number; 
                           </span>
                         )}
                       </div>
-                      <div className="mt-1 truncate text-[11px] text-slate-500">
+                      <div className="mt-1 truncate text-xs text-slate-500">
                         {displayId(i.id, i.first_reported)} · {i.department.split(' (')[0]}
                       </div>
                     </button>

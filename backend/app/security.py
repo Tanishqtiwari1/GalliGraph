@@ -55,8 +55,10 @@ def _same_site(request: Request) -> bool:
         return True  # not a browser cross-site request (curl, server-to-server); cookies are still required for officials
     if origin.rstrip("/") in config.CORS_ORIGINS:
         return True
-    host = request.headers.get("x-forwarded-host") if config.TRUST_PROXY else None
-    return urlsplit(origin).netloc == (host or request.headers.get("host"))
+    hosts = {request.headers.get("host")}
+    if config.TRUST_PROXY:  # a hosting proxy may report the public name in either header
+        hosts.add(request.headers.get("x-forwarded-host"))
+    return urlsplit(origin).netloc in hosts
 
 
 class BodySizeLimit:

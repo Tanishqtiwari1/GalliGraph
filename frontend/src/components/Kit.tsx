@@ -2,6 +2,7 @@ import { AudioLines, Crosshair, Loader2, Mic, MicOff, Square, X } from 'lucide-r
 import { createContext, useCallback, useContext, useEffect, useRef, useState } from 'react'
 import { CircleMarker, MapContainer, TileLayer, useMap, useMapEvents } from 'react-leaflet'
 import { api } from '../api'
+import { useLang } from '../i18n'
 
 /* ------------------------------------------------------------------ animated number */
 
@@ -42,19 +43,50 @@ export function Skeleton({ className = '' }: { className?: string }) {
 
 /* ------------------------------------------------------------------ modal & slide-over */
 
-export function Modal({ title, onClose, children, wide = false }: { title: string; onClose: () => void; children: React.ReactNode; wide?: boolean }) {
+/** Moves keyboard focus into a dialog, keeps Tab inside it, closes on Escape and hands focus back afterwards. */
+function useDialog(onClose: () => void) {
+  const ref = useRef<HTMLDivElement>(null)
+  const close = useRef(onClose)
+  close.current = onClose
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && onClose()
+    const opener = document.activeElement as HTMLElement | null
+    const focusable = () =>
+      [...(ref.current?.querySelectorAll<HTMLElement>('a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled])') ?? [])].filter(
+        (el) => el.offsetParent !== null && !el.dataset.backdrop,
+      )
+    focusable()[0]?.focus()
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') return close.current()
+      if (e.key !== 'Tab') return
+      const els = focusable()
+      if (!els.length) return
+      const [first, last] = [els[0], els[els.length - 1]]
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault()
+        last.focus()
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault()
+        first.focus()
+      }
+    }
     window.addEventListener('keydown', onKey)
-    return () => window.removeEventListener('keydown', onKey)
-  }, [onClose])
+    return () => {
+      window.removeEventListener('keydown', onKey)
+      opener?.focus?.()
+    }
+  }, [])
+  return ref
+}
+
+export function Modal({ title, onClose, children, wide = false }: { title: string; onClose: () => void; children: React.ReactNode; wide?: boolean }) {
+  const ref = useDialog(onClose)
   return (
-    <div className="fixed inset-0 z-[1200] flex items-end justify-center p-0 sm:items-center sm:p-4" role="dialog" aria-modal="true" aria-label={title}>
-      <button type="button" aria-label="Close" onClick={onClose} className="absolute inset-0 cursor-default bg-navy-900/45 backdrop-blur-sm" />
+    <div ref={ref} className="fixed inset-0 z-[1200] flex items-end justify-center p-0 sm:items-center sm:p-4" role="dialog" aria-modal="true" aria-label={title}>
+      <button type="button" tabIndex={-1} data-backdrop="1" aria-label="Close" onClick={onClose} className="absolute inset-0 cursor-default bg-navy-900/45 backdrop-blur-sm" />
       <div className={`animate-rise relative max-h-[92vh] w-full overflow-y-auto rounded-t-2xl bg-white p-5 shadow-2xl sm:rounded-2xl ${wide ? 'sm:max-w-2xl' : 'sm:max-w-md'}`}>
         <div className="mb-3 flex items-center justify-between gap-2">
           <h2 className="font-display text-lg font-bold">{title}</h2>
-          <button type="button" onClick={onClose} className="rounded-lg p-1.5 hover:bg-slate-100" aria-label="Close">
+          <button type="button" onClick={onClose} className="flex h-11 w-11 items-center justify-center rounded-lg hover:bg-slate-100" aria-label="Close">
             <X className="h-5 w-5" />
           </button>
         </div>
@@ -65,18 +97,16 @@ export function Modal({ title, onClose, children, wide = false }: { title: strin
 }
 
 export function SlideOver({ onClose, children, label }: { onClose: () => void; children: React.ReactNode; label: string }) {
+  const ref = useDialog(onClose)
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && onClose()
-    window.addEventListener('keydown', onKey)
     document.body.style.overflow = 'hidden'
     return () => {
-      window.removeEventListener('keydown', onKey)
       document.body.style.overflow = ''
     }
-  }, [onClose])
+  }, [])
   return (
-    <div className="fixed inset-0 z-[1100] flex justify-end" role="dialog" aria-modal="true" aria-label={label}>
-      <button type="button" aria-label="Close" onClick={onClose} className="absolute inset-0 cursor-default bg-navy-900/40 backdrop-blur-[2px]" />
+    <div ref={ref} className="fixed inset-0 z-[1100] flex justify-end" role="dialog" aria-modal="true" aria-label={label}>
+      <button type="button" tabIndex={-1} data-backdrop="1" aria-label="Close" onClick={onClose} className="absolute inset-0 cursor-default bg-navy-900/40 backdrop-blur-[2px]" />
       <div className="animate-slide-in relative h-full w-full max-w-3xl overflow-y-auto bg-canvas p-3 shadow-2xl sm:p-4">
         <button type="button" onClick={onClose} className="mb-2 inline-flex items-center gap-1 rounded-lg px-2 py-1 text-sm font-semibold text-slate-600 hover:bg-white">
           <X className="h-4 w-4" /> Close
@@ -96,12 +126,12 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
   const push = useCallback((msg: string, tone: 'ok' | 'error' = 'ok') => {
     const id = Date.now() + Math.random()
     setItems((xs) => [...xs, { id, msg, tone }])
-    setTimeout(() => setItems((xs) => xs.filter((x) => x.id !== id)), 3500)
+    setTimeout(() => setItems((xs) => xs.filter((x) => x.id !== id)), 6000)
   }, [])
   return (
     <ToastCtx.Provider value={push}>
       {children}
-      <div className="pointer-events-none fixed inset-x-0 bottom-20 z-[1300] flex flex-col items-center gap-2 px-4 lg:bottom-6" aria-live="polite">
+      <div className="pointer-events-none fixed inset-x-0 bottom-24 z-[1300] flex flex-col items-center gap-2 px-4 lg:bottom-6" aria-live="polite">
         {items.map((t) => (
           <div key={t.id} className={`animate-rise rounded-lg px-4 py-2 text-sm font-medium text-white shadow-lg ${t.tone === 'error' ? 'bg-red-700' : 'bg-navy-900'}`}>
             {t.msg}
@@ -134,6 +164,7 @@ function speechCtor(): (new () => SpeechRec) | null {
 
 /** Browser speech recognition (Chrome/Edge/Safari). Audio is handled by the browser; nothing is uploaded by GalliGraph. */
 export function VoiceButton({ onText, lang }: { onText: (t: string) => void; lang: 'hi-IN' | 'en-IN' }) {
+  const { l } = useLang()
   const [listening, setListening] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const rec = useRef<SpeechRec | null>(null)
@@ -156,7 +187,7 @@ export function VoiceButton({ onText, lang }: { onText: (t: string) => void; lan
     }
     r.onend = () => setListening(false)
     r.onerror = (e) => {
-      setError(e.error === 'not-allowed' ? 'Microphone permission was denied.' : 'Voice input stopped. Try again.')
+      setError(e.error === 'not-allowed' ? l('Microphone permission was denied.', 'माइक्रोफ़ोन की अनुमति नहीं मिली।') : l('Voice input stopped. Try again.', 'आवाज़ लेना रुक गया। फिर कोशिश करें।'))
       setListening(false)
     }
     setError(null)
@@ -165,7 +196,7 @@ export function VoiceButton({ onText, lang }: { onText: (t: string) => void; lan
     setListening(true)
   }
 
-  if (!Ctor) return <span className="text-xs text-slate-500">Voice input works in Chrome, Edge and Safari.</span>
+  if (!Ctor) return <span className="text-xs text-slate-500">{l('Voice input works in Chrome, Edge and Safari.', 'बोलकर लिखना Chrome, Edge और Safari में चलता है।')}</span>
   return (
     <span className="inline-flex flex-col">
       <button
@@ -176,7 +207,7 @@ export function VoiceButton({ onText, lang }: { onText: (t: string) => void; lan
       >
         {listening && <span className="absolute -left-1 -top-1 h-3 w-3 animate-ping rounded-full bg-red-500" />}
         {listening ? <MicOff className="h-4 w-4" /> : <Mic className="h-4 w-4" />}
-        {listening ? 'Stop listening' : lang === 'hi-IN' ? 'बोलकर लिखें' : 'Speak instead'}
+        {listening ? l('Stop listening', 'सुनना बंद करें') : l('Speak instead', 'बोलकर लिखें')}
       </button>
       {error && <span className="mt-1 text-xs text-red-600">{error}</span>}
     </span>
@@ -262,7 +293,7 @@ export function VoiceNoteButton({ onText, hindi }: { onText: (t: string) => void
         setHeard(t.text)
         onText(t.for_ai)
       } catch (e) {
-        setError(e instanceof Error ? e.message : 'Could not transcribe the voice note.')
+        setError(e instanceof Error ? e.message : hindi ? 'वॉइस नोट समझ नहीं पाए।' : 'Could not transcribe the voice note.')
       } finally {
         setState('idle')
       }
@@ -326,12 +357,13 @@ export function LocationPicker({
   value: { lat: number; lng: number } | null
   onChange: (v: { lat: number; lng: number } | null) => void
 }) {
+  const { l } = useLang()
   const [busy, setBusy] = useState(false)
   const [msg, setMsg] = useState<string | null>(null)
   const [center, setCenter] = useState<[number, number] | null>(null)
 
   function useGps() {
-    if (!navigator.geolocation) return setMsg('Location is not available in this browser.')
+    if (!navigator.geolocation) return setMsg(l('Location is not available in this browser.', 'इस ब्राउज़र में लोकेशन उपलब्ध नहीं है।'))
     setBusy(true)
     navigator.geolocation.getCurrentPosition(
       (p) => {
@@ -343,7 +375,7 @@ export function LocationPicker({
       },
       () => {
         setBusy(false)
-        setMsg('Could not read your location. Tap the map instead.')
+        setMsg(l('Could not read your location. Tap the map instead.', 'आपकी लोकेशन नहीं मिली। नक्शे पर टैप करें।'))
       },
       { enableHighAccuracy: true, timeout: 10000 },
     )
@@ -353,11 +385,11 @@ export function LocationPicker({
     <div className="space-y-2">
       <div className="flex flex-wrap items-center gap-2">
         <button type="button" onClick={useGps} className="btn btn-ghost" disabled={busy}>
-          {busy ? <Loader2 className="h-4 w-4 animate-spin" /> : <Crosshair className="h-4 w-4" />} Use my current location
+          {busy ? <Loader2 className="h-4 w-4 animate-spin" /> : <Crosshair className="h-4 w-4" />} {l('Use my current location', 'मेरी मौजूदा लोकेशन लें')}
         </button>
         {value && (
-          <button type="button" onClick={() => onChange(null)} className="text-xs font-semibold text-slate-600 underline">
-            Clear pin
+          <button type="button" onClick={() => onChange(null)} className="min-h-11 px-2 text-sm font-bold text-slate-700 underline">
+            {l('Remove pin', 'पिन हटाएँ')}
           </button>
         )}
       </div>
@@ -370,13 +402,13 @@ export function LocationPicker({
         </MapContainer>
         {!value && (
           <div className="pointer-events-none absolute right-2 top-2 z-[400] w-fit max-w-[70%] rounded-full bg-white/95 px-3 py-1 text-xs font-semibold shadow">
-            Tap the map to drop a pin on the exact spot
+            {l('Tap the map on the exact spot', 'नक्शे पर सही जगह टैप करें')}
           </div>
         )}
       </div>
       {value && (
         <p className="text-xs text-slate-600">
-          Pinned at <span className="font-mono">{value.lat.toFixed(5)}, {value.lng.toFixed(5)}</span>. Officers see the exact spot; the public map shows it only to ~100 m.
+          {l('Pin added. Officers see the exact spot. The public map shows it only to about 100 m.', 'पिन लग गया। अधिकारी सही जगह देखेंगे। सार्वजनिक नक्शे पर लगभग 100 मीटर तक ही दिखेगा।')}
         </p>
       )}
       {msg && <p className="text-xs text-red-600">{msg}</p>}

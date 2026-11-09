@@ -262,6 +262,7 @@ export interface TrackResult {
   secondary_department: string | null
   report_count: number
   tier: Tier | null
+  safety_risk: boolean
   deadline: Deadline
   escalated: boolean
   message: string
@@ -413,6 +414,48 @@ export interface Health {
   trained_model: { source: string; trained_on: number; test_accuracy: number } | null
 }
 
+export interface SubmitBody {
+  text: string
+  lat?: number
+  lng?: number
+  channel?: string
+  image_base64?: string
+  image_media_type?: string
+  category_hint?: string
+  phone?: string
+  sms_opt_in?: boolean
+}
+
+export interface DangerSpot {
+  id: number
+  category: Category
+  sub_type: string
+  label: string
+  locality: string | null
+  lat: number
+  lng: number
+  reports: number
+  confirmations: number
+  first_reported: string
+}
+
+export interface RepeatFailure {
+  category: Category
+  category_label: string
+  sub_type: string
+  locality: string | null
+  location_detail: string | null
+  department: string
+  failures: number
+  returned: number
+  disputed: number
+  median_days_held: number | null
+  last_repaired_by: string | null
+  latest_issue_id: number
+  still_open: boolean
+  history: { id: number; first_reported: string; resolved_at: string | null; status: Status }[]
+}
+
 export class ApiError extends Error {
   status: number
   constructor(status: number, message: string) {
@@ -465,6 +508,8 @@ export const api = {
   me: () => request<User>('/auth/me'),
   publicMap: (category?: string) => request<MapPoint[]>(`/public/map${category ? `?category=${category}` : ''}`),
   publicSummary: () => request<PublicSummary>('/public/summary'),
+  dangers: () => request<DangerSpot[]>('/public/dangers'),
+  repeatFailures: () => request<RepeatFailure[]>('/repeat-failures'),
   meta: () => request<Meta>('/meta'),
   stats: () => request<Stats>('/stats'),
   alerts: () => request<Alert[]>('/alerts'),
@@ -512,17 +557,7 @@ export const api = {
   reply: (code: string, text: string) =>
     request<TrackResult>(`/track/${encodeURIComponent(code)}/reply`, { method: 'POST', body: JSON.stringify({ text }) }),
   performance: (days = 30) => request<Performance>(`/performance?days=${days}`),
-  submit: (body: {
-    text: string
-    lat?: number
-    lng?: number
-    channel?: string
-    image_base64?: string
-    image_media_type?: string
-    category_hint?: string
-    phone?: string
-    sms_opt_in?: boolean
-  }) => request<Receipt>('/complaints', { method: 'POST', body: JSON.stringify(body) }),
+  submit: (body: SubmitBody) => request<Receipt>('/complaints', { method: 'POST', body: JSON.stringify(body) }),
   notifyOptIn: (code: string, phone: string) =>
     request<{ ok: boolean; to: string }>(`/track/${encodeURIComponent(code)}/notify`, { method: 'POST', body: JSON.stringify({ phone }) }),
   notifyOptOut: (code: string) => request<{ ok: boolean }>(`/track/${encodeURIComponent(code)}/notify`, { method: 'DELETE' }),

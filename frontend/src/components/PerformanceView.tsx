@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
 import { api, type Issue, type Performance, type PerfSummary } from '../api'
 import { ESCALATION_LABEL, deadlineChip, fmtHours, priorityTone } from '../ui'
+import { RepeatFailures } from './RepeatFailures'
 import { Card, Kpi as ShellKpi } from './Shell'
 
 function pct(v: number | null) {
@@ -83,6 +84,8 @@ export function PerformanceView({ refreshKey, onSelect }: { refreshKey: number; 
         <Kpi label="Closures flagged" value={o.awaiting_verification} hint="photo did not verify" cls={o.awaiting_verification ? 'text-purple-700' : undefined} />
       </div>
 
+      <RepeatFailures onSelect={onSelect} />
+
       <Card title="Department scorecard">
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
@@ -128,7 +131,7 @@ export function PerformanceView({ refreshKey, onSelect }: { refreshKey: number; 
         </Card>
 
         <Card title="Areas with the worst backlog">
-          <div className="max-h-64 overflow-y-auto">
+          <div className="max-h-64 overflow-y-auto" tabIndex={0}>
             <table className="w-full text-sm">
               <thead className="sticky top-0 bg-slate-50 text-xs uppercase tracking-wide text-slate-500">
                 <tr>
