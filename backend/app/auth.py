@@ -1,7 +1,9 @@
 """Official accounts, sessions and rate limits.
 
 * Passwords: scrypt with a per-user random salt (Python standard library, no extra dependency).
-* Sessions: an HMAC-signed token in an httpOnly, SameSite=Lax cookie. No server-side session store.
+* Sessions: an HMAC-signed token in an httpOnly, SameSite=Strict cookie. Each token carries the user's
+  session_version; logging out or a password reset bumps it, which revokes every existing session.
+* Login: rate limited per IP and per account, and equally slow whether or not the username exists.
 * Roles: "official" (work on issues) and "supervisor" (also accept/reject flagged closures, close manually).
 """
 import base64
@@ -36,7 +38,8 @@ CREATE TABLE IF NOT EXISTS users (
     display_name  TEXT NOT NULL,
     department    TEXT,
     created_at    TEXT NOT NULL,
-    last_login_at TEXT
+    last_login_at TEXT,
+    session_version INTEGER NOT NULL DEFAULT 0
 );
 """
 
@@ -48,7 +51,11 @@ def _key() -> bytes:
     if _secret is None:
         env = os.getenv("CIVICPULSE_SECRET_KEY")
         if env:
+            if config.PRODUCTION and len(env) < 32:
+                raise RuntimeError("CIVICPULSE_SECRET_KEY must be at least 32 characters in production")
             _secret = env.encode()
+        elif config.PRODUCTION:
+            raise RuntimeError("CIVICPULSE_SECRET_KEY must be set in production (CIVICPULSE_ENV=production)")
         else:
             _secret = secrets.token_bytes(32)
             log.warning("CIVICPULSE_SECRET_KEY not set: using a random key, so logins reset when the server restarts")
@@ -63,6 +70,10 @@ def hash_password(password: str) -> str:
     return f"scrypt${base64.b64encode(salt).decode()}${base64.b64encode(digest).decode()}"
 
 
+# Checked against when the username does not exist, so a failed login takes the same time either way
+_DUMMY_HASH = hash_password(secrets.token_hex(16))
+
+
 def verify_password(password: str, stored: str) -> bool:
     try:
         _, salt_b64, digest_b64 = stored.split("$")
@@ -75,7 +86,10 @@ def verify_password(password: str, stored: str) -> bool:
 # ----------------------------------------------------------------------------- users
 
 def init_users(conn: sqlite3.Connection) -> None:
+    _key()  # fail fast on a missing production secret
     conn.executescript(USERS_SCHEMA)
+    if "session_version" not in {r["name"] for r in conn.execute("PRAGMA table_info(users)")}:
+        conn.execute("ALTER TABLE users ADD COLUMN session_version INTEGER NOT NULL DEFAULT 0")
     # Bootstrap the first supervisor account from the environment (never hard-coded).
     username = os.getenv("CIVICPULSE_ADMIN_USER", "admin")
     password = os.getenv("CIVICPULSE_ADMIN_PASSWORD")
@@ -100,10 +114,16 @@ def create_user(conn: sqlite3.Connection, username: str, password: str, role: st
 def authenticate(username: str, password: str) -> dict | None:
     with db.session() as conn:
         row = conn.execute("SELECT * FROM users WHERE username = ?", (username.strip().lower(),)).fetchone()
-        if not row or not verify_password(password, row["password_hash"]):
+        ok = verify_password(password, row["password_hash"] if row else _DUMMY_HASH)
+        if not row or not ok:
             return None
         conn.execute("UPDATE users SET last_login_at = ? WHERE id = ?", (iso(utcnow()), row["id"]))
         return public_user(row)
+
+
+def revoke_sessions(conn: sqlite3.Connection, user_id: int) -> None:
+    """Sign the user out everywhere (logout, password reset)."""
+    conn.execute("UPDATE users SET session_version = session_version + 1 WHERE id = ?", (user_id,))
 
 
 def public_user(row) -> dict:
@@ -114,13 +134,15 @@ def public_user(row) -> dict:
 # ----------------------------------------------------------------------------- sessions
 
 def make_token(user: dict) -> str:
+    with db.session() as conn:
+        version = conn.execute("SELECT session_version FROM users WHERE id = ?", (user["id"],)).fetchone()[0]
     payload = base64.urlsafe_b64encode(json.dumps(
-        {"uid": user["id"], "exp": int(time.time()) + SESSION_HOURS * 3600}).encode()).decode()
+        {"uid": user["id"], "v": version, "exp": int(time.time()) + SESSION_HOURS * 3600}).encode()).decode()
     sig = hmac.new(_key(), payload.encode(), hashlib.sha256).hexdigest()
     return f"{payload}.{sig}"
 
 
-def read_token(token: str | None) -> int | None:
+def read_token(token: str | None) -> tuple[int, int] | None:
     if not token or "." not in token:
         return None
     payload, sig = token.rsplit(".", 1)
@@ -131,16 +153,21 @@ def read_token(token: str | None) -> int | None:
         data = json.loads(base64.urlsafe_b64decode(payload.encode()))
     except (ValueError, json.JSONDecodeError):
         return None
-    return data["uid"] if data.get("exp", 0) > time.time() else None
+    if not isinstance(data, dict) or data.get("exp", 0) <= time.time():
+        return None
+    return data.get("uid"), data.get("v", 0)
 
 
 def current_user(request: Request) -> dict | None:
-    uid = read_token(request.cookies.get(COOKIE))
-    if uid is None:
+    tok = read_token(request.cookies.get(COOKIE))
+    if tok is None:
         return None
+    uid, version = tok
     with db.session() as conn:
         row = conn.execute("SELECT * FROM users WHERE id = ?", (uid,)).fetchone()
-    return public_user(row) if row else None
+    if not row or row["session_version"] != version:
+        return None  # signed out, password changed or account removed
+    return public_user(row)
 
 
 def require_official(request: Request) -> dict:
@@ -158,6 +185,8 @@ def require_supervisor(request: Request) -> dict:
 
 
 def cookie_secure(request: Request) -> bool:
+    if config.PRODUCTION:
+        return True
     if os.getenv("CIVICPULSE_COOKIE_SECURE") is not None:
         return os.getenv("CIVICPULSE_COOKIE_SECURE") == "1"
     return request.headers.get("x-forwarded-proto", request.url.scheme) == "https"
@@ -173,10 +202,13 @@ class RateLimiter:
         self.hits: dict[str, deque] = defaultdict(deque)
         self.lock = threading.Lock()
 
-    def check(self, request: Request) -> None:
-        ip = client_ip(request)
+    def check(self, request: Request, key: str | None = None) -> None:
+        ip = key or client_ip(request)
         now = time.monotonic()
         with self.lock:
+            if len(self.hits) > 50_000:  # forget idle clients so the table cannot grow without bound
+                for k in [k for k, q in self.hits.items() if not q or now - q[-1] > self.window]:
+                    del self.hits[k]
             q = self.hits[ip]
             while q and now - q[0] > self.window:
                 q.popleft()
@@ -195,3 +227,5 @@ def client_ip(request: Request) -> str:
 
 complaint_limiter = RateLimiter(limit=int(os.getenv("CIVICPULSE_COMPLAINTS_PER_10MIN", 10)), window_s=600)
 login_limiter = RateLimiter(limit=8, window_s=300)
+# Slows password guessing against one account from many addresses
+account_login_limiter = RateLimiter(limit=10, window_s=900)

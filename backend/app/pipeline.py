@@ -11,7 +11,7 @@ from .dedup import DedupResult, find_match, merged_embedding
 from .embed import embed
 from .extract import extract
 from .geo import geocode, spot_keys
-from .media import save_image
+from .media import clean_image, store_image
 from .taxonomy import CATEGORIES, department_for
 from .timeutil import iso, parse, utcnow
 
@@ -64,7 +64,10 @@ def ingest(conn: sqlite3.Connection, *, text: str, lat: float | None = None, lng
            category_hint: str | None = None, sms_opt_in: bool = False) -> dict:
     t0 = time.perf_counter()
     created_at = iso(parse(created_at)) if created_at else iso(utcnow())
-    image_path = save_image(image_b64, image_media_type) if image_b64 else None  # validates before any AI spend
+    image_path = None
+    if image_b64:  # validates before any AI spend; the AI only ever sees the metadata-free copy
+        image_b64, image_media_type = clean_image(image_b64, image_media_type)
+        image_path = store_image(image_b64, image_media_type)
 
     # 1. Extract structured fields
     ex, extractor = extract(text, image_b64, image_media_type)

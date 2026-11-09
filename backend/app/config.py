@@ -50,6 +50,9 @@ SPIKE_Z_THRESHOLD = float(os.getenv("SPIKE_Z_THRESHOLD", 3.0))
 SPIKE_MIN_COUNT = int(os.getenv("SPIKE_MIN_COUNT", 4))
 
 # --- Deployment -------------------------------------------------------------
+# "production" turns on the strict checks: a real secret key is required, API docs are hidden,
+# session cookies are always Secure and HSTS is sent.
+PRODUCTION = os.getenv("CIVICPULSE_ENV", "development").lower() == "production"
 # Behind a hosting proxy (Render, Railway, nginx) set 1 so rate limits see the real client IP.
 TRUST_PROXY = os.getenv("CIVICPULSE_TRUST_PROXY", "0") == "1"
 # Show a "demo data" banner on the citizen portal when the database holds synthetic complaints.
@@ -58,3 +61,12 @@ DEMO_DATA = os.getenv("CIVICPULSE_DEMO_DATA", "1") == "1"
 FRONTEND_DIST = Path(os.getenv("CIVICPULSE_FRONTEND_DIST", PROJECT_DIR / "frontend" / "dist"))
 # Comma-separated origins allowed to call the API from another domain (empty = same origin only).
 CORS_ORIGINS = [o.strip() for o in os.getenv("CIVICPULSE_CORS_ORIGINS", "").split(",") if o.strip()]
+# Largest request body the API accepts (photos and voice notes arrive base64-encoded in JSON).
+MAX_BODY_BYTES = int(os.getenv("CIVICPULSE_MAX_BODY_MB", 14)) * 1024 * 1024
+
+# --- Privacy / data retention ----------------------------------------------
+# Citizens' phone numbers are only needed to send the "resolved" message, so they are erased this
+# many days after the issue is closed. Unsent WhatsApp drafts (phone + photo) are erased after 1 day.
+CONTACT_RETENTION_DAYS = int(os.getenv("CIVICPULSE_CONTACT_RETENTION_DAYS", 30))
+# Evidence photos of closed issues are deleted after this many days (0 = keep them).
+PHOTO_RETENTION_DAYS = int(os.getenv("CIVICPULSE_PHOTO_RETENTION_DAYS", 0))

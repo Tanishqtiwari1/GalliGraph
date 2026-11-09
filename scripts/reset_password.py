@@ -30,7 +30,9 @@ def main() -> None:
         sys.exit("Passwords do not match.")
     with db.session() as conn:
         conn.execute("UPDATE users SET password_hash = ? WHERE username = ?", (auth.hash_password(password), username))
-    print(f"Password for '{username}' updated. Existing sessions stay valid until they expire (12 h).")
+        uid = conn.execute("SELECT id FROM users WHERE username = ?", (username,)).fetchone()["id"]
+        auth.revoke_sessions(conn, uid)
+    print(f"Password for '{username}' updated. Every open session for this account has been signed out.")
 
 
 if __name__ == "__main__":

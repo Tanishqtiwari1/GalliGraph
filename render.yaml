@@ -6,6 +6,8 @@ services:
     plan: free
     healthCheckPath: /api/health
     envVars:
+      - key: CIVICPULSE_ENV
+        value: production     # secure cookies, HSTS, no /docs, refuses to start without a secret key
       - key: CIVICPULSE_SECRET_KEY
         generateValue: true
       - key: CIVICPULSE_ADMIN_USER

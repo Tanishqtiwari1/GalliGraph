@@ -204,10 +204,29 @@ export function TrackView({ initialCode }: { initialCode?: string }) {
               </div>
             </form>
           )}
-          {(res.sms_opt_in || smsTo) && !closed && (
-            <p className="flex items-center gap-2 text-sm text-emerald-800">
-              <MessageSquareText className="h-5 w-5" aria-hidden /> {l('You will get an SMS when this is fixed.', 'ठीक होने पर आपको SMS मिलेगा।')}
-            </p>
+          {(res.sms_opt_in || smsTo) && (
+            <div className="card p-4 text-sm">
+              <p className="flex items-center gap-2">
+                <MessageSquareText className="h-5 w-5 shrink-0 text-brand-700" aria-hidden />
+                {closed ? l('Your number is saved for updates on this complaint.', 'इस शिकायत की सूचना के लिए आपका नंबर सहेजा गया है।') : l('You will get an SMS when this is fixed.', 'ठीक होने पर आपको SMS मिलेगा।')}
+              </p>
+              <button
+                type="button"
+                onClick={async () => {
+                  try {
+                    await api.notifyOptOut(res.tracking_code)
+                    setSmsTo(null)
+                    setRes({ ...res, sms_opt_in: false })
+                    toast(l('Your number was deleted. You will not get messages about this complaint.', 'आपका नंबर हटा दिया गया। इस शिकायत के संदेश अब नहीं आएँगे।'))
+                  } catch (err) {
+                    toast(err instanceof Error ? err.message : l('Could not delete the number', 'नंबर हटाया नहीं जा सका'), 'error')
+                  }
+                }}
+                className="mt-1 min-h-11 font-bold text-slate-700 underline"
+              >
+                {l('Stop messages and delete my number', 'संदेश बंद करें और मेरा नंबर हटाएँ')}
+              </button>
+            </div>
           )}
 
           <div className="card p-5">
