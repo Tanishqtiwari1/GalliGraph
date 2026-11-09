@@ -13,7 +13,7 @@ from typing import Literal
 from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel, Field
 
-from . import auth, db, sla
+from . import auth, db, sla, trends
 from .geo import haversine_m, locality_by_id
 from .pipeline import rescore_issue
 from .taxonomy import CATEGORIES, department_for
@@ -233,6 +233,14 @@ def activity(limit: int = 40, user: dict = Official):
     args.append(min(limit, 200))
     with db.session() as conn:
         return [dict(r) for r in conn.execute(sql, args)]
+
+
+# ----------------------------------------------------------------------------- repairs that did not last
+
+@router.get("/repeat-failures")
+def repeat_failures(user: dict = Official):
+    with db.session() as conn:
+        return trends.repeat_failures(conn, scope(user))
 
 
 # ----------------------------------------------------------------------------- SLA centre

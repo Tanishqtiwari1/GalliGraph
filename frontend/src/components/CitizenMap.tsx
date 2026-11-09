@@ -1,4 +1,4 @@
-import { CheckCircle2, ChevronRight, Flame, Landmark, MapPin, Search, ThumbsUp, TriangleAlert, Users, X } from 'lucide-react'
+import { CheckCircle2, ChevronRight, Flame, Landmark, MapPin, ThumbsUp, TriangleAlert, Users, X } from 'lucide-react'
 import { useEffect, useMemo, useState } from 'react'
 import { CircleMarker, MapContainer, TileLayer, Tooltip, useMap } from 'react-leaflet'
 import { api, type Category, type MapPoint, type Meta, type PublicSummary } from '../api'
@@ -21,7 +21,7 @@ function FlyTo({ center }: { center: [number, number] | null }) {
 }
 
 export function CitizenMap({ meta, onReport }: { meta: Meta | null; onReport: (c?: Category) => void }) {
-  const { lang } = useLang()
+  const { lang, l, place, department } = useLang()
   const [points, setPoints] = useState<MapPoint[]>([])
   const [summary, setSummary] = useState<PublicSummary | null>(null)
   const [filter, setFilter] = useState<Filter>('active')
@@ -78,32 +78,29 @@ export function CitizenMap({ meta, onReport }: { meta: Meta | null; onReport: (c
     <div className="space-y-4">
       {/* Search + filters */}
       <div className="space-y-2">
-        <label className="card flex items-center gap-2 px-3 py-2">
-          <Search className="h-4 w-4 text-slate-400" aria-hidden />
-          <select
+        <label htmlFor="map-area" className="block text-sm font-bold">{l('Area', 'क्षेत्र')}</label>
+        <select
+            id="map-area"
             value={area}
             onChange={(e) => {
               setArea(e.target.value)
               setSelected(null)
             }}
-            className="w-full bg-transparent text-sm outline-none"
-            aria-label="Choose an area"
+            className="field"
           >
-            <option value="">All of {CITY}</option>
+            <option value="">{l(`All of ${CITY}`, 'पूरा जयपुर')}</option>
             {meta?.localities.map((l) => (
               <option key={l.id} value={l.id}>
                 {l.name}
               </option>
             ))}
-          </select>
-          {loc && <span className="pill pill-zone">Ward</span>}
-        </label>
+        </select>
         <div className="flex gap-2 overflow-x-auto pb-1">
           {(
             [
-              ['hotspots', 'Critical hotspots', 'bg-red-50 text-red-700 ring-red-200', 'bg-red-600 text-white ring-red-600'],
-              ['active', 'Active', 'bg-white text-slate-700 ring-slate-300', 'bg-brand-700 text-white ring-brand-700'],
-              ['resolved', 'Resolved', 'bg-white text-slate-700 ring-slate-300', 'bg-brand-700 text-white ring-brand-700'],
+              ['hotspots', l('Most urgent', 'सबसे ज़रूरी'), 'bg-red-50 text-red-700 ring-red-300', 'bg-red-700 text-white ring-red-700'],
+              ['active', l('Open', 'खुली'), 'bg-white text-slate-800 ring-slate-400', 'bg-brand-700 text-white ring-brand-700'],
+              ['resolved', l('Fixed', 'ठीक हुई'), 'bg-white text-slate-800 ring-slate-400', 'bg-brand-700 text-white ring-brand-700'],
             ] as const
           ).map(([id, label, idle, on]) => (
             <button
@@ -111,36 +108,36 @@ export function CitizenMap({ meta, onReport }: { meta: Meta | null; onReport: (c
               type="button"
               onClick={() => setFilter(id)}
               aria-pressed={filter === id}
-              className={`inline-flex shrink-0 items-center gap-1.5 rounded-full px-3.5 py-1.5 text-sm font-semibold ring-1 ${filter === id ? on : idle}`}
+              className={`inline-flex min-h-11 shrink-0 items-center gap-1.5 rounded-full px-4 text-sm font-bold ring-1 ${filter === id ? on : idle}`}
             >
               {id === 'hotspots' ? <span className="h-2 w-2 rounded-full bg-current" /> : id === 'active' ? <TriangleAlert className="h-3.5 w-3.5" /> : <CheckCircle2 className="h-3.5 w-3.5" />}
               {label} ({counts[id]})
             </button>
           ))}
-          <div className="ml-auto flex shrink-0 overflow-hidden rounded-full text-xs font-semibold ring-1 ring-slate-300" role="group" aria-label="Map style">
+          <div className="ml-auto flex shrink-0 overflow-hidden rounded-full text-sm font-bold ring-1 ring-slate-400" role="group" aria-label={l('Map style', 'नक्शे का प्रकार')}>
             {(['points', 'heat'] as const).map((v) => (
               <button
                 key={v}
                 type="button"
                 onClick={() => setView(v)}
                 aria-pressed={view === v}
-                className={`px-3 py-1.5 ${view === v ? 'bg-navy-900 text-white' : 'bg-white text-slate-600'}`}
+                className={`min-h-11 px-4 ${view === v ? 'bg-navy-900 text-white' : 'bg-white text-slate-700'}`}
               >
-                {v === 'points' ? 'Issues' : 'Heat'}
+                {v === 'points' ? l('Points', 'बिंदु') : l('Heat', 'घनत्व')}
               </button>
             ))}
           </div>
         </div>
       </div>
 
-      <div className="flex gap-1.5 overflow-x-auto pb-1" role="group" aria-label="Problem type">
+      <div className="flex gap-1.5 overflow-x-auto pb-1" role="group" aria-label={l('Problem type', 'समस्या का प्रकार')}>
         <button
           type="button"
           onClick={() => setCat('')}
           aria-pressed={cat === ''}
-          className={`shrink-0 rounded-full px-3 py-1 text-xs font-semibold ring-1 ${cat === '' ? 'bg-navy-900 text-white ring-navy-900' : 'bg-white text-slate-700 ring-slate-300'}`}
+          className={`min-h-11 shrink-0 rounded-full px-4 text-sm font-bold ring-1 ${cat === '' ? 'bg-navy-900 text-white ring-navy-900' : 'bg-white text-slate-800 ring-slate-400'}`}
         >
-          All types
+          {l('All types', 'सभी प्रकार')}
         </button>
         {(['road_damage', 'garbage', 'drainage', 'water_supply', 'streetlight', 'traffic', 'stray_animals', 'electricity'] as Category[]).map((c) => {
           const Icon = CATEGORY_ICON[c]
@@ -150,7 +147,7 @@ export function CitizenMap({ meta, onReport }: { meta: Meta | null; onReport: (c
               type="button"
               onClick={() => setCat(cat === c ? '' : c)}
               aria-pressed={cat === c}
-              className={`inline-flex shrink-0 items-center gap-1 rounded-full px-3 py-1 text-xs font-semibold ring-1 ${cat === c ? 'bg-navy-900 text-white ring-navy-900' : 'bg-white text-slate-700 ring-slate-300'}`}
+              className={`inline-flex min-h-11 shrink-0 items-center gap-1 rounded-full px-4 text-sm font-bold ring-1 ${cat === c ? 'bg-navy-900 text-white ring-navy-900' : 'bg-white text-slate-800 ring-slate-400'}`}
             >
               <Icon className="h-3.5 w-3.5" /> {lang === 'hi' ? CATEGORY_HI[c] : CATEGORY_META[c].label}
             </button>
@@ -191,36 +188,35 @@ export function CitizenMap({ meta, onReport }: { meta: Meta | null; onReport: (c
                 <MapPin className="h-5 w-5" />
               </span>
               <div className="min-w-0 flex-1">
-                <div className="truncate font-semibold">{selected.label}</div>
+                <div className="font-bold leading-snug">{place(selected.label, selected.category)}</div>
                 <div className="mt-1 flex flex-wrap gap-1">
                   {selected.status === 'resolved' ? (
-                    <span className="pill pill-ok">Fixed in {selected.days_open} days</span>
+                    <span className="pill pill-ok">{l(`Fixed in ${selected.days_open} days`, `${selected.days_open} दिन में ठीक`)}</span>
                   ) : (
-                    <span className={`pill ${TIER_PILL[selected.tier].cls}`}>{TIER_PILL[selected.tier].label}</span>
+                    <span className={`pill ${TIER_PILL[selected.tier].cls}`}>{l(TIER_PILL[selected.tier].label, { critical: 'बहुत ज़रूरी', high: 'ज़रूरी', medium: 'मध्यम', low: 'सामान्य' }[selected.tier])}</span>
                   )}
-                  {selected.overdue && <span className="pill pill-crit">Past deadline</span>}
+                  {selected.overdue && <span className="pill pill-crit">{l('Past deadline', 'समय-सीमा पार')}</span>}
                 </div>
                 <p className="mt-1 text-xs text-slate-600">
-                  {selected.reports} citizen report{selected.reports > 1 ? 's' : ''} merged
-                  {selected.confirmations ? ` · ${selected.confirmations} neighbours confirmed` : ''}
+                  {l(`${selected.reports + selected.confirmations} people reported this`, `${selected.reports + selected.confirmations} लोगों ने बताया`)}
                 </p>
               </div>
-              <button type="button" onClick={() => setSelected(null)} className="rounded p-1 hover:bg-slate-100" aria-label="Close">
-                <X className="h-4 w-4" />
+              <button type="button" onClick={() => setSelected(null)} className="flex h-11 w-11 shrink-0 items-center justify-center rounded hover:bg-slate-100" aria-label={l('Close', 'बंद करें')}>
+                <X className="h-5 w-5" aria-hidden />
               </button>
             </div>
             <div className="mt-2 flex items-center justify-between gap-2 rounded-lg bg-surface-low px-3 py-2 text-xs">
               <span className="inline-flex min-w-0 items-center gap-1.5 font-semibold text-slate-700">
-                <Landmark className="h-3.5 w-3.5 shrink-0" /> <span className="truncate">{selected.department}</span>
+                <Landmark className="h-3.5 w-3.5 shrink-0" /> <span className="truncate">{department(selected.department)}</span>
               </span>
               {selected.status !== 'resolved' && (
                 <button
                   type="button"
                   disabled={confirmed.includes(selected.id)}
                   onClick={() => plusOne(selected)}
-                  className="btn btn-primary min-h-0 shrink-0 px-2.5 py-1 text-xs"
+                  className="btn btn-primary shrink-0 text-sm"
                 >
-                  <ThumbsUp className="h-3.5 w-3.5" /> {confirmed.includes(selected.id) ? 'Confirmed' : '+1'}
+                  <ThumbsUp className="h-3.5 w-3.5" /> {confirmed.includes(selected.id) ? l('Confirmed', 'पुष्टि हुई') : l('I saw this too', 'मैंने भी देखा')}
                 </button>
               )}
             </div>
@@ -228,24 +224,35 @@ export function CitizenMap({ meta, onReport }: { meta: Meta | null; onReport: (c
         )}
       </div>
 
+      <details className="card p-4">
+        <summary className="min-h-11 cursor-pointer text-sm font-bold">{l(`See these ${shown.length} problems as a list`, `इन ${shown.length} समस्याओं को सूची में देखें`)}</summary>
+        <ul className="mt-2 divide-y divide-slate-200">
+          {shown.slice(0, 40).map((p) => (
+            <li key={p.id} className="py-2 text-sm">
+              <b>{place(p.label, p.category)}</b> · {department(p.department)}
+              {p.overdue && <b className="text-red-700"> · {l('Past deadline', 'समय-सीमा पार')}</b>}
+            </li>
+          ))}
+        </ul>
+      </details>
+
       {/* Ward performance & hotspots */}
       <section className="space-y-4">
         <div className="flex items-end justify-between">
           <div>
-            <h2 className="font-display text-xl font-bold sm:text-2xl">{loc ? `${loc.name} performance` : 'Ward performance & hotspots'}</h2>
+            <h2 className="font-display text-xl font-bold sm:text-2xl">{loc ? l(`${loc.name}: how it is doing`, `${loc.name}: काम कैसा है`) : l('How each area is doing', 'हर क्षेत्र का काम कैसा है')}</h2>
             <p className="text-sm text-slate-600">
-              {loc ? `${areaStats?.open ?? 0} active issues · ${areaStats?.overdue ?? 0} past deadline` : `${counts.active} active civic issues across ${CITY}`}
+              {loc ? l(`${areaStats?.open ?? 0} open · ${areaStats?.overdue ?? 0} past deadline`, `${areaStats?.open ?? 0} खुली · ${areaStats?.overdue ?? 0} समय-सीमा पार`) : l(`${counts.active} open problems across ${CITY}`, `पूरे जयपुर में ${counts.active} खुली समस्याएँ`)}
             </p>
           </div>
           <button type="button" onClick={() => onReport()} className="btn btn-primary hidden sm:inline-flex">
-            Report a problem
+            {l('Report a problem', 'समस्या दर्ज करें')}
           </button>
         </div>
 
         <div className="card space-y-2 p-4">
           <div className="flex items-center justify-between text-sm font-semibold">
-            <span>Grievance distribution</span>
-            <span className="text-xs text-slate-500">open issues by type</span>
+            <span>{l('Open problems by type', 'प्रकार के अनुसार खुली समस्याएँ')}</span>
           </div>
           <div className="flex h-3 overflow-hidden rounded-full bg-slate-100">
             {dist.map((d) => (
@@ -263,9 +270,9 @@ export function CitizenMap({ meta, onReport }: { meta: Meta | null; onReport: (c
         </div>
 
         <div>
-          <SectionHeader title="Vulnerability hotspot clusters" right={<span className="text-xs font-semibold text-saffron-700">{hotspots.length} clusters</span>} />
+          <SectionHeader title={l('Places with repeated problems', 'बार-बार समस्या वाली जगहें')} />
           <ul className="space-y-2">
-            {hotspots.length === 0 && <li className="card p-4 text-sm text-slate-500">No recurring hotspot here.</li>}
+            {hotspots.length === 0 && <li className="card p-4 text-sm text-slate-500">{l('No repeated problems here.', 'यहाँ बार-बार की समस्या नहीं।')}</li>}
             {hotspots.map((h) => {
               const Icon = CATEGORY_ICON[h.category]
               return (
@@ -284,10 +291,10 @@ export function CitizenMap({ meta, onReport }: { meta: Meta | null; onReport: (c
                     <span className="min-w-0 flex-1">
                       <span className="flex flex-wrap items-center gap-2">
                         <span className="font-semibold">{h.locality}</span>
-                        <span className="rounded bg-red-600 px-1.5 py-0.5 text-[11px] font-bold text-white">{h.reports} reports</span>
+                        <span className="rounded bg-red-700 px-1.5 py-0.5 text-xs font-bold text-white">{l(`${h.reports} reports`, `${h.reports} शिकायतें`)}</span>
                       </span>
                       <span className="text-xs text-slate-600">
-                        {h.issues} recurring {h.category_label.toLowerCase()} issues in 90 days
+                        {l(`${h.issues} ${h.category_label.toLowerCase()} problems in 90 days`, `90 दिन में ${CATEGORY_HI[h.category]} की ${h.issues} समस्याएँ`)}
                       </span>
                     </span>
                     <ChevronRight className="h-4 w-4 text-slate-400" />
@@ -301,17 +308,17 @@ export function CitizenMap({ meta, onReport }: { meta: Meta | null; onReport: (c
         <div className="card overflow-hidden">
           <div className="flex items-center gap-2 border-b border-slate-100 px-4 py-3">
             <Flame className="h-4 w-4 text-brand-700" />
-            <h3 className="text-sm font-semibold">How each department is doing</h3>
+            <h3 className="text-sm font-semibold">{l('How each department is doing', 'हर विभाग का काम')}</h3>
           </div>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead className="bg-slate-50 text-xs uppercase tracking-wide text-slate-500">
                 <tr>
-                  <th className="px-3 py-2 text-left font-semibold">Department</th>
-                  <th className="px-3 py-2 text-right font-semibold">Open</th>
-                  <th className="hidden px-3 py-2 text-right font-semibold sm:table-cell">Fixed</th>
-                  <th className="hidden px-3 py-2 text-right font-semibold sm:table-cell">Typical fix</th>
-                  <th className="px-3 py-2 text-right font-semibold">On time</th>
+                  <th className="px-3 py-2 text-left font-semibold">{l('Department', 'विभाग')}</th>
+                  <th className="px-3 py-2 text-right font-semibold">{l('Open', 'खुली')}</th>
+                  <th className="hidden px-3 py-2 text-right font-semibold sm:table-cell">{l('Fixed', 'ठीक')}</th>
+                  <th className="hidden px-3 py-2 text-right font-semibold sm:table-cell">{l('Typical fix', 'आम समय')}</th>
+                  <th className="px-3 py-2 text-right font-semibold">{l('On time', 'समय पर')}</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100">
@@ -319,7 +326,7 @@ export function CitizenMap({ meta, onReport }: { meta: Meta | null; onReport: (c
                   .filter((d) => d.open + d.resolved > 0)
                   .map((d) => (
                     <tr key={d.department}>
-                      <td className="px-3 py-2">{d.department}</td>
+                      <td className="px-3 py-2">{department(d.department)}</td>
                       <td className="px-3 py-2 text-right tnum">{d.open}</td>
                       <td className="hidden px-3 py-2 text-right tnum sm:table-cell">{d.resolved}</td>
                       <td className="hidden px-3 py-2 text-right tnum sm:table-cell">{d.median_resolution_hours === null ? '—' : fmtHours(d.median_resolution_hours)}</td>
@@ -334,7 +341,7 @@ export function CitizenMap({ meta, onReport }: { meta: Meta | null; onReport: (c
             </table>
           </div>
           <p className="flex items-center gap-1.5 border-t border-slate-100 px-4 py-2 text-xs text-slate-500">
-            <Users className="h-3.5 w-3.5" /> Locations are shown to ~100 m. Complaint text and photos stay private.
+            <Users className="h-3.5 w-3.5" /> {l('Locations are shown to about 100 metres. Complaint text and photos stay private.', 'जगहें लगभग 100 मीटर तक दिखती हैं। शिकायत का पाठ और फ़ोटो निजी रहते हैं।')}
           </p>
         </div>
       </section>

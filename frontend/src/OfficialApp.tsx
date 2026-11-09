@@ -153,7 +153,7 @@ function OfficialInner() {
           <Logo size={36} />
           <div className="leading-tight">
             <div className="font-display text-lg font-extrabold text-white">{BRAND}</div>
-            <div className="text-[11px] text-slate-400">Operations · {CITY} / JMC</div>
+            <div className="text-xs text-slate-400">Operations · {CITY} / JMC</div>
           </div>
         </div>
         <nav className="flex-1 space-y-0.5 px-2" aria-label="Sections">
@@ -169,7 +169,7 @@ function OfficialInner() {
             >
               <Icon className="h-4 w-4" />
               <span className="flex-1 text-left">{label}</span>
-              {!!badge && <span className={`rounded-full px-1.5 text-[11px] font-bold ${tab === id ? 'bg-white/20' : 'bg-red-600 text-white'}`}>{badge}</span>}
+              {!!badge && <span className={`rounded-full px-1.5 text-xs font-bold ${tab === id ? 'bg-navy-900 text-white' : 'bg-red-700 text-white'}`}>{badge}</span>}
             </button>
           ))}
         </nav>
@@ -178,13 +178,13 @@ function OfficialInner() {
             <span className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-600 text-xs font-bold text-white">{initials(user.display_name) || 'O'}</span>
             <div className="min-w-0 flex-1 leading-tight">
               <div className="truncate text-sm font-semibold text-white">{user.display_name}</div>
-              <div className="truncate text-[11px] capitalize text-slate-400">{user.role}{user.department ? ` · ${user.department}` : ''}</div>
+              <div className="truncate text-xs capitalize text-slate-400">{user.role}{user.department ? ` · ${user.department}` : ''}</div>
             </div>
             <button type="button" onClick={async () => { await api.logout().catch(() => {}); setUser(null) }} className="rounded-lg p-1.5 hover:bg-white/10" aria-label="Log out" title="Log out">
               <LogOut className="h-4 w-4" />
             </button>
           </div>
-          <a href="/" className="mt-2 block text-center text-[11px] font-semibold text-brand-200 hover:underline">
+          <a href="/" className="mt-2 block text-center text-xs font-semibold text-brand-200 hover:underline">
             Open citizen portal ↗
           </a>
         </div>
@@ -223,7 +223,7 @@ function OfficialInner() {
                 aria-expanded={bellOpen}
               >
                 <Bell className="h-5 w-5" />
-                {unread > 0 && <span className="absolute right-1 top-1 min-w-4 rounded-full bg-red-600 px-1 text-[10px] font-bold leading-4 text-white">{unread > 9 ? '9+' : unread}</span>}
+                {unread > 0 && <span className="absolute right-1 top-1 min-w-4 rounded-full bg-red-600 px-1 text-xs font-bold leading-4 text-white">{unread > 9 ? '9+' : unread}</span>}
               </button>
               {bellOpen && (
                 <div className="card-raised animate-rise absolute right-0 top-11 z-[900] w-[min(22rem,90vw)] overflow-hidden">
@@ -283,7 +283,7 @@ function OfficialInner() {
             {nav.slice(4).map(({ id, label, icon: Icon, badge }) => (
               <button key={id} type="button" onClick={() => go(id)} className="card lift flex items-center gap-2 p-3 text-left text-sm font-semibold">
                 <Icon className="h-5 w-5 text-brand-700" /> {label}
-                {!!badge && <span className="ml-auto rounded-full bg-red-600 px-1.5 text-[11px] font-bold text-white">{badge}</span>}
+                {!!badge && <span className="ml-auto rounded-full bg-red-600 px-1.5 text-xs font-bold text-white">{badge}</span>}
               </button>
             ))}
           </div>

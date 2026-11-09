@@ -380,6 +380,12 @@ def public_map(category: str | None = None, resolved_days: int = Query(30, ge=0,
         return public.map_points(conn, resolved_days, category)
 
 
+@app.get("/api/public/dangers")
+def public_dangers():
+    with db.session() as conn:
+        return public.dangers(conn)
+
+
 @app.get("/api/public/summary")
 def public_summary(days: int = Query(30, ge=7, le=365)):
     with db.session() as conn:

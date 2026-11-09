@@ -194,7 +194,7 @@ export function OfficialMap({ meta, refreshKey, onTriage }: { meta: Meta | null;
                 <span className="min-w-0 flex-1">
                   <span className="flex flex-wrap items-center gap-2">
                     <span className="font-semibold">{h.locality}</span>
-                    <span className="rounded bg-red-600 px-1.5 py-0.5 text-[11px] font-bold text-white">{h.reports} reports</span>
+                    <span className="rounded bg-red-600 px-1.5 py-0.5 text-xs font-bold text-white">{h.reports} reports</span>
                   </span>
                   <span className="text-xs text-slate-600">
                     {h.issues} {h.category_label.toLowerCase()} issues in 90 days · {CATEGORY_HI[h.category]}

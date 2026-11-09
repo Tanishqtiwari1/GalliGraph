@@ -7,6 +7,7 @@ import OfficialApp from './OfficialApp.tsx'
 
 // Two portals from one build: /official for municipal staff, everything else for citizens.
 const isOfficial = window.location.pathname.replace(/\/+$/, '') === '/official'
+document.documentElement.classList.toggle('portal-official', isOfficial)
 document.title = isOfficial ? 'GalliGraph · Officer Console' : 'GalliGraph · Your city. Your voice.'
 
 createRoot(document.getElementById('root')!).render(

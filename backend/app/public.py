@@ -45,6 +45,23 @@ def map_points(conn: sqlite3.Connection, include_resolved_days: int = 30, catego
     return out
 
 
+def dangers(conn: sqlite3.Connection) -> list[dict]:
+    """Open hazards that threaten life (open manholes, live wires, places where someone was hurt).
+    The whole list is sent to the browser, which works out what is close: the citizen's position never reaches the server."""
+    out = []
+    for r in conn.execute(
+            "SELECT id, category, sub_type, lat, lng, locality_id, report_count, confirmations, first_reported FROM issues "
+            "WHERE lat IS NOT NULL AND safety_risk = 1 AND severity >= 5 AND status NOT IN ('resolved', 'rejected') "
+            "ORDER BY first_reported DESC"):
+        loc = locality_by_id().get(r["locality_id"] or "", {}).get("name")
+        out.append({"id": r["id"], "category": r["category"], "sub_type": r["sub_type"],
+                    "label": _label(r["category"], r["sub_type"], loc), "locality": loc,
+                    "lat": round(r["lat"], 3), "lng": round(r["lng"], 3),  # same ~100 m precision as the public map
+                    "reports": r["report_count"], "confirmations": r["confirmations"],
+                    "first_reported": r["first_reported"]})
+    return out
+
+
 def summary(conn: sqlite3.Connection, days: int = 30) -> dict:
     perf = analytics.performance(conn, days)
     q = lambda sql, *a: conn.execute(sql, a).fetchone()[0]
@@ -149,6 +166,7 @@ def track(conn: sqlite3.Connection, code: str) -> dict | None:
         "secondary_department": i["secondary_department"],
         "report_count": i["report_count"],
         "tier": i["sla_tier"],
+        "safety_risk": bool(i["safety_risk"]),
         "deadline": sla.status_of(i),
         "escalated": i["escalation_level"] > 0 and status not in ("resolved", "rejected"),
         "info_request": i["info_request"] if status == "info_requested" else None,

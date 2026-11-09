@@ -140,7 +140,7 @@ export function StaffView({ meta, me }: { meta: Meta | null; me: string }) {
                   <input type="number" min={1} max={2160} value={policy[t]} onChange={(e) => setPolicy({ ...policy, [t]: Number(e.target.value) })} className="field" aria-label={`${t} hours`} />
                   <span className="text-xs text-slate-500">hours</span>
                 </span>
-                <span className="text-[11px] text-slate-400">default {defaults[t]} h</span>
+                <span className="text-xs text-slate-400">default {defaults[t]} h</span>
               </label>
             ))}
           </div>
