@@ -157,7 +157,7 @@ export function ComplaintsView({ meta, refreshKey, initial, openIssue }: { meta:
       </div>
 
       <div className="card overflow-hidden">
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto" tabIndex={0}>
           <table className="w-full text-left text-sm">
             <thead className="bg-slate-50 text-xs uppercase tracking-wide text-slate-500">
               <tr>
@@ -212,8 +212,8 @@ export function ComplaintsView({ meta, refreshKey, initial, openIssue }: { meta:
                     <td className="hidden px-3 py-2.5 text-xs text-slate-600 lg:table-cell">{i.department}</td>
                     <td className="px-3 py-2.5">
                       <span className={`whitespace-nowrap rounded-full px-2 py-0.5 text-xs ring-1 ${STATUS_META[i.status].cls}`}>{STATUS_META[i.status].label}</span>
-                      {!i.reviewed_at && !['resolved', 'rejected'].includes(i.status) && <span className="ml-1 text-[10px] font-bold text-amber-700">NEW</span>}
-                      {i.disputed && <span className="ml-1 text-[10px] font-bold text-red-700">DISPUTED</span>}
+                      {!i.reviewed_at && !['resolved', 'rejected'].includes(i.status) && <span className="ml-1 text-xs font-bold text-amber-700">NEW</span>}
+                      {i.disputed && <span className="ml-1 text-xs font-bold text-red-700">DISPUTED</span>}
                     </td>
                     <td className="px-3 py-2.5 text-xs">
                       {i.sla.hours_left !== null ? (

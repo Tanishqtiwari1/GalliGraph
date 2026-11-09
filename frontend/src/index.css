@@ -3,18 +3,32 @@
 
 /* GalliGraph "Civic Intelligence System" design tokens (see the Stitch DESIGN.md) */
 @theme {
-  --font-sans: "Inter", "Noto Sans Devanagari", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-display: "Manrope", "Noto Sans Devanagari", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Atkinson Hyperlegible", "Noto Sans Devanagari", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Atkinson Hyperlegible", "Noto Sans Devanagari", ui-sans-serif, system-ui, sans-serif;
+
+  /* Citizen pages read large; the officer console scales back down (see .portal-official) */
+  --text-xs: 0.875rem;
+  --text-xs--line-height: 1.45;
+  --text-sm: 1rem;
+  --text-sm--line-height: 1.5;
+  --text-base: 1.125rem;
+  --text-base--line-height: 1.55;
 
   /* Primary: civic resolution, verified states, primary actions */
   --color-brand-50: #f0fdfa;
   --color-brand-100: #ccfbf1;
   --color-brand-200: #99f6e4;
-  --color-brand-500: #14b8a6;
-  --color-brand-600: #0d9488;
-  --color-brand-700: #0f766e;
-  --color-brand-800: #115e59;
-  --color-brand-900: #134e4a;
+  /* 600 and up carry white text at 5:1 or better */
+  --color-brand-500: #0d9488;
+  --color-brand-600: #0f766e;
+  --color-brand-700: #0f5f59;
+  --color-brand-800: #134e4a;
+  --color-brand-900: #123f3c;
+
+  /* Secondary text stays readable on white and on tinted cards */
+  --color-slate-400: #64748b;
+  --color-slate-500: #4b5b73;
+  --color-focus: #1d4ed8;
 
   /* Secondary: navigation chrome and authoritative headings */
   --color-navy-700: #334155;
@@ -43,12 +57,35 @@ body,
   min-height: 100%;
 }
 
+html {
+  --ctl-h: 48px;
+  /* Keyboard focus never lands underneath the sticky header or bottom navigation */
+  scroll-padding-top: 88px;
+  scroll-padding-bottom: 96px;
+}
+
+html.portal-official {
+  --text-xs: 0.8125rem;
+  --text-sm: 0.9375rem;
+  --text-base: 1rem;
+  --ctl-h: 40px;
+}
+
 body {
   background: var(--color-canvas);
   color: var(--color-ink);
+  font-size: var(--text-base);
+  line-height: 1.55;
   -webkit-font-smoothing: antialiased;
-  font-feature-settings: "cv11", "ss01";
 }
+
+:focus-visible {
+  outline: 3px solid var(--color-focus) !important;
+  outline-offset: 2px;
+}
+/* The page container takes focus on navigation for screen readers; it is not a control */
+main:focus { outline: none !important; }
+::placeholder { color: var(--color-slate-500); opacity: 1; }
 
 /* Level 1: white card, 1px slate border, ambient shadow */
 @utility card {
@@ -73,20 +110,18 @@ body {
 @utility pill-info { @apply border-brand-200 bg-brand-50 text-brand-800; }
 @utility btn {
   @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 text-sm font-semibold transition active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50;
-  min-height: 40px;
+  min-height: var(--ctl-h);
 }
 @utility btn-primary { @apply bg-brand-600 text-white hover:bg-brand-700 active:bg-brand-800; }
 @utility btn-navy { @apply bg-navy-900 text-white hover:bg-navy-800; }
 @utility btn-ghost { @apply border border-slate-300 bg-white text-slate-800 hover:bg-slate-50; }
 @utility btn-danger { @apply bg-red-600 text-white hover:bg-red-700; }
 @utility field {
-  @apply w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm outline-none focus:border-brand-600 focus:ring-2 focus:ring-brand-100;
+  @apply w-full rounded-lg border border-slate-400 bg-white px-3 py-2 text-sm focus:border-brand-700;
+  min-height: var(--ctl-h);
 }
 @utility tnum { font-variant-numeric: tabular-nums; }
 
-.font-display {
-  letter-spacing: -0.015em;
-}
 
 .leaflet-container {
   font-family: inherit;
@@ -118,11 +153,8 @@ body {
 /* Motion: entrance + panel transitions (disabled by prefers-reduced-motion above) */
 @keyframes rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
 @keyframes slide-in { from { transform: translateX(40px); opacity: 0.6; } to { transform: none; opacity: 1; } }
-@keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 .animate-rise { animation: rise 0.35s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
 .animate-slide-in { animation: slide-in 0.28s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
-.animate-ticker { animation: ticker 40s linear infinite; }
-.animate-ticker:hover { animation-play-state: paused; }
 .stagger > * { animation: rise 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
 .stagger > *:nth-child(2) { animation-delay: 40ms; }
 .stagger > *:nth-child(3) { animation-delay: 80ms; }
@@ -138,6 +170,7 @@ body {
    touching every component: light tints become deep tints, dark text becomes light text. */
 html.dark {
   color-scheme: dark;
+  --color-focus: #fde047;
   --color-white: #111c2e;
   --color-canvas: #0a1220;
   --color-surface-low: #0f1a2b;
@@ -151,7 +184,7 @@ html.dark {
   --color-slate-100: #16233a;
   --color-slate-200: #22324a;
   --color-slate-300: #334560;
-  --color-slate-400: #6b7d95;
+  --color-slate-400: #8b9bb1;
   --color-slate-500: #94a3b8;
   --color-slate-600: #a9b6c8;
   --color-slate-700: #cbd5e1;
@@ -162,6 +195,9 @@ html.dark {
   --color-brand-50: #0b2e2b;
   --color-brand-100: #0f3f3b;
   --color-brand-200: #17574f;
+  --color-brand-500: #2dd4bf;
+  --color-brand-600: #2dd4bf;
+  --color-brand-700: #5eead4;
   --color-brand-800: #5eead4;
   --color-brand-900: #99f6e4;
 
@@ -187,12 +223,22 @@ html.dark .btn-danger {
   color: #fff;
 }
 html.dark .bg-navy-900 { background-color: #1e3a5f; }
+html.dark .btn-primary,
+html.dark .bg-brand-600,
+html.dark .bg-brand-700 { background-color: #0f766e; }
+html.dark .btn-primary:hover { background-color: #115e59; }
+html.dark .text-red-600 { color: #fca5a5; }
 html.dark .leaflet-container { filter: brightness(0.8) contrast(1.1); }
+aside.bg-navy-900 {
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #b6c2d0;
+  --color-slate-500: #94a3b8;
+}
 /* The officer sidebar is a dark panel in both themes: give it back the original slate text colours */
 html.dark aside.bg-navy-900 {
   --color-slate-300: #cbd5e1;
-  --color-slate-400: #94a3b8;
-  --color-slate-500: #64748b;
+  --color-slate-400: #b6c2d0;
+  --color-slate-500: #94a3b8;
   background-color: #0b1526;
   border-right: 1px solid #22324a;
 }

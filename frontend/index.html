@@ -8,14 +8,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=Noto+Sans+Devanagari:wght@500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
     <title>GalliGraph</title>
       <script>
       try {
         var t = localStorage.getItem('gg-theme')
-        if (t === 'dark' || (!t && matchMedia('(prefers-color-scheme: dark)').matches)) document.documentElement.classList.add('dark')
+        if (t === 'dark') document.documentElement.classList.add('dark')
+        if (localStorage.getItem('gg_lang') === 'hi') document.documentElement.lang = 'hi'
       } catch (e) {}
     </script>
   </head>
